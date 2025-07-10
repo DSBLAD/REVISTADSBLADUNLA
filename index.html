@@ -1,0 +1,596 @@
+ 
+ <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>INKAO</title>
+    
+      <!-- Meta para redes sociales -->
+      <meta property="og:title" content="INKAO" />
+      <meta property="og:description" content="Estudio de Diseño" />
+      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
+      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
+      <meta name="twitter:card" content="summary_large_image" />
+    
+      <!-- Icono -->
+      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+      <link rel="icon" href="images/ChatGPT Image 24 may 2025, 19_11_32.png" type="image/x-icon" />
+    
+      <!-- Estilos personalizados -->
+      <link rel="stylesheet" href="style.css" />
+    
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+      <!--googlefonts -->
+
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          celeste: '#0c6d99',
+          celestonoscuro: '#1394ad',
+          azulpetrol: '#168AAD',
+          azulverdoso: '#34A0A4',
+          verdepetroloscuro: '#036666',
+          verdepetroleo: '#14746F',
+          verdepetro: '#248277',
+          amarillooro: '#D7B04B',
+          amarillo: '#FFCF56',
+          fondocalido: '#FDFCFB',
+          black: '#000000',
+          Gris: '#4d4d4d',
+          Amarillo: '#f3be13',
+          Turquesa: '#26a7a6',
+          cyanoscuroelegante: '#006D77',
+          turquesaprofundo: '#007C91',
+        },
+        fontSize: {
+          '2xl': '1.5rem',
+          '3xl': '1.875rem',
+          '4xl': '2.25rem',
+          '5xl': '3rem',
+          '6xl': '3.75rem',
+        },
+        fontWeight: {
+          normal: 400,
+          medium: 500,
+          bold: 700,
+        },
+        fontFamily: {
+          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<!-- FUENTES PERSONALIZADAS -->
+<style>
+@font-face {
+  font-family: 'FF Good Pro Cond Black';
+  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FF Good Pro Wide Light';
+  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+       url('fonts/ff-good-pro-wide-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+        html {
+          scroll-behavior: smooth;
+        }
+    
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        .animate-fade-in {
+          animation: fadeIn 1.2s ease-out forwards;
+        }
+    
+        .animate-fade-in-delay {
+          animation: fadeIn 1.2s ease-out 0.3s forwards;
+        }
+      </style>
+    </head>
+
+      
+    
+    <body class="bg-black text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
+    
+<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+
+
+  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2 text-lg sm:text-xl font text-amarillo">
+    
+    <!-- Logo -->
+    <a href="https://www.instagram.com/inkao_estudio/?hl=es" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      <img src="./images/Boton - Sin fondo.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+    </a>
+
+       
+  </div>
+
+ 
+    <!-- Botón hamburguesa visible solo en sm y md -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+        <span id="menu-icon">&#9776;</span>
+      </button>
+    </div>
+  
+    <!-- Menú visible en LG y desplegable en SM/MD -->
+    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-amarillo">
+    
+      <li><a href="#sobre" class="block w-full py-1 hover:text-Turquesa">Sobre INKAO</a></li>
+      <li><a href="#estudios" class="block w-full py-1 hover:text-Turquesa">CURSOS</a></li>
+      <li><a href="logincursos.html" target="_blank" rel="noopener noreferrer" class="block w-full py-1 hover:text-Turquesa">INKAO Web</a></li>
+      
+      <li>
+  <a id="contactoMail" href="#" 
+     class="block w-full py-1 text-white hover:text-Turquesa flex items-center space-x-2">
+    <i class="fas fa-envelope"></i>
+    <span>Contacto</span>
+  </a>
+</li>
+      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+        </a>
+        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- HERO principal con texto y logo al costado -->
+
+  <section 
+  id="fs"
+  class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-6 gap-12"
+>
+  <!-- Logo -->
+  <div class="md:w-1/2 flex justify-center">
+    <img src="images/Lineal Sin Fondo + Recuadro.png" alt="Logo INKAO" class="w-full max-w-lg" />
+  </div>
+
+  <!-- Texto -->
+  <div class="md:w-1/2 text-center md:text-left">
+    <h1 class="text-6xl md:text-8xl text-Turquesa font-barlow-condensed mb-2">INKAO</h1>
+
+    <h2 class="text-3xl md:text-5xl text-amarillooro font-bold mb-6 leading-tight">ESTUDIO DE DISEÑO</h2>
+
+   <div class="text-white text-lg leading-relaxed px-6 space-y-6 text-justify sm:text-left">
+
+    En <strong>INKAO</strong> creemos que el diseño es una herramienta transformadora, y lo abordamos desde una mirada integral, estratégica y consciente. 
+    No se trata solo de formas o estética, sino de crear soluciones que conecten con las personas, que comuniquen con claridad y que se produzcan con inteligencia.
+  </p>
+  <p class="text-lg text-white mb-4">
+    Te acompañamos en un proceso de diseño sólido, desde la idea hasta su materialización, combinando diseño industrial, branding, modelado 3D y tecnologías de fabricación digital.
+  </p>
+  <p class="text-lg text-white">
+    En cada proyecto buscamos equilibrio entre innovación, propósito y producción, porque para nosotros, diseñar también es construir futuro.
+  </p>
+    </p>
+    <p class="text-xl text-amarillooro mb-8">
+      <strong> Te invito a que conozcas nuestro espacio.</strong>
+    </p>
+   </div>
+
+   <!-- Botones en fila -->
+<div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
+  <a href="#estudios" class="h-12 flex items-center justify-center bg-verdepetroloscuro text-white px-2 rounded-lg text-sm font-bold shadow hover:bg-amarillooro transition text-center">
+    DISEÑO
+  </a>
+  <a href="#estudios" class="h-12 flex items-center justify-center bg-verdepetroloscuro text-white px-2 rounded-lg text-sm font-bold shadow hover:bg-amarillooro transition text-center">
+    CURSOS
+  </a>
+  <a href="#estudios" class="h-12 flex items-center justify-center bg-verdepetroloscuro text-white px-2 rounded-lg text-sm font-bold shadow hover:bg-amarillooro transition text-center">
+    SERVICIOS
+  </a>
+</div>
+</div>
+
+</section>
+
+ 
+  
+  <!-- Animaciones personalizadas -->
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .animate-fade-in {
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+  
+    .animate-fade-in-delay {
+      animation: fadeIn 1.2s ease-out 0.3s forwards;
+    }
+  </style>
+
+  <!-- Sobre -->
+
+   <section id="sobre" class="py-20 px-6 bg-black text-center">
+  <div class="mx-auto px-6 py-20 bg-gris rounded-2xl max-w-3xl">
+    <h2 class="text-3xl text-white font-semibold mb-6">Sobre INKAO</h2>
+     <div class="border-t-2 border-amarillo mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+    <div class="text-white text-lg leading-relaxed space-y-6 text-justify sm:text-left">
+   <p><strong>INKAO</strong> es un estudio de diseño que acompaña a emprendedores, cooperativas, profesionales y empresas en el desarrollo estratégico de sus productos, marcas y experiencias. Integra diseño industrial, branding, modelado 3D y tecnologías de fabricación digital, con un enfoque centrado en las personas, el contexto y el impacto real.</p>
+
+<p>Nace como un espacio de creación, acompañamiento y mejora continua, pensado para proyectos que quieren destacarse, crecer y adaptarse a los desafíos actuales sin perder su identidad. En cada edición, trabajamos junto a quienes buscan transformar sus ideas en soluciones funcionales, sostenibles y con sentido.</p>
+
+<p>Creemos que un <strong>diseño coherente, bien gestionado y con propósito</strong> puede ser un motor de cambio. Por eso, nuestro enfoque combina creatividad, análisis, experimentación y estrategia, en un proceso dinámico que va desde la concepción hasta la materialización.</p>
+
+<p>Nuestra propuesta integra herramientas de diseño industrial, prototipado, construcción de identidad visual, comunicación y producción digital, acompañadas por una mirada profesional, humana y accesible.</p>
+
+<p><strong>INKAO</strong> te invita a diseñar desde lo esencial, con claridad y proyección. Para que tus ideas no solo tomen forma, sino que se conviertan en productos, marcas o servicios que conecten con las personas y construyan valor en el tiempo.</p>
+
+<p>Ofrecemos un espacio para pensar, desarrollar, testear y evolucionar. Porque diseñar bien no es solo una cuestión estética: es crear con intención, con impacto y con futuro.</p>
+  </div>
+  </div>
+
+  <div class="text-center mt-8">
+    <a href="formulario.html"
+       target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-verdepetroloscuro text-white text-m font-semibold px-4 py-3 rounded-lg shadow-md hover:bg-amarillooro transition">
+      Quiero formar parte
+    </a>
+  </div>
+</section>
+
+<!-- Sección de estudios -->
+<section id="estudios" class="py-10 px-6 bg-verdepetroloscuro">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-white">LO QUE TENEMOS PARA OFRECERTE...</h2>
+   <div class="border-t-2 border-amarillo mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+
+    <section id="asesorias">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
+
+    <!-- Tarjeta 1 -->
+     
+    <div>
+      <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+        <div class="text-6xl mb-4">
+  <i class="fas fa-pencil-ruler"></i>
+</div>
+        <h3 class="text-m font-bold mb-2">DISEÑO DE PRODUCTO Y GESTION DE DISEÑO</h3>
+        <p class="mb-4">Diseño industrial aplicado a la realidad con factibilidad tecnológica, productiva y financiera</p>
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Saber más</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div>
+      <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+        <div class="text-6xl mb-4">
+          <i class="fas fa-people-group"></i>
+        </div>
+        <h3 class="text-m font-bold mb-2">EQUIPO DE PROFESIONALES</h3>
+        <p class="mb-4">Conocé a los profesionales y a los estudios asociados, que conforman el equipo de trabajo.</p>
+        <br>
+        <a href="unidadsangha.html#equipoprofesionales" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Conocenos</a>
+      <br>
+      <br>
+        </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div>
+       <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+        <div class="text-6xl mb-4">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <h3 class="text-m font-bold mb-2">CURSOS Y CAPACITACIONES</h3>
+        <p class="mb-4">Profundizá conocimientos en Modelado 3D, fabricación digital, gestión y diseño de productos.</p>
+        <br>
+        <a href="cursossangha.html" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ir al sitio</a>
+     <br>
+        <br>
+      </div>
+     </div>
+
+    <!-- Tarjeta 4 -->
+    <div>
+     
+      <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+        <div class="text-6xl mb-4">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3 class="text-m font-bold mb-2">ASESORÍAS PERSONALIZADAS</h3>
+        <p class="mb-4">Consultoría y acompañamiento para emprendedores y empresas.</p>
+        <br>
+        <a href="unidadsangha.html#equipoprofesionales" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Agendá tu turno</a>
+      <br>
+        <br> 
+      </div>
+        </div>
+      </section>
+
+  </div>
+</section>
+
+
+  
+    
+<!-- Comunidad -->
+<section id="comunidad" class="py-20 px-6 bg-verdeingles text-center">
+  <h2 class="text-3xl font-semibold mb-6 text-white">Sumate a las novedades de INKAO</h2>
+  <p class="max-w-xl mx-auto mb-6 text-lg text-white">
+    Recibí recursos, novedades y muchas cosas más que te suman semana a semana.
+  </p>
+
+  <!-- Formulario -->
+  <form id="formComunidad" class="max-w-xl mx-auto space-y-4">
+    <div class="text-left">
+      <label for="nombreUsuario" class="block text-sm font-medium text-white mb-1">Tu nombre:</label>
+      <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ej: Juan Pérez"
+             class="w-full rounded-md border-gray-300 shadow-sm focus:border-azulino focus:ring focus:ring-azulino focus:ring-opacity-50 p-2" required>
+    </div>
+
+    <div class="flex">
+      <input
+        id="correoUsuario"
+        type="email"
+        placeholder="Tu correo electrónico"
+        class="flex-grow px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none"
+        required
+      />
+      <button type="submit"
+        class="bg-amarillooro text-white px-4 py-2 rounded-r-md hover:bg-Turquesa transition">
+        Suscribirme
+      </button>
+    </div>
+  </form>
+
+  <!-- Mensaje de confirmación -->
+  <p id="mensajeSuscripcion" class="mt-6 text-green-100 hidden">¡Gracias por suscribirte!</p>
+</section>
+
+<!-- Botón flotante de WhatsApp con estilos corregidos -->
+<div class="fixed bottom-6 right-6 z-50">
+  <a href="https://wa.me/5492215916442"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-transform transform hover:scale-110">
+
+    <!-- Ícono de WhatsApp -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16.001 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.45 1.71 6.39L3.2 28.8l6.6-1.73c1.83.96 3.9 1.47 6.2 1.47 7.07 0 12.8-5.73 12.8-12.8s-5.73-12.8-12.8-12.8zm0 23.2c-2.01 0-3.95-.56-5.63-1.61l-.4-.24-3.92 1.03 1.05-3.82-.26-.41a10.44 10.44 0 01-1.54-5.44c0-5.77 4.7-10.48 10.48-10.48s10.48 4.7 10.48 10.48-4.7 10.48-10.48 10.48zm5.38-7.56c-.3-.15-1.77-.88-2.05-.98s-.48-.15-.68.15-.79 1-.96 1.21-.36.24-.66.08a8.33 8.33 0 01-2.4-1.47 9.49 9.49 0 01-1.69-2.13c-.18-.3 0-.47.14-.63s.32-.36.48-.54c.15-.18.32-.39.44-.61a.58.58 0 000-.55c-.15-.15-.68-1.67-.94-2.29s-.5-.53-.69-.54h-.57c-.22 0-.56.08-.86.38s-1.13 1.1-1.13 2.68 1.15 3.1 1.32 3.28c.16.16 2.27 3.43 5.5 4.81a19.25 19.25 0 001.9.7 4.56 4.56 0 002.1.14c.63-.1 1.87-.75 2.13-1.48.27-.74.27-1.35.19-1.46s-.3-.23-.6-.38z"/>
+    </svg>
+  </a>
+</div>
+
+<!--PREFOOTER -->
+
+<section class="bg-verdepetroloscuro text-white py-10 px-4 font-outfit">
+  <!-- Grid superior -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+
+    <!-- CONSULTORÍA -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">CONSULTORÍA</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Diseño</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías a Emprendedores</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Gestión</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Fabricacion Digital</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Comunicación</a></li>
+      </ul>
+    </div>
+
+    <!-- REDES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">REDES</h2>
+      <div class="flex space-x-4 text-xl">
+        <a href="https://www.instagram.com/inkao_estudio/?hl=es" target="_blank" class="hover:text-amarillooro transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="mt-4 text-sm leading-relaxed">
+        <p>La Plata, Argentina</p>
+        <p><a href="mailto:finanzas.saludables.emprende@gmail.com" class="hover:text-amarillooro transition-colors">inkao.estudio@gmail.com</a></p>
+        <p><a href="tel:+5492215738117" class="hover:text-amarillooro transition-colors">+54 9221 591 6442</a></p>
+      </div>
+    </div>
+
+    <!-- SECCIONES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-verdementa transition-colors">Asesorias</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Cursos</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Servicios</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Equipo</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- LOGO -->
+    <div class="flex items-center justify-center">
+        <img src="images/Lineal Fondo Negro + Marco Negro (1).png" alt="Logo FS" class="w-auto h-20" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Línea y grid inferior -->
+  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
+    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Política de privacidad</a>
+    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Política de Cookies</a>
+    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Términos y condiciones</a>
+    <p>INKAO 2025 © Todos los derechos reservados</p>
+  </div>
+</section>
+
+ <!-- FOOTER -->
+<footer class="bg-white text-black text-center py-4 px-2">
+  <div class="flex justify-center items-center gap-6 mb-4 flex-wrap">
+    <div class="bg-white flex items-center justify-center rounded p-4" style="height: 2rem; width: auto;">
+      <img src="images/logotipo negro.png" alt="Logo Bloms" class="w-8 sm:w-12 h-auto" />
+    </div>
+  </div>
+  <p class="text-sm xs:text-base px-2 sm:px-0">
+    © 2025 BLÖMS CONSULTORA todos los derechos reservados. Responsable de DISEÑO DE CONCEPTO, GESTIÓN EMPRENDIMIENTO Y DISEÑO WEB
+  </p>
+</footer>
+
+   
+
+<!-- JS para abrir/cerrar el menú en móvil -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      const icon = document.getElementById('menu-icon');
+  
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-full');
+        menu.classList.toggle('left-0');
+        menu.classList.toggle('bg-[#3e2d4f]');
+        menu.classList.toggle('w-full');
+        menu.classList.toggle('p-4');
+        menu.classList.toggle('shadow-md');
+        menu.classList.toggle('z-40');
+  
+        // Cambiar icono
+        if (menu.classList.contains('hidden')) {
+          icon.innerHTML = '&#9776;'; // ☰
+        } else {
+          icon.innerHTML = '&#10005;'; // ✖
+        }
+      });
+    });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+  });
+  </script>
+
+<script>
+  document.getElementById('contactoMail').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+
+    const asunto = 'Consulta sobre el Coaching Finanzas Saludables';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la Comunidad Finanzas Saludables.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+
+    const mailtoLink = `mailto:finanzas.saludables.emprende@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
+<script>
+  document.getElementById('formComunidad').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreUsuario').value.trim();
+    const email = document.getElementById('correoUsuario').value.trim();
+
+    if (!nombre || !email) return;
+
+    // Usamos nuestra API personalizada en Vercel para ocultar la API key de SheetBest
+    const endpoint = "https://guardar-api-sheetbest.vercel.app/api/guardarSuscripcion";
+
+    const data = {
+      nombre: nombre,
+      email: email
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById('mensajeSuscripcion').classList.remove('hidden');
+        document.getElementById('formComunidad').reset();
+      } else {
+        alert("Hubo un error al enviar tus datos. Intentá más tarde.");
+      }
+    } catch (error) {
+      alert("Error de red. Verificá tu conexión.");
+      console.error(error);
+    }
+  });
+</script>
+
+<script>
+  document.getElementById('formComunidad').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita envío tradicional
+
+    // Aquí puedes agregar la integración con un backend o Google Forms
+
+    // Mostrar mensaje de confirmación
+    const mensaje = document.getElementById('mensajeSuscripcion');
+    mensaje.classList.remove('hidden');
+
+    // Opcional: limpiar formulario
+    this.reset();
+
+    // Opcional: ocultar mensaje después de unos segundos
+    setTimeout(() => {
+      mensaje.classList.add('hidden');
+    }, 5000);
+  });
+</script>
+
+
+  
+ 
+  </body>
+</html>

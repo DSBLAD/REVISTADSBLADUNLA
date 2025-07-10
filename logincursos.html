@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>INKAO WEB</title>
+    
+      <!-- Meta para redes sociales -->
+      <meta property="og:title" content="INKAO" />
+      <meta property="og:description" content="Estudio de diseño industrial especializado en branding, modelado 3D y tecnologías digitales, con enfoque creativo, estratégico y orientado a resultados" />
+      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/logorectangularnegro" />
+      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
+      <meta name="twitter:card" content="summary_large_image" />
+    
+      <!-- Icono -->
+      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+      <link rel="icon" href="images/ChatGPT Image 24 may 2025, 19_11_32.png" type="image/x-icon" />
+    
+      <!-- Estilos personalizados -->
+      <link rel="stylesheet" href="style.css" />
+    
+      <!-- Fuente Outfit -->
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+      <!-- Tailwind CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                violeta: '#9676d8',
+                morado: '#6A1B9A',
+                fondo: '#FAF5FF',
+                bordo: '#a2263f',
+                celeste: '#0c6d99',
+                azul: '#1D3B6D',
+                berenjena: '#5c4554',
+                bordooscuro: '#552c5b',
+                violaceo: '#6a4b8e',
+                celestonoscuro: '#1394ad',
+                vino: '#80142f',
+                violetagrafito: '#3e2d4f',
+                lila: '#C587C5',
+                violaceoclaro: '#e0d1fa',
+
+                azulado: '#8EA4D2',
+                azulino: '#6279B8',
+                azulgris: '#49516F',
+                azulmarino: '#184E77', 
+                azulbase: '#1E6091',
+                azulinado: '#1A759F',
+                azulpetrol: '#168AAD',
+                azulverdoso: '#34A0A4',
+                verdepalta: '#6BAB6F',
+                verdepetroloscuro: '#036666',
+                verdepetroleo: '#14746F',
+                verdepetro: '#248277',
+                verdepetroclaro: '#469d89', 
+                verdeinglesclaro: '#3AB795',
+                verdementa: '#A0E8AF',
+                verdeingles: '#477E62',
+                verdepetroseco: '#86BAA1',
+                amarillooro: '#D7B04B',
+                amarillolimon: '#D9ED92',
+                amarillo: '#FFCF56',
+                fondocalido: '#FDFCFB',
+                cyanoscuroelegante: '#006D77',
+                turquesaprofundo: '#007C91',
+
+              },
+              fontSize: {
+                '2xl': '1.5rem',
+                '3xl': '1.875rem',
+                '4xl': '2.25rem',
+                '5xl': '3rem',
+                '6xl': '3.75rem',
+              },
+              fontWeight: {
+                normal: 400,
+                medium: 500,
+                bold: 700,
+              },
+
+              fontFamily: {
+          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+        },
+             
+            },
+          },
+        };
+      </script>
+
+    
+      <!-- Animaciones -->
+      <style>
+        html {
+          scroll-behavior: smooth;
+        }
+    
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        .animate-fade-in {
+          animation: fadeIn 1.2s ease-out forwards;
+        }
+    
+        .animate-fade-in-delay {
+          animation: fadeIn 1.2s ease-out 0.3s forwards;
+        }
+      </style>
+     
+
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+     <!-- Firebase -->
+    const firebaseConfig = {
+      apiKey: "AIzaSyD8RJRMdHCq1OCmiPav20rE3V3Xz4atidM",
+      authDomain: "capacitaciones-hub-di-lad-unla.firebaseapp.com",
+      projectId: "capacitaciones-hub-di-lad-unla",
+      storageBucket: "capacitaciones-hub-di-lad-unla.firebasestorage.app",
+      messagingSenderId: "513215452871",
+      appId: "1:51513215452871:web:d0501216696c6cfd6e50e2",
+      measurementId: "G-T7M70K037C"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Registro
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('regEmail').value;
+      const password = document.getElementById('regPassword').value;
+      const nombre = document.getElementById('regNombre').value;
+      const apellido = document.getElementById('regApellido').value;
+      const rol = document.getElementById('regRol').value;
+
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        await setDoc(doc(db, "usuarios", user.uid), {
+          nombre,
+          apellido,
+          rol,
+          email
+        });
+        alert('Usuario registrado con éxito');
+        window.location.href = "cursossangha.html";
+      } catch (error) {
+        alert(error.message);
+      }
+    });
+
+    // Login
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        const docRef = doc(db, "usuarios", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          sessionStorage.setItem('usuario', JSON.stringify(docSnap.data()));
+          window.location.href = "cursossangha.html";
+        } else {
+          alert('Perfil no encontrado');
+        }
+      } catch (error) {
+        alert(error.message);
+      }
+    });
+  </script>
+</head>
+
+<!-- Tailwind CSS y configuración ya incluida arriba -->
+
+</head>
+
+<body class="bg-black text-[#222] font-sans min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white p-6 rounded-xl shadow-xl w-full max-w-2xl">
+    <div class="text-center mb-4">
+      <img src="./images/logocuadradoblanco2.jpeg" class="mx-auto h-36 mb-4" alt="Logo SANGHA">
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="mb-6">
+      <h2 class="text-lg font-semibold text-black mb-2">Iniciar sesión</h2>
+      <input type="email" id="loginEmail" placeholder="Correo electrónico" class="w-full mb-3 px-4 py-2 border rounded" required>
+      <input type="password" id="loginPassword" placeholder="Contraseña" class="w-full mb-3 px-4 py-2 border rounded" required>
+      <button type="submit" class="w-full bg-verdepetroloscuro/95 text-white py-2 rounded font-bold hover:bg-amarillooro">Ingresar</button>
+    </form>
+
+    <!-- Registro Form -->
+    <form id="registerForm">
+      <h2 class="text-lg font-semibold text-black mb-2">Registrarse</h2>
+      <input type="text" id="regNombre" placeholder="Nombre" class="w-full mb-3 px-4 py-2 border rounded" required>
+      <input type="text" id="regApellido" placeholder="Apellido" class="w-full mb-3 px-4 py-2 border rounded" required>
+      <input type="email" id="regEmail" placeholder="Correo electrónico" class="w-full mb-3 px-4 py-2 border rounded" required>
+      <input type="password" id="regPassword" placeholder="Contraseña" class="w-full mb-3 px-4 py-2 border rounded" required>
+      <select id="regRol" class="w-full mb-4 px-4 py-2 border rounded" required>
+        <option value="">Seleccionar rol</option>
+        <option value="estudiante">Estudiante</option>
+        <option value="docente">Docente</option>
+        <option value="emprendedor">Emprendedor/a</option>
+      </select>
+      <button type="submit" class="w-full bg-verdepetroloscuro text-white py-2 rounded font-semibold hover:bg-amarillooro">Crear cuenta</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+

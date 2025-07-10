@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>INKAO</title>
+    
+      <!-- Meta para redes sociales -->
+      <meta property="og:title" content="INKAO" />
+      <meta property="og:description" content="Estudio de Diseño" />
+      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
+      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
+      <meta name="twitter:card" content="summary_large_image" />
+    
+      <!-- Icono -->
+      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+      <link rel="icon" href="images/ChatGPT Image 24 may 2025, 19_11_32.png" type="image/x-icon" />
+    
+      <!-- Estilos personalizados -->
+      <link rel="stylesheet" href="style.css" />
+    
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+      <!--googlefonts -->
+
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          celeste: '#0c6d99',
+          celestonoscuro: '#1394ad',
+          azulpetrol: '#168AAD',
+          azulverdoso: '#34A0A4',
+          verdepetroloscuro: '#036666',
+          verdepetroleo: '#14746F',
+          verdepetro: '#248277',
+          amarillooro: '#D7B04B',
+          amarillo: '#FFCF56',
+          fondocalido: '#FDFCFB',
+          black: '#000000',
+          Gris: '#4d4d4d',
+          Amarillo: '#f3be13',
+          Turquesa: '#26a7a6',
+          cyanoscuroelegante: '#006D77',
+          turquesaprofundo: '#007C91',
+        },
+        fontSize: {
+          '2xl': '1.5rem',
+          '3xl': '1.875rem',
+          '4xl': '2.25rem',
+          '5xl': '3rem',
+          '6xl': '3.75rem',
+        },
+        fontWeight: {
+          normal: 400,
+          medium: 500,
+          bold: 700,
+        },
+        fontFamily: {
+          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<!-- FUENTES PERSONALIZADAS -->
+<style>
+@font-face {
+  font-family: 'FF Good Pro Cond Black';
+  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FF Good Pro Wide Light';
+  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+       url('fonts/ff-good-pro-wide-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+        html {
+          scroll-behavior: smooth;
+        }
+    
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        .animate-fade-in {
+          animation: fadeIn 1.2s ease-out forwards;
+        }
+    
+        .animate-fade-in-delay {
+          animation: fadeIn 1.2s ease-out 0.3s forwards;
+        }
+      </style>
+    </head>
+
+      
+    
+    <body class="bg-black text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
+    
+<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+
+
+  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2 text-lg sm:text-xl font text-amarillo">
+    
+    <!-- Logo -->
+    <a href="https://www.instagram.com/inkao_estudio/?hl=es" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      <img src="./images/Boton - Sin fondo.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+    </a>
+
+       
+  </div>
+
+ 
+    <!-- Botón hamburguesa visible solo en sm y md -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+        <span id="menu-icon">&#9776;</span>
+      </button>
+    </div>
+  
+    <!-- Menú visible en LG y desplegable en SM/MD -->
+    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-amarillo">
+    
+      <li><a href="#sobre" class="block w-full py-1 hover:text-Turquesa">Sobre INKAO</a></li>
+      <li><a href="#estudios" class="block w-full py-1 hover:text-Turquesa">CURSOS</a></li>
+      <li><a href="logincursos.html" target="_blank" rel="noopener noreferrer" class="block w-full py-1 hover:text-Turquesa">INKAO Web</a></li>
+      
+      <li>
+  <a id="contactoMail" href="#" 
+     class="block w-full py-1 text-white hover:text-Turquesa flex items-center space-x-2">
+    <i class="fas fa-envelope"></i>
+    <span>Contacto</span>
+  </a>
+</li>
+      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+        </a>
+        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+
+<br>
+
+<!-- TÍTULO principal -->
+
+<!-- TÍTULO flotante alineado a la izquierda y superpuesto -->
+<div class="relative max-w-4xl mx-auto -mb-6 z-10">
+    <h1 class="bg-verdepaltaoscuro text-white text-3xl font-bold px-6 py-3 rounded-xl shadow-lg w-full block">
+      Curso: SOLID WORKS
+    </h1>
+  </div>
+  
+  <!-- CONTENEDOR -->
+  <div class="container max-w-4xl mx-auto bg-white rounded-2xl shadow-lg my-10 p-6 sm:p-10">
+    <!-- INFO -->
+    <div class="max-w-2xl mx-auto text-left text-base leading-relaxed space-y-4 mb-10"> 
+
+        <div class="relative w-full aspect-video overflow-hidden rounded-xl shadow-md mb-8">
+            <img src="images/IA Aplicada (1).png" alt="Imagen curso solid"
+              class="absolute top-0 left-0 w-full h-full object-cover" />
+          </div>
+
+<h2 class="text-2xl font-bold text-turquesaprofundo">¿Cómo participar?</h2>
+<div>
+  <p class="text-lg">
+    Aprendé a diseñar y modelar productos 3D de forma profesional con SolidWorks, una de las herramientas de diseño asistido por computadora (CAD) más utilizadas en la industria.
+  </p>
+
+  <h2 class="text-2xl font-semibold text-turquesaprofundo mb-4">¿En qué consiste este curso?</h2>
+  <p>
+    SolidWorks es un software líder en diseño mecánico 3D, ampliamente utilizado en sectores como la ingeniería, el diseño industrial y la fabricación. Este curso te brinda las herramientas necesarias para dominar el modelado paramétrico, generar planos técnicos y realizar simulaciones básicas.
+    Potenciá tus proyectos, productos o servicios utilizando SolidWorks de manera estratégica y profesional, incorporando prácticas de diseño eficientes que agreguen valor e innovación a tus desarrollos.
+    El curso de Diseño 3D con SolidWorks está pensado para quienes buscan adquirir competencias prácticas en modelado, ensamblado y documentación técnica, con un enfoque accesible y centrado en la aplicación directa a proyectos reales.
+  </p>
+
+  <h3 class="text-2xl font-semibold mt-10 mb-3 text-turquesaprofundo">¿Qué incluye el curso?</h3>
+  <p>
+    Está pensado para estudiantes, profesionales, emprendedores/as o equipos de trabajo que quieran comprender los fundamentos del diseño CAD y aplicar SolidWorks en contextos productivos reales.
+  </p>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li>Introducción al entorno de trabajo de SolidWorks y configuración inicial.</li>
+    <li>Modelado de piezas 3D a partir de bocetos y operaciones básicas.</li>
+    <li>Creación de ensamblajes con múltiples componentes.</li>
+    <li>Generación de planos técnicos con cotas, vistas y detalles.</li>
+    <li>Simulaciones simples de esfuerzos y movimientos.</li>
+    <li>Aplicación práctica en proyectos individuales o grupales.</li>
+    <li>Consejos de buenas prácticas y organización del trabajo para flujos eficientes de diseño.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold mt-10 mb-3 text-turquesaprofundo">Modalidad, duración y certificación</h3>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li><strong>Modalidad:</strong> Virtual con encuentros sincrónicos y acceso a materiales complementarios en un campus online.</li>
+    <li><strong>Duración:</strong> 6 semanas (con una carga estimada de 4 horas semanales).</li>
+    <li><strong>Certificación:</strong> Se entrega constancia de participación con aval institucional al finalizar el curso.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold mt-10 mb-3 text-turquesaprofundo">¿A quién está dirigido?</h3>
+  <p>
+    A quienes desarrollen productos, servicios o prototipos y deseen incorporar diseño asistido por computadora a sus procesos. Ideal para personas que trabajen en áreas vinculadas al diseño industrial, ingeniería, manufactura o desarrollo de productos, y que busquen mejorar la calidad de sus diseños, su presentación técnica y su potencial de producción.
+  </p>
+
+  <h3 class="text-2xl font-semibold mt-10 mb-3 text-turquesaprofundo">¿A quién está orientado el curso?</h3>
+  <p>
+    A estudiantes, profesionales, técnicos/as, emprendedores/as o equipos de trabajo que deseen incorporar herramientas de diseño 3D en sus proyectos. Ideal para quienes buscan optimizar su flujo de trabajo, generar documentación técnica profesional o desarrollar prototipos listos para manufactura. También está orientado a quienes desean ampliar sus competencias laborales y acceder a nuevas oportunidades profesionales en industrias que valoran el manejo de herramientas CAD.
+  </p>
+</div>
+
+
+    <!-- BOTONES -->
+    <div class="text-center">
+      <a href="https://forms.gle/VqtrYCQtwx6qWg9d8" target="_blank" rel="noopener noreferrer"
+      class="inline-block bg-turquesaprofundo text-white py-3 px-6 rounded-lg font-semibold hover:bg-verdeingles transition">
+        Completar el formulario para participar del CURSO SOLID WORKS
+      </a>
+    </div>
+    <br>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+  <h3 class="text-2xl font-semibold mt-10 mb-3 text-verdeingles">CONTENIDOS:</h3>
+
+  <br>
+
+<div class="bg-verdepaltaoscuro text-white p-6 rounded-2xl shadow-lg text-left">
+  <h4 class="text-xl font-semibold mt-6 mb-2">Clase 1: Introducción a SolidWorks y fundamentos del diseño CAD</h4>
+<ul class="list-disc list-inside space-y-2 mb-6">
+  <li>¿Qué es SolidWorks? Alcance, usos y ventajas del software.</li>
+  <li>Introducción al diseño asistido por computadora (CAD).</li>
+  <li>Interfaz de usuario: navegación, herramientas básicas y flujo de trabajo.</li>
+  <li>Presentación del programa y dinámica del curso.</li>
+</ul>
+    </div>
+
+<div class="bg-verdepaltaoscuro text-white p-6 rounded-2xl shadow-lg text-left">
+<h4 class="text-xl font-semibold mt-6 mb-2">Clase 2: Modelado de piezas 3D</h4>
+<ul class="list-disc list-inside space-y-2 mb-6">
+  <li>Creación de bocetos 2D y restricciones geométricas.</li>
+  <li>Operaciones básicas: extrusión, revolución, corte y vaciado.</li>
+  <li>Diseño paramétrico: uso de cotas y relaciones.</li>
+  <li>Ejercicio práctico: modelado completo de una pieza simple.</li>
+</ul>
+</div>
+
+<div class="bg-verdepaltaoscuro text-white p-6 rounded-2xl shadow-lg text-left">
+<h4 class="text-xl font-semibold mt-6 mb-2">Clase 3: Ensamblaje de componentes</h4>
+<ul class="list-disc list-inside space-y-2 mb-6">
+  <li>Estructura de un ensamblaje y gestión de relaciones entre piezas.</li>
+  <li>Tipos de restricciones: concéntrico, coincidente, paralelo, etc.</li>
+  <li>Detección de colisiones y análisis de movimiento básico.</li>
+  <li>Ejercicio práctico: creación de un ensamblaje funcional.</li>
+</ul>
+</div>
+
+<div class="bg-verdepaltaoscuro text-white p-6 rounded-2xl shadow-lg text-left">
+<h4 class="text-xl font-semibold mt-6 mb-2">Clase 4: Planos técnicos y documentación</h4>
+<ul class="list-disc list-inside space-y-2 mb-6">
+  <li>Generación de vistas estándar, secciones y detalles.</li>
+  <li>Acotado automático y manual.</li>
+  <li>Incorporación de listas de materiales (BOM) y notas técnicas.</li>
+  <li>Exportación de planos para fabricación o presentación profesional.</li>
+</ul>
+</div>
+
+<div class="bg-verdepaltaoscuro text-white p-6 rounded-2xl shadow-lg text-left">
+<h4 class="text-xl font-semibold mt-6 mb-2">Clase 5: Simulación y análisis básico</h4>
+<ul class="list-disc list-inside space-y-2 mb-6">
+  <li>Introducción a SolidWorks Simulation: tipos de análisis disponibles.</li>
+  <li>Análisis de esfuerzos y deformaciones en piezas simples.</li>
+  <li>Aplicación de cargas, condiciones de frontera y materiales.</li>
+  <li>Interpretación de resultados y validación de diseño.</li>
+</ul>
+</div>
+
+<div class="bg-verdepaltaoscuro text-white p-6 rounded-2xl shadow-lg text-left">
+<h4 class="text-xl font-semibold mt-6 mb-2">Clase 6: Proyecto final y presentación</h4>
+<ul class="list-disc list-inside space-y-2 mb-6">
+  <li>Desarrollo de un proyecto integral: desde boceto hasta ensamblaje y plano.</li>
+  <li>Aplicación de buenas prácticas de modelado y documentación.</li>
+  <li>Presentación de proyectos finales con análisis y mejoras.</li>
+  <li>Cierre del curso, entrega de certificados y recursos para continuar aprendiendo.</li>
+</ul>
+</div>
+    </div>
+
+
+
+    <br>
+    <br>
+  <div class="text-left">
+  <h3 class="text-2xl font-semibold mt-10 mb-3 text-turquesaprofundo">¿Por qué elegir este curso?</h3>
+  <p>
+    Este curso te brinda la oportunidad de adquirir habilidades prácticas en SolidWorks, una herramienta fundamental en el diseño industrial y la ingeniería. Aprenderás a modelar, ensamblar y documentar tus proyectos de manera profesional, lo que te permitirá destacarte en el mercado laboral y mejorar tus competencias técnicas.
+  </p>
+</div>
+    </div>
+ 
+
+<br>
+    
+    <!-- Botón volver-->
+    <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        <a href="./cursossangha.html" class="w-30 bg-turquesaprofundo text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-verdeingles transition">
+         Volver a Cursos
+       </a>
+       </div>
+   
+    <br>
+    <div class="text-center">
+      <a href="mailto:incubadoradetifypppunla@gmail.com?subject=Consulta%20Modelo%206%20-%20Lanzamiento" 
+      class="inline-block bg-azulino text-white py-3 px-6 rounded-lg font-semibold hover:bg-verdeingles transition">
+        Comprar aca
+      </a>
+    </div>
+
+    <br>
+    <div class="text-center">
+      <a href="logincursos.html" 
+      class="inline-block bg-verdepetroloscuro text-white py-3 px-6 rounded-lg font-semibold hover:bg-verdeingles transition">
+        Login Cursos
+      </a>
+    </div>
+
+
+
+    <!-- CATÁLOGOS -->
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-turquesaprofundo mb-6">Descarga el programa</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="./documents/CURSO SOLID WORKS.pdf" download>
+          <img src="./images/IA Aplicada (1).png" alt="programa solid" class="h-56 rounded-xl shadow-lg" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!--PREFOOTER -->
+
+<section class="bg-verdepetroloscuro text-white py-10 px-4 font-outfit">
+  <!-- Grid superior -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+
+    <!-- CONSULTORÍA -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">CONSULTORÍA</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Diseño</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías a Emprendedores</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Gestión</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Fabricacion Digital</a></li>
+        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Comunicación</a></li>
+      </ul>
+    </div>
+
+    <!-- REDES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">REDES</h2>
+      <div class="flex space-x-4 text-xl">
+        <a href="https://www.instagram.com/inkao_estudio/?hl=es" target="_blank" class="hover:text-amarillooro transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="mt-4 text-sm leading-relaxed">
+        <p>La Plata, Argentina</p>
+        <p><a href="mailto:finanzas.saludables.emprende@gmail.com" class="hover:text-amarillooro transition-colors">inkao.estudio@gmail.com</a></p>
+        <p><a href="tel:+5492215738117" class="hover:text-amarillooro transition-colors">+54 9221 591 6442</a></p>
+      </div>
+    </div>
+
+    <!-- SECCIONES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-verdementa transition-colors">Asesorias</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Cursos</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Servicios</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Equipo</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- LOGO -->
+    <div class="flex items-center justify-center">
+        <img src="images/Lineal Fondo Negro + Marco Negro (1).png" alt="Logo FS" class="w-auto h-20" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Línea y grid inferior -->
+  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
+    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Política de privacidad</a>
+    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Política de Cookies</a>
+    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Términos y condiciones</a>
+    <p>INKAO 2025 © Todos los derechos reservados</p>
+  </div>
+</section>
+
+
+   <!-- FOOTER -->
+<footer class="bg-white text-black text-center py-4 px-2">
+  <div class="flex justify-center items-center gap-6 mb-4 flex-wrap">
+    <div class="bg-white flex items-center justify-center rounded p-4" style="height: 2rem; width: auto;">
+      <img src="images/logotipo negro.png" alt="Logo Bloms" class="w-8 sm:w-12 h-auto" />
+    </div>
+  </div>
+  <p class="text-sm xs:text-base px-2 sm:px-0">
+    © 2025 BLÖMS CONSULTORA todos los derechos reservados. Responsable de DISEÑO DE CONCEPTO, GESTIÓN EMPRENDIMIENTO Y DISEÑO WEB
+  </p>
+</footer>
+
+ 
+
+<!-- JS para abrir/cerrar el menú en móvil -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      const icon = document.getElementById('menu-icon');
+  
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-full');
+        menu.classList.toggle('left-0');
+        menu.classList.toggle('bg-[#3e2d4f]');
+        menu.classList.toggle('w-full');
+        menu.classList.toggle('p-4');
+        menu.classList.toggle('shadow-md');
+        menu.classList.toggle('z-40');
+  
+        // Cambiar icono
+        if (menu.classList.contains('hidden')) {
+          icon.innerHTML = '&#9776;'; // ☰
+        } else {
+          icon.innerHTML = '&#10005;'; // ✖
+        }
+      });
+    });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+  });
+  </script>
+
+<script>
+  document.getElementById('contactoMail').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+
+    const asunto = 'Consulta sobre el Coaching Finanzas Saludables';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la Comunidad Finanzas Saludables.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+
+    const mailtoLink = `mailto:finanzas.saludables.emprende@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
+<script>
+  document.getElementById('formComunidad').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreUsuario').value.trim();
+    const email = document.getElementById('correoUsuario').value.trim();
+
+    if (!nombre || !email) return;
+
+    // Reemplazá esta URL con la que te dio SheetBest
+    const endpoint = "https://api.sheetbest.com/sheets/5c1c5dc7-d22e-4014-95d7-5005d25b56c2";
+
+    const data = {
+      nombre: nombre,
+      email: email
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById('mensajeSuscripcion').classList.remove('hidden');
+        document.getElementById('formComunidad').reset();
+      } else {
+        alert("Hubo un error al enviar tus datos. Intentá más tarde.");
+      }
+    } catch (error) {
+      alert("Error de red. Verificá tu conexión.");
+      console.error(error);
+    }
+  });
+</script>
+
+<script>
+  document.getElementById('formComunidad').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita envío tradicional
+
+    // Aquí puedes agregar la integración con un backend o Google Forms
+
+    // Mostrar mensaje de confirmación
+    const mensaje = document.getElementById('mensajeSuscripcion');
+    mensaje.classList.remove('hidden');
+
+    // Opcional: limpiar formulario
+    this.reset();
+
+    // Opcional: ocultar mensaje después de unos segundos
+    setTimeout(() => {
+      mensaje.classList.add('hidden');
+    }, 5000);
+  });
+</script>
+
+
+  
+ 
+  </body>
+</html>
+
