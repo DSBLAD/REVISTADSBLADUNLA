@@ -5,7 +5,7 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>INKAO</title>
+      <title>DSBLAD</title>
     
       <!-- Meta para redes sociales -->
       <meta property="og:title" content="INKAO" />
@@ -16,7 +16,7 @@
     
       <!-- Icono -->
       <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/ChatGPT Image 24 may 2025, 19_11_32.png" type="image/x-icon" />
+      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     
       <!-- Estilos personalizados -->
       <link rel="stylesheet" href="style.css" />
@@ -53,6 +53,10 @@
           Turquesa: '#26a7a6',
           cyanoscuroelegante: '#006D77',
           turquesaprofundo: '#007C91',
+          violetweb: '#7F5AF0',
+          pastelviolet: '#CBB7E2',
+          darkviolet: '#3D2C54', 
+          bordoviolet: '#A45C84',
         },
         fontSize: {
           '2xl': '1.5rem',
@@ -121,17 +125,17 @@
 
       
     
-    <body class="bg-black text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
+    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
     
 <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
 
   <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
-  <div class="flex items-center gap-2 text-lg sm:text-xl font text-amarillo">
+  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
     
     <!-- Logo -->
-    <a href="https://www.instagram.com/inkao_estudio/?hl=es" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <img src="./images/Boton - Sin fondo.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
     </a>
 
        
@@ -146,15 +150,15 @@
     </div>
   
     <!-- Menú visible en LG y desplegable en SM/MD -->
-    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-amarillo">
+    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
     
-      <li><a href="#sobre" class="block w-full py-1 hover:text-Turquesa">Sobre INKAO</a></li>
-      <li><a href="#estudios" class="block w-full py-1 hover:text-Turquesa">CURSOS</a></li>
-      <li><a href="logincursos.html" target="_blank" rel="noopener noreferrer" class="block w-full py-1 hover:text-Turquesa">INKAO Web</a></li>
+      <li><a href="#sobre" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+      <li><a href="#estudios" class="block w-full py-1 hover:text-pastelviolet">Comitee Editorial</a></li>
+      
       
       <li>
   <a id="contactoMail" href="#" 
-     class="block w-full py-1 text-white hover:text-Turquesa flex items-center space-x-2">
+     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
     <i class="fas fa-envelope"></i>
     <span>Contacto</span>
   </a>
@@ -175,45 +179,56 @@
   <section 
   id="fs"
   class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-6 gap-12"
->
-  <!-- Logo -->
-  <div class="md:w-1/2 flex justify-center">
-    <img src="images/Lineal Sin Fondo + Recuadro.png" alt="Logo INKAO" class="w-full max-w-lg" />
+
+  <!-- Logo + Carteles -->
+<div class="md:w-1/2 flex justify-center relative">
+  <!-- Imagen de fondo -->
+  <img src="images/n1.png" alt="Logo n1" class="w-full max-w-2xl" />
+
+  <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Numero 1
   </div>
 
+  <!-- Cartel "DSB LAD LANZAMIENTO..." encima de la imagen -->
+  <div class="absolute top-20 right-20 bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-4 py-2 rounded-sm text-3xl leading-tight shadow-md">
+    <div>DSB LAD</div>
+    <div>LANZAMIENTO</div>
+    <div>Diseño sin Barreras</div>
+  </div>
+</div>
+
+ 
   <!-- Texto -->
   <div class="md:w-1/2 text-center md:text-left">
-    <h1 class="text-6xl md:text-8xl text-Turquesa font-barlow-condensed mb-2">INKAO</h1>
+    <h1 class="text-6xl md:text-8xl text-darkviolet font-barlow-condensed mb-2">DSB LAD</h1>
 
-    <h2 class="text-3xl md:text-5xl text-amarillooro font-bold mb-6 leading-tight">ESTUDIO DE DISEÑO</h2>
+    <h2 class="text-3xl md:text-5xl text-black font-bold mb-6 leading-tight">REVISTA DE DISEÑO</h2>
 
-   <div class="text-white text-lg leading-relaxed px-6 space-y-6 text-justify sm:text-left">
+   <div class="text-black text-sm leading-relaxed space-y-6 text-justify sm:text-left">
 
-    En <strong>INKAO</strong> creemos que el diseño es una herramienta transformadora, y lo abordamos desde una mirada integral, estratégica y consciente. 
-    No se trata solo de formas o estética, sino de crear soluciones que conecten con las personas, que comuniquen con claridad y que se produzcan con inteligencia.
+<strong>DSB</strong> propone ser una publicación del Laboratorio de Diseño (LAD), con un enfoque de revista de divulgación académica. Se orienta hacia las áreas del Diseño Industrial, Diseño y Comunicación Visual para poner el foco en la divulgación de actividades académicas y de investigación tanto de grado como posgrado. Desde este lugar, pretende abrirse hacia otras disciplinas del campo del diseño y su objetivo principal es constituirse como un espacio plural para la producción y difusión de conocimientos y desarrollos vinculados al diseño, tanto en su dimensión académica como profesional. Para permitir así el diálogo entre la comunidad, el ámbito educativo, el ejercicio profesional y el público general interesado en el diseño. 
+Busca visibilizar resultados de proyectos de investigación,  de las asignaturas de grado y posgrado , en especial los Talleres de PPP, Tesinas de grado como lo son los TIFs, problemáticas, tendencias, metodologías, procesos creativos e innovaciones en el campo del diseño, así como contribuir al fortalecimiento del pensamiento crítico y proyectual.
+La revista se coordinó para que su publicación aborde la problemática del diseño de modo multidisciplinar con una periodicidad regular ( Anual ) y un promedio de 20 artículos por número . Estará disponible en formato digital de acceso abierto.
+ DSB LAD ofrece dos posibilidades principales de participación para investigadores, docentes, profesionales y estudiantes vinculados al campo del diseño. La primera corresponde al envío de artículos, ensayos académicos, reseñas críticas y proyectos teóricos dentro de los campos del Diseño Industrial y de Comunicación Visual, y otras disciplinas afines, tanto desde una perspectiva disciplinar como interdisciplinar. La segunda toma el formato de comunicación breve y propone una presentación con énfasis en lo visual, donde se podrán mostrar resultados de la experiencia desarrollo de producto, trabajos de estudiantes, propuestas docentes y entrevistas.
+
   </p>
-  <p class="text-lg text-white mb-4">
-    Te acompañamos en un proceso de diseño sólido, desde la idea hasta su materialización, combinando diseño industrial, branding, modelado 3D y tecnologías de fabricación digital.
-  </p>
-  <p class="text-lg text-white">
-    En cada proyecto buscamos equilibrio entre innovación, propósito y producción, porque para nosotros, diseñar también es construir futuro.
-  </p>
-    </p>
-    <p class="text-xl text-amarillooro mb-8">
-      <strong> Te invito a que conozcas nuestro espacio.</strong>
+  
+    <p class="text-xl text-darkviolet mb-8">
+      <strong> Te invitamos a que conozcas nuestra publicación.</strong>
     </p>
    </div>
 
    <!-- Botones en fila -->
 <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
-  <a href="#estudios" class="h-12 flex items-center justify-center bg-verdepetroloscuro text-white px-2 rounded-lg text-sm font-bold shadow hover:bg-amarillooro transition text-center">
-    DISEÑO
+  <a href="#estudios" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
+    NUMEROS
   </a>
-  <a href="#estudios" class="h-12 flex items-center justify-center bg-verdepetroloscuro text-white px-2 rounded-lg text-sm font-bold shadow hover:bg-amarillooro transition text-center">
-    CURSOS
+  <a href="#estudios" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
+    DOSSIERS
   </a>
-  <a href="#estudios" class="h-12 flex items-center justify-center bg-verdepetroloscuro text-white px-2 rounded-lg text-sm font-bold shadow hover:bg-amarillooro transition text-center">
-    SERVICIOS
+  <a href="#estudios" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
+    GUIAS
   </a>
 </div>
 </div>
@@ -244,118 +259,368 @@
     }
   </style>
 
-  <!-- Sobre -->
-
-   <section id="sobre" class="py-20 px-6 bg-black text-center">
-  <div class="mx-auto px-6 py-20 bg-gris rounded-2xl max-w-3xl">
-    <h2 class="text-3xl text-white font-semibold mb-6">Sobre INKAO</h2>
-     <div class="border-t-2 border-amarillo mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-    <div class="text-white text-lg leading-relaxed space-y-6 text-justify sm:text-left">
-   <p><strong>INKAO</strong> es un estudio de diseño que acompaña a emprendedores, cooperativas, profesionales y empresas en el desarrollo estratégico de sus productos, marcas y experiencias. Integra diseño industrial, branding, modelado 3D y tecnologías de fabricación digital, con un enfoque centrado en las personas, el contexto y el impacto real.</p>
-
-<p>Nace como un espacio de creación, acompañamiento y mejora continua, pensado para proyectos que quieren destacarse, crecer y adaptarse a los desafíos actuales sin perder su identidad. En cada edición, trabajamos junto a quienes buscan transformar sus ideas en soluciones funcionales, sostenibles y con sentido.</p>
-
-<p>Creemos que un <strong>diseño coherente, bien gestionado y con propósito</strong> puede ser un motor de cambio. Por eso, nuestro enfoque combina creatividad, análisis, experimentación y estrategia, en un proceso dinámico que va desde la concepción hasta la materialización.</p>
-
-<p>Nuestra propuesta integra herramientas de diseño industrial, prototipado, construcción de identidad visual, comunicación y producción digital, acompañadas por una mirada profesional, humana y accesible.</p>
-
-<p><strong>INKAO</strong> te invita a diseñar desde lo esencial, con claridad y proyección. Para que tus ideas no solo tomen forma, sino que se conviertan en productos, marcas o servicios que conecten con las personas y construyan valor en el tiempo.</p>
-
-<p>Ofrecemos un espacio para pensar, desarrollar, testear y evolucionar. Porque diseñar bien no es solo una cuestión estética: es crear con intención, con impacto y con futuro.</p>
-  </div>
-  </div>
-
-  <div class="text-center mt-8">
-    <a href="formulario.html"
-       target="_blank" rel="noopener noreferrer"
-       class="inline-block bg-verdepetroloscuro text-white text-m font-semibold px-4 py-3 rounded-lg shadow-md hover:bg-amarillooro transition">
-      Quiero formar parte
-    </a>
-  </div>
-</section>
-
-<!-- Sección de estudios -->
-<section id="estudios" class="py-10 px-6 bg-verdepetroloscuro">
-  <h2 class="text-3xl font-semibold text-center mb-10 text-white">LO QUE TENEMOS PARA OFRECERTE...</h2>
-   <div class="border-t-2 border-amarillo mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+  <!-- Sección de estudios -->
+<section id="estudios" class="py-10 px-6 bg-darkviolet">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-white">NUMEROS DSB LAD</h2>
+   <div class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
 
     <section id="asesorias">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
 
     <!-- Tarjeta 1 -->
+<div>
+  <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 transition-all duration-300 transform hover:scale-105 text-center">
+    
+   
+     <!-- Contenedor relativo para superponer cartel sobre imagen -->
+<div class="relative mb-4 w-fit mx-auto">
+  <!-- Imagen del número -->
+  <img src="images/n1.png" alt="Número 1" class="w-20 h-20 object-contain" />
+
+  <!-- Cartel centrado encima de la imagen -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-1 py-1 rounded-sm text-[10px] leading-tight text-center shadow min-w-[90px]">
+      <div>DSB LAD</div>
+      <div>LANZAMIENTO</div>
+      <div>Diseño sin Barreras</div>
+    </div>
+  </div>
+</div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>Numero especial de Lanzamiento</p>
+    <br>
+    <a href="unidadsangha.html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">
+      Ver numero
+    </a>
+    <br><br>
+  </div>
+</div>
+
+
+    <!-- Tarjeta 2 -->
      
     <div>
-      <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-        <div class="text-6xl mb-4">
-  <i class="fas fa-pencil-ruler"></i>
+      <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
 </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO DE PRODUCTO Y GESTION DE DISEÑO</h3>
-        <p class="mb-4">Diseño industrial aplicado a la realidad con factibilidad tecnológica, productiva y financiera</p>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Proximamente
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">NUMERO 2. </p>
+        <p>  Hacia una epistemología del diseño</p>
         <br>
-        <a href="unidadsangha.html" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Saber más</a>
+        <a href="unidadsangha.html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver numero</a>
       <br>
       <br>
       </div>
-    </div>
-
-    <!-- Tarjeta 2 -->
-    <div>
-      <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-        <div class="text-6xl mb-4">
-          <i class="fas fa-people-group"></i>
-        </div>
-        <h3 class="text-m font-bold mb-2">EQUIPO DE PROFESIONALES</h3>
-        <p class="mb-4">Conocé a los profesionales y a los estudios asociados, que conforman el equipo de trabajo.</p>
-        <br>
-        <a href="unidadsangha.html#equipoprofesionales" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Conocenos</a>
-      <br>
-      <br>
-        </div>
     </div>
 
     <!-- Tarjeta 3 -->
+     
     <div>
-       <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-        <div class="text-6xl mb-4">
-          <i class="fas fa-chalkboard-teacher"></i>
-        </div>
-        <h3 class="text-m font-bold mb-2">CURSOS Y CAPACITACIONES</h3>
-        <p class="mb-4">Profundizá conocimientos en Modelado 3D, fabricación digital, gestión y diseño de productos.</p>
+      <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Proximamente
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">NUMERO 3. </p>
+          <p> El Diseño como factor de innovación</p>
         <br>
-        <a href="cursossangha.html" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ir al sitio</a>
-     <br>
-        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver numero</a>
+      <br>
+      <br>
       </div>
-     </div>
+    </div>
 
     <!-- Tarjeta 4 -->
-    <div>
      
-      <div class="bg-cyanooscuroelegante text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-        <div class="text-6xl mb-4">
-          <i class="fas fa-handshake"></i>
-        </div>
-        <h3 class="text-m font-bold mb-2">ASESORÍAS PERSONALIZADAS</h3>
-        <p class="mb-4">Consultoría y acompañamiento para emprendedores y empresas.</p>
+    <div>
+      <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n6.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Proximamente
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">NUMERO 4. </p>
+        <p> La necesaria mirada crítica del diseño</p>
         <br>
-        <a href="unidadsangha.html#equipoprofesionales" target="_blank" class="bg-white text-Turquesa font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Agendá tu turno</a>
+        <a href="unidadsangha.html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver numero</a>
       <br>
-        <br> 
+      <br>
       </div>
-        </div>
+    </div>
+
+    
+
+    
       </section>
 
   </div>
 </section>
 
+<!-- Sección de estudios -->
+<section id="estudios" class="py-10 px-6 bg-black">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-white">DOSSIERS DSB LAD</h2>
+   <div class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+
+    <section id="asesorias">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
+
+    <!-- Tarjeta 1 -->
+<div>
+  <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 transition-all duration-300 transform hover:scale-105 text-center">
+    
+   
+     <!-- Contenedor relativo para superponer cartel sobre imagen -->
+<div class="relative mb-4 w-fit mx-auto">
+  <!-- Imagen del número -->
+  <img src="images/n2.png" alt="Dossier 1" class="w-20 h-20 object-contain" />
+
+  <!-- Cartel centrado encima de la imagen -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-1 py-1 rounded-sm text-[10px] leading-tight text-center shadow min-w-[90px]">
+      <div>DSB LAD</div>
+      <div>LANZAMIENTO</div>
+      <div>5 años del LAD</div>
+    </div>
+  </div>
+</div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">DOSSIER 1.</p>
+    <p>Numero especial 5 años del LAD</p>
+    <br>
+    <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">
+      Ver dossier
+    </a>
+    <br><br>
+  </div>
+</div>
+
+
+    <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Proximamente
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">DOSSIER 2. </p>
+        <p>  Practicas preprofesionales en el Diseño</p>
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver dossier</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Proximamente
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">DOSSIER 3. </p>
+          <p> Los TIFs como motor de innovación</p>
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver dossier</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Proximamente
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">DOSSIER 4. </p>
+        <p> Investigación, ciencia y tecnologia del diseño</p>
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver dossier</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    
+
+    
+      </section>
+
+  </div>
+</section>
+
+<!-- Sección de estudios -->
+<section id="estudios" class="py-10 px-6 bg-pastelviolet">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-white">GUIA PARA AUTORES Y LECTORES DSB LAD</h2>
+   <div class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+
+    <section id="asesorias">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
 
   
+  <!-- Tarjeta 1 -->
+     
+    <div>
+      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    POLITICAS
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">POLITICAS EDITORIALES.</p>
+       
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
+      <br>
+      <br>
+      </div>
+    </div>
+    
+    <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    GUIA DE AUTORES
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">GUIA DE AUTORES.</p>
+       
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+     
+    <div>
+      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n1.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    REGLAMENTO
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">REGLAMENMTO.</p>
+        
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    MODELOS
+  </div>
+        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+        <p class="mb-4">MODELOS. </p>
+       
+        <br>
+        <a href="unidadsangha.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    
+
+    
+      </section>
+
+  </div>
+</section>
+
+  <!-- Sobre -->
+
+   <section id="sobre" class="py-20 px-6 bg-white text-center">
+  <div class="mx-auto px-6 py-20 bg-gris rounded-2xl max-w-3xl">
+    <h2 class="text-3xl text-black font-semibold mb-6">Sobre DISEÑO SIN BARRERAS</h2>
+     <div class="border-t-2 border-darkviolet mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+    <div class="text-black text-lg leading-relaxed space-y-6 text-justify sm:text-left">
+  <p><strong>DSB LAD – Diseño Sin Barreras</strong> es una revista de diseño que promueve la accesibilidad, la inclusión y la innovación en los procesos creativos y productivos. Nace como un espacio editorial colaborativo que articula saberes, experiencias y herramientas desde una perspectiva crítica y transformadora del diseño.</p>
+
+<p>La publicación se construye como una plataforma para visibilizar proyectos, ideas y prácticas que apuestan a un diseño más equitativo, comprometido con el entorno y centrado en las personas. Cada número invita a reflexionar sobre los desafíos contemporáneos del diseño, desde lo social, lo cultural, lo técnico y lo humano.</p>
+
+<p>Creemos que un <strong>diseño inclusivo, consciente y situado</strong> puede abrir caminos, derribar barreras y generar un impacto positivo real. Por eso, DSB LAD reúne voces diversas, promueve el diálogo interdisciplinario y apuesta a la producción de contenidos que inspiren, cuestionen y propongan.</p>
+
+<p>La revista integra herramientas del diseño industrial, gráfico y digital, junto con enfoques de investigación, docencia y activismo. Se proyecta como un puente entre profesionales, estudiantes, colectivos y comunidades que entienden el diseño como una herramienta de transformación.</p>
+
+<p><strong>DSB LAD</strong> te invita a ser parte de un movimiento editorial donde diseñar es también incluir, escuchar, repensar y crear con sentido. Porque el diseño sin barreras no es una meta, sino un camino que se construye colectivamente.</p>
+
+<p>En cada edición, abrimos un espacio para pensar, compartir y avanzar hacia un diseño más accesible, abierto y comprometido con el presente y el futuro.</p>
+ </div>
+  </div>
+
+  <div class="text-center mt-8">
+    <a href="formulario.html"
+       target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-black text-white text-m font-semibold px-4 py-3 rounded-lg shadow-md hover:bg-darkviolet transition">
+      Quiero formar parte y te acerco mi propuesta
+    </a>
+  </div>
+</section>
+
+
     
 <!-- Comunidad -->
-<section id="comunidad" class="py-20 px-6 bg-verdeingles text-center">
-  <h2 class="text-3xl font-semibold mb-6 text-white">Sumate a las novedades de INKAO</h2>
+<section id="comunidad" class="py-20 px-6 bg-darkviolet text-center">
+  <h2 class="text-3xl font-semibold mb-6 text-white">Sumate a las novedades de DSB LAD</h2>
   <p class="max-w-xl mx-auto mb-6 text-lg text-white">
-    Recibí recursos, novedades y muchas cosas más que te suman semana a semana.
+    Recibí novedades y muchas cosas más.
   </p>
 
   <!-- Formulario -->
@@ -375,7 +640,7 @@
         required
       />
       <button type="submit"
-        class="bg-amarillooro text-white px-4 py-2 rounded-r-md hover:bg-Turquesa transition">
+        class="bg-black text-white px-4 py-2 rounded-r-md hover:bg-pastelviolet transition">
         Suscribirme
       </button>
     </div>
@@ -385,23 +650,11 @@
   <p id="mensajeSuscripcion" class="mt-6 text-green-100 hidden">¡Gracias por suscribirte!</p>
 </section>
 
-<!-- Botón flotante de WhatsApp con estilos corregidos -->
-<div class="fixed bottom-6 right-6 z-50">
-  <a href="https://wa.me/5492215916442"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-transform transform hover:scale-110">
 
-    <!-- Ícono de WhatsApp -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
-      <path d="M16.001 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.45 1.71 6.39L3.2 28.8l6.6-1.73c1.83.96 3.9 1.47 6.2 1.47 7.07 0 12.8-5.73 12.8-12.8s-5.73-12.8-12.8-12.8zm0 23.2c-2.01 0-3.95-.56-5.63-1.61l-.4-.24-3.92 1.03 1.05-3.82-.26-.41a10.44 10.44 0 01-1.54-5.44c0-5.77 4.7-10.48 10.48-10.48s10.48 4.7 10.48 10.48-4.7 10.48-10.48 10.48zm5.38-7.56c-.3-.15-1.77-.88-2.05-.98s-.48-.15-.68.15-.79 1-.96 1.21-.36.24-.66.08a8.33 8.33 0 01-2.4-1.47 9.49 9.49 0 01-1.69-2.13c-.18-.3 0-.47.14-.63s.32-.36.48-.54c.15-.18.32-.39.44-.61a.58.58 0 000-.55c-.15-.15-.68-1.67-.94-2.29s-.5-.53-.69-.54h-.57c-.22 0-.56.08-.86.38s-1.13 1.1-1.13 2.68 1.15 3.1 1.32 3.28c.16.16 2.27 3.43 5.5 4.81a19.25 19.25 0 001.9.7 4.56 4.56 0 002.1.14c.63-.1 1.87-.75 2.13-1.48.27-.74.27-1.35.19-1.46s-.3-.23-.6-.38z"/>
-    </svg>
-  </a>
-</div>
 
 <!--PREFOOTER -->
 
-<section class="bg-verdepetroloscuro text-white py-10 px-4 font-outfit">
+<section class="bg-black text-white py-10 px-4 font-outfit">
   <!-- Grid superior -->
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
 
@@ -409,11 +662,11 @@
     <div>
       <h2 class="text-lg font-bold mb-3">CONSULTORÍA</h2>
       <ul class="space-y-1">
-        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Diseño</a></li>
-        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías a Emprendedores</a></li>
-        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Gestión</a></li>
-        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Fabricacion Digital</a></li>
-        <li><a href="#" class="hover:text-amarillooro transition-colors">Asesorías en Comunicación</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
       </ul>
     </div>
 
@@ -421,14 +674,13 @@
     <div>
       <h2 class="text-lg font-bold mb-3">REDES</h2>
       <div class="flex space-x-4 text-xl">
-        <a href="https://www.instagram.com/inkao_estudio/?hl=es" target="_blank" class="hover:text-amarillooro transition-colors">
+        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
       <div class="mt-4 text-sm leading-relaxed">
-        <p>La Plata, Argentina</p>
-        <p><a href="mailto:finanzas.saludables.emprende@gmail.com" class="hover:text-amarillooro transition-colors">inkao.estudio@gmail.com</a></p>
-        <p><a href="tel:+5492215738117" class="hover:text-amarillooro transition-colors">+54 9221 591 6442</a></p>
+        <p>Lanús, Argentina</p>
+        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
       </div>
     </div>
 
@@ -436,9 +688,9 @@
     <div>
       <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
       <ul class="space-y-1">
-        <li><a href="#" class="hover:text-verdementa transition-colors">Asesorias</a></li>
-        <li><a href="#" class="hover:text-verdementa transition-colors">Cursos</a></li>
-        <li><a href="#" class="hover:text-verdementa transition-colors">Servicios</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Numeros</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Dossiers</a></li>
+        <li><a href="#" class="hover:text-verdementa transition-colors">Guias</a></li>
         <li><a href="#" class="hover:text-verdementa transition-colors">Equipo</a></li>
         <li><a href="#" class="hover:text-verdementa transition-colors">Contacto</a></li>
       </ul>
@@ -446,7 +698,7 @@
 
     <!-- LOGO -->
     <div class="flex items-center justify-center">
-        <img src="images/Lineal Fondo Negro + Marco Negro (1).png" alt="Logo FS" class="w-auto h-20" />
+        <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
       </div>
     </div>
   </div>
@@ -456,21 +708,9 @@
     <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Política de privacidad</a>
     <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Política de Cookies</a>
     <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-amarillooro transition-colors">Términos y condiciones</a>
-    <p>INKAO 2025 © Todos los derechos reservados</p>
+    <p>DSB LAD 2025 © Todos los derechos reservados</p>
   </div>
 </section>
-
- <!-- FOOTER -->
-<footer class="bg-white text-black text-center py-4 px-2">
-  <div class="flex justify-center items-center gap-6 mb-4 flex-wrap">
-    <div class="bg-white flex items-center justify-center rounded p-4" style="height: 2rem; width: auto;">
-      <img src="images/logotipo negro.png" alt="Logo Bloms" class="w-8 sm:w-12 h-auto" />
-    </div>
-  </div>
-  <p class="text-sm xs:text-base px-2 sm:px-0">
-    © 2025 BLÖMS CONSULTORA todos los derechos reservados. Responsable de DISEÑO DE CONCEPTO, GESTIÓN EMPRENDIMIENTO Y DISEÑO WEB
-  </p>
-</footer>
 
    
 
