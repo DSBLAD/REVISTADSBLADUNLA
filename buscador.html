@@ -174,32 +174,96 @@
     </ul>
   </nav>
 
+  <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+<div class="sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
+
+      <a href="#equipo" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Equipo editorial
+    </a>
+    
+    <a href="#lectores" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Información para Lectores
+    </a>
+
+    <a href="#autores" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Información para Autores
+    </a>
+
+    <a href="#bibliotecarios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
+      Información para Bibliotecarios
+    </a>
+
+    <a href="#etica" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Etica y buenas prácticas
+    </a>
+
+<a href="#Políticas" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Políticas
+    </a>
+
+    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Envios
+    </a>
+
+    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
+  <i class="fas fa-search"></i>
+  <span>Buscador</span>
+</a>
+        
+  </div>
+</div>
+
+
+ 
+        
+  </div>
+</div>
+
 
 
 <!-- Políticas de cookies con ancho mayor -->
 <section id="cookies" class="py-10 px-6 bg-black">
   <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
-    <h2 class="text-3xl text-black font-semibold mb-6 text-center">Formulario</h2>
+    <h2 class="text-3xl text-black font-semibold mb-6 text-center">Buscador</h2>
      <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
     <div class="text-black text-xs leading-relaxed space-y-6 text-left">
 
       <!-- contenido markdown -->
       <div class="markdown prose w-full break-words dark:prose-invert light">
-    
-    <div class="flex justify-center">
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdYRIiLkDuqsAq90CtHtmY8AHSVSSxDog4Ko_WhJPXD2YzEjg/viewform?usp=header" 
-        width="100%" 
-        height="900" 
-        class="max-w-3xl w-full rounded-md border-none"
-        style="min-height: 3850px;"
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-      >
-        Cargando…
-      </iframe>
+
+        
+
+  <!-- Encabezado -->
+  <header class="bg-[#4B145F] text-white py-4 shadow-md">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <h1 class="text-xl font-semibold">Buscador DSB LAD</h1>
+      <a href="index.html" class="text-sm underline hover:text-purple-300">← Volver al inicio</a>
     </div>
+  </header>
+
+  <!-- Buscador -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Buscar artículos, autores, temas..."
+          class="w-full pl-12 pr-4 py-3 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-purple-400"
+          id="busquedaInput"
+        />
+        <div class="absolute left-4 top-3 text-gray-500">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <!-- Resultados simulados -->
+      <div id="resultados" class="mt-8 space-y-4">
+        <!-- Aquí se mostrarán resultados dinámicos -->
+      </div>
+    </div>
+  </main>
+
 
     <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
   </div>
@@ -326,6 +390,41 @@
     window.location.href = mailtoLink;
   });
 </script>
+
+ <!-- Script básico para búsqueda simulada -->
+  <script>
+    const resultados = [
+      "Artículo sobre ética editorial",
+      "Guía para autores",
+      "Normas de publicación",
+      "Equipo editorial de DSB LAD",
+      "Información para bibliotecarios"
+    ];
+
+    const input = document.getElementById('busquedaInput');
+    const contenedor = document.getElementById('resultados');
+
+    input.addEventListener('input', () => {
+      const filtro = input.value.toLowerCase();
+      contenedor.innerHTML = '';
+
+      if (filtro.length < 2) return;
+
+      const filtrados = resultados.filter(item => item.toLowerCase().includes(filtro));
+
+      if (filtrados.length === 0) {
+        contenedor.innerHTML = '<p class="text-gray-500">No se encontraron resultados.</p>';
+        return;
+      }
+
+      filtrados.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'bg-white p-4 rounded shadow hover:bg-gray-50';
+        div.textContent = item;
+        contenedor.appendChild(div);
+      });
+    });
+  </script>
 
  
   </body>
