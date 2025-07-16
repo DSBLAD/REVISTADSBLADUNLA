@@ -79,6 +79,10 @@
     },
   };
 </script>
+<style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
 
 <!-- FUENTES PERSONALIZADAS -->
 <style>
@@ -124,7 +128,7 @@
     </head>
 
       
-    
+   
     <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
     
 <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
@@ -218,65 +222,154 @@
   </div>
 </div>
 
-     	<!-- Políticas de cookies con ancho mayor -->
+    <!-- Políticas de cookies con ancho mayor -->
 <section id="cookies" class="py-10 px-6 bg-black">
   <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
-    <h2 class="text-3xl text-black font-semibold mb-6 text-center">Política de privacidad</h2>
-     <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+    <h2 class="text-3xl text-black font-semibold mb-6 text-center">Política Editorial DSB LAD</h2>
+    <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
     <div class="text-black text-xs leading-relaxed space-y-6 text-left">
+      <p class="text-right italic">Última actualización: 30 de junio 2025</p>
+
+      <!-- Tabs -->
+      <div class="max-w-6xl mx-auto px-4 py-2 bg-white shadow-md rounded-md mt-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 justify-center mb-6">
+          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="1">Políticas Generales</button>
+          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="2">Acceso Abierto y Ética</button>
+          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="3">Derechos y Licencias</button>
+          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="4">Divulgación y Accesibilidad</button>
+          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="5">Contenido y Originalidad</button>
+          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="6">Campaña de Difusión</button>
+        </div>
+
+        <!-- Tab 1: Políticas Generales -->
+
+ <div id="tab-1" class="tab-content active space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Políticas Generales</h2>
+          <p>La revista DSB adhiere a principios y estándares editoriales nacionales e internacionales que garantizan la calidad, integridad y responsabilidad en la publicación científica y de divulgación. A continuación, se detallan sus principales políticas:</p>
+          <p>DSB acepta contribuciones originales e inéditas que se enmarquen en las áreas del Diseño Industrial, el Diseño en Comunicación Visual y otras disciplinas del diseño, así como también producciones interdisciplinarias vinculadas al campo. La publicación está abierta a artículos científicos, ensayos, experiencias proyectuales, estudios de caso, entrevistas, reseñas y otros formatos que aporten al conocimiento, la reflexión crítica y la divulgación del diseño.</p>
+          <p><strong>Las condiciones generales para la postulación de trabajos son las siguientes:</strong></p>
+          <p><strong>Originalidad:</strong> Los trabajos deben ser originales e inéditos, no haberse publicado previamente ni estar en proceso de evaluación en otras revistas o medios.</p>
+          <p><strong>Relevancia temática:</strong> Las contribuciones deben abordar problemáticas, desarrollos o reflexiones vinculadas al diseño, con claridad conceptual y pertinencia para los ámbitos académico, profesional y/o de divulgación.</p>
+          <p><strong>Tipos de contribuciones:</strong></p>
+          <ul class="list-disc list-inside">
+            <p><strong>Artículos científicos</strong> con resultados de investigaciones teóricas o aplicadas.</p>
+            <li>Resultado de Proyectos de Investigación</li>
+            <li>Resultado de Proyectos de Extensión</li>
+            <li>Resultado de Proyectos de Vinculación</li>
+            <li>Resultado de Proyectos de Gestión</li>
+            <li>Resultado de Tesis de Grado</li>
+            <li>Resultado de Tesis de Especialización</li>
+            <li>Resultado de Tesis de Maestría</li>
+            <li>Resultado de Tesis de Doctorado</li>
+            <li>Resultado de Tesis de Posdoctorado</li>
+            <li>Resultado de Procesos Académicos</li>
+<br>
+            <p><strong>Artículos de Divulgación:</strong></p>
+            <li>Ensayos críticos y experiencias profesionales o pedagógicas documentadas</li>
+            <li>entrevistas a referentes</li>
+            <li>reseñas de libros, exposiciones u otros eventos relevantes para el campo del diseño</li>
+            <li>otras contribuciones de importancia para el LAD o las carreras afines.</li>
+          </ul>
+          <p><strong>Normas de presentación:</strong> Los trabajos deben respetar las pautas de estilo, extensión, formato y sistema de citación definidos por la revista (disponibles en la Guía para autores/as). Deben incluir título, resumen, palabras clave y datos de los/as autores/as con filiación institucional.</p>
+          <p><strong>Evaluación:</strong> Los artículos científicos serán sometidos a evaluación por pares bajo la modalidad de simple ciego, definidos por la revista (disponibles en el documento Políticas de evaluación y revisión). Las contribuciones de carácter divulgativo serán evaluadas por el comité editorial. En todos los casos, se notificará a los/as autores/as sobre el resultado del proceso y eventuales recomendaciones.</p>
+          <p><strong>Idioma:</strong> Se aceptan trabajos en español. Excepcionalmente se considerarán contribuciones en otros idiomas con traducción incluida.</p>
+          <p><strong>Acceso abierto:</strong> La revista se publica en acceso abierto y no cobra cargos por presentación ni por publicación de artículos.</p>
+          <p><strong>Derechos de autor/a:</strong> Los/as autores/as conservan los derechos sobre sus obras, que serán publicadas bajo una licencia Creative Commons que permite su uso y difusión no comercial, con la debida atribución.</p>
+<br>
+ <p>Estas condiciones buscan asegurar la calidad, diversidad y accesibilidad de los contenidos, promoviendo una revista abierta, plural y comprometida con el desarrollo del campo del diseño.</p>
+
+       
+        </div>
+
+        <!-- Tab 2: Acceso Abierto y Ética -->
+
+         <div id="tab-2" class="tab-content space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Acceso Abierto y Ética</h2>
+          <p><strong>Acceso abierto:</strong> DSB adopta una política de acceso abierto (Open Access), lo que significa que todos sus contenidos son de acceso libre, gratuito y universal desde el momento de su publicación, sin cargos para autores/as ni lectores/as. Esta política busca garantizar la democratización del conocimiento y facilitar la circulación de saberes en el ámbito académico, profesional y social.</p>
+          <p><strong>Ciencia abierta:</strong> En línea con los principios de la ciencia abierta, DSB promueve prácticas editoriales que favorezcan la transparencia, trazabilidad, reproducibilidad y colaboración en los procesos de producción y evaluación del conocimiento. Se incentiva el uso de repositorios abiertos, identificadores ORCID, y el enlace a fuentes de datos, metodologías o recursos complementarios cuando corresponda.</p>
+          <p><strong>Ética en la investigación:</strong> La revista respeta y exige el cumplimiento de normas éticas en la producción científica. Los artículos que involucren trabajo de campo, entrevistas o recolección de datos deberán declarar que se han respetado principios de consentimiento informado, privacidad de las personas participantes y evaluación por comités éticos institucionales, si correspondiera.</p>
+          <p><strong>Detección de plagio:</strong> Todos los trabajos recibidos serán sometidos a una revisión de originalidad, mediante herramientas antiplagio y lectura editorial, antes de ser enviados a evaluación. La revista no aceptará trabajos con indicios de plagio, autoplagio, falsificación o manipulación de datos. En caso de detectarse prácticas deshonestas, el trabajo será rechazado y se informará al autor/a y a su institución.</p>
+        </div>
+
+        <div id="tab-2" class="tab-content space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Acceso Abierto y Ética</h2>
+          <p>DSB adopta una política de acceso abierto (Open Access), garantizando acceso libre y gratuito desde su publicación, sin cargos para autores/as ni lectores/as.</p>
+          <h3 class="font-semibold">Ciencia abierta</h3>
+          <p>Se promueven prácticas editoriales que favorezcan la transparencia, trazabilidad, reproducibilidad y colaboración. Se incentiva el uso de repositorios abiertos y enlaces a datos/metodologías.</p>
+          <h3 class="font-semibold">Ética en la investigación</h3>
+          <p>Se exige respeto a principios éticos, consentimiento informado y privacidad. En caso de corresponder, deberá acreditarse evaluación por comités éticos.</p>
+          <h3 class="font-semibold">Detección de plagio</h3>
+          <p>Todos los trabajos serán revisados con herramientas antiplagio. Se rechazarán los trabajos con plagio, autoplagio o falsificación de datos.</p>
+        </div>
+
+        <!-- Tab 3: Derechos y Licencias -->
+
+ <div id="tab-3" class="tab-content space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Derechos y Licencias</h2>
+          <p><strong>Derechos de autor y licencias:</strong> Las y los autores conservan los derechos de autor de sus obras, pero autorizan su publicación en la revista bajo una licencia Creative Commons Atribución-NoComercial-CompartirIgual (CC BY-NC-SA), que permite el uso, reproducción y distribución del contenido con fines no comerciales, reconociendo la autoría y manteniendo la misma licencia.</p>
+          <p><strong>Compromiso editorial:</strong> El equipo editorial garantiza un proceso de selección y evaluación basado en la calidad de los trabajos, sin discriminación por razones de género, nacionalidad, ideología, adscripción institucional o trayectorias académicas. Se resguarda la confidencialidad en los procesos de revisión y se respetan los plazos y normas de publicación establecidos.</p>
+          <p><strong>Conflictos de interés:</strong> Autores/as, evaluadores/as y miembros del equipo editorial deberán declarar cualquier conflicto de interés que pudiera influir en el proceso de evaluación, decisión editorial o publicación. La revista se compromete a actuar con imparcialidad y transparencia ante cualquier situación que comprometa la objetividad académica.</p>
+          <p><strong>Retractaciones, correcciones y comentarios post-publicación:</strong> La revista contempla mecanismos para la corrección de errores, aclaraciones, retracciones o respuestas a comentarios posteriores a la publicación, siguiendo las recomendaciones del Committee on Publication Ethics (COPE). Estas acciones se llevarán a cabo con criterios de responsabilidad, ética y preservación del registro académico.</p>
+        </div>
+
+        <!-- Tab 4: Divulgación y Accesibilidad -->
+
+         <div id="tab-4" class="tab-content space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Divulgación y Accesibilidad</h2>
+          <p>La revista DSB promueve activamente la accesibilidad del conocimiento, tanto en términos de acceso abierto como de claridad y diversidad en los modos de comunicar. En su carácter mixto, integra producciones académicas rigurosas junto a textos de divulgación con un lenguaje claro y comprensible para públicos no especializados, sin perder profundidad conceptual.</p>
+          <p>Todos los contenidos se publican bajo una política de acceso abierto y gratuito, sin cargos para autores ni lectoras/es, favoreciendo la democratización del conocimiento. La revista adhiere a licencias Creative Commons, que permiten la circulación, uso y reutilización del material con los debidos créditos, en consonancia con principios de ciencia abierta.</p>
+          <p>Asimismo, se prioriza el diseño de contenidos accesibles desde el punto de vista visual, técnico y comunicacional, facilitando la lectura digital y considerando criterios de inclusión (uso adecuado del color, contraste, tipografías legibles y formatos compatibles con lectores de pantalla).</p>
+          <p>En cuanto a su estrategia de divulgación, la revista contará con presencia en plataformas académicas, redes sociales institucionales, newsletters y bases de datos abiertas, buscando ampliar el alcance de las producciones y favorecer su circulación en entornos educativos, profesionales y comunitarios.</p>
+          <p>De este modo, la revista asume el compromiso de contribuir a una comunicación científica y cultural más justa, equitativa y socialmente significativa.</p>
+        </div>
+
        
 
-      <!-- contenido markdown -->
-      <div class="markdown prose w-full break-words dark:prose-invert light">
+        <!-- Tab 5: Contenido y Originalidad -->
+<div id="tab-5" class="tab-content space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Contenido y Originalidad</h2>
+          <p>La revista DSB se propone como un espacio abierto, plural y dinámico para la producción, comunicación y circulación de saberes vinculados al Diseño Industrial, el Diseño en Comunicación Visual y otras áreas del diseño en sentido amplio. Su contenido articula perspectivas académicas, proyectuales, culturales, tecnológicas y pedagógicas, propiciando el intercambio entre la comunidad universitaria, el ámbito profesional y la sociedad en general.</p>
+          <p>Su abordaje mixto —que articula tanto contenidos científicos como de divulgación— permite tender puentes entre la comunidad académica, los espacios profesionales, los territorios y la sociedad en su conjunto.</p>
+          <p>Uno de los principales valores de la publicación radica en su carácter de divulgación mixto, que combina el rigor de la investigación científica con el lenguaje accesible de la divulgación. Esta dualidad permite ampliar el alcance del conocimiento generado, promover el pensamiento crítico y vincular el diseño con los debates contemporáneos en torno al desarrollo, la sustentabilidad, la cultura y la innovación social.</p>
+          <p>La revista fomenta la originalidad de los aportes y valora especialmente aquellos trabajos que aborden enfoques transdisciplinarios, experiencias proyectuales innovadoras, metodologías emergentes, desarrollos experimentales, reflexiones críticas y propuestas creativas que enriquezcan el campo del diseño desde miradas diversas y situadas.</p>
+          <p>En un contexto en el que existe una escasa presencia de revistas dedicadas al diseño en el ámbito de las Universidades Nacionales, esta publicación constituye una propuesta innovadora y necesaria para visibilizar investigaciones, experiencias proyectuales, desarrollos teóricos y prácticas emergentes en clave latinoamericana, con anclaje local y perspectiva situada.</p>
+          <p>La revista promueve la originalidad de los aportes y valora especialmente trabajos que interpelen los límites disciplinares, que dialoguen con problemáticas sociales, productivas, culturales y ambientales, y que aporten al desarrollo de metodologías innovadoras, enfoques inclusivos, perspectiva de género, diversidad epistemológica y vinculación con el territorio.</p>
+          <p>De esta manera, DSB se configura como un dispositivo de producción y democratización del conocimiento en diseño, en clave crítica, contemporánea y comprometida con los desafíos colectivos.</p>
+          <p>En sintonía con los principios institucionales de la Universidad Nacional de Lanús, la publicación busca contribuir a una producción de conocimiento comprometida con la justicia social, los derechos humanos, la soberanía, la integración regional y el fortalecimiento de una identidad latinoamericana, entendiendo al diseño como una herramienta transformadora al servicio del desarrollo humano y colectivo.</p>
+        </div>
 
-        <p>Última actualización: 30 de junio 2025</p>
-        <br>
+         <!-- Tab 6: Campaña y difusión -->
+ <div id="tab-6" class="tab-content space-y-4">
+          <h2 class="text-xl font-semibold text-[#4B145F]">Campaña de Difusión</h2>
+          <p>Uno de los principales objetivos que se propone DSB es la instalación y visibilización de su propuesta editorial dentro del campo académico y profesional del diseño, tanto a nivel nacional como regional. Esta propuesta se vincula con la escasa existencia de publicaciones científicas y de divulgación especializadas en diseño en el ámbito de las Universidades Nacionales, lo cual demanda un trabajo sostenido de posicionamiento.</p>
+          <p>Entre las acciones principales, se identifican:</p>
+          <ul class="list-disc pl-6">
+           <li>Contar con recursos para el diseño y gestión de campañas digitales (en redes sociales, newsletters, sitio web institucional, etc.).</li>
+            <li>Establecer vínculos con otras revistas, facultades, instituciones, cátedras y colectivos profesionales del ámbito del diseño, la comunicación y la cultura.</li>
+            <li>Participar en ferias, congresos y encuentros académicos o profesionales como forma de promover la revista y convocar a nuevas colaboraciones.</li>
+          </ul>
+         
+          <p>En este sentido, se prevé impulsar una campaña de difusión articulada con la Universidad Nacional de Lanús y sus canales oficiales, así como con redes de docentes, investigadores/as y estudiantes de carreras afines. También se propone desarrollar alianzas estratégicas con instituciones educativas, medios culturales, bibliotecas y colectivos de diseño, priorizando espacios de circulación abiertos, cooperativos y accesibles.</p>
+        </div>
 
+       
+       
+      </div>
 
-    <strong>1. Introducción<br>
-    </strong><p>En DSB LAD nos comprometemos a proteger tu privacidad y a garantizar la seguridad de la información proporcionada. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tus datos.</p>
-    <br>
-    <p><strong>2. Información Recopilada<br>
-    </strong>No requerimos registro para acceder al sitio de acceso público, pero recopilamos información a través de nuestro formulario de contacto y de suscripción. La información puede incluir tu nombre, dirección de correo electrónico y detalles relacionados con tus consultas o proyectos.</p>
-    </strong>Si requerimos registro para acceder al sitio de acceso por membresía, recopilamos información a través de nuestro formulario de suscripción paga. La información puede incluir tu nombre y apellido, dirección de correo electrónico y detalles relacionados con tus consultas o proyectos.</p>
-     <br>
-    <p><strong>3. Uso de la Información<br>
-    </strong>La información recopilada se utiliza exclusivamente para responder a tus consultas, proporcionar las asesorías solicitadas y mejorar la calidad de nuestros servicios. No compartimos esta información con terceros sin tu consentimiento explícito.</p>
-    <br>
-    <p><strong>4. Cookies y Tecnologías Similares<br>
-    </strong>Utilizamos cookies para mejorar la experiencia del usuario. Estas no contienen información personal identificable. Al continuar navegando, aceptas el uso de cookies de acuerdo con nuestra Política de Cookies.</p>
-     <br>
-    <p><strong>5. Transferencia Internacional de Datos<br>
-    </strong>DSB LAD ofrece servicios en todo el mundo, incluyendo la Comunidad Europea y Estados Unidos. Al utilizar nuestro sitio, aceptas la transferencia de datos a ubicaciones fuera de tu jurisdicción.</p>
-     <br>
-    <p><strong>6. Seguridad de la Información<br>
-    </strong>Implementamos medidas de seguridad para proteger tu información contra pérdida, acceso no autorizado o divulgación. Sin embargo, ten en cuenta que la transmisión de información a través de internet no es completamente segura.</p>
-     <br>
-    <p><strong>7. Menores de Edad<br>
-    </strong>Nuestros servicios no están dirigidos a menores de 16 años. No recopilamos intencionalmente información personal de menores. Si eres padre, madre o tutor y crees que hemos recopilado información de un menor, contáctanos para eliminarla.</p>
-     <br>
-    <p><strong>8. Cambios en la Política de Privacidad<br>
-    </strong>Nos reservamos el derecho de actualizar esta política para reflejar cambios en nuestras prácticas y la legislación aplicable. Te recomendamos revisar esta página periódicamente para estar informado.</p>
-     <br>
-    <p><strong>9. Contacto<br>
-    </strong>    
-     <p>Si tienes alguna pregunta sobre nuestra política de privacidad, no dudes en ponerte en contacto con nosotros a través de <a href="mailto:dsbladunla@gmail.com" class="text-pastelviolet hover:underline"><strong> dsbladunla@gmail.com</strong></a>.</p>
-
-
-</div>
-
-<br>
-
-<div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mt-6">
-<a href="politicas.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    VOLVER A POLITICAS
-  </a>
-  <a href="index.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    INICIO
-  </a>
-</div>
-
+      <!-- Botones de navegación -->
+      <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mt-6">
+        <a href="politicas.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
+          VOLVER A POLITICAS
+        </a>
+        <a href="index.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
+          INICIO
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
+
+
 
 <!--PREFOOTER -->
 
@@ -398,8 +491,30 @@
   });
 </script>
 
- 
-  </body>
+<!-- Script Tabs -->
+<script>
+  const buttons = document.querySelectorAll(".tab-btn");
+  const tabs = document.querySelectorAll(".tab-content");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.tab;
+      tabs.forEach(tab => tab.classList.remove("active"));
+      document.getElementById(`tab-${target}`).classList.add("active");
+    });
+  });
+</script>
+
+<style>
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+</style>
+
+
+</body>
 </html>
+
+ 
+  
 
 
