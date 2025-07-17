@@ -120,117 +120,96 @@
         .animate-fade-in-delay {
           animation: fadeIn 1.2s ease-out 0.3s forwards;
         }
-      </style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  nav,
+  .sticky {
+    margin: 0;
+    padding: 0;
+  }
+</style>
     </head>
 
       
     
-    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
+    <body class="bg-black text-[#222] font-sans"> <!-- Compensa altura del menú fijo -->
     
 <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
-
-
-  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
+<nav class="fixed top-0 left-0 right-0 bg-black text-white z-50 px-6 py-3 flex items-center justify-between">
   <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
-    
     <!-- Logo -->
     <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+      <img src="./images/n1.png" alt="LAD Logo" class="h-6 sm:h-8 md:h-10 w-auto object-contain" />
     </a>
-
-       
   </div>
 
- 
-    <!-- Botón hamburguesa visible solo en sm y md -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
-        <span id="menu-icon">&#9776;</span>
-      </button>
-    </div>
-  
-    <!-- Menú visible en LG y desplegable en SM/MD -->
-    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
-    
-     <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
-      
-      
-      <li>
-        <a id="contactoMail" href="mailto:dsbladunla@gmail.com"
-     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
-    <i class="fas fa-envelope"></i>
-    <span>Contacto</span>
-  </a>
-</li>
-      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
-        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
-        </a>
-        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
-<div class="sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
-
-      <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Equipo editorial
-    </a>
-    
-    <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Información para Lectores
-    </a>
-
-    <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Información para Autores
-    </a>
-
-    <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
-      Información para Bibliotecarios
-    </a>
-
-    <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Etica y buenas prácticas
-    </a>
-
-<a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Políticas
-    </a>
-
-    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Envios
-    </a>
-
-    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
-  <i class="fas fa-search"></i>
-  <span>Buscador</span>
-</a>
-
-<a href="index.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-xs text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    Inicio
-  </a>
-        
+  <!-- Botón hamburguesa visible solo en sm y md -->
+  <div class="lg:hidden">
+    <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+      <span id="menu-icon">&#9776;</span>
+    </button>
   </div>
-</div>
+
+  <!-- Menú visible en LG y desplegable en SM/MD -->
+  <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
+    <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+    <li>
+      <a id="contactoMail" href="mailto:dsbladunla@gmail.com"
+         class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
+        <i class="fas fa-envelope"></i>
+        <span>Contacto</span>
+      </a>
+    </li>
+    <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+      <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+        <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+      </a>
+      <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+        <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+<div class="sticky top-[64px] z-40 bg-[#4B145F] text-white w-full">
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-2 text-sm sm:text-base">
+    <a href="unidadequipo.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Equipo editorial</a>
+    <a href="infolectores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Información para Lectores</a>
+    <a href="infoautores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Información para Autores</a>
+    <a href="infobibliotecarios.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Información para Bibliotecarios</a>
+    <a href="etica.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Etica y buenas prácticas</a>
+    <a href="politicas.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Políticas</a>
+    <a href="#envios" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Envios</a>
+    <a href="buscador.html" target="_blank" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
+      <i class="fas fa-search"></i>
+      <span>Buscador</span>
+    </a>
+    <a href="index.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Inicio</a>
+   
   </div>
 </div>
 
 
 
 <!-- Políticas de cookies con ancho mayor -->
-<section id="cookies" class="py-6 px-6 bg-black">
-  <div class="mx-auto px-4 py-4 bg-white rounded-md max-w-7xl">
-    <h2 class="text-xl text-black font-semibold mb-4 text-center">DSB LAD NUMERO 1</h2>
-    <div class="border-t-2 border-pastelviolet mt-2 pt-2"></div>
+<section id="cookies" class="mt-[45px] py-2 px-2 bg-black"></section>
+  <div class="mx-auto px-2 py-2 bg-black rounded-md max-w-7xl">
+  
+   
 
     <div class="text-black text-xs leading-relaxed text-left">
-      <div class="w-full text-center mt-6">
-        <h2 class="text-lG font-bold text-black mb-2">Edición Digital</h2>
-
+      <div class="w-full text-center mt-1">
+      
         <!-- IFRAME agrandado -->
         <div class="relative w-full" style="padding-top: 65%;">
           <iframe 
