@@ -215,7 +215,7 @@
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-  import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
@@ -239,20 +239,16 @@
   });
 
   document.getElementById('descargarPDF').addEventListener('click', () => {
-  import { runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
-
-document.getElementById('descargarPDF').addEventListener('click', () => {
-  runTransaction(contadorRef, (currentValue) => {
-    return (currentValue || 0) + 1;
-  }).then(() => {
-    window.open('documents/dhya2021.pdf', '_blank');
-  }).catch((error) => {
-    console.error("Error al actualizar el contador:", error);
-  });
-});
-
+    runTransaction(contadorRef, (current) => {
+      return (current || 0) + 1;
+    }).then(() => {
+      window.open('documents/dhya2021.pdf', '_blank');
+    }).catch((error) => {
+      console.error("Error al actualizar el contador:", error);
+    });
   });
 </script>
+
 
 </body>
 </html>
