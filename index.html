@@ -647,6 +647,10 @@
       Quiero formar parte y te acerco mi propuesta
     </a>
   </div>
+  <p class="text-sm text-gray-400 mt-2 text-center">
+  Visitas al sitio: <span id="contadorVisitas">0</span>
+</p>
+
 </section>
 
 
@@ -734,6 +738,7 @@
   <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
   <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
 </div>
+
     
     </div>
   </div>
@@ -864,6 +869,60 @@
   });
 </script>
 
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
+    authDomain: "descargaspdfdsb.firebaseapp.com",
+    projectId: "descargaspdfdsb",
+    storageBucket: "descargaspdfdsb.appspot.com",
+    messagingSenderId: "305859273500",
+    appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
+    measurementId: "G-Q3R5X04YB3",
+    databaseURL: "https://descargaspdfdsb.firebaseio.com"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  // DESCARGAS REVISTA NUMERO 1
+  const contadorRef = ref(db, 'descargas/numero1');
+  const enlaceDescarga = document.getElementById('enlaceDescarga');
+
+  // Mostrar contador de descargas
+  onValue(contadorRef, (snapshot) => {
+    const count = snapshot.val() || 0;
+    document.getElementById('contadorDescargas').textContent = count;
+  });
+
+  // Botón de descarga
+  document.getElementById('descargarPDF').addEventListener('click', () => {
+    enlaceDescarga.click();
+    runTransaction(contadorRef, (current) => (current || 0) + 1).catch((error) => {
+      console.error("Error al actualizar contador de descargas:", error);
+    });
+  });
+
+  // CONTADOR DE VISITAS AL INDEX
+  const visitasRef = ref(db, 'visitas/index');
+
+  function formatearNumero(num) {
+    return new Intl.NumberFormat('es-AR').format(num);
+  }
+
+  onValue(visitasRef, (snapshot) => {
+    const count = snapshot.val() || 0;
+    document.getElementById('contadorVisitas').textContent = formatearNumero(count);
+  });
+
+  runTransaction(visitasRef, (current) => (current || 0) + 1).catch((error) => {
+    console.error("Error al actualizar contador de visitas:", error);
+  });
+</script>
 
   
  
