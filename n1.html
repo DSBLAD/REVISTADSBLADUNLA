@@ -239,15 +239,17 @@
   });
 
   document.getElementById('descargarPDF').addEventListener('click', () => {
-   runTransaction(contadorRef, (current) => {
-  return (current || 0) + 1;
-}).then(() => {
-  window.open('https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf', '_blank');
-})
+  runTransaction(contadorRef, (current) => {
+    return (current || 0) + 1;
+  })
+  .then(() => {
+    window.open('https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf', '_blank');
+  })
+  .catch((error) => {
+    console.error("Error al actualizar el contador:", error);
+  });
+});
 
-    }).catch((error) => {
-      console.error("Error al actualizar el contador:", error);
-    });
 </script>
 
 
