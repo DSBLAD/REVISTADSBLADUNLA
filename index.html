@@ -905,17 +905,12 @@ const btnDescarga = document.getElementById('descargarPDF');
 if (btnDescarga) {
   btnDescarga.addEventListener('click', () => {
     enlaceDescarga.click();
-    runTransaction(contadorRef, (current) => (current || 0) + 1);
-  });
-}
-
-
-  document.getElementById('descargarPDF').addEventListener('click', () => {
-    enlaceDescarga.click();
     runTransaction(contadorRef, (current) => (current || 0) + 1).catch((error) => {
       console.error("Error al actualizar contador de descargas:", error);
     });
   });
+}
+
 
   // CONTADOR DE VISITAS AL INDEX
 const visitasRef = ref(db, 'visitas/index');
