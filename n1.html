@@ -215,6 +215,27 @@
 </script>
 
 <!-- Firebase -->
+<!-- Enlace invisible para forzar apertura en nueva pestaña -->
+<a id="enlaceDescarga" href="https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf" target="_blank" style="display: none;"></a>
+
+<!-- Scripts -->
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('menu');
+    const icon = document.getElementById('menu-icon');
+    menu.classList.toggle('hidden');
+    icon.innerHTML = menu.classList.contains('hidden') ? '&#9776;' : '&#10005;';
+  });
+
+  document.getElementById('contactoMail').addEventListener('click', function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+    const asunto = 'Consulta sobre la revista DSB';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB.%0A%0AMi pregunta es:%0A%0AQuedo atento/a.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+    window.location.href = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+  });
+</script>
+
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
@@ -236,43 +257,29 @@
   const db = getDatabase(app);
   const contadorRef = ref(db, 'descargas/numero1');
 
+  const enlaceDescarga = document.getElementById('enlaceDescarga');
+
+  // Mostrar contador
   onValue(contadorRef, (snapshot) => {
     const count = snapshot.val() || 0;
     document.getElementById('contadorDescargas').textContent = count;
   });
 
+  // Al hacer clic en el botón
   document.getElementById('descargarPDF').addEventListener('click', () => {
-  runTransaction(contadorRef, (current) => {
-    return (current || 0) + 1;
-  })
-  .then(() => {
-    window.open('https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf', '_blank');
-  })
-  .catch((error) => {
-    console.error("Error al actualizar el contador:", error);
-  });
-});
-
-
-
-
-<script>
-  const enlaceDescarga = document.getElementById('enlaceDescarga');
-
-  document.getElementById('descargarPDF').addEventListener('click', () => {
-    // Abrir inmediatamente antes de la promesa para evitar bloqueo
+    // Abrimos el PDF primero para que no lo bloquee el navegador
     enlaceDescarga.click();
 
-    // Registrar descarga en Firebase
-    runTransaction(ref(getDatabase(), 'descargas/numero1'), (current) => {
+    // Registramos la descarga en Firebase
+    runTransaction(contadorRef, (current) => {
       return (current || 0) + 1;
     }).catch((error) => {
       console.error("Error al actualizar el contador:", error);
     });
   });
-
 </script>
-
 
 </body>
 </html>
+
+
