@@ -1,133 +1,64 @@
 
 <!DOCTYPE html>
-    <html lang="es">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscador de Publicaciones - DSB LAD</title>
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DSBLAD</title>
-    
-      <!-- Meta para redes sociales -->
-      <meta property="og:title" content="INKAO" />
-      <meta property="og:description" content="Estudio de Diseño" />
-      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
-      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
-      <meta name="twitter:card" content="summary_large_image" />
-    
-      <!-- Icono -->
-      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="style.css" />
-    
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-      <!--googlefonts -->
-
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
-
-    
-
-    <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          celeste: '#0c6d99',
-          celestonoscuro: '#1394ad',
-          azulpetrol: '#168AAD',
-          azulverdoso: '#34A0A4',
-          verdepetroloscuro: '#036666',
-          verdepetroleo: '#14746F',
-          verdepetro: '#248277',
-          amarillooro: '#D7B04B',
-          amarillo: '#FFCF56',
-          fondocalido: '#FDFCFB',
-          black: '#000000',
-          Gris: '#4d4d4d',
-          Amarillo: '#f3be13',
-          Turquesa: '#26a7a6',
-          cyanoscuroelegante: '#006D77',
-          turquesaprofundo: '#007C91',
-          violetweb: '#7F5AF0',
-          pastelviolet: '#CBB7E2',
-          darkviolet: '#3D2C54', 
-          bordoviolet: '#A45C84',
-        },
-        fontSize: {
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '3.75rem',
-        },
-        fontWeight: {
-          normal: 400,
-          medium: 500,
-          bold: 700,
-        },
-        fontFamily: {
-          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
-          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
-          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastelviolet: '#CBB7E2',
+            darkviolet: '#3D2C54',
+            violaceo: '#7F5AF0',
+          },
+          fontFamily: {
+            sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+            condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+            'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+          },
         },
       },
-    },
-  };
-</script>
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
 
-<!-- FUENTES PERSONALIZADAS -->
-<style>
-@font-face {
-  font-family: 'FF Good Pro Cond Black';
-  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
 
-@font-face {
-  font-family: 'FF Good Pro Wide Light';
-  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
-       url('fonts/ff-good-pro-wide-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-        html {
-          scroll-behavior: smooth;
-        }
-    
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-    
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out forwards;
-        }
-    
-        .animate-fade-in-delay {
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
-      </style>
-    </head>
+  <style>
+    @font-face {
+      font-family: 'FF Good Pro Cond Black';
+      src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FF Good Pro Wide Light';
+      src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+           url('fonts/ff-good-pro-wide-light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+    }
+    html { scroll-behavior: smooth; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+    .animate-fade-in-delay { animation: fadeIn 1.2s ease-out 0.3s forwards; }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
 
-      
-    
-    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
-    
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+  <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
 
   <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
@@ -152,7 +83,8 @@
     <!-- Menú visible en LG y desplegable en SM/MD -->
     <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
     
-      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+     <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+      
       
       <li>
         <a id="contactoMail" href="mailto:dsbladunla@gmail.com"
@@ -213,67 +145,46 @@
     Inicio
   </a>
         
-        
+  </div>
+</div>
   </div>
 </div>
 
 
- 
-        
-  </div>
-</div>
-
-
-
-<!-- Políticas de cookies con ancho mayor -->
-<section id="cookies" class="py-10 px-6 bg-black">
-  <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
-    <h2 class="text-3xl text-black font-semibold mb-6 text-center">Buscador</h2>
-     <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-    <div class="text-black text-xs leading-relaxed space-y-6 text-left">
-
-      <!-- contenido markdown -->
-      <div class="markdown prose w-full break-words dark:prose-invert light">
-
-        
 
   <!-- Encabezado -->
-  <header class="bg-[#4B145F] text-white py-4 shadow-md">
-    <div class="container mx-auto px-4 flex items-center justify-between">
-      <h1 class="text-xl font-semibold">Buscador DSB LAD</h1>
-      <a href="index.html" class="text-sm underline hover:text-purple-300">← Volver al inicio</a>
+  <header class="bg-darkviolet text-white py-4 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Buscador DSB LAD</h1>
+      <a href="index.html" class="text-sm underline hover:text-pastelviolet">← Volver al inicio</a>
     </div>
   </header>
 
-  <!-- Buscador -->
-  <main class="flex-grow container mx-auto px-4 py-8">
-    <div class="max-w-2xl mx-auto">
-      <div class="relative">
-        <input
-          type="text"
-          placeholder="Buscar artículos, autores, temas..."
-          class="w-full pl-12 pr-4 py-3 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-purple-400"
-          id="busquedaInput"
-        />
-        <div class="absolute left-4 top-3 text-gray-500">
-          <i class="fas fa-search"></i>
-        </div>
+  <!-- Sección de buscador -->
+  <main class="py-12 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 uppercase">Buscador de Publicaciones</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <input type="text" id="Tema" placeholder="Tema" class="border border-gray-300 p-2 rounded">
+        <input type="text" id="Palabra clave" placeholder="Palabra clave" class="border border-gray-300 p-2 rounded">
+        <input type="text" id="Autor" placeholder="Autor" class="border border-gray-300 p-2 rounded">
+        <select id="Asignatura" class="border border-gray-300 p-2 rounded"><option value="">Asignatura</option></select>
+        <select id="Carrera" class="border border-gray-300 p-2 rounded"><option value="">Carrera</option></select>
+        <input type="text" id="Convocatoria" placeholder="Convocatoria" class="border border-gray-300 p-2 rounded">
+        <select id="Año" class="border border-gray-300 p-2 rounded"><option value="">Año</option></select>
+        <select id="Número" class="border border-gray-300 p-2 rounded"><option value="">Número de revista</option></select>
+        <select id="Dossier" class="border border-gray-300 p-2 rounded"><option value="">Dossier</option></select>
       </div>
 
-      <!-- Resultados simulados -->
-      <div id="resultados" class="mt-8 space-y-4">
-        <!-- Aquí se mostrarán resultados dinámicos -->
+      <div class="flex justify-center">
+        <button onclick="filtrar()" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Buscar</button>
       </div>
+
+      <div id="resultados" class="mt-10 space-y-4"></div>
     </div>
-  </main>
 
-
-    <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-  </div>
-</section>
-
-
-<!--PREFOOTER -->
+    <!--PREFOOTER -->
 
 <section class="bg-black text-white py-10 px-4 font-outfit">
   <!-- Grid superior -->
@@ -318,9 +229,11 @@
     </div>
 
     <!-- LOGO -->
-    <div class="flex items-center justify-center">
-        <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
-      </div>
+     <div class="flex items-center justify-center gap-x-8">
+  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
+  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
+</div>
+    
     </div>
   </div>
 
@@ -334,7 +247,7 @@
 </section>
 
 
-
+</main>
 
 <!-- JS para abrir/cerrar el menú en móvil -->
 
@@ -394,43 +307,84 @@
   });
 </script>
 
- <!-- Script básico para búsqueda simulada -->
+
   <script>
-    const resultados = [
-      "Artículo sobre ética editorial",
-      "Guía para autores",
-      "Normas de publicación",
-      "Equipo editorial de DSB LAD",
-      "Información para bibliotecarios"
-    ];
+    let datos = [];
 
-    const input = document.getElementById('busquedaInput');
-    const contenedor = document.getElementById('resultados');
+    function init() {
+      Tabletop.init({
+        key: 'https://docs.google.com/spreadsheets/d/1NYPw5bWNT6lJjgoVcaXRIcJu4pcYIye4O1cet_0H44Q/pubhtml',
+        simpleSheet: true,
+        callback: function(data) {
+          datos = data;
+          cargarOpciones();
+          renderResultados(data);
+        }
+      });
+    }
 
-    input.addEventListener('input', () => {
-      const filtro = input.value.toLowerCase();
-      contenedor.innerHTML = '';
+    function cargarOpciones() {
+      const campos = ['Año', 'Número', 'Dossier', 'Asignatura', 'Carrera'];
+      campos.forEach(campo => {
+        const select = document.getElementById(campo);
+        const opcionesUnicas = [...new Set(datos.map(row => row[campo]).filter(Boolean))].sort();
+        opcionesUnicas.forEach(op => {
+          const option = document.createElement('option');
+          option.value = op;
+          option.textContent = op;
+          select.appendChild(option);
+        });
+      });
+    }
 
-      if (filtro.length < 2) return;
+    function filtrar() {
+      const campos = ['Tema', 'Palabra clave', 'Autor', 'Asignatura', 'Carrera', 'Convocatoria', 'Año', 'Número', 'Dossier'];
+      const filtros = {};
 
-      const filtrados = resultados.filter(item => item.toLowerCase().includes(filtro));
+      campos.forEach(campo => {
+        const valor = document.getElementById(campo).value.toLowerCase();
+        if (valor) filtros[campo] = valor;
+      });
 
-      if (filtrados.length === 0) {
-        contenedor.innerHTML = '<p class="text-gray-500">No se encontraron resultados.</p>';
+      const filtrados = datos.filter(row => {
+        return Object.keys(filtros).every(campo =>
+          row[campo] && row[campo].toLowerCase().includes(filtros[campo])
+        );
+      });
+
+      renderResultados(filtrados);
+    }
+
+    function renderResultados(rows) {
+      const resultados = document.getElementById('resultados');
+      resultados.innerHTML = '';
+
+      if (rows.length === 0) {
+        resultados.innerHTML = '<p class="text-center text-gray-600">No se encontraron resultados.</p>';
         return;
       }
 
-      filtrados.forEach(item => {
+      rows.forEach(row => {
         const div = document.createElement('div');
-        div.className = 'bg-white p-4 rounded shadow hover:bg-gray-50';
-        div.textContent = item;
-        contenedor.appendChild(div);
+        div.className = 'p-4 border-b border-gray-300 bg-white shadow-sm rounded-md';
+        div.innerHTML = `
+          <p><strong>Tema:</strong> ${row.Tema}</p>
+          <p><strong>Palabra clave:</strong> ${row["Palabra clave"]}</p>
+          <p><strong>Autor:</strong> ${row.Autor}</p>
+          <p><strong>Asignatura:</strong> ${row.Asignatura}</p>
+          <p><strong>Carrera:</strong> ${row.Carrera}</p>
+          <p><strong>Convocatoria:</strong> ${row.Convocatoria}</p>
+          <p><strong>Año:</strong> ${row.Año}</p>
+          <p><strong>Número:</strong> ${row["Número"]}</p>
+          <p><strong>Dossier:</strong> ${row.Dossier}</p>
+          ${row.Enlace ? `<a href="${row.Enlace}" target="_blank" class="text-violaceo underline hover:text-violaceo/80">Ver artículo</a>` : ''}
+        `;
+        resultados.appendChild(div);
       });
-    });
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
   </script>
 
- 
-  </body>
+</body>
 </html>
-
-
