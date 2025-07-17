@@ -901,6 +901,15 @@
   });
 
   // Botón de descarga
+const btnDescarga = document.getElementById('descargarPDF');
+if (btnDescarga) {
+  btnDescarga.addEventListener('click', () => {
+    enlaceDescarga.click();
+    runTransaction(contadorRef, (current) => (current || 0) + 1);
+  });
+}
+
+
   document.getElementById('descargarPDF').addEventListener('click', () => {
     enlaceDescarga.click();
     runTransaction(contadorRef, (current) => (current || 0) + 1).catch((error) => {
@@ -909,20 +918,25 @@
   });
 
   // CONTADOR DE VISITAS AL INDEX
-  const visitasRef = ref(db, 'visitas/index');
+const visitasRef = ref(db, 'visitas/index');
 
-  function formatearNumero(num) {
-    return new Intl.NumberFormat('es-AR').format(num);
-  }
+function formatearNumero(num) {
+  return new Intl.NumberFormat('es-AR').format(num);
+}
 
-  onValue(visitasRef, (snapshot) => {
-    const count = snapshot.val() || 0;
-    document.getElementById('contadorVisitas').textContent = formatearNumero(count);
-  });
+onValue(visitasRef, (snapshot) => {
+  const count = snapshot.val() || 0;
+  const contador = document.getElementById('contadorVisitas');
+  if (contador) contador.textContent = formatearNumero(count);
+});
 
-  runTransaction(visitasRef, (current) => (current || 0) + 1).catch((error) => {
-    console.error("Error al actualizar contador de visitas:", error);
-  });
+runTransaction(visitasRef, (current) => (current || 0) + 1).catch((error) => {
+  console.error("Error al actualizar contador de visitas:", error);
+});
+
+
+
+
 </script>
 
   
