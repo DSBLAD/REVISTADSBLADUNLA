@@ -142,6 +142,9 @@
         <button id="descargarPDF" class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white font-bold py-2 px-4 rounded-md transition">
           <i class="fas fa-download"></i> Descargar revista Número 1 (PDF)
         </button>
+        <!-- Enlace invisible para forzar apertura en nueva pestaña -->
+<a id="enlaceDescarga" href="https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf" target="_blank" style="display: none;"></a>
+
         <p class="text-sm text-gray-400 mt-2">Descargas: <span id="contadorDescargas">0</span></p>
       </div>
     </div>
@@ -249,6 +252,24 @@
     console.error("Error al actualizar el contador:", error);
   });
 });
+
+
+
+
+<script>
+  const enlaceDescarga = document.getElementById('enlaceDescarga');
+
+  document.getElementById('descargarPDF').addEventListener('click', () => {
+    // Abrir inmediatamente antes de la promesa para evitar bloqueo
+    enlaceDescarga.click();
+
+    // Registrar descarga en Firebase
+    runTransaction(ref(getDatabase(), 'descargas/numero1'), (current) => {
+      return (current || 0) + 1;
+    }).catch((error) => {
+      console.error("Error al actualizar el contador:", error);
+    });
+  });
 
 </script>
 
