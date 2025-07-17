@@ -1,359 +1,258 @@
 
+
 <!DOCTYPE html>
-    <html lang="es">
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSBLAD</title>
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DSBLAD</title>
-    
-      <!-- Meta para redes sociales -->
-      <meta property="og:title" content="INKAO" />
-      <meta property="og:description" content="Estudio de Diseño" />
-      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
-      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
-      <meta name="twitter:card" content="summary_large_image" />
-    
-      <!-- Icono -->
-      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="style.css" />
-    
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Meta para redes sociales -->
+  <meta property="og:title" content="DSBLAD" />
+  <meta property="og:description" content="Revista del Laboratorio de Diseño LAD UNLa" />
+  <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
+  <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-      <!--googlefonts -->
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          celeste: '#0c6d99',
-          celestonoscuro: '#1394ad',
-          azulpetrol: '#168AAD',
-          azulverdoso: '#34A0A4',
-          verdepetroloscuro: '#036666',
-          verdepetroleo: '#14746F',
-          verdepetro: '#248277',
-          amarillooro: '#D7B04B',
-          amarillo: '#FFCF56',
-          fondocalido: '#FDFCFB',
-          black: '#000000',
-          Gris: '#4d4d4d',
-          Amarillo: '#f3be13',
-          Turquesa: '#26a7a6',
-          cyanoscuroelegante: '#006D77',
-          turquesaprofundo: '#007C91',
-          violetweb: '#7F5AF0',
-          pastelviolet: '#CBB7E2',
-          darkviolet: '#3D2C54', 
-          bordoviolet: '#A45C84',
-        },
-        fontSize: {
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '3.75rem',
-        },
-        fontWeight: {
-          normal: 400,
-          medium: 500,
-          bold: 700,
-        },
-        fontFamily: {
-          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
-          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
-          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastelviolet: '#CBB7E2',
+            black: '#000000',
+            // tus otros colores personalizados...
+          },
+          fontFamily: {
+            sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+            'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+            condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+          },
         },
       },
-    },
-  };
-</script>
+    };
+  </script>
 
-<!-- FUENTES PERSONALIZADAS -->
-<style>
-@font-face {
-  font-family: 'FF Good Pro Cond Black';
-  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+  <!-- Fuentes personalizadas -->
+  <style>
+    @font-face {
+      font-family: 'FF Good Pro Cond Black';
+      src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
 
-@font-face {
-  font-family: 'FF Good Pro Wide Light';
-  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
-       url('fonts/ff-good-pro-wide-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-        html {
-          scroll-behavior: smooth;
-        }
-    
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-    
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out forwards;
-        }
-    
-        .animate-fade-in-delay {
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
+    @font-face {
+      font-family: 'FF Good Pro Wide Light';
+      src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+           url('fonts/ff-good-pro-wide-light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    html { scroll-behavior: smooth; }
 
-  body {
-    background-color: black;
-  }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-  nav,
-  .sticky {
-    margin: 0;
-    padding: 0;
-  }
-</style>
-    </head>
+    .animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+    .animate-fade-in-delay { animation: fadeIn 1.2s ease-out 0.3s forwards; }
 
-      
-    
-    <body class="bg-black text-[#222] font-sans"> <!-- Compensa altura del menú fijo -->
-    
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: black; }
+  </style>
+</head>
+
+<body class="bg-black text-[#222] font-sans">
+
+<!-- NAV -->
 <nav class="fixed top-0 left-0 right-0 bg-black text-white z-50 px-6 py-3 flex items-center justify-between">
   <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
-    <!-- Logo -->
     <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
       <img src="./images/n1.png" alt="LAD Logo" class="h-6 sm:h-8 md:h-10 w-auto object-contain" />
     </a>
   </div>
-
-  <!-- Botón hamburguesa visible solo en sm y md -->
   <div class="lg:hidden">
     <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
       <span id="menu-icon">&#9776;</span>
     </button>
   </div>
-
-  <!-- Menú visible en LG y desplegable en SM/MD -->
-  <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
-    <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+  <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base text-white">
+    <li><a href="sobredsb.html" class="py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
     <li>
-      <a id="contactoMail" href="mailto:dsbladunla@gmail.com"
-         class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
-        <i class="fas fa-envelope"></i>
-        <span>Contacto</span>
+      <a id="contactoMail" href="mailto:dsbladunla@gmail.com" class="py-1 hover:text-pastelviolet flex items-center space-x-2">
+        <i class="fas fa-envelope"></i><span>Contacto</span>
       </a>
     </li>
-    <li class="flex flex-row gap-2 mt-2 lg:mt-0">
-      <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+    <li class="flex gap-2 mt-2 lg:mt-0">
+      <a href="index.html" class="bg-black text-[#80142f] text-sm px-2 py-1 rounded-md hover:bg-gray-100">
         <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
       </a>
-      <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+      <a href="indexen.html" class="bg-black text-[#80142f] text-sm px-2 py-1 rounded-md hover:bg-gray-100">
         <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
       </a>
     </li>
   </ul>
 </nav>
 
-<!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+<!-- Barra pestañas -->
 <div class="sticky top-[64px] z-40 bg-[#4B145F] text-white w-full">
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-2 text-sm sm:text-base">
-    <a href="unidadequipo.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Equipo editorial</a>
-    <a href="infolectores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Información para Lectores</a>
-    <a href="infoautores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Información para Autores</a>
-    <a href="infobibliotecarios.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Información para Bibliotecarios</a>
-    <a href="etica.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Etica y buenas prácticas</a>
-    <a href="politicas.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Políticas</a>
-    <a href="#envios" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Envios</a>
-    <a href="buscador.html" target="_blank" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
-      <i class="fas fa-search"></i>
-      <span>Buscador</span>
+  <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 py-2 px-2 text-sm sm:text-base">
+    <a href="unidadequipo.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Equipo editorial</a>
+    <a href="infolectores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Información para Lectores</a>
+    <a href="infoautores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Información para Autores</a>
+    <a href="infobibliotecarios.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Información para Bibliotecarios</a>
+    <a href="etica.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Ética y buenas prácticas</a>
+    <a href="politicas.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Políticas</a>
+    <a href="#envios" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Envíos</a>
+    <a href="buscador.html" target="_blank" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded flex items-center gap-2">
+      <i class="fas fa-search"></i><span>Buscador</span>
     </a>
-    <a href="index.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded-sm transition duration-200">Inicio</a>
-   
+    <a href="index.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Inicio</a>
   </div>
 </div>
 
-
-
-<!-- Políticas de cookies con ancho mayor -->
-<section id="cookies" class="mt-[45px] py-2 px-2 bg-black"></section>
-  <div class="mx-auto px-2 py-2 bg-black rounded-md max-w-7xl">
-  
-   
-
-    <div class="text-black text-xs leading-relaxed text-left">
-      <div class="w-full text-center mt-1">
-      
-        <!-- IFRAME agrandado -->
-        <div class="relative w-full" style="padding-top: 65%;">
-          <iframe 
-            src="https://online.fliphtml5.com/oyilb/tybv/" 
-            class="absolute top-0 left-0 w-full h-full rounded-md shadow-md"
-            frameborder="0" 
-            allowfullscreen="true" 
-            allow="autoplay">
-          </iframe>
-        </div>
+<!-- Contenido central: revista embebida -->
+<section id="cookies" class="mt-[45px] py-2 px-2 bg-black">
+  <div class="mx-auto px-2 py-2 bg-black rounded-md max-w-7xl text-black text-xs leading-relaxed">
+    <div class="text-center mt-1">
+      <div class="relative w-full" style="padding-top: 65%;">
+        <iframe 
+          src="https://online.fliphtml5.com/oyilb/tybv/" 
+          class="absolute top-0 left-0 w-full h-full rounded-md shadow-md"
+          frameborder="0" allowfullscreen allow="autoplay">
+        </iframe>
+      </div>
+      <div class="text-center mt-4">
+        <button id="descargarPDF" class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white font-bold py-2 px-4 rounded-md transition">
+          <i class="fas fa-download"></i> Descargar revista Número 1 (PDF)
+        </button>
+        <p class="text-sm text-gray-400 mt-2">Descargas: <span id="contadorDescargas">0</span></p>
       </div>
     </div>
   </div>
 </section>
 
-
-     
-
-<!--PREFOOTER -->
-
-<section class="bg-black text-white py-10 px-4 font-outfit">
-  <!-- Grid superior -->
+<!-- Footer -->
+<section class="bg-black text-white py-10 px-4">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-
-    <!-- CONSULTORÍA -->
     <div>
       <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
       <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">DSB LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Dirección Editorial</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Redacción y Diseño</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Comité Editorial</a></li>
       </ul>
     </div>
-
-    <!-- REDES -->
     <div>
       <h2 class="text-lg font-bold mb-3">REDES</h2>
       <div class="flex space-x-4 text-xl">
-        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
+        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
-      <div class="mt-4 text-sm leading-relaxed">
-        <p>Lanús, Argentina</p>
-        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
-      </div>
+      <p class="mt-4 text-sm">Lanús, Argentina<br><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet">dsbladunla@gmail.com</a></p>
     </div>
-
-    <!-- SECCIONES -->
     <div>
       <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
       <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Números</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Dossiers</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Guías</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Equipo</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Contacto</a></li>
       </ul>
     </div>
-
-   <!-- LOGO -->
-     <div class="flex items-center justify-center gap-x-8">
-  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
-  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
-</div>
-    
+    <div class="flex justify-center items-center gap-8">
+      <img src="images/n1.png" alt="Logo dsb" class="h-20 w-auto" />
+      <img src="images/LAD-logo chico.png" alt="Logo lad" class="h-20 w-auto" />
     </div>
   </div>
-
-  <!-- Línea y grid inferior -->
-  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
-    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
-    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
-    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
+  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+    <a href="politicasdeprivacidad.html" class="hover:text-pastelviolet">Política de privacidad</a>
+    <a href="politicasdecookies.html" class="hover:text-pastelviolet">Política de Cookies</a>
+    <a href="terminosycondiciones.html" class="hover:text-pastelviolet">Términos y condiciones</a>
     <p>DSB LAD 2025 © Todos los derechos reservados</p>
   </div>
 </section>
 
-
-
-
-<!-- JS para abrir/cerrar el menú en móvil -->
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('menu');
-      const icon = document.getElementById('menu-icon');
-  
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        menu.classList.toggle('flex-col');
-        menu.classList.toggle('absolute');
-        menu.classList.toggle('top-full');
-        menu.classList.toggle('left-0');
-        menu.classList.toggle('bg-[#3e2d4f]');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('p-4');
-        menu.classList.toggle('shadow-md');
-        menu.classList.toggle('z-40');
-  
-        // Cambiar icono
-        if (menu.classList.contains('hidden')) {
-          icon.innerHTML = '&#9776;'; // ☰
-        } else {
-          icon.innerHTML = '&#10005;'; // ✖
-        }
-      });
-    });
-
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  menuToggle.addEventListener('click', () => {
-    if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden');
-    } else {
-      menu.classList.add('hidden');
-    }
-  });
-  </script>
-
+<!-- Scripts -->
 <script>
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('menu');
+    const icon = document.getElementById('menu-icon');
+    menu.classList.toggle('hidden');
+    icon.innerHTML = menu.classList.contains('hidden') ? '&#9776;' : '&#10005;';
+  });
+
   document.getElementById('contactoMail').addEventListener('click', function (e) {
     e.preventDefault();
-
     const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
-
-    const asunto = 'Consulta sobre el Coaching Finanzas Saludables';
-    const cuerpo = `Hola, me comunico para realizar una consulta sobre la Comunidad Finanzas Saludables.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
-
-    const mailtoLink = `mailto:finanzas.saludables.emprende@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
-
-    window.location.href = mailtoLink;
+    const asunto = 'Consulta sobre la revista DSB';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB.%0A%0AMi pregunta es:%0A%0AQuedo atento/a.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+    window.location.href = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
   });
 </script>
 
- 
- 
-  </body>
+<!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+  import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
+    authDomain: "descargaspdfdsb.firebaseapp.com",
+    projectId: "descargaspdfdsb",
+    storageBucket: "descargaspdfdsb.appspot.com",
+    messagingSenderId: "305859273500",
+    appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
+    measurementId: "G-Q3R5X04YB3",
+    databaseURL: "https://descargaspdfdsb.firebaseio.com"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+  const contadorRef = ref(db, 'descargas/numero1');
+
+  onValue(contadorRef, (snapshot) => {
+    const count = snapshot.val() || 0;
+    document.getElementById('contadorDescargas').textContent = count;
+  });
+
+  document.getElementById('descargarPDF').addEventListener('click', () => {
+  import { runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+document.getElementById('descargarPDF').addEventListener('click', () => {
+  runTransaction(contadorRef, (currentValue) => {
+    return (currentValue || 0) + 1;
+  }).then(() => {
+    window.open('documents/dhya2021.pdf', '_blank');
+  }).catch((error) => {
+    console.error("Error al actualizar el contador:", error);
+  });
+});
+
+  });
+</script>
+
+</body>
 </html>
-
-
