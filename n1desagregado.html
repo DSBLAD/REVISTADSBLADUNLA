@@ -1,0 +1,729 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSBLAD Nro 1</title>
+
+  <!-- Meta para redes sociales -->
+  <meta property="og:title" content="DSBLAD" />
+  <meta property="og:description" content="Revista del Laboratorio de Diseño LAD UNLa" />
+  <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
+  <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celeste: '#0c6d99',
+          celestonoscuro: '#1394ad',
+          azulpetrol: '#168AAD',
+          azulverdoso: '#34A0A4',
+          verdepetroloscuro: '#036666',
+          verdepetroleo: '#14746F',
+          verdepetro: '#248277',
+          amarillooro: '#D7B04B',
+          amarillo: '#FFCF56',
+          fondocalido: '#FDFCFB',
+          black: '#000000',
+          Gris: '#4d4d4d',
+          Amarillo: '#f3be13',
+          Turquesa: '#26a7a6',
+          cyanoscuroelegante: '#006D77',
+          turquesaprofundo: '#007C91',
+          violetweb: '#7F5AF0',
+          pastelviolet: '#CBB7E2',
+          darkviolet: '#3D2C54', 
+          bordoviolet: '#A45C84',
+            pastelviolet: '#CBB7E2',
+            black: '#000000',
+            // tus otros colores personalizados...
+          },
+          fontFamily: {
+            sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+            'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+            condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fuentes personalizadas -->
+  <style>
+    @font-face {
+      font-family: 'FF Good Pro Cond Black';
+      src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FF Good Pro Wide Light';
+      src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+           url('fonts/ff-good-pro-wide-light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+    .animate-fade-in-delay { animation: fadeIn 1.2s ease-out 0.3s forwards; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: black; }
+  </style>
+</head>
+
+<body class="bg-white text-[#222] font-sans pt-20">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 bg-black text-white z-50 px-6 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
+    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      <img src="./images/n1.png" alt="LAD Logo" class="h-6 sm:h-8 md:h-10 w-auto object-contain" />
+    </a>
+  </div>
+  <div class="lg:hidden">
+    <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+      <span id="menu-icon">&#9776;</span>
+    </button>
+  </div>
+  <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base text-white">
+    <li><a href="sobredsb.html" class="py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+    <li>
+      <a id="contactoMail" href="mailto:dsbladunla@gmail.com" class="py-1 hover:text-pastelviolet flex items-center space-x-2">
+        <i class="fas fa-envelope"></i><span>Contacto</span>
+      </a>
+    </li>
+    <li class="flex gap-2 mt-2 lg:mt-0">
+      <a href="index.html" class="bg-black text-[#80142f] text-sm px-2 py-1 rounded-md hover:bg-gray-100">
+        <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+      </a>
+      <a href="indexen.html" class="bg-black text-[#80142f] text-sm px-2 py-1 rounded-md hover:bg-gray-100">
+        <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Barra pestañas -->
+<div class="sticky top-[64px] z-40 bg-[#4B145F] text-white w-full">
+  <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 py-2 px-2 text-sm sm:text-base">
+    <a href="unidadequipo.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Equipo editorial</a>
+    <a href="infolectores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Información para Lectores</a>
+    <a href="infoautores.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Información para Autores</a>
+    <a href="infobibliotecarios.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Información para Bibliotecarios</a>
+    <a href="etica.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Ética y buenas prácticas</a>
+    <a href="politicas.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Políticas</a>
+    <a href="#envios" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Envíos</a>
+    <a href="buscador.html" target="_blank" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded flex items-center gap-2">
+      <i class="fas fa-search"></i><span>Buscador</span>
+    </a>
+    <a href="index.html" class="hover:bg-gray-100 hover:text-black px-2 py-2 rounded">Inicio</a>
+  </div>
+</div>
+
+
+
+<!-- Sección de articulos -->
+<section id="articulos" class="py-10 px-6 bg-white">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-black">ARTICULOS Nro 1 DSB LAD</h2>
+   <div class="border-t-2 border-black mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+
+    <section id="asesorias">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-12 max-w-6xl mx-auto">
+
+    <!-- Tarjeta 1 -->
+
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Articulo 1
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ARTICULO 1</p>
+    <br>
+    
+    <a id="btn-Articulo1" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Articulo1">0</span></p>
+<a id="enlace-Articulo1" href="documents/articulo1.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+
+    <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Articulo 2
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ARTICULO 2</p>
+    <br>
+   
+    <a id="btn-Articulo2" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Articulo2">0</span></p>
+<a id="enlace-Articulo2" href="documents/articulo2.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 3 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Articulo 3
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ARTICULO 3</p>
+    <br>
+   
+    <a id="btn-Articulo3" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Articulo3">0</span></p>
+<a id="enlace-Articulo3" href="documents/articulo3.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+<!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Articulo 4
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ARTICULO 4</p>
+    <br>
+    
+    <a id="btn-Articulo4" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Articulo4">0</span></p>
+<a id="enlace-Articulo4" href="documents/articulo4.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+ <!-- Tarjeta 5 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+<!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Articulo 5
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ARTICULO 5</p>
+    <br>
+    
+    <a id="btn-Articulo5" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Articulo5">0</span></p>
+<a id="enlace-Articulo5" href="documents/articulo5.pdf" target="_blank" style="display: none;"></a>
+    <br>
+    <br>
+  </div>
+    </div>
+
+</section>
+</div>
+      </section>
+
+      <!-- Sección de articulos -->
+<section id="articulos" class="py-10 px-6 bg-white">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-black">COMUNICACIONES Nro 1 DSB LAD</h2>
+   <div class="border-t-2 border-black mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+
+    <section id="asesorias">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-12 max-w-6xl mx-auto">
+
+    <!-- Tarjeta 1 -->
+
+  <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Comunicación 1
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>COMUNICACION BREVE 1</p>
+    <br>
+    
+    <a id="btn-Comunicacion1" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Comunicacion1">0</span></p>
+<a id="enlace-Comunicacion1" href="documents/Comunicacion1.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+    
+   
+     
+
+
+    <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Comunicación 2
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>COMUNICACION BREVE 2</p>
+    <br>
+   
+     <a id="btn-Comunicacion2" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Comunicacion2">0</span></p>
+<a id="enlace-Comunicacion2" href="documents/Comunicacion2.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 3 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Comunicación 3
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>COMUNICACIÓN BREVE 3</p>
+    <br>
+    
+     <a id="btn-Comunicacion3" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Comunicacion3">0</span></p>
+<a id="enlace-Comunicacion3" href="documents/Comunicacion3.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+<!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Comunicación 4
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>COMUNICACION BREVE 4</p>
+    <br>
+    
+     <a id="btn-Comunicacion4" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Comunicacion4">0</span></p>
+<a id="enlace-Comunicacion4" href="documents/Comunicacion4.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+ <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+<!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Comunicacion 5
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>COMUNICACION BREVE 5</p>
+    <br>
+    
+     <a id="btn-Comunicacion5" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Comunicacion5">0</span></p>
+<a id="enlace-Comunicacion5" href="documents/Comunicacion5.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+  </div>
+</section>
+</div>
+      </section>
+
+      <!-- Sección de articulos -->
+<section id="articulos" class="py-10 px-6 bg-white">
+  <h2 class="text-3xl font-semibold text-center mb-10 text-black">EDITORIAL Y ENTREVISTAS Nro 1 DSB LAD</h2>
+   <div class="border-t-2 border-black mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+
+    <section id="asesorias">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-12 max-w-6xl mx-auto">
+
+    <!-- Tarjeta 1 -->
+
+  <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Editorial
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>EDITORIAL</p>
+    <br>
+    
+     <a id="btn-Editorial" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Editorial">0</span></p>
+<a id="enlace-Editorial" href="documents/Editorial.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 2 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Entrevista
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ENTREVISTA</p>
+    <br>
+   
+    
+    <a id="btn-Entrevista" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Entrevista">0</span></p>
+<a id="enlace-Entrevista" href="documents/Entrevista.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 3 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+ <!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Tesis
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>Tesis</p>
+    <br>
+   
+    <a id="btn-Tesis" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Tesis">0</span></p>
+<a id="enlace-Tesis" href="documents/Tesis.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+    <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+<!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Ensayos
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>ENSAYOS</p>
+    <br>
+   
+    <a id="btn-Ensayos" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Ensayos">0</span></p>
+<a id="enlace-Ensayos" href="documents/Ensayos.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+</div>
+
+ <!-- Tarjeta 4 -->
+     
+    <div>
+      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
+       <div class="mb-4">
+  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
+</div>
+<!-- Cartel "Numero 1" -->
+  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
+    Reseñas
+  </div>
+
+    <!-- Texto descriptivo -->
+    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
+    <p class="mb-4">NUMERO 1.</p>
+    <p>RESEÑAS</p>
+    <br>
+    
+    <a id="btn-Resenas" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition cursor-pointer">
+  Descargar PDF
+</a>
+<p class="text-xs mt-2">Descargas: <span id="contador-Resenas">0</span></p>
+<a id="enlace-Resenas" href="documents/Resenas.pdf" target="_blank" style="display: none;"></a>
+    <br><br>
+  </div>
+  </div>
+</section>
+</div>
+      </section>
+
+<!-- Footer -->
+<section class="bg-black text-white py-10 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-pastelviolet">DSB LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Dirección Editorial</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Redacción y Diseño</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Comité Editorial</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-lg font-bold mb-3">REDES</h2>
+      <div class="flex space-x-4 text-xl">
+        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="mt-4 text-sm">Lanús, Argentina<br><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet">dsbladunla@gmail.com</a></p>
+    </div>
+    <div>
+      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-pastelviolet">Números</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Dossiers</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Guías</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Equipo</a></li>
+        <li><a href="#" class="hover:text-pastelviolet">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="flex justify-center items-center gap-8">
+      <img src="images/n1.png" alt="Logo dsb" class="h-20 w-auto" />
+      <img src="images/LAD-logo chico.png" alt="Logo lad" class="h-20 w-auto" />
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+    <a href="politicasdeprivacidad.html" class="hover:text-pastelviolet">Política de privacidad</a>
+    <a href="politicasdecookies.html" class="hover:text-pastelviolet">Política de Cookies</a>
+    <a href="terminosycondiciones.html" class="hover:text-pastelviolet">Términos y condiciones</a>
+    <p>DSB LAD 2025 © Todos los derechos reservados</p>
+  </div>
+</section>
+
+<!-- Scripts -->
+
+<!-- Scripts generales -->
+<script>
+  // Menú hamburguesa
+  document.getElementById('menu-toggle')?.addEventListener('click', () => {
+    const menu = document.getElementById('menu');
+    const icon = document.getElementById('menu-icon');
+    menu.classList.toggle('hidden');
+    icon.innerHTML = menu.classList.contains('hidden') ? '&#9776;' : '&#10005;';
+  });
+
+  // Enlace de contacto
+  document.getElementById('contactoMail')?.addEventListener('click', function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+    const asunto = 'Consulta sobre la revista DSB';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB.%0A%0AMi pregunta es:%0A%0AQuedo atento/a.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+    window.location.href = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+  });
+</script>
+
+<!-- Firebase + contador de descargas -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
+    authDomain: "descargaspdfdsb.firebaseapp.com",
+    projectId: "descargaspdfdsb",
+    storageBucket: "descargaspdfdsb.appspot.com",
+    messagingSenderId: "305859273500",
+    appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
+    measurementId: "G-Q3R5X04YB3",
+    databaseURL: "https://descargaspdfdsb.firebaseio.com"
+  };
+
+  // Inicializar Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  // Inicializar contador individual
+  function inicializarContador(nombre) {
+    const boton = document.getElementById(`btn-${nombre}`);
+    const contador = document.getElementById(`contador-${nombre}`);
+    const enlace = document.getElementById(`enlace-${nombre}`);
+    const refDescarga = ref(db, `descargas/${nombre}`);
+
+    // Mostrar número de descargas actual
+    onValue(refDescarga, (snapshot) => {
+      const count = snapshot.val() || 0;
+      if (contador) contador.textContent = count;
+    });
+
+    // Contar clic en botón
+    boton?.addEventListener('click', () => {
+      enlace?.click(); // Abrir PDF
+      runTransaction(refDescarga, (actual) => (actual || 0) + 1)
+        .catch((error) => console.error(`Error en contador ${nombre}:`, error));
+    });
+  }
+
+  // Lista de documentos (coincide con los IDs en el HTML)
+  const documentos = [
+    "Articulo1", "Articulo2", "Articulo3", "Articulo4", "Articulo5",
+    "Comunicacion1", "Comunicacion2", "Comunicacion3", "Comunicacion4", "Comunicacion5",
+    "Editorial", "Entrevista", "Tesis", "Ensayos", "Resenas"
+  ];
+
+  documentos.forEach(inicializarContador);
+</script>
+
+
+
+</body>
+</html>
+
+
