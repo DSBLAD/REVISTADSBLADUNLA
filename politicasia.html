@@ -407,14 +407,16 @@
 
     const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
 
-    const asunto = 'Consulta sobre el Coaching Finanzas Saludables';
-    const cuerpo = `Hola, me comunico para realizar una consulta sobre la Comunidad Finanzas Saludables.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+    const asunto = 'Consulta sobre la revista DSB LAD';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
 
-    const mailtoLink = `mailto:finanzas.saludables.emprende@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+    const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
 
     window.location.href = mailtoLink;
   });
 </script>
+
+
 
  
  
