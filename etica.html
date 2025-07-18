@@ -133,6 +133,10 @@
   <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
   <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
     
+  
+
+
+
     <!-- Logo -->
     <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
       <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
@@ -162,7 +166,7 @@
     <span>Contacto</span>
   </a>
 </li>
-      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+      <li class="flex flex-col gap-2 mt-2 lg:mt-0">
         <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
           <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
         </a>
@@ -170,14 +174,20 @@
           <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
         </a>
       </li>
+
+        <!-- Botón que despliega la barra -->
+<button id="toggle-tabs" class="text-white px-3 py-2 bg-black rounded-md hover:bg-[#6c1d85] transition">
+  <i class="fas fa-bars text-xl"></i>
+</button>
     </ul>
   </nav>
 
   <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
-<div class="sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
+   <!-- BARRA DE PESTAÑAS -->
+<div id="barra-pestanas" class="hidden sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner transition-all duration-300">
   <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
-
-      <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+    <!-- ...enlaces... -->
+       <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
       Equipo editorial
     </a>
     
@@ -229,75 +239,76 @@
 <!-- Políticas de cookies con ancho mayor -->
 <section id="cookies" class="py-10 px-6 bg-black">
   <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
-    <h2 class="text-3xl text-black font-semibold mb-6 text-center">Etica y buenas prácticas</h2>
+    <h2 class="text-2xl text-black font-semibold mb-6 text-center">Etica y buenas prácticas</h2>
      <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
     <div class="text-black text-xs leading-relaxed space-y-6 text-left">
 
      <section class="py-4 px-4 bg-white text-black text-sm leading-relaxed">
-  <div class="max-w-5xl mx-auto space-y-6">
-    <h2 class="text-2xl font-bold text-center mb-6">Deberes de los editores</h2>
+     <div class="w-full max-w-full sm:max-w-[20cm] mx-auto px-6 py-10 bg-white rounded-md">
+ 
+    <h2 class="text-lg font-bold text-center mb-6">Deberes de los editores</h2>
 
-    <h3 class="font-semibold text-lg">Decisiones de publicación</h3>
+    <h3 class="font-semibold text-md">Decisiones de publicación</h3>
     <p>Los editores se harán responsables de la decisión de la publicación de los manuscritos que reciba la revista. Los manuscritos serán evaluados atendiendo a criterios imparcialidad y ecuanimidad, no considerando ningún tipo de criterio que suponga desigualdad con respecto a sus autores: raza, género, orientación sexual, creencias religiosas, origen étnico, nacionalidad ideas políticas. Los únicos criterios aceptados para la publicación de cualquier manuscrito se circunscribirá la la importancia y trascendencia del mismo, su originalidad y claridad, la validez del mismo y su pertinencia en relación con la línea editorial de la revista. Se tendrá en cuenta también el ajuste del manuscrito a las exigencias legales con relación al buen nombre de las personas e instituciones, con relación a los derechos de autor y las correspondientes al plagio.</p>
-
-    <h3 class="font-semibold text-lg">Confidencialidad</h3>
+<br>
+    <h3 class="font-semibold text-md">Confidencialidad</h3>
     <p>Ninguno de los miembros que componen el equipo editorial de la revista, así como sus colaboradores, podrá revelar ningún tipo de información relacionada con los manuscritos recibidos. Nadie que no sea el autor o los evaluadores. Atendiendo en la proporción debida al cumplimiento de las finalidades de la actividad propuesta y con la debida prudencia.</p>
-
-    <h3 class="font-semibold text-lg">Conflicto de intereses</h3>
+<br>
+    <h3 class="font-semibold text-md">Conflicto de intereses</h3>
     <p>En ningún caso, los materiales correspondientes a los manuscritos recibidos y no publicados pueden ser utilizados por los editores para sus propias investigaciones, sin disponer previamente de la autorización por escrito del autor.</p>
-
-    <h2 class="text-2xl font-bold text-center mt-10 mb-6">Deberes de los evaluadores</h2>
-
-    <h3 class="font-semibold text-lg">Cooperación con las decisiones editoriales</h3>
+<br>
+    <h2 class="text-lg font-bold text-center mt-10 mb-6">Deberes de los evaluadores</h2>
+<br>
+    <h3 class="font-semibold text-md">Cooperación con las decisiones editoriales</h3>
     <p>El objetivo de la evaluación por expertos de los manuscritos recibidos es el de ayudar a los editores en la selección de los manuscritos para su publicación, contribuir de este modo en la adopción de la decisión de la publicación de los artículos que van a formar parte de la revista, además de colaborar en la mejora de la calidad de los mismos.</p>
-
-    <h3 class="font-semibold text-lg">Diligencia</h3>
+<br>
+    <h3 class="font-semibold text-md">Diligencia</h3>
     <p>En el caso de que un experto seleccionado para la evaluación de un manuscrito que no se considerase competente para juzgarlo, o hacerlo con la suficiente diligencia, deberá ponerlo en conocimiento de los editores y renunciar a la evaluación.</p>
-
-    <h3 class="font-semibold text-lg">Confidencialidad</h3>
+<br>
+    <h3 class="font-semibold text-md">Confidencialidad</h3>
     <p>Los manuscritos recibidos para su evaluación deben ser tratados como documentos confidenciales. No se los debe utilizar ni discutir públicamente, a menos que así lo autoricen los editores.</p>
-
-    <h3 class="font-semibold text-lg">Criterios de objetividad</h3>
+<br>
+    <h3 class="font-semibold text-md">Criterios de objetividad</h3>
     <p>Los evaluadores realizarán su tarea de modo objetivo, dejando al margen la crítica personal. Es obligación de los evaluadores expresar sus juicios con claridad y de manera fundada.</p>
-
-    <h3 class="font-semibold text-lg">Determinación de las fuentes</h3>
+<br>
+    <h3 class="font-semibold text-md">Determinación de las fuentes</h3>
     <p>Es obligación de los revisores la determinación de la existencia de trabajos publicados a los que se refiera el manuscrito y que no hubieran sido citados en la correspondiente sección de referencias bibliográficas. Del mismo modo deben indicar aquellas observaciones o argumentos que aparezcan en el manuscrito y que no vayan acompañados de su respectiva fuente bibliográfica.</p>
     <p>Los evaluadores deben poner también en conocimiento de los editores cualquier coincidencia o solapamiento de cierta importancia entre el manuscrito y cualquier otra publicación de la que tengan conocimiento.</p>
-
-    <h3 class="font-semibold text-lg">Conflicto de intereses</h3>
+<br>
+    <h3 class="font-semibold text-md">Conflicto de intereses</h3>
     <p>La información o ideas que pudiera obtenerse por el privilegio de la actividad evaluadora de los manuscritos deberán mantenerse siempre bajo el secreto de la confidencia, no pudiéndose obtener provechos personales. Del mismo modo los evaluadores deben abstenerse de juzgar manuscritos con los que tengan algún conflicto de interés derivado de relaciones competitivas, de colaboración o de otro tipo, o bien derivadas de vínculos con autores, instituciones o empresas relacionadas con los manuscritos.</p>
-
-    <h2 class="text-2xl font-bold text-center mt-10 mb-6">Deberes de los autores</h2>
-
-    <h3 class="font-semibold text-lg">El cumplimiento de exigencias de calidad</h3>
+<br>
+    <h2 class="text-lg font-bold text-center mt-10 mb-6">Deberes de los autores</h2>
+<br>
+    <h3 class="font-semibold text-md">El cumplimiento de exigencias de calidad</h3>
     <p>Los autores han de presentar investigaciones originales con una exposición clara y precisa del trabajo realizado, así como la discusión objetiva de su importancia. Los datos que apoyen el trabajo deben quedar reflejados con la suficiente claridad en el manuscrito. El manuscrito ha de tener las referencias bien detalladas de forma que permita de un modo suficiente que otros autores puedan reproducir la investigación y comprobar los resultados. Cualquier afirmación falsa o intencionadamente inexacta se juzgará como una falta ética y será, por tanto, motivo de exclusión.</p>
-
-    <h3 class="font-semibold text-lg">Acceso a los datos de la investigación</h3>
+<br>
+    <h3 class="font-semibold text-md">Acceso a los datos de la investigación</h3>
     <p>Los autores deben proporcionar los datos de sus investigaciones junto con el manuscrito a los fines de la evaluación editorial. Si fuera necesario, también deberán hacer públicos dichos datos. En cualquier caso, se entiende que es obligación de los investigadores el poner a disposición de la comunidad científica dichos datos, siempre que quede garantizada la confidencialidad sobre los participantes y que no haya menoscabo de los derechos institucionales que pudieran existir.</p>
-
-    <h3 class="font-semibold text-lg">Originalidad, plagio y fuentes</h3>
+<br>
+    <h3 class="font-semibold text-md">Originalidad, plagio y fuentes</h3>
     <p>Los manuscritos deben ser trabajos originales y hacer referencia, por medio de las citas pertinentes, al trabajo de otros autores. Se debe así mismo citar y referir los trabajos de autores que hayan sido determinantes en la definición de la naturaleza y objetivos del trabajo.</p>
-
-    <h3 class="font-semibold text-lg">Publicación múltiple, superflua o simultánea</h3>
+<br>
+    <h3 class="font-semibold text-md">Publicación múltiple, superflua o simultánea</h3>
     <p>No deben publicarse en más de una revista trabajos que describan esencialmente la misma investigación. Del mismo modo que tampoco se debe enviar el mismo trabajo a varias revistas. Ambos casos serán motivo de exclusión.</p>
     <p>No se deben enviar manuscritos que ya hayan sido publicados en otras revistas. Tampoco se deben enviar el mismo manuscrito a otra revista, cuando en ésta esté en periodo de evaluación. Todo ello sin perjuicio de que el autor siempre y en todo momento mantenga la plenitud de sus derechos de autor con relación al trabajo publicado y, por tanto, de reproducción y transmisión como crea conveniente.</p>
-
-    <h3 class="font-semibold text-lg">La autoría del artículo</h3>
+<br>
+    <h3 class="font-semibold text-md">La autoría del artículo</h3>
     <p>La autoría debe limitarse a las personas que hayan contribuido de un modo importante a la concepción, elaboración o interpretación del trabajo. Todas las personas que así lo haya hecho deben aparecer, por tanto, como coautores.</p>
     <p>El autor principal se obliga a garantizar que únicamente dichas personas aparezcan como coautores y ninguna otra. Asimismo, se obliga a someter a la aprobación de los coautores la última versión del artículo y a obtener su autorización para la publicación.</p>
     <p>En el momento del envío del artículo, todas las autorías están obligadas informar sobre los autores y autoras que han hecho una contribución científica e intelectual significativa en el trabajo presentado. Se deberá además indicar la contribución concreta realizada por cada uno/a de ellos/as e informar sobre el criterio escogido para decidir el orden de firma.</p>
     <p>Esta información deberá incluirse en el apartado metadatos. Nunca en el artículo enviado.</p>
-
-    <h3 class="font-semibold text-lg">Conflicto de intereses</h3>
+<br>
+    <h3 class="font-semibold text-md">Conflicto de intereses</h3>
     <p>Los autores deben declarar las fuentes de financiación de su trabajo y deben tratar de evitar cualquier conflicto de intereses que afecte a los resultados o a la interpretación de sus conclusiones.</p>
-
-    <h3 class="font-semibold text-lg">Errores fundamentales en el trabajo publicado</h3>
+<br>
+    <h3 class="font-semibold text-md">Errores fundamentales en el trabajo publicado</h3>
     <p>En el caso de que el autor descubra errores o inexactitudes importantes en su trabajo publicado, tiene el deber de ponerlo en conocimiento diligentemente de los editores y de colaborar en la corrección o, en su caso, rectificación de lo publicado.</p>
-
-    <h2 class="text-2xl font-bold text-center mt-10 mb-6">Buenas prácticas editoriales en igualdad de género</h2>
-
+<br>
+    <h2 class="text-lg font-bold text-center mt-10 mb-6">Buenas prácticas editoriales en igualdad de género</h2>
+<br>
     <p>Editorial UNla, como sello académico de la Universidad Nacional de Lanús (UNLa) gestionado a través del Servicio de Publicaciones y Divulgación Académica-Científica del Departamento de Humanidades y Artes de la Universidad Nacional de Lanús (UNLa), comparte los valores de la institución. Entre ellos se establece “la igualdad” entre mujeres y hombres.</p>
-
+<br>
     <p>En este sentido, seguimos las pautas de la Guía de Autores para la Edición del Servicio de Publicaciones y Divulgación Académica-Científica, que tiene como base la Guía orientativa para el uso igualitario del lenguaje y de la imagen de la UNLa (2024), un instrumento útil que ofrece recursos y estrategias para evitar el sexismo lingüístico en la actividad editorial, docente, investigadora y de gestión.</p>
   </div>
 
@@ -398,7 +409,15 @@
   </div>
 </section>
 
+<!-- JS para desplegar barra -->
 
+
+<script>
+  document.getElementById('toggle-tabs').addEventListener('click', () => {
+    const barra = document.getElementById('barra-pestanas');
+    barra.classList.toggle('hidden');
+  });
+</script>
 
 
 <!-- JS para abrir/cerrar el menú en móvil -->

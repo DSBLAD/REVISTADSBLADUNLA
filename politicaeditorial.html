@@ -175,12 +175,18 @@
           <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
         </a>
       </li>
+       <!-- Botón que despliega la barra -->
+<button id="toggle-tabs" class="text-white px-3 py-2 bg-black rounded-md hover:bg-[#6c1d85] transition">
+  <i class="fas fa-bars text-xl"></i>
+</button>
     </ul>
   </nav>
   
-  <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
-<div class="sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
+ 
+   <!-- BARRA DE PESTAÑAS -->
+<div id="barra-pestanas" class="hidden sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner transition-all duration-300">
   <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
+    <!-- ...enlaces... -->
 
       <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
       Equipo editorial
@@ -439,6 +445,12 @@
 </section>
 
 
+<script>
+  document.getElementById('toggle-tabs').addEventListener('click', () => {
+    const barra = document.getElementById('barra-pestanas');
+    barra.classList.toggle('hidden');
+  });
+</script>
 
 <!-- JS para abrir/cerrar el menú en móvil -->
 
