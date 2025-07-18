@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estadísticas - DSB LAD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Meta para redes sociales -->
+  <meta property="og:title" content="DSB LAD" />
+  <meta property="og:description" content="Revista de Diseño" />
+  <meta property="og:image" content="https://dsblad.github.io/REVISTADSBLADUNLA/images/n5.png" />
+  <meta property="og:url" content="https://dsblad.github.io/REVISTADSBLADUNLA/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Icono -->
+  <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!--googlefonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celeste: '#0c6d99', celestonoscuro: '#1394ad', azulpetrol: '#168AAD', azulverdoso: '#34A0A4',
+            verdepetroloscuro: '#036666', verdepetroleo: '#14746F', verdepetro: '#248277',
+            amarillooro: '#D7B04B', amarillo: '#FFCF56', fondocalido: '#FDFCFB', black: '#000000',
+            Gris: '#4d4d4d', Amarillo: '#f3be13', Turquesa: '#26a7a6', cyanoscuroelegante: '#006D77',
+            turquesaprofundo: '#007C91', violetweb: '#7F5AF0', pastelviolet: '#CBB7E2',
+            darkviolet: '#3D2C54', bordoviolet: '#A45C84',
+          },
+          fontSize: {
+            '2xl': '1.5rem', '3xl': '1.875rem', '4xl': '2.25rem', '5xl': '3rem', '6xl': '3.75rem',
+          },
+          fontWeight: {
+            normal: 400, medium: 500, bold: 700,
+          },
+          fontFamily: {
+            sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+            condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+            'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'FF Good Pro Cond Black';
+      src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FF Good Pro Wide Light';
+      src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+           url('fonts/ff-good-pro-wide-light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+    .animate-fade-in-delay { animation: fadeIn 1.2s ease-out 0.3s forwards; }
+  </style>
+</head>
+
+<body class="bg-white text-[#222] font-sans pt-20">
+  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
+      <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
+        <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+      </a>
+    </div>
+
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+        <span id="menu-icon">&#9776;</span>
+      </button>
+    </div>
+
+    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
+      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+      <li>
+        <a id="contactoMail" href="mailto:dsbladunla@gmail.com" class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
+          <i class="fas fa-envelope"></i>
+          <span>Contacto</span>
+        </a>
+      </li>
+      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+        </a>
+        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
+      <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Equipo editorial</a>
+      <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Información para Lectores</a>
+      <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Información para Autores</a>
+      <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Información para Bibliotecarios</a>
+      <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Ética y buenas prácticas</a>
+      <a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Políticas</a>
+      <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">Envíos</a>
+      <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
+        <i class="fas fa-search"></i>
+        <span>Buscador</span>
+      </a>
+    </div>
+  </div>
+
+  <section id="estadistica" class="flex bg-gray-100">
+    <section class="min-h-screen flex bg-gray-100">
+     <aside class="w-64 bg-darkviolet text-white flex flex-col p-6 pt-6 shadow-lg sticky top-[100px] h-[calc(100vh-100px)]">
+    
+      <h1 class="text-2xl font-bold mb-8">DSB LAD</h1>
+      <nav class="space-y-4">
+        <a href="#" class="flex items-center gap-2 hover:text-pastelviolet transition"><i data-lucide="layout-dashboard" class="w-5 h-5"></i> Panel</a>
+        <a href="#" class="flex items-center gap-2 hover:text-pastelviolet transition"><i data-lucide="book-open" class="w-5 h-5"></i> Publicaciones</a>
+        <a href="#" class="flex items-center gap-2 hover:text-pastelviolet transition"><i data-lucide="user" class="w-5 h-5"></i> Usuarios</a>
+      </nav>
+    </aside>
+
+  
+    <main class="ml-64 p-10 flex-1">
+      <h2 class="text-3xl font-bold mb-8">Panel de Estadísticas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <div class="bg-white rounded-2xl p-6 shadow-md flex items-center justify-between border">
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-gray-700">Visitas al sitio</h3>
+            <p class="text-4xl font-bold text-darkviolet" id="totalVisitas">0</p>
+          </div>
+          <i data-lucide="eye" class="w-10 h-10 text-darkviolet"></i>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-md flex items-center justify-between border">
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-gray-700">Descargas totales</h3>
+            <p class="text-4xl font-bold text-darkviolet" id="totalDescargas">0</p>
+          </div>
+          <i data-lucide="download" class="w-10 h-10 text-darkviolet"></i>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-md border">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-semibold text-gray-700">Descargas por documento</h3>
+          <i data-lucide="bar-chart" class="w-6 h-6 text-darkviolet"></i>
+        </div>
+        <canvas id="graficoDescargas" height="150"></canvas>
+      </div>
+    </section>
+  </section>
+  </main>
+
+
+
+
+  <!--PREFOOTER -->
+
+<section class="bg-black text-white py-10 px-4 font-outfit">
+  <!-- Grid superior -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+
+    <!-- CONSULTORÍA -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
+      </ul>
+    </div>
+
+    <!-- REDES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">REDES</h2>
+      <div class="flex space-x-4 text-xl">
+        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="mt-4 text-sm leading-relaxed">
+        <p>Lanús, Argentina</p>
+        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- SECCIONES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
+      </ul>
+    </div>
+
+   <!-- LOGO -->
+     <div class="flex items-center justify-center gap-x-8">
+  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
+  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
+</div>
+
+    
+    </div>
+  </div>
+
+  <!-- Línea y grid inferior -->
+  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
+    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
+    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
+    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
+    <p>DSB LAD 2025 © Todos los derechos reservados</p>
+  </div>
+</section>
+ 
+
+ <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
+      authDomain: "descargaspdfdsb.firebaseapp.com",
+      projectId: "descargaspdfdsb",
+      storageBucket: "descargaspdfdsb.appspot.com",
+      messagingSenderId: "305859273500",
+      appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
+      measurementId: "G-Q3R5X04YB3",
+      databaseURL: "https://descargaspdfdsb-default-rtdb.firebaseio.com"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    const visitasRef = ref(db, 'visitas/index');
+    const descargasRef = ref(db, 'descargas');
+
+    // Total de visitas
+    onValue(visitasRef, snapshot => {
+      const total = snapshot.val() || 0;
+      document.getElementById('totalVisitas').textContent = total.toLocaleString('es-AR');
+    });
+
+    // Descargas por documento y total
+    onValue(descargasRef, snapshot => {
+      const datos = snapshot.val() || {};
+      const etiquetas = Object.keys(datos);
+      const valores = Object.values(datos);
+      const total = valores.reduce((acc, val) => acc + val, 0);
+
+      document.getElementById('totalDescargas').textContent = total.toLocaleString('es-AR');
+
+      const ctx = document.getElementById('graficoDescargas').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: etiquetas,
+          datasets: [{
+            label: 'Descargas',
+            data: valores,
+            backgroundColor: '#7e3af2'
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+    });
+  </script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+
+
+ 
