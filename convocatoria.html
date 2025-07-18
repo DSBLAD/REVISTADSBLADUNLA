@@ -1,0 +1,633 @@
+ 
+ <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>DSBLAD</title>
+    
+      <!-- Meta para redes sociales -->
+      <meta property="og:title" content="DSB LAD" />
+      <meta property="og:description" content="Revista de Diseño" />
+      <meta property="og:image" content="https://dsblad.github.io/REVISTADSBLADUNLA/images/n5.png" />
+      <meta property="og:url" content="https://dsblad.github.io/REVISTADSBLADUNLA/" />
+      <meta name="twitter:card" content="summary_large_image" />
+    
+      <!-- Icono -->
+      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    
+      <!-- Estilos personalizados -->
+      <link rel="stylesheet" href="style.css" />
+    
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+      <!--googlefonts -->
+
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          celeste: '#0c6d99',
+          celestonoscuro: '#1394ad',
+          azulpetrol: '#168AAD',
+          azulverdoso: '#34A0A4',
+          verdepetroloscuro: '#036666',
+          verdepetroleo: '#14746F',
+          verdepetro: '#248277',
+          amarillooro: '#D7B04B',
+          amarillo: '#FFCF56',
+          fondocalido: '#FDFCFB',
+          black: '#000000',
+          Gris: '#4d4d4d',
+          Amarillo: '#f3be13',
+          Turquesa: '#26a7a6',
+          cyanoscuroelegante: '#006D77',
+          turquesaprofundo: '#007C91',
+          violetweb: '#7F5AF0',
+          pastelviolet: '#CBB7E2',
+          darkviolet: '#3D2C54', 
+          bordoviolet: '#A45C84',
+        },
+        fontSize: {
+          '2xl': '1.5rem',
+          '3xl': '1.875rem',
+          '4xl': '2.25rem',
+          '5xl': '3rem',
+          '6xl': '3.75rem',
+        },
+        fontWeight: {
+          normal: 400,
+          medium: 500,
+          bold: 700,
+        },
+        fontFamily: {
+          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
+          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
+          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<!-- FUENTES PERSONALIZADAS -->
+<style>
+@font-face {
+  font-family: 'FF Good Pro Cond Black';
+  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FF Good Pro Wide Light';
+  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
+       url('fonts/ff-good-pro-wide-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+        html {
+          scroll-behavior: smooth;
+        }
+    
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        .animate-fade-in {
+          animation: fadeIn 1.2s ease-out forwards;
+        }
+    
+        .animate-fade-in-delay {
+          animation: fadeIn 1.2s ease-out 0.3s forwards;
+        }
+      </style>
+    </head>
+
+      
+    
+    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
+    
+<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+
+
+  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
+    
+    <!-- Logo -->
+    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+    </a>
+
+       
+  </div>
+
+ 
+    <!-- Botón hamburguesa visible solo en sm y md -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+        <span id="menu-icon">&#9776;</span>
+      </button>
+    </div>
+  
+    <!-- Menú visible en LG y desplegable en SM/MD -->
+    <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
+    
+      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
+      
+      
+      <li>
+  <a id="contactoMail" href="mailto:dsbladunla@gmail.com" 
+     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
+    <i class="fas fa-envelope"></i>
+    <span>Contacto</span>
+  </a>
+</li>
+      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+        </a>
+        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
+          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+   <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+<div class="sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
+
+      <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Equipo editorial
+    </a>
+    
+    <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Lectores
+    </a>
+
+    <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Autores
+    </a>
+
+    <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
+      Bibliotecarios
+    </a>
+
+    <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Buenas prácticas
+    </a>
+
+<a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Políticas
+    </a>
+
+    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+      Envios
+    </a>
+
+    <a href="estadistica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
+    Estadísticas
+  </a>
+
+    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
+  <i class="fas fa-search"></i>
+  <span>Buscador</span>
+</a>
+        
+  </div>
+</div>
+
+ <!-- Hero -->
+  <section class="relative bg-darkviolet text-white py-10 px-6 overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Convocatoria Abierta <br> Revista DSB LAD</h1>
+      <p class="text-lg max-w-2xl mx-auto">Te invitamos a formar parte de la próxima edición de nuestra revista. Sumate a la construcción de un diseño más inclusivo, accesible y transformador.</p>
+      <a href="#postular" class="mt-8 inline-block bg-white text-darkviolet font-bold py-3 px-6 rounded-lg shadow hover:bg-gray-100 transition">Postular Artículo</a>
+    </div>
+  </section>
+
+  <!-- Contenido Convocatoria -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto space-y-6 text-justify">
+      <h2 class="text-2xl font-bold text-darkviolet">¿De qué se trata?</h2>
+      <p>El LAD Laboratorio de Diseño del Departamento de Humanidades y Artes de la Universidad Nacional de Lanús convoca a participar de la publicación de artículos en la revista DSB LAD - Diseño Sin Barreras. La propuesta editorial busca visibilizar proyectos, ideas y reflexiones vinculadas a la accesibilidad, inclusión, diversidad, tecnología, investigación aplicada y experiencias proyectuales en torno al diseño.</p>
+
+  
+ <section class="bg-white text-black py-10 px-6">
+  <div class="max-w-4xl mx-auto space-y-10">
+    
+    <!-- Título -->
+    <header class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold text-darkviolet">Convocatoria a Publicaciones 2025</h1>
+      <p class="mt-2 text-lg text-gray-700">Diseño sin Barreras · Revista del Laboratorio de Diseño · UNLa</p>
+    </header>
+
+    <!-- Descripción -->
+    <div class="space-y-4 text-left leading-relaxed text-sm sm:text-base">
+      <p>La revista <strong>DSB-LAD</strong> convoca a participar con artículos originales, inéditos, experiencias pedagógicas y ensayos visuales. Esta publicación del <strong>Laboratorio de Diseño</strong> (UNLa) busca fomentar la reflexión y difusión de conocimientos en Diseño Industrial, Diseño en Comunicación Visual y disciplinas afines.</p>
+
+      <p>La convocatoria ofrece dos modalidades: <strong>Artículos académicos y de divulgación</strong>, o <strong>comunicaciones breves con énfasis visual</strong>.</p>
+    </div>
+
+    <!-- Fechas -->
+    <div class="bg-gray-100 border-l-4 border-darkviolet p-4">
+      <p class="text-md"><strong>Fecha límite de envío:</strong> 28 de agosto de 2025</p>
+       <p><strong>Publicación del número:</strong> Octubre de 2025</p>
+
+      <h2 class="text-xl font-bold text-darkviolet pt-8">¿Cómo participar?</h2>
+      <p>Los textos deberán enviarse en formato Word (plantilla a descargar abajo), incluir título, resumen, palabras clave, bibliografía y datos de contacto. Podrán tener hasta 6.000 palabras. El comité editorial evaluará cada propuesta según pertinencia, originalidad y claridad.</p>
+<br>
+      <p class="text-md"><strong>Envíos a:</strong> <a href="mailto:dsbladunla@gmail.com" class="underline text-darkviolet">dsbladunla@gmail.com</a></p>
+    </div>
+
+    <!-- Ejes temáticos -->
+    <div>
+      <h2 class="text-xl font-bold text-darkviolet mb-2">Ejes temáticos</h2>
+      <ul class="list-disc list-inside text-md space-y-2">
+        <li><strong>Investigación en Diseño:</strong> resultados de proyectos de investigación académica.</li>
+        <li><strong>Diseño en Expansión:</strong> impacto social, ambiental o cultural del diseño.</li>
+        <li><strong>Diseño para la Enseñanza y el Aprendizaje:</strong> experiencias educativas, recursos pedagógicos.</li>
+      </ul>
+    </div>
+
+    <!-- Formatos -->
+    <div>
+      <h2 class="text-xl font-bold text-darkviolet mb-2">Formatos de publicación</h2>
+      <div class="text-md space-y-3">
+        <p><strong>Artículo de divulgación:</strong> Hasta 4000 palabras + bibliografía.</p>
+        <p><strong>Comunicación breve / ensayo visual:</strong> Hasta 1000 palabras y 20 imágenes.</p>
+      </div>
+    </div>
+
+    <!-- Botón de plantilla -->
+    <div class="text-center">
+      <a href="documents/DSB LAD - Plantilla para articulo - doc v3 (1).docx" target="_blank" class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white text-base font-bold py-2 px-4 rounded-md transition">
+        <i class="fas fa-file-download"></i> Descargar plantilla modelo de estilo
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="postular" class="py-10 bg-white text-center">
+    <h2 class="text-xl font-bold text-darkviolet mb-2">¿Querés ser parte?</h2>
+    <a href="mailto:dsbladunla@gmail.com" class="inline-block bg-darkviolet text-white font-bold py-3 px-6 rounded-lg hover:bg-[#6c1d85] transition">
+      Enviar artículo ahora
+    </a>
+  </section>
+
+    <!-- Footer info -->
+    <p class="text-center text-sm text-gray-500 mt-10">
+      La revista DSB-LAD adhiere a estándares de ética editorial y publica bajo licencia Creative Commons.
+    </p>
+
+  </div>
+</section>
+
+
+<!--PREFOOTER -->
+
+<section class="bg-black text-white py-10 px-4 font-outfit">
+  <!-- Grid superior -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+
+    <!-- CONSULTORÍA -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
+      </ul>
+    </div>
+
+    <!-- REDES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">REDES</h2>
+      <div class="flex space-x-4 text-xl">
+        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="mt-4 text-sm leading-relaxed">
+        <p>Lanús, Argentina</p>
+        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- SECCIONES -->
+    <div>
+      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
+        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
+      </ul>
+    </div>
+
+   <!-- LOGO -->
+     <div class="flex items-center justify-center gap-x-8">
+  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
+  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
+</div>
+
+    
+    </div>
+  </div>
+
+  <!-- Línea y grid inferior -->
+  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
+    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
+    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
+    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
+    <p>DSB LAD 2025 © Todos los derechos reservados</p>
+  </div>
+</section>
+
+<!-- JS para mostrar/ocultar -->
+<script>
+  document.getElementById('abrirCita').addEventListener('click', () => {
+    document.getElementById('modalCita').classList.remove('hidden');
+  });
+
+  document.getElementById('cerrarCita').addEventListener('click', () => {
+    document.getElementById('modalCita').classList.add('hidden');
+  });
+
+  // También cerrar si se hace clic fuera del modal
+  document.getElementById('modalCita').addEventListener('click', (e) => {
+    if (e.target.id === 'modalCita') {
+      e.target.classList.add('hidden');
+    }
+  });
+</script>
+
+<!-- JS para aceptar cookies-->
+
+<script>
+  document.getElementById('cookieOverlay').addEventListener('click', function(e) {
+    // Si se hace clic fuera del banner, que no cierre ni interfiera
+    if (e.target === this) e.stopPropagation();
+  });
+
+  document.querySelectorAll('#cookieBanner a').forEach(a => {
+    a.addEventListener('click', function(e) {
+      // Dejamos pasar el clic para abrir el enlace
+      e.stopPropagation();
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('cookieOverlay');
+    const banner = document.getElementById('cookieBanner');
+    const boton = document.getElementById('aceptarCookies');
+    const enlaces = document.querySelectorAll('a');
+
+   function bloquearEnlaces() {
+  enlaces.forEach(link => {
+    // No bloquear enlaces dentro del banner de cookies
+    if (!link.closest('#cookieBanner')) {
+      link.dataset.href = link.getAttribute('href');
+      link.setAttribute('href', '#');
+      link.style.pointerEvents = 'none';
+      link.classList.add('opacity-50');
+    }
+  });
+}
+
+    function restaurarEnlaces() {
+      enlaces.forEach(link => {
+        if (link.dataset.href) {
+          link.setAttribute('href', link.dataset.href);
+          link.style.pointerEvents = 'auto';
+          link.classList.remove('opacity-50');
+        }
+      });
+    }
+
+    if (!localStorage.getItem('cookiesAceptadas')) {
+      overlay.classList.remove('hidden');
+      bloquearEnlaces();
+    } else {
+      overlay.remove();
+    }
+
+    boton.addEventListener('click', () => {
+      localStorage.setItem('cookiesAceptadas', 'true');
+      overlay.remove();
+      restaurarEnlaces();
+    });
+  });
+</script>
+
+<!-- JS para abrir/cerrar el menú en móvil -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      const icon = document.getElementById('menu-icon');
+  
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-full');
+        menu.classList.toggle('left-0');
+        menu.classList.toggle('bg-[#3e2d4f]');
+        menu.classList.toggle('w-full');
+        menu.classList.toggle('p-4');
+        menu.classList.toggle('shadow-md');
+        menu.classList.toggle('z-40');
+  
+        // Cambiar icono
+        if (menu.classList.contains('hidden')) {
+          icon.innerHTML = '&#9776;'; // ☰
+        } else {
+          icon.innerHTML = '&#10005;'; // ✖
+        }
+      });
+    });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+  });
+  </script>
+
+<script>
+  document.getElementById('contactoMail').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+
+    const asunto = 'Consulta sobre la revista DSB LAD';
+    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+
+    const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
+<script>
+  document.getElementById('formComunidad').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreUsuario').value.trim();
+    const email = document.getElementById('correoUsuario').value.trim();
+
+    if (!nombre || !email) return;
+
+    // Usamos nuestra API personalizada en Vercel para ocultar la API key de SheetBest
+    const endpoint = "https://guardar-api-sheetbest.vercel.app/api/guardarSuscripcion";
+
+    const data = {
+      nombre: nombre,
+      email: email
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById('mensajeSuscripcion').classList.remove('hidden');
+        document.getElementById('formComunidad').reset();
+      } else {
+        alert("Hubo un error al enviar tus datos. Intentá más tarde.");
+      }
+    } catch (error) {
+      alert("Error de red. Verificá tu conexión.");
+      console.error(error);
+    }
+  });
+</script>
+
+<script>
+  document.getElementById('formComunidad').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita envío tradicional
+
+    // Aquí puedes agregar la integración con un backend o Google Forms
+
+    // Mostrar mensaje de confirmación
+    const mensaje = document.getElementById('mensajeSuscripcion');
+    mensaje.classList.remove('hidden');
+
+    // Opcional: limpiar formulario
+    this.reset();
+
+    // Opcional: ocultar mensaje después de unos segundos
+    setTimeout(() => {
+      mensaje.classList.add('hidden');
+    }, 5000);
+  });
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
+    authDomain: "descargaspdfdsb.firebaseapp.com",
+    projectId: "descargaspdfdsb",
+    storageBucket: "descargaspdfdsb.appspot.com",
+    messagingSenderId: "305859273500",
+    appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
+    measurementId: "G-Q3R5X04YB3",
+    databaseURL: "https://descargaspdfdsb-default-rtdb.firebaseio.com/"
+    
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  // DESCARGAS REVISTA NUMERO 1
+  const contadorRef = ref(db, 'descargas/numero1');
+  const enlaceDescarga = document.getElementById('enlaceDescarga');
+
+  // Mostrar contador de descargas
+  onValue(contadorRef, (snapshot) => {
+    const count = snapshot.val() || 0;
+    document.getElementById('contadorDescargas').textContent = count;
+  });
+
+  // Botón de descarga
+const btnDescarga = document.getElementById('descargarPDF');
+if (btnDescarga) {
+  btnDescarga.addEventListener('click', () => {
+    enlaceDescarga.click();
+    runTransaction(contadorRef, (current) => (current || 0) + 1).catch((error) => {
+      console.error("Error al actualizar contador de descargas:", error);
+    });
+  });
+}
+
+
+  // CONTADOR DE VISITAS AL INDEX
+const visitasRef = ref(db, 'visitas/index');
+
+function formatearNumero(num) {
+  return new Intl.NumberFormat('es-AR').format(num);
+}
+
+onValue(visitasRef, (snapshot) => {
+  const count = snapshot.val() || 0;
+  const contador = document.getElementById('contadorVisitas');
+  if (contador) contador.textContent = formatearNumero(count);
+});
+
+runTransaction(visitasRef, (current) => (current || 0) + 1).catch((error) => {
+  console.error("Error al actualizar contador de visitas:", error);
+});
+
+
+
+
+</script>
+
+  
+ 
+  </body>
+</html>
