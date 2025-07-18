@@ -87,6 +87,9 @@
     .animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
     .animate-fade-in-delay { animation: fadeIn 1.2s ease-out 0.3s forwards; }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body class="bg-white text-[#222] font-sans pt-20">
@@ -169,6 +172,7 @@
           <i data-lucide="download" class="w-10 h-10 text-darkviolet"></i>
         </div>
       </div>
+      
       <div class="bg-white rounded-2xl p-6 shadow-md border">
         <div class="flex items-center justify-between mb-4">
           <h3 class="text-lg font-semibold text-gray-700">Descargas por documento</h3>
@@ -304,6 +308,36 @@
     });
   </script>
   <script>lucide.createIcons();</script>
+
+  <script>
+  const ctx = document.getElementById('graficoDescargas').getContext('2d');
+  const graficoDescargas = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Documento 1', 'Documento 2', 'Documento 3', 'Documento 4'],
+      datasets: [{
+        label: 'Cantidad de descargas',
+        data: [5, 8, 2, 10], // estos son valores de ejemplo
+        backgroundColor: '#5c2c90', // color violeta oscuro
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
 
