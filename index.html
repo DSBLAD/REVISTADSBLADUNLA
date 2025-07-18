@@ -711,6 +711,25 @@
   </div>
 </div>
 
+<!-- Botón de cita -->
+<button id="abrirCita" class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2 bg-darkviolet text-white text-base py-2 px-4 rounded-md shadow-lg hover:bg-Gris transition">
+  <i class="fas fa-quote-right"></i> Citar revista
+</button>
+
+<!-- Modal de cita -->
+<div id="modalCita" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full relative">
+    <button id="cerrarCita" class="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
+    <h3 class="text-lg font-bold mb-3 text-darkviolet">Cómo citar esta revista</h3>
+    <p class="text-sm text-gray-700 mb-4">
+      Autor del artículo, Título del artículo, Numero (1). Revista DSB LAD (2025). <em>Diseño sin barreras</em>. Universidad Nacional de Lanús. Recuperado de http://dsblad.unla.edu.ar/. Editorial LAD UNLa. 
+    </p>
+    <p class="text-xs text-gray-500">Formato APA 7ª edición</p>
+  </div>
+</div>
+
+
+
 
 
 <!--PREFOOTER -->
@@ -775,6 +794,24 @@
     <p>DSB LAD 2025 © Todos los derechos reservados</p>
   </div>
 </section>
+
+<!-- JS para mostrar/ocultar -->
+<script>
+  document.getElementById('abrirCita').addEventListener('click', () => {
+    document.getElementById('modalCita').classList.remove('hidden');
+  });
+
+  document.getElementById('cerrarCita').addEventListener('click', () => {
+    document.getElementById('modalCita').classList.add('hidden');
+  });
+
+  // También cerrar si se hace clic fuera del modal
+  document.getElementById('modalCita').addEventListener('click', (e) => {
+    if (e.target.id === 'modalCita') {
+      e.target.classList.add('hidden');
+    }
+  });
+</script>
 
 <!-- JS para aceptar cookies-->
 
