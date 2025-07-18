@@ -800,13 +800,18 @@
     const boton = document.getElementById('aceptarCookies');
     const enlaces = document.querySelectorAll('a');
 
-    function bloquearEnlaces() {
-      enlaces.forEach(link => {
-        link.dataset.href = link.getAttribute('href');
-        link.setAttribute('href', '#');
-        link.style.pointerEvents = 'none';
-        link.classList.add('opacity-50');
-      });
+   function bloquearEnlaces() {
+  enlaces.forEach(link => {
+    // No bloquear enlaces dentro del banner de cookies
+    if (!link.closest('#cookieBanner')) {
+      link.dataset.href = link.getAttribute('href');
+      link.setAttribute('href', '#');
+      link.style.pointerEvents = 'none';
+      link.classList.add('opacity-50');
+    }
+  });
+}
+
     }
 
     function restaurarEnlaces() {
