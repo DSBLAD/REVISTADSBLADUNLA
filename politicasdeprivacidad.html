@@ -365,48 +365,7 @@
 
 
 
-<!-- JS para abrir/cerrar el menú en móvil -->
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('menu');
-      const icon = document.getElementById('menu-icon');
-  
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        menu.classList.toggle('flex-col');
-        menu.classList.toggle('absolute');
-        menu.classList.toggle('top-full');
-        menu.classList.toggle('left-0');
-        menu.classList.toggle('bg-[#3e2d4f]');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('p-4');
-        menu.classList.toggle('shadow-md');
-        menu.classList.toggle('z-40');
-  
-        // Cambiar icono
-        if (menu.classList.contains('hidden')) {
-          icon.innerHTML = '&#9776;'; // ☰
-        } else {
-          icon.innerHTML = '&#10005;'; // ✖
-        }
-      });
-    });
-
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  menuToggle.addEventListener('click', () => {
-    if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden');
-    } else {
-      menu.classList.add('hidden');
-    }
-  });
-  </script>
+<!-- JS para abrir mail-->
 
 <script>
   document.getElementById('contactoMail').addEventListener('click', function (e) {
@@ -423,7 +382,50 @@
   });
 </script>
 
- 
+<!-- JS para mostrar barra fija -->
+
+<script>
+  const toggleButton = document.getElementById('toggle-tabs');
+  const tabBar = document.getElementById('tab-bar');
+
+  toggleButton.addEventListener('click', () => {
+    tabBar.classList.toggle('hidden');
+    tabBar.classList.toggle('flex');
+  });
+</script>
+
+<!-- JS para mostrar barra nav -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const icon = document.getElementById('menu-icon');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-full');
+        menu.classList.toggle('left-0');
+        menu.classList.toggle('bg-[#3e2d4f]');
+        menu.classList.toggle('w-full');
+        menu.classList.toggle('p-4');
+        menu.classList.toggle('shadow-md');
+        menu.classList.toggle('z-40');
+
+        // Cambiar icono ☰ ⇄ ✖
+        if (menu.classList.contains('hidden')) {
+          icon.innerHTML = '&#9776;';
+        } else {
+          icon.innerHTML = '&#10005;';
+        }
+      });
+    }
+  });
+</script>
+  
   </body>
 </html>
 
