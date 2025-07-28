@@ -852,6 +852,22 @@
   });
 </script>
 
+<!-- JS para mostrar barra nav -->
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex'); // Asegura que se muestre como bloque en vertical
+    menu.classList.toggle('flex-col'); // Hace que los items se apilen
+    menu.classList.toggle('bg-black'); // Opcional, si querés fondo negro
+    menu.classList.toggle('p-4'); // Opcional, espacio interno
+  });
+</script>
+
+
 
 <!-- JS para mostrar/ocultar cita -->
 <script>
