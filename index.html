@@ -173,9 +173,19 @@
     </ul>
   </nav>
 
+  <!-- Botón para mostrar barra de pestañas en mobile -->
+<div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white sticky top-[70px] z-40">
+  <button id="toggle-tabs" class="text-2xl focus:outline-none">
+    <i class="fas fa-bars"></i> <!-- Ícono de menú -->
+  </button>
+</div>
+
  
 
 <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+
+<div id="tab-bar" class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner sticky top-[110px] z-30">
+ 
 <div class="hidden sm:flex sticky top-[70px] z-40 bg-[#4B145F] text-white w-full shadow-inner">
   <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
   
@@ -829,6 +839,18 @@
     <p>DSB LAD 2025 © Todos los derechos reservados</p>
   </div>
 </section>
+
+<!-- JS para mostrar barra fija -->
+<script>
+  const toggleButton = document.getElementById('toggle-tabs');
+  const tabBar = document.getElementById('tab-bar');
+
+  toggleButton.addEventListener('click', () => {
+    tabBar.classList.toggle('hidden');
+    tabBar.classList.toggle('flex');
+  });
+</script>
+
 
 <!-- JS para mostrar/ocultar cita -->
 <script>
