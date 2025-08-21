@@ -1,559 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSBLAD</title>
 
- <!DOCTYPE html>
-    <html lang="es">
+    <!-- Meta para redes sociales -->
+    <meta property="og:title" content="INKAO" />
+    <meta property="og:description" content="Estudio de Diseño" />
+    <meta
+      property="og:image"
+      content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://blomstfrisk.github.io/WEB-INKAO/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DSBLAD</title>
-    
-      <!-- Meta para redes sociales -->
-      <meta property="og:title" content="INKAO" />
-      <meta property="og:description" content="Estudio de Diseño" />
-      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
-      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
-      <meta name="twitter:card" content="summary_large_image" />
-    
-      <!-- Icono -->
-      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="style.css" />
-    
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Icono -->
+    <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 
-      <!--googlefonts -->
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css" />
 
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    
+    <!--googlefonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          celeste: '#0c6d99',
-          celestonoscuro: '#1394ad',
-          azulpetrol: '#168AAD',
-          azulverdoso: '#34A0A4',
-          verdepetroloscuro: '#036666',
-          verdepetroleo: '#14746F',
-          verdepetro: '#248277',
-          amarillooro: '#D7B04B',
-          amarillo: '#FFCF56',
-          fondocalido: '#FDFCFB',
-          black: '#000000',
-          Gris: '#4d4d4d',
-          Amarillo: '#f3be13',
-          Turquesa: '#26a7a6',
-          cyanoscuroelegante: '#006D77',
-          turquesaprofundo: '#007C91',
-          violetweb: '#7F5AF0',
-          pastelviolet: '#CBB7E2',
-          darkviolet: '#3D2C54', 
-          bordoviolet: '#A45C84',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              celeste: "#0c6d99",
+              celestonoscuro: "#1394ad",
+              azulpetrol: "#168AAD",
+              azulverdoso: "#34A0A4",
+              verdepetroloscuro: "#036666",
+              verdepetroleo: "#14746F",
+              verdepetro: "#248277",
+              amarillooro: "#D7B04B",
+              amarillo: "#FFCF56",
+              fondocalido: "#FDFCFB",
+              black: "#000000",
+              Gris: "#4d4d4d",
+              Amarillo: "#f3be13",
+              Turquesa: "#26a7a6",
+              cyanoscuroelegante: "#006D77",
+              turquesaprofundo: "#007C91",
+              violetweb: "#7F5AF0",
+              pastelviolet: "#CBB7E2",
+              darkviolet: "#3D2C54",
+              bordoviolet: "#A45C84",
+            },
+            fontSize: {
+              "2xl": "1.5rem",
+              "3xl": "1.875rem",
+              "4xl": "2.25rem",
+              "5xl": "3rem",
+              "6xl": "3.75rem",
+            },
+            fontWeight: {
+              normal: 400,
+              medium: 500,
+              bold: 700,
+            },
+            fontFamily: {
+              sans: ['"FF Good Pro Wide Light"', "sans-serif"],
+              condblack: ['"FF Good Pro Cond Black"', "sans-serif"],
+              "barlow-condensed": ['"Barlow Condensed"', "sans-serif"],
+            },
+          },
         },
-        fontSize: {
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '3.75rem',
-        },
-        fontWeight: {
-          normal: 400,
-          medium: 500,
-          bold: 700,
-        },
-        fontFamily: {
-          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
-          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
-          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
-<style>
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-  </style>
+      };
+    </script>
+    <style>
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
 
-<!-- FUENTES PERSONALIZADAS -->
-<style>
-@font-face {
-  font-family: 'FF Good Pro Cond Black';
-  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+    <!-- FUENTES PERSONALIZADAS -->
+    <style>
+      @font-face {
+        font-family: "FF Good Pro Cond Black";
+        src: url("fonts/ff-good-pro-cond-black.woff") format("woff");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
 
-@font-face {
-  font-family: 'FF Good Pro Wide Light';
-  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
-       url('fonts/ff-good-pro-wide-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-        html {
-          scroll-behavior: smooth;
+      @font-face {
+        font-family: "FF Good Pro Wide Light";
+        src: url("fonts/ff-good-pro-wide-light.woff2") format("woff2"),
+          url("fonts/ff-good-pro-wide-light.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
         }
-    
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
-    
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out forwards;
-        }
-    
-        .animate-fade-in-delay {
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
-      </style>
-    </head>
+      }
 
-      
-   
-    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
-    
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
 
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+      .animate-fade-in-delay {
+        animation: fadeIn 1.2s ease-out 0.3s forwards;
+      }
+    </style>
+  </head>
 
+  <body class="bg-white text-[#222] font-sans pt-20">
+    <!-- Compensa altura del menú fijo -->
 
-  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
-  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
-    
-    <!-- Logo -->
-    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
-    </a>
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
-       
-  </div>
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
- 
-    <!-- Botón hamburguesa visible solo en sm y md -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
-        <span id="menu-icon">&#9776;</span>
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between"
+    >
+      <div
+        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
+      >
+        <!-- Logo -->
+        <a
+          href="https://www.instagram.com/lad.unla/?hl=es-la"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline"
+        >
+          <img
+            src="./images/n1.png"
+            alt="LAD Logo"
+            class="h-10 sm:h-12 md:h-14 w-auto object-contain"
+          />
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa visible solo en sm y md -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+          <span id="menu-icon">&#9776;</span>
+        </button>
+      </div>
+
+      <!-- Menú visible en LG y desplegable en SM/MD -->
+
+      <ul
+        id="menu"
+        class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white"
+      >
+        <li>
+          <a
+            href="sobredsb.html"
+            class="block w-full py-1 hover:text-pastelviolet"
+            >Sobre DSB LAD</a
+          >
+        </li>
+
+        <li>
+          <a
+            id="contactoMail"
+            href="mailto:dsbladunla@gmail.com"
+            class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Contacto</span>
+          </a>
+        </li>
+        <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+          <a
+            href="index.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/ar.png"
+              alt="Español"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+          <a
+            href="indexen.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/us.png"
+              alt="English"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Botón para mostrar barra de pestañas en mobile -->
+    <div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
+      <button id="toggle-tabs" class="text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
-  
-    <!-- Menú visible en LG y desplegable en SM/MD -->
 
-     <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
-       
-      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
-      
-      
-      <li>
-  <a id="contactoMail" href="mailto:dsbladunla@gmail.com" 
-     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
-    <i class="fas fa-envelope"></i>
-    <span>Contacto</span>
-  </a>
-</li>
-      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
-        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+    <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+
+    <div
+      id="tab-bar"
+      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner"
+    >
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base"
+      >
+        <a
+          href="convocatoria.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Convocatorias
         </a>
-        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+
+        <a
+          href="unidadequipo.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Equipo editorial
         </a>
-      </li>
-    </ul>
-  </nav>
 
-  
-<!-- Botón para mostrar barra de pestañas en mobile -->
-<div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
-  <button id="toggle-tabs" class="text-2xl focus:outline-none">
-    <i class="fas fa-bars"></i>
-  </button>
-</div>
+        <a
+          href="infolectores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Lectores
+        </a>
 
+        <a
+          href="infoautores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Autores
+        </a>
 
- 
+        <a
+          href="infobibliotecarios.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200"
+        >
+          Bibliotecarios
+        </a>
 
-<!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+        <a
+          href="etica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Buenas prácticas
+        </a>
 
-<div id="tab-bar" class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner">
+        <a
+          href="politicas.html"
+          class="w-full sm:w-auto text-center bg-gray-100 text-black px-4 py-2 rounded-sm transition duration-200"
+          style="pointer-events: none"
+        >
+          Políticas
+        </a>
 
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
-  
+        <a
+          href="#envios"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Envios
+        </a>
 
-      <a href="convocatoria.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Convocatorias
-  </a>
-    
-    <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Equipo editorial
-    </a>
-    
-    <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Lectores
-    </a>
+        <a
+          href="estadistica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Estadísticas
+        </a>
 
-    <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Autores
-    </a>
-
-    <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
-      Bibliotecarios
-    </a>
-
-    <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Buenas prácticas
-    </a>
-
-<a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Políticas
-    </a>
-
-    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Envios
-    </a>
-
-    <a href="estadistica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Estadísticas
-  </a>
-
-    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
-  <i class="fas fa-search"></i>
-  <span>Buscador</span>
-</a>
-        
-</div>
-</div>
-
-  </div>
-</div>
+        <a
+          href="buscador.html"
+          target="_blank"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2"
+        >
+          <i class="fas fa-search"></i>
+          <span>Buscador</span>
+        </a>
+      </div>
+    </div>
 
     <!-- Políticas de cookies con ancho mayor -->
-<section id="cookies" class="py-10 px-6 bg-black">
-  <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
-    <h2 class="text-2xl text-black font-semibold mb-6 text-center">Política Editorial DSB LAD</h2>
-    <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-    <div class="text-black text-sm leading-relaxed space-y-6 text-left">
-      <p class="text-right italic">Última actualización: 30 de junio 2025</p>
-     
+    <section id="cookies" class="py-10 px-6 bg-black">
+      <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
+        <h2 class="text-2xl text-black font-semibold mb-6 text-center">
+          Política Editorial DSB LAD
+        </h2>
+        <div
+          class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+        ></div>
+        <div class="text-black text-sm leading-relaxed space-y-6 text-left">
+          <p class="text-right italic">
+            Última actualización: 30 de junio 2025
+          </p>
 
-      <!-- Tabs -->
-      <div class="max-w-6xl mx-auto px-4 py-2 bg-white shadow-md rounded-md mt-8">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 justify-center mb-6">
-          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="1">Políticas Generales</button>
-          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="2">Acceso Abierto y Ética</button>
-          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="3">Derechos y Licencias</button>
-          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="4">Divulgación y Accesibilidad</button>
-          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="5">Contenido y Originalidad</button>
-          <button class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold" data-tab="6">Campaña de Difusión</button>
+          <!-- Tabs -->
+          <div
+            class="max-w-6xl mx-auto px-4 py-2 bg-white shadow-md rounded-md mt-8"
+          >
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 justify-center mb-6"
+            >
+              <button
+                class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold"
+                data-tab="1"
+              >
+                Políticas Generales
+              </button>
+              <button
+                class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold"
+                data-tab="2"
+              >
+                Acceso Abierto y Ética
+              </button>
+              <button
+                class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold"
+                data-tab="3"
+              >
+                Derechos y Licencias
+              </button>
+              <button
+                class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold"
+                data-tab="4"
+              >
+                Divulgación y Accesibilidad
+              </button>
+              <button
+                class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold"
+                data-tab="5"
+              >
+                Contenido y Originalidad
+              </button>
+              <button
+                class="tab-btn px-2 py-2 bg-[#4B145F] text-white rounded hover:bg-black text-sm font-semibold"
+                data-tab="6"
+              >
+                Campaña de Difusión
+              </button>
+            </div>
+
+            <div
+              class="w-full max-w-full sm:max-w-[20cm] mx-auto px-6 py-10 bg-white rounded-md"
+            >
+              <!-- Tab 1: Políticas Generales -->
+
+              <div id="tab-1" class="tab-content active space-y-4">
+                <h2 class="text-lg font-semibold text-center text-black">
+                  Políticas Generales
+                </h2>
+                <p>
+                  La revista DSB adhiere a principios y estándares editoriales
+                  nacionales e internacionales que garantizan la calidad,
+                  integridad y responsabilidad en la publicación científica y de
+                  divulgación. A continuación, se detallan sus principales
+                  políticas:
+                </p>
+                <p>
+                  DSB acepta contribuciones originales e inéditas que se
+                  enmarquen en las áreas del Diseño Industrial, el Diseño en
+                  Comunicación Visual y otras disciplinas del diseño, así como
+                  también producciones interdisciplinarias vinculadas al campo.
+                  La publicación está abierta a artículos científicos, ensayos,
+                  experiencias proyectuales, estudios de caso, entrevistas,
+                  reseñas y otros formatos que aporten al conocimiento, la
+                  reflexión crítica y la divulgación del diseño.
+                </p>
+                <p>
+                  <strong
+                    >Las condiciones generales para la postulación de trabajos
+                    son las siguientes:</strong
+                  >
+                </p>
+                <p>
+                  <strong>Originalidad:</strong> Los trabajos deben ser
+                  originales e inéditos, no haberse publicado previamente ni
+                  estar en proceso de evaluación en otras revistas o medios.
+                </p>
+                <p>
+                  <strong>Relevancia temática:</strong> Las contribuciones deben
+                  abordar problemáticas, desarrollos o reflexiones vinculadas al
+                  diseño, con claridad conceptual y pertinencia para los ámbitos
+                  académico, profesional y/o de divulgación.
+                </p>
+                <p><strong>Tipos de contribuciones:</strong></p>
+                <ul class="list-disc list-inside">
+                  <p>
+                    <strong>Artículos científicos</strong> con resultados de
+                    investigaciones teóricas o aplicadas.
+                  </p>
+                  <li>Resultado de Proyectos de Investigación</li>
+                  <li>Resultado de Proyectos de Extensión</li>
+                  <li>Resultado de Proyectos de Vinculación</li>
+                  <li>Resultado de Proyectos de Gestión</li>
+                  <li>Resultado de Tesis de Grado</li>
+                  <li>Resultado de Tesis de Especialización</li>
+                  <li>Resultado de Tesis de Maestría</li>
+                  <li>Resultado de Tesis de Doctorado</li>
+                  <li>Resultado de Tesis de Posdoctorado</li>
+                  <li>Resultado de Procesos Académicos</li>
+                  <br />
+                  <p><strong>Artículos de Divulgación:</strong></p>
+                  <li>
+                    Ensayos críticos y experiencias profesionales o pedagógicas
+                    documentadas
+                  </li>
+                  <li>entrevistas a referentes</li>
+                  <li>
+                    reseñas de libros, exposiciones u otros eventos relevantes
+                    para el campo del diseño
+                  </li>
+                  <li>
+                    otras contribuciones de importancia para el LAD o las
+                    carreras afines.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Normas de presentación:</strong> Los trabajos deben
+                  respetar las pautas de estilo, extensión, formato y sistema de
+                  citación definidos por la revista (disponibles en la Guía para
+                  autores/as). Deben incluir título, resumen, palabras clave y
+                  datos de los/as autores/as con filiación institucional.
+                </p>
+                <p>
+                  <strong>Evaluación:</strong> Los artículos científicos serán
+                  sometidos a evaluación por pares bajo la modalidad de simple
+                  ciego, definidos por la revista (disponibles en el documento
+                  Políticas de evaluación y revisión). Las contribuciones de
+                  carácter divulgativo serán evaluadas por el comité editorial.
+                  En todos los casos, se notificará a los/as autores/as sobre el
+                  resultado del proceso y eventuales recomendaciones.
+                </p>
+                <p>
+                  <strong>Idioma:</strong> Se aceptan trabajos en español.
+                  Excepcionalmente se considerarán contribuciones en otros
+                  idiomas con traducción incluida.
+                </p>
+                <p>
+                  <strong>Acceso abierto:</strong> La revista se publica en
+                  acceso abierto y no cobra cargos por presentación ni por
+                  publicación de artículos.
+                </p>
+                <p>
+                  <strong>Derechos de autor/a:</strong> Los/as autores/as
+                  conservan los derechos sobre sus obras, que serán publicadas
+                  bajo una licencia Creative Commons que permite su uso y
+                  difusión no comercial, con la debida atribución.
+                </p>
+                <br />
+                <p>
+                  Estas condiciones buscan asegurar la calidad, diversidad y
+                  accesibilidad de los contenidos, promoviendo una revista
+                  abierta, plural y comprometida con el desarrollo del campo del
+                  diseño.
+                </p>
+              </div>
+
+              <!-- Tab 2: Acceso Abierto y Ética -->
+
+              <div id="tab-2" class="tab-content space-y-4">
+                <h2 class="text-lg font-semibold text-center text-black">
+                  Acceso Abierto y Ética
+                </h2>
+                <p>
+                  <strong>Acceso abierto:</strong> DSB adopta una política de
+                  acceso abierto (Open Access), lo que significa que todos sus
+                  contenidos son de acceso libre, gratuito y universal desde el
+                  momento de su publicación, sin cargos para autores/as ni
+                  lectores/as. Esta política busca garantizar la democratización
+                  del conocimiento y facilitar la circulación de saberes en el
+                  ámbito académico, profesional y social.
+                </p>
+                <p>
+                  <strong>Ciencia abierta:</strong> En línea con los principios
+                  de la ciencia abierta, DSB promueve prácticas editoriales que
+                  favorezcan la transparencia, trazabilidad, reproducibilidad y
+                  colaboración en los procesos de producción y evaluación del
+                  conocimiento. Se incentiva el uso de repositorios abiertos,
+                  identificadores ORCID, y el enlace a fuentes de datos,
+                  metodologías o recursos complementarios cuando corresponda.
+                </p>
+                <p>
+                  <strong>Ética en la investigación:</strong> La revista respeta
+                  y exige el cumplimiento de normas éticas en la producción
+                  científica. Los artículos que involucren trabajo de campo,
+                  entrevistas o recolección de datos deberán declarar que se han
+                  respetado principios de consentimiento informado, privacidad
+                  de las personas participantes y evaluación por comités éticos
+                  institucionales, si correspondiera.
+                </p>
+                <p>
+                  <strong>Detección de plagio:</strong> Todos los trabajos
+                  recibidos serán sometidos a una revisión de originalidad,
+                  mediante herramientas antiplagio y lectura editorial, antes de
+                  ser enviados a evaluación. La revista no aceptará trabajos con
+                  indicios de plagio, autoplagio, falsificación o manipulación
+                  de datos. En caso de detectarse prácticas deshonestas, el
+                  trabajo será rechazado y se informará al autor/a y a su
+                  institución.
+                </p>
+              </div>
+
+              <!-- Tab 3: Derechos y Licencias -->
+
+              <div id="tab-3" class="tab-content space-y-4">
+                <h2 class="text-lg font-semibold text-center text-black">
+                  Derechos y Licencias
+                </h2>
+                <p>
+                  <strong>Derechos de autor y licencias:</strong> Las y los
+                  autores conservan los derechos de autor de sus obras, pero
+                  autorizan su publicación en la revista bajo una licencia
+                  Creative Commons Atribución-NoComercial-CompartirIgual (CC
+                  BY-NC-SA), que permite el uso, reproducción y distribución del
+                  contenido con fines no comerciales, reconociendo la autoría y
+                  manteniendo la misma licencia.
+                </p>
+                <p>
+                  <strong>Compromiso editorial:</strong> El equipo editorial
+                  garantiza un proceso de selección y evaluación basado en la
+                  calidad de los trabajos, sin discriminación por razones de
+                  género, nacionalidad, ideología, adscripción institucional o
+                  trayectorias académicas. Se resguarda la confidencialidad en
+                  los procesos de revisión y se respetan los plazos y normas de
+                  publicación establecidos.
+                </p>
+                <p>
+                  <strong>Conflictos de interés:</strong> Autores/as,
+                  evaluadores/as y miembros del equipo editorial deberán
+                  declarar cualquier conflicto de interés que pudiera influir en
+                  el proceso de evaluación, decisión editorial o publicación. La
+                  revista se compromete a actuar con imparcialidad y
+                  transparencia ante cualquier situación que comprometa la
+                  objetividad académica.
+                </p>
+                <p>
+                  <strong
+                    >Retractaciones, correcciones y comentarios
+                    post-publicación:</strong
+                  >
+                  La revista contempla mecanismos para la corrección de errores,
+                  aclaraciones, retracciones o respuestas a comentarios
+                  posteriores a la publicación, siguiendo las recomendaciones
+                  del Committee on Publication Ethics (COPE). Estas acciones se
+                  llevarán a cabo con criterios de responsabilidad, ética y
+                  preservación del registro académico.
+                </p>
+              </div>
+
+              <!-- Tab 4: Divulgación y Accesibilidad -->
+
+              <div id="tab-4" class="tab-content space-y-4">
+                <h2 class="text-lg font-semibold text-center text-black">
+                  Divulgación y Accesibilidad
+                </h2>
+                <p>
+                  La revista DSB promueve activamente la accesibilidad del
+                  conocimiento, tanto en términos de acceso abierto como de
+                  claridad y diversidad en los modos de comunicar. En su
+                  carácter mixto, integra producciones académicas rigurosas
+                  junto a textos de divulgación con un lenguaje claro y
+                  comprensible para públicos no especializados, sin perder
+                  profundidad conceptual.
+                </p>
+                <p>
+                  Todos los contenidos se publican bajo una política de acceso
+                  abierto y gratuito, sin cargos para autores ni lectoras/es,
+                  favoreciendo la democratización del conocimiento. La revista
+                  adhiere a licencias Creative Commons, que permiten la
+                  circulación, uso y reutilización del material con los debidos
+                  créditos, en consonancia con principios de ciencia abierta.
+                </p>
+                <p>
+                  Asimismo, se prioriza el diseño de contenidos accesibles desde
+                  el punto de vista visual, técnico y comunicacional,
+                  facilitando la lectura digital y considerando criterios de
+                  inclusión (uso adecuado del color, contraste, tipografías
+                  legibles y formatos compatibles con lectores de pantalla).
+                </p>
+                <p>
+                  En cuanto a su estrategia de divulgación, la revista contará
+                  con presencia en plataformas académicas, redes sociales
+                  institucionales, newsletters y bases de datos abiertas,
+                  buscando ampliar el alcance de las producciones y favorecer su
+                  circulación en entornos educativos, profesionales y
+                  comunitarios.
+                </p>
+                <p>
+                  De este modo, la revista asume el compromiso de contribuir a
+                  una comunicación científica y cultural más justa, equitativa y
+                  socialmente significativa.
+                </p>
+              </div>
+
+              <!-- Tab 5: Contenido y Originalidad -->
+              <div id="tab-5" class="tab-content space-y-4">
+                <h2 class="text-lg font-semibold text-center text-black">
+                  Contenido y Originalidad
+                </h2>
+                <p>
+                  La revista DSB se propone como un espacio abierto, plural y
+                  dinámico para la producción, comunicación y circulación de
+                  saberes vinculados al Diseño Industrial, el Diseño en
+                  Comunicación Visual y otras áreas del diseño en sentido
+                  amplio. Su contenido articula perspectivas académicas,
+                  proyectuales, culturales, tecnológicas y pedagógicas,
+                  propiciando el intercambio entre la comunidad universitaria,
+                  el ámbito profesional y la sociedad en general.
+                </p>
+                <p>
+                  Su abordaje mixto —que articula tanto contenidos científicos
+                  como de divulgación— permite tender puentes entre la comunidad
+                  académica, los espacios profesionales, los territorios y la
+                  sociedad en su conjunto.
+                </p>
+                <p>
+                  Uno de los principales valores de la publicación radica en su
+                  carácter de divulgación mixto, que combina el rigor de la
+                  investigación científica con el lenguaje accesible de la
+                  divulgación. Esta dualidad permite ampliar el alcance del
+                  conocimiento generado, promover el pensamiento crítico y
+                  vincular el diseño con los debates contemporáneos en torno al
+                  desarrollo, la sustentabilidad, la cultura y la innovación
+                  social.
+                </p>
+                <p>
+                  La revista fomenta la originalidad de los aportes y valora
+                  especialmente aquellos trabajos que aborden enfoques
+                  transdisciplinarios, experiencias proyectuales innovadoras,
+                  metodologías emergentes, desarrollos experimentales,
+                  reflexiones críticas y propuestas creativas que enriquezcan el
+                  campo del diseño desde miradas diversas y situadas.
+                </p>
+                <p>
+                  En un contexto en el que existe una escasa presencia de
+                  revistas dedicadas al diseño en el ámbito de las Universidades
+                  Nacionales, esta publicación constituye una propuesta
+                  innovadora y necesaria para visibilizar investigaciones,
+                  experiencias proyectuales, desarrollos teóricos y prácticas
+                  emergentes en clave latinoamericana, con anclaje local y
+                  perspectiva situada.
+                </p>
+                <p>
+                  La revista promueve la originalidad de los aportes y valora
+                  especialmente trabajos que interpelen los límites
+                  disciplinares, que dialoguen con problemáticas sociales,
+                  productivas, culturales y ambientales, y que aporten al
+                  desarrollo de metodologías innovadoras, enfoques inclusivos,
+                  perspectiva de género, diversidad epistemológica y vinculación
+                  con el territorio.
+                </p>
+                <p>
+                  De esta manera, DSB se configura como un dispositivo de
+                  producción y democratización del conocimiento en diseño, en
+                  clave crítica, contemporánea y comprometida con los desafíos
+                  colectivos.
+                </p>
+                <p>
+                  En sintonía con los principios institucionales de la
+                  Universidad Nacional de Lanús, la publicación busca contribuir
+                  a una producción de conocimiento comprometida con la justicia
+                  social, los derechos humanos, la soberanía, la integración
+                  regional y el fortalecimiento de una identidad
+                  latinoamericana, entendiendo al diseño como una herramienta
+                  transformadora al servicio del desarrollo humano y colectivo.
+                </p>
+              </div>
+
+              <!-- Tab 6: Campaña y difusión -->
+              <div id="tab-6" class="tab-content space-y-4">
+                <h2 class="text-lg font-semibold text-center text-black">
+                  Campaña de Difusión
+                </h2>
+                <p>
+                  Uno de los principales objetivos que se propone DSB es la
+                  instalación y visibilización de su propuesta editorial dentro
+                  del campo académico y profesional del diseño, tanto a nivel
+                  nacional como regional. Esta propuesta se vincula con la
+                  escasa existencia de publicaciones científicas y de
+                  divulgación especializadas en diseño en el ámbito de las
+                  Universidades Nacionales, lo cual demanda un trabajo sostenido
+                  de posicionamiento.
+                </p>
+                <p>Entre las acciones principales, se identifican:</p>
+                <ul class="list-disc pl-6">
+                  <li>
+                    Contar con recursos para el diseño y gestión de campañas
+                    digitales (en redes sociales, newsletters, sitio web
+                    institucional, etc.).
+                  </li>
+                  <li>
+                    Establecer vínculos con otras revistas, facultades,
+                    instituciones, cátedras y colectivos profesionales del
+                    ámbito del diseño, la comunicación y la cultura.
+                  </li>
+                  <li>
+                    Participar en ferias, congresos y encuentros académicos o
+                    profesionales como forma de promover la revista y convocar a
+                    nuevas colaboraciones.
+                  </li>
+                </ul>
+
+                <p>
+                  En este sentido, se prevé impulsar una campaña de difusión
+                  articulada con la Universidad Nacional de Lanús y sus canales
+                  oficiales, así como con redes de docentes, investigadores/as y
+                  estudiantes de carreras afines. También se propone desarrollar
+                  alianzas estratégicas con instituciones educativas, medios
+                  culturales, bibliotecas y colectivos de diseño, priorizando
+                  espacios de circulación abiertos, cooperativos y accesibles.
+                </p>
+              </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mt-6">
+              <a
+                href="politicas.html"
+                class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+              >
+                VOLVER A POLITICAS
+              </a>
+              <a
+                href="index.html"
+                class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+              >
+                INICIO
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-         <div class="w-full max-w-full sm:max-w-[20cm] mx-auto px-6 py-10 bg-white rounded-md">
+    <!--PREFOOTER -->
 
-        <!-- Tab 1: Políticas Generales -->
-
- <div id="tab-1" class="tab-content active space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Políticas Generales</h2>
-          <p>La revista DSB adhiere a principios y estándares editoriales nacionales e internacionales que garantizan la calidad, integridad y responsabilidad en la publicación científica y de divulgación. A continuación, se detallan sus principales políticas:</p>
-          <p>DSB acepta contribuciones originales e inéditas que se enmarquen en las áreas del Diseño Industrial, el Diseño en Comunicación Visual y otras disciplinas del diseño, así como también producciones interdisciplinarias vinculadas al campo. La publicación está abierta a artículos científicos, ensayos, experiencias proyectuales, estudios de caso, entrevistas, reseñas y otros formatos que aporten al conocimiento, la reflexión crítica y la divulgación del diseño.</p>
-          <p><strong>Las condiciones generales para la postulación de trabajos son las siguientes:</strong></p>
-          <p><strong>Originalidad:</strong> Los trabajos deben ser originales e inéditos, no haberse publicado previamente ni estar en proceso de evaluación en otras revistas o medios.</p>
-          <p><strong>Relevancia temática:</strong> Las contribuciones deben abordar problemáticas, desarrollos o reflexiones vinculadas al diseño, con claridad conceptual y pertinencia para los ámbitos académico, profesional y/o de divulgación.</p>
-          <p><strong>Tipos de contribuciones:</strong></p>
-          <ul class="list-disc list-inside">
-            <p><strong>Artículos científicos</strong> con resultados de investigaciones teóricas o aplicadas.</p>
-            <li>Resultado de Proyectos de Investigación</li>
-            <li>Resultado de Proyectos de Extensión</li>
-            <li>Resultado de Proyectos de Vinculación</li>
-            <li>Resultado de Proyectos de Gestión</li>
-            <li>Resultado de Tesis de Grado</li>
-            <li>Resultado de Tesis de Especialización</li>
-            <li>Resultado de Tesis de Maestría</li>
-            <li>Resultado de Tesis de Doctorado</li>
-            <li>Resultado de Tesis de Posdoctorado</li>
-            <li>Resultado de Procesos Académicos</li>
-<br>
-            <p><strong>Artículos de Divulgación:</strong></p>
-            <li>Ensayos críticos y experiencias profesionales o pedagógicas documentadas</li>
-            <li>entrevistas a referentes</li>
-            <li>reseñas de libros, exposiciones u otros eventos relevantes para el campo del diseño</li>
-            <li>otras contribuciones de importancia para el LAD o las carreras afines.</li>
+    <section class="bg-black text-white py-10 px-4 font-outfit">
+      <!-- Grid superior -->
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm"
+      >
+        <!-- CONSULTORÍA -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >DSB LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dirección Editorial y Técnica</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Redacción, Diseño y contenidos</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Comitee Editorial</a
+              >
+            </li>
           </ul>
-          <p><strong>Normas de presentación:</strong> Los trabajos deben respetar las pautas de estilo, extensión, formato y sistema de citación definidos por la revista (disponibles en la Guía para autores/as). Deben incluir título, resumen, palabras clave y datos de los/as autores/as con filiación institucional.</p>
-          <p><strong>Evaluación:</strong> Los artículos científicos serán sometidos a evaluación por pares bajo la modalidad de simple ciego, definidos por la revista (disponibles en el documento Políticas de evaluación y revisión). Las contribuciones de carácter divulgativo serán evaluadas por el comité editorial. En todos los casos, se notificará a los/as autores/as sobre el resultado del proceso y eventuales recomendaciones.</p>
-          <p><strong>Idioma:</strong> Se aceptan trabajos en español. Excepcionalmente se considerarán contribuciones en otros idiomas con traducción incluida.</p>
-          <p><strong>Acceso abierto:</strong> La revista se publica en acceso abierto y no cobra cargos por presentación ni por publicación de artículos.</p>
-          <p><strong>Derechos de autor/a:</strong> Los/as autores/as conservan los derechos sobre sus obras, que serán publicadas bajo una licencia Creative Commons que permite su uso y difusión no comercial, con la debida atribución.</p>
-<br>
- <p>Estas condiciones buscan asegurar la calidad, diversidad y accesibilidad de los contenidos, promoviendo una revista abierta, plural y comprometida con el desarrollo del campo del diseño.</p>
-
-       
         </div>
 
-        <!-- Tab 2: Acceso Abierto y Ética -->
-
-         <div id="tab-2" class="tab-content space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Acceso Abierto y Ética</h2>
-          <p><strong>Acceso abierto:</strong> DSB adopta una política de acceso abierto (Open Access), lo que significa que todos sus contenidos son de acceso libre, gratuito y universal desde el momento de su publicación, sin cargos para autores/as ni lectores/as. Esta política busca garantizar la democratización del conocimiento y facilitar la circulación de saberes en el ámbito académico, profesional y social.</p>
-          <p><strong>Ciencia abierta:</strong> En línea con los principios de la ciencia abierta, DSB promueve prácticas editoriales que favorezcan la transparencia, trazabilidad, reproducibilidad y colaboración en los procesos de producción y evaluación del conocimiento. Se incentiva el uso de repositorios abiertos, identificadores ORCID, y el enlace a fuentes de datos, metodologías o recursos complementarios cuando corresponda.</p>
-          <p><strong>Ética en la investigación:</strong> La revista respeta y exige el cumplimiento de normas éticas en la producción científica. Los artículos que involucren trabajo de campo, entrevistas o recolección de datos deberán declarar que se han respetado principios de consentimiento informado, privacidad de las personas participantes y evaluación por comités éticos institucionales, si correspondiera.</p>
-          <p><strong>Detección de plagio:</strong> Todos los trabajos recibidos serán sometidos a una revisión de originalidad, mediante herramientas antiplagio y lectura editorial, antes de ser enviados a evaluación. La revista no aceptará trabajos con indicios de plagio, autoplagio, falsificación o manipulación de datos. En caso de detectarse prácticas deshonestas, el trabajo será rechazado y se informará al autor/a y a su institución.</p>
+        <!-- REDES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">REDES</h2>
+          <div class="flex space-x-4 text-xl">
+            <a
+              href="https://www.instagram.com/lad.unla/?hl=es-la"
+              target="_blank"
+              class="hover:text-pastelviolet transition-colors"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="mt-4 text-sm leading-relaxed">
+            <p>Lanús, Argentina</p>
+            <p>
+              <a
+                href="mailto:dsbladunla@gmail.com"
+                class="hover:text-pastelviolet transition-colors"
+                >dsbladunla@gmail.com</a
+              >
+            </p>
+          </div>
         </div>
 
-        <div id="tab-2" class="tab-content space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Acceso Abierto y Ética</h2>
-          <p>DSB adopta una política de acceso abierto (Open Access), garantizando acceso libre y gratuito desde su publicación, sin cargos para autores/as ni lectores/as.</p>
-          <h3 class="font-semibold">Ciencia abierta</h3>
-          <p>Se promueven prácticas editoriales que favorezcan la transparencia, trazabilidad, reproducibilidad y colaboración. Se incentiva el uso de repositorios abiertos y enlaces a datos/metodologías.</p>
-          <h3 class="font-semibold">Ética en la investigación</h3>
-          <p>Se exige respeto a principios éticos, consentimiento informado y privacidad. En caso de corresponder, deberá acreditarse evaluación por comités éticos.</p>
-          <h3 class="font-semibold">Detección de plagio</h3>
-          <p>Todos los trabajos serán revisados con herramientas antiplagio. Se rechazarán los trabajos con plagio, autoplagio o falsificación de datos.</p>
-        </div>
-
-        <!-- Tab 3: Derechos y Licencias -->
-
- <div id="tab-3" class="tab-content space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Derechos y Licencias</h2>
-          <p><strong>Derechos de autor y licencias:</strong> Las y los autores conservan los derechos de autor de sus obras, pero autorizan su publicación en la revista bajo una licencia Creative Commons Atribución-NoComercial-CompartirIgual (CC BY-NC-SA), que permite el uso, reproducción y distribución del contenido con fines no comerciales, reconociendo la autoría y manteniendo la misma licencia.</p>
-          <p><strong>Compromiso editorial:</strong> El equipo editorial garantiza un proceso de selección y evaluación basado en la calidad de los trabajos, sin discriminación por razones de género, nacionalidad, ideología, adscripción institucional o trayectorias académicas. Se resguarda la confidencialidad en los procesos de revisión y se respetan los plazos y normas de publicación establecidos.</p>
-          <p><strong>Conflictos de interés:</strong> Autores/as, evaluadores/as y miembros del equipo editorial deberán declarar cualquier conflicto de interés que pudiera influir en el proceso de evaluación, decisión editorial o publicación. La revista se compromete a actuar con imparcialidad y transparencia ante cualquier situación que comprometa la objetividad académica.</p>
-          <p><strong>Retractaciones, correcciones y comentarios post-publicación:</strong> La revista contempla mecanismos para la corrección de errores, aclaraciones, retracciones o respuestas a comentarios posteriores a la publicación, siguiendo las recomendaciones del Committee on Publication Ethics (COPE). Estas acciones se llevarán a cabo con criterios de responsabilidad, ética y preservación del registro académico.</p>
-        </div>
-
-        <!-- Tab 4: Divulgación y Accesibilidad -->
-
-         <div id="tab-4" class="tab-content space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Divulgación y Accesibilidad</h2>
-          <p>La revista DSB promueve activamente la accesibilidad del conocimiento, tanto en términos de acceso abierto como de claridad y diversidad en los modos de comunicar. En su carácter mixto, integra producciones académicas rigurosas junto a textos de divulgación con un lenguaje claro y comprensible para públicos no especializados, sin perder profundidad conceptual.</p>
-          <p>Todos los contenidos se publican bajo una política de acceso abierto y gratuito, sin cargos para autores ni lectoras/es, favoreciendo la democratización del conocimiento. La revista adhiere a licencias Creative Commons, que permiten la circulación, uso y reutilización del material con los debidos créditos, en consonancia con principios de ciencia abierta.</p>
-          <p>Asimismo, se prioriza el diseño de contenidos accesibles desde el punto de vista visual, técnico y comunicacional, facilitando la lectura digital y considerando criterios de inclusión (uso adecuado del color, contraste, tipografías legibles y formatos compatibles con lectores de pantalla).</p>
-          <p>En cuanto a su estrategia de divulgación, la revista contará con presencia en plataformas académicas, redes sociales institucionales, newsletters y bases de datos abiertas, buscando ampliar el alcance de las producciones y favorecer su circulación en entornos educativos, profesionales y comunitarios.</p>
-          <p>De este modo, la revista asume el compromiso de contribuir a una comunicación científica y cultural más justa, equitativa y socialmente significativa.</p>
-        </div>
-
-       
-
-        <!-- Tab 5: Contenido y Originalidad -->
-<div id="tab-5" class="tab-content space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Contenido y Originalidad</h2>
-          <p>La revista DSB se propone como un espacio abierto, plural y dinámico para la producción, comunicación y circulación de saberes vinculados al Diseño Industrial, el Diseño en Comunicación Visual y otras áreas del diseño en sentido amplio. Su contenido articula perspectivas académicas, proyectuales, culturales, tecnológicas y pedagógicas, propiciando el intercambio entre la comunidad universitaria, el ámbito profesional y la sociedad en general.</p>
-          <p>Su abordaje mixto —que articula tanto contenidos científicos como de divulgación— permite tender puentes entre la comunidad académica, los espacios profesionales, los territorios y la sociedad en su conjunto.</p>
-          <p>Uno de los principales valores de la publicación radica en su carácter de divulgación mixto, que combina el rigor de la investigación científica con el lenguaje accesible de la divulgación. Esta dualidad permite ampliar el alcance del conocimiento generado, promover el pensamiento crítico y vincular el diseño con los debates contemporáneos en torno al desarrollo, la sustentabilidad, la cultura y la innovación social.</p>
-          <p>La revista fomenta la originalidad de los aportes y valora especialmente aquellos trabajos que aborden enfoques transdisciplinarios, experiencias proyectuales innovadoras, metodologías emergentes, desarrollos experimentales, reflexiones críticas y propuestas creativas que enriquezcan el campo del diseño desde miradas diversas y situadas.</p>
-          <p>En un contexto en el que existe una escasa presencia de revistas dedicadas al diseño en el ámbito de las Universidades Nacionales, esta publicación constituye una propuesta innovadora y necesaria para visibilizar investigaciones, experiencias proyectuales, desarrollos teóricos y prácticas emergentes en clave latinoamericana, con anclaje local y perspectiva situada.</p>
-          <p>La revista promueve la originalidad de los aportes y valora especialmente trabajos que interpelen los límites disciplinares, que dialoguen con problemáticas sociales, productivas, culturales y ambientales, y que aporten al desarrollo de metodologías innovadoras, enfoques inclusivos, perspectiva de género, diversidad epistemológica y vinculación con el territorio.</p>
-          <p>De esta manera, DSB se configura como un dispositivo de producción y democratización del conocimiento en diseño, en clave crítica, contemporánea y comprometida con los desafíos colectivos.</p>
-          <p>En sintonía con los principios institucionales de la Universidad Nacional de Lanús, la publicación busca contribuir a una producción de conocimiento comprometida con la justicia social, los derechos humanos, la soberanía, la integración regional y el fortalecimiento de una identidad latinoamericana, entendiendo al diseño como una herramienta transformadora al servicio del desarrollo humano y colectivo.</p>
-        </div>
-
-         <!-- Tab 6: Campaña y difusión -->
- <div id="tab-6" class="tab-content space-y-4">
-          <h2 class="text-lg font-semibold text-center text-black">Campaña de Difusión</h2>
-          <p>Uno de los principales objetivos que se propone DSB es la instalación y visibilización de su propuesta editorial dentro del campo académico y profesional del diseño, tanto a nivel nacional como regional. Esta propuesta se vincula con la escasa existencia de publicaciones científicas y de divulgación especializadas en diseño en el ámbito de las Universidades Nacionales, lo cual demanda un trabajo sostenido de posicionamiento.</p>
-          <p>Entre las acciones principales, se identifican:</p>
-          <ul class="list-disc pl-6">
-           <li>Contar con recursos para el diseño y gestión de campañas digitales (en redes sociales, newsletters, sitio web institucional, etc.).</li>
-            <li>Establecer vínculos con otras revistas, facultades, instituciones, cátedras y colectivos profesionales del ámbito del diseño, la comunicación y la cultura.</li>
-            <li>Participar en ferias, congresos y encuentros académicos o profesionales como forma de promover la revista y convocar a nuevas colaboraciones.</li>
+        <!-- SECCIONES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Numeros</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dossiers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Guias</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Equipo</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Contacto</a
+              >
+            </li>
           </ul>
-         
-          <p>En este sentido, se prevé impulsar una campaña de difusión articulada con la Universidad Nacional de Lanús y sus canales oficiales, así como con redes de docentes, investigadores/as y estudiantes de carreras afines. También se propone desarrollar alianzas estratégicas con instituciones educativas, medios culturales, bibliotecas y colectivos de diseño, priorizando espacios de circulación abiertos, cooperativos y accesibles.</p>
         </div>
 
-       
-       
+        <!-- LOGO -->
+        <div class="flex items-center justify-center gap-x-8">
+          <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
+          <img
+            src="images/LAD-logo chico.png"
+            alt="Logo lad"
+            class="w-auto h-20"
+          />
+        </div>
       </div>
 
-      <!-- Botones de navegación -->
-      <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mt-6">
-        <a href="politicas.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-          VOLVER A POLITICAS
-        </a>
-        <a href="index.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-          INICIO
-        </a>
+      <!-- Línea y grid inferior -->
+      <div
+        class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left"
+      >
+        <a
+          href="politicasdeprivacidad.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de privacidad</a
+        >
+        <a
+          href="politicasdecookies.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de Cookies</a
+        >
+        <a
+          href="terminosycondiciones.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Términos y condiciones</a
+        >
+        <p>DSB LAD 2025 © Todos los derechos reservados</p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <script>
+      document.getElementById("toggle-tabs").addEventListener("click", () => {
+        const barra = document.getElementById("barra-pestanas");
+        barra.classList.toggle("hidden");
+      });
+    </script>
 
+    <!-- JS para abrir mail -->
 
-<!--PREFOOTER -->
+    <script>
+      document
+        .getElementById("contactoMail")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
 
-<section class="bg-black text-white py-10 px-4 font-outfit">
-  <!-- Grid superior -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+          const nombre =
+            document.getElementById("nombreUsuario")?.value || "[Nombre]";
 
-    <!-- CONSULTORÍA -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
-      </ul>
-    </div>
+          const asunto = "Consulta sobre la revista DSB LAD";
+          const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(
+            nombre
+          )}`;
 
-    <!-- REDES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">REDES</h2>
-      <div class="flex space-x-4 text-xl">
-        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <div class="mt-4 text-sm leading-relaxed">
-        <p>Lanús, Argentina</p>
-        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
-      </div>
-    </div>
+          const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
+            asunto
+          )}&body=${cuerpo}`;
 
-    <!-- SECCIONES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
-      </ul>
-    </div>
+          window.location.href = mailtoLink;
+        });
+    </script>
 
-   <!-- LOGO -->
-     <div class="flex items-center justify-center gap-x-8">
-  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
-  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
-</div>
-    
-    </div>
-  </div>
+    <!-- Script Tabs -->
+    <script>
+      const buttons = document.querySelectorAll(".tab-btn");
+      const tabs = document.querySelectorAll(".tab-content");
 
-  <!-- Línea y grid inferior -->
-  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
-    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
-    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
-    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
-    <p>DSB LAD 2025 © Todos los derechos reservados</p>
-  </div>
-</section>
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.tab;
+          tabs.forEach((tab) => tab.classList.remove("active"));
+          document.getElementById(`tab-${target}`).classList.add("active");
+        });
+      });
+    </script>
 
+    <style>
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
 
-<script>
-  document.getElementById('toggle-tabs').addEventListener('click', () => {
-    const barra = document.getElementById('barra-pestanas');
-    barra.classList.toggle('hidden');
-  });
-</script>
+    <!-- JS para mostrar barra fija -->
 
-<!-- JS para abrir mail -->
+    <script>
+      const toggleButton = document.getElementById("toggle-tabs");
+      const tabBar = document.getElementById("tab-bar");
 
-<script>
-  document.getElementById('contactoMail').addEventListener('click', function (e) {
-    e.preventDefault();
+      toggleButton.addEventListener("click", () => {
+        tabBar.classList.toggle("hidden");
+        tabBar.classList.toggle("flex");
+      });
+    </script>
 
-    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+    <!-- JS para mostrar barra nav -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const icon = document.getElementById("menu-icon");
 
-    const asunto = 'Consulta sobre la revista DSB LAD';
-    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+        if (toggle && menu) {
+          toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+            menu.classList.toggle("flex-col");
+            menu.classList.toggle("absolute");
+            menu.classList.toggle("top-full");
+            menu.classList.toggle("left-0");
+            menu.classList.toggle("bg-[#3e2d4f]");
+            menu.classList.toggle("w-full");
+            menu.classList.toggle("p-4");
+            menu.classList.toggle("shadow-md");
+            menu.classList.toggle("z-40");
 
-    const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
-
-    window.location.href = mailtoLink;
-  });
-</script>
-
-
-<!-- Script Tabs -->
-<script>
-  const buttons = document.querySelectorAll(".tab-btn");
-  const tabs = document.querySelectorAll(".tab-content");
-
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const target = button.dataset.tab;
-      tabs.forEach(tab => tab.classList.remove("active"));
-      document.getElementById(`tab-${target}`).classList.add("active");
-    });
-  });
-</script>
-
-<style>
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
-</style>
-
-<!-- JS para mostrar barra fija -->
-
-<script>
-  const toggleButton = document.getElementById('toggle-tabs');
-  const tabBar = document.getElementById('tab-bar');
-
-  toggleButton.addEventListener('click', () => {
-    tabBar.classList.toggle('hidden');
-    tabBar.classList.toggle('flex');
-  });
-</script>
-
-<!-- JS para mostrar barra nav -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const icon = document.getElementById('menu-icon');
-
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        menu.classList.toggle('flex-col');
-        menu.classList.toggle('absolute');
-        menu.classList.toggle('top-full');
-        menu.classList.toggle('left-0');
-        menu.classList.toggle('bg-[#3e2d4f]');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('p-4');
-        menu.classList.toggle('shadow-md');
-        menu.classList.toggle('z-40');
-
-        // Cambiar icono ☰ ⇄ ✖
-        if (menu.classList.contains('hidden')) {
-          icon.innerHTML = '&#9776;';
-        } else {
-          icon.innerHTML = '&#10005;';
+            // Cambiar icono ☰ ⇄ ✖
+            if (menu.classList.contains("hidden")) {
+              icon.innerHTML = "&#9776;";
+            } else {
+              icon.innerHTML = "&#10005;";
+            }
+          });
         }
       });
-    }
-  });
-</script>
- 
-
-
-</body>
+    </script>
+  </body>
 </html>
-
- 
-  
-
-

@@ -1,684 +1,1165 @@
-
 <!DOCTYPE html>
-    <html lang="es">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSBLAD</title>
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DSBLAD</title>
-    
-      <!-- Meta para redes sociales -->
-      <meta property="og:title" content="INKAO" />
-      <meta property="og:description" content="Estudio de Diseño" />
-      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
-      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
-      <meta name="twitter:card" content="summary_large_image" />
-    
-      <!-- Icono -->
-      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="style.css" />
-    
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Meta para redes sociales -->
+    <meta property="og:title" content="INKAO" />
+    <meta property="og:description" content="Estudio de Diseño" />
+    <meta
+      property="og:image"
+      content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://blomstfrisk.github.io/WEB-INKAO/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-      <!--googlefonts -->
+    <!-- Icono -->
+    <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css" />
 
-    
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!--googlefonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          celeste: '#0c6d99',
-          celestonoscuro: '#1394ad',
-          azulpetrol: '#168AAD',
-          azulverdoso: '#34A0A4',
-          verdepetroloscuro: '#036666',
-          verdepetroleo: '#14746F',
-          verdepetro: '#248277',
-          amarillooro: '#D7B04B',
-          amarillo: '#FFCF56',
-          fondocalido: '#FDFCFB',
-          black: '#000000',
-          Gris: '#4d4d4d',
-          Amarillo: '#f3be13',
-          Turquesa: '#26a7a6',
-          cyanoscuroelegante: '#006D77',
-          turquesaprofundo: '#007C91',
-          violetweb: '#7F5AF0',
-          pastelviolet: '#CBB7E2',
-          darkviolet: '#3D2C54', 
-          bordoviolet: '#A45C84',
-          violeta: '#9676d8',
-                morado: '#6A1B9A',
-                fondo: '#FAF5FF',
-                bordo: '#a2263f',
-                celeste: '#0c6d99',
-                azul: '#1D3B6D',
-                berenjena: '#5c4554',
-                bordooscuro: '#552c5b',
-                violaceo: '#6a4b8e',
-                celestonoscuro: '#1394ad',
-                vino: '#80142f',
-                violetagrafito: '#3e2d4f',
-                lila: '#C587C5',
-                violaceoclaro: '#e0d1fa',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              celeste: "#0c6d99",
+              celestonoscuro: "#1394ad",
+              azulpetrol: "#168AAD",
+              azulverdoso: "#34A0A4",
+              verdepetroloscuro: "#036666",
+              verdepetroleo: "#14746F",
+              verdepetro: "#248277",
+              amarillooro: "#D7B04B",
+              amarillo: "#FFCF56",
+              fondocalido: "#FDFCFB",
+              black: "#000000",
+              Gris: "#4d4d4d",
+              Amarillo: "#f3be13",
+              Turquesa: "#26a7a6",
+              cyanoscuroelegante: "#006D77",
+              turquesaprofundo: "#007C91",
+              violetweb: "#7F5AF0",
+              pastelviolet: "#CBB7E2",
+              darkviolet: "#3D2C54",
+              bordoviolet: "#A45C84",
+              violeta: "#9676d8",
+              morado: "#6A1B9A",
+              fondo: "#FAF5FF",
+              bordo: "#a2263f",
+              celeste: "#0c6d99",
+              azul: "#1D3B6D",
+              berenjena: "#5c4554",
+              bordooscuro: "#552c5b",
+              violaceo: "#6a4b8e",
+              celestonoscuro: "#1394ad",
+              vino: "#80142f",
+              violetagrafito: "#3e2d4f",
+              lila: "#C587C5",
+              violaceoclaro: "#e0d1fa",
 
-                azulado: '#8EA4D2',
-                azulino: '#6279B8',
-                azulgris: '#49516F',
-                azulmarino: '#184E77', 
-                azulbase: '#1E6091',
-                azulinado: '#1A759F',
-                azulpetrol: '#168AAD',
-                azulverdoso: '#34A0A4',
-                verdepalta: '#6BAB6F',
-                verdepetroloscuro: '#036666',
-                verdepetroleo: '#14746F',
-                verdepetro: '#248277',
-                verdepetroclaro: '#469d89', 
-                verdeinglesclaro: '#3AB795',
-                verdementa: '#A0E8AF',
-                verdeingles: '#477E62',
-                verdepetroseco: '#86BAA1',
-                amarillooro: '#D7B04B',
-                amarillolimon: '#D9ED92',
-                amarillo: '#FFCF56',
-                fondocalido: '#FDFCFB',
-                cyanoscuroelegante: '#006D77',
-                turquesaprofundo: '#007C91',
-                verdepaltaoscuro: '#247864',
-                verdeolivaoscuro: '#2F6650',
+              azulado: "#8EA4D2",
+              azulino: "#6279B8",
+              azulgris: "#49516F",
+              azulmarino: "#184E77",
+              azulbase: "#1E6091",
+              azulinado: "#1A759F",
+              azulpetrol: "#168AAD",
+              azulverdoso: "#34A0A4",
+              verdepalta: "#6BAB6F",
+              verdepetroloscuro: "#036666",
+              verdepetroleo: "#14746F",
+              verdepetro: "#248277",
+              verdepetroclaro: "#469d89",
+              verdeinglesclaro: "#3AB795",
+              verdementa: "#A0E8AF",
+              verdeingles: "#477E62",
+              verdepetroseco: "#86BAA1",
+              amarillooro: "#D7B04B",
+              amarillolimon: "#D9ED92",
+              amarillo: "#FFCF56",
+              fondocalido: "#FDFCFB",
+              cyanoscuroelegante: "#006D77",
+              turquesaprofundo: "#007C91",
+              verdepaltaoscuro: "#247864",
+              verdeolivaoscuro: "#2F6650",
+            },
+            fontSize: {
+              "2xl": "1.5rem",
+              "3xl": "1.875rem",
+              "4xl": "2.25rem",
+              "5xl": "3rem",
+              "6xl": "3.75rem",
+            },
+            fontWeight: {
+              normal: 400,
+              medium: 500,
+              bold: 700,
+            },
+            fontFamily: {
+              sans: ['"FF Good Pro Wide Light"', "sans-serif"],
+              condblack: ['"FF Good Pro Cond Black"', "sans-serif"],
+              "barlow-condensed": ['"Barlow Condensed"', "sans-serif"],
+            },
+          },
         },
-        fontSize: {
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '3.75rem',
-        },
-        fontWeight: {
-          normal: 400,
-          medium: 500,
-          bold: 700,
-        },
-        fontFamily: {
-          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
-          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
-          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+      };
+    </script>
 
-<!-- FUENTES PERSONALIZADAS -->
-<style>
-@font-face {
-  font-family: 'FF Good Pro Cond Black';
-  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+    <!-- FUENTES PERSONALIZADAS -->
+    <style>
+      @font-face {
+        font-family: "FF Good Pro Cond Black";
+        src: url("fonts/ff-good-pro-cond-black.woff") format("woff");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
 
-@font-face {
-  font-family: 'FF Good Pro Wide Light';
-  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
-       url('fonts/ff-good-pro-wide-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-        html {
-          scroll-behavior: smooth;
+      @font-face {
+        font-family: "FF Good Pro Wide Light";
+        src: url("fonts/ff-good-pro-wide-light.woff2") format("woff2"),
+          url("fonts/ff-good-pro-wide-light.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
         }
-    
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
-    
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out forwards;
-        }
-    
-        .animate-fade-in-delay {
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
-      </style>
-    </head>
+      }
 
-      
-    
-    <body class="bg-black text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
-    
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
 
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+      .animate-fade-in-delay {
+        animation: fadeIn 1.2s ease-out 0.3s forwards;
+      }
+    </style>
+  </head>
 
+  <body class="bg-black text-[#222] font-sans pt-20">
+    <!-- Compensa altura del menú fijo -->
 
-  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
-  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
-    
-    <!-- Logo -->
-    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
-    </a>
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
-       
-  </div>
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
- 
-    <!-- Botón hamburguesa visible solo en sm y md -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
-        <span id="menu-icon">&#9776;</span>
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between"
+    >
+      <div
+        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
+      >
+        <!-- Logo -->
+        <a
+          href="https://www.instagram.com/lad.unla/?hl=es-la"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline"
+        >
+          <img
+            src="./images/n1.png"
+            alt="LAD Logo"
+            class="h-10 sm:h-12 md:h-14 w-auto object-contain"
+          />
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa visible solo en sm y md -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+          <span id="menu-icon">&#9776;</span>
+        </button>
+      </div>
+
+      <!-- Menú visible en LG y desplegable en SM/MD -->
+
+      <ul
+        id="menu"
+        class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white"
+      >
+        <li>
+          <a
+            href="sobredsb.html"
+            class="block w-full py-1 hover:text-pastelviolet"
+            >Sobre DSB LAD</a
+          >
+        </li>
+
+        <li>
+          <a
+            id="contactoMail"
+            href="mailto:dsbladunla@gmail.com"
+            class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Contacto</span>
+          </a>
+        </li>
+        <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+          <a
+            href="index.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/ar.png"
+              alt="Español"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+          <a
+            href="indexen.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/us.png"
+              alt="English"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Botón para mostrar barra de pestañas en mobile -->
+    <div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
+      <button id="toggle-tabs" class="text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
-  
-    <!-- Menú visible en LG y desplegable en SM/MD -->
 
-     <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
-       
-      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
-      
-      
-      <li>
-  <a id="contactoMail" href="mailto:dsbladunla@gmail.com" 
-     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
-    <i class="fas fa-envelope"></i>
-    <span>Contacto</span>
-  </a>
-</li>
-      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
-        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+    <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+
+    <div
+      id="tab-bar"
+      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner"
+    >
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base"
+      >
+        <a
+          href="convocatoria.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Convocatorias
         </a>
-        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+
+        <a
+          href="unidadequipo.html"
+          class="w-full sm:w-auto text-center bg-gray-100 text-black px-4 py-2 rounded-sm transition duration-200"
+          style="pointer-events: none"
+        >
+          Equipo editorial
         </a>
-      </li>
-    </ul>
-  </nav>
 
-  
-<!-- Botón para mostrar barra de pestañas en mobile -->
-<div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
-  <button id="toggle-tabs" class="text-2xl focus:outline-none">
-    <i class="fas fa-bars"></i>
-  </button>
-</div>
+        <a
+          href="infolectores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Lectores
+        </a>
 
+        <a
+          href="infoautores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Autores
+        </a>
 
- 
+        <a
+          href="infobibliotecarios.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200"
+        >
+          Bibliotecarios
+        </a>
 
-<!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+        <a
+          href="etica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Buenas prácticas
+        </a>
 
-<div id="tab-bar" class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner">
+        <a
+          href="politicas.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Políticas
+        </a>
 
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
-  
+        <a
+          href="#envios"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Envios
+        </a>
 
-      <a href="convocatoria.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Convocatorias
-  </a>
-    
-    <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Equipo editorial
-    </a>
-    
-    <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Lectores
-    </a>
+        <a
+          href="estadistica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Estadísticas
+        </a>
 
-    <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Autores
-    </a>
-
-    <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
-      Bibliotecarios
-    </a>
-
-    <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Buenas prácticas
-    </a>
-
-<a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Políticas
-    </a>
-
-    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Envios
-    </a>
-
-    <a href="estadistica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Estadísticas
-  </a>
-
-    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
-  <i class="fas fa-search"></i>
-  <span>Buscador</span>
-</a>
-        
-</div>
-</div>
-
-  </div>
-</div>
-
-<!-- EQUIPO DIRECTIVO -->
-<section id="equipodirectivo" class="pt-20 pb-6 px-4 bg-black"> <!-- pt-20 agrega más espacio arriba -->
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-white text-2xl sm:text-3xl font-bold px-6 py-3 rounded-sm shadow-lg inline-block uppercase">
-      EQUIPO DIRECTIVO
-    </h2>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
-
-    <!-- Estefi -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/estefi_grayscale_enhanced.jpg" alt="Estefi Fondevila Sancet" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-2">Estefi Fondevila Sancet</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DIRECCIÓN EDITORIAL DI</h3>
-        <p class="text-sm text-white/90 mb-4 text-left">Estefanía Fondevila Sancet, es Especialista en Metodología de la Investigación Científica UNLa, Diplomada en Ciencia y Tecnología UNQ y programadora web, Responsable de la coordinacion de Investigación del Departamento de Humanidades y Artes de la UNLa, fundadora del HUB de Diseño Industrial de la UNLa, desarrolla herramientas de planificación, diagnóstico, desarrollo y seguimiento de proyectos y emprendimientos. Articula con empresas, instituciones y equipos interdisciplinarios. Se desempeña como Directora de proyectos de investigación, de becarios y pasantes, con instituciones nacionales e internacionales. 
-Actualmente su actividad docente se desarrolla en UNLa, como profesora adjunta concursada en la materia Ciencia aplicada al Diseño Industrial, Taller de Prácticas Preprofesionales y en Taller Integrador Final en la Licenciatura en Diseño Industrial. 
-Participa de redes nacionales de Gestión de la Ciencia y la Tecnología. 1er premio innovar 2012 y 2016, Distinguida con Diploma de Honor en el concurso Arte, ciencia, tecnologia e innovación</p>
-   </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Diana -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/diana.jpeg" alt="Diana Corvalán" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Diana Corvalán</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DIRECCIÓN EDITORIAL DyCV</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Diana G. Corvalán es Diseñadora gráfica egresada de FADU, UBA, tiene estudios de posgrado en Comunicación y Creación Cultural, en el instituto Walter Benjamin en convenio con CAECE. Realizó la carrera docente especializada en arquitectura, diseño y urbanismo en FADU UBA.
-Se desempeñó como docente en diferentes universidades, donde también coordinó proyectos de cooperación y de extensión con instituciones nacionales e internacionales. 
-En la actualidad su actividad docente se concentra en UNLa, es coordinadora académica de la Licenciatura en Diseño y Comunicación Visual y es profesora asociada concursada en la materia Espacio Tipográfico 1 en DyCV y en la materia Imagen, tipografía e identidad cultural en la Licenciatura en Audiovisión. 
-Participa de equipos de investigación, redes y grupos de estudio vinculados con la tipografía, la caligrafía, el libro  y la cultura gráfica.Siempre interesada por el universo de la imagen y el diseño en general, ávida lectora, le interesan las diferentes dimensiones del mundo</p>
-    </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Clara -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/clara.jpeg" alt="Clara Tapia" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Clara Tapia</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DIRECCIÓN CONTENIDO</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Clara Tapia es Doctora en Artes, y Diseñadora Industrial (UNLP). Ganadora de la Beca de Estancia Corta de investigación doctoral BEC.AR en el Politécnico de Milano. Donde estudió en el Doctorado de Investigación en Diseño POLIMI y trabajó en el laboratorio de fabricación digital Polifactory.
-Sus proyectos cruzan el diseño, la industria textil y el arte. Es Profesora Adjunta de Historia y Metodología del Diseño (UNLa) y ayudante en Historia del Diseño Industrial (UNLP). Como investigadora trabaja en programas de I+D para promover la innovación en la economía social. Es performer y diseñadora de vestuario en varios colectivos de artistas de la ciudad de La Plata.</p>
-   </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Angelina -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/angelina.jpeg" alt="Angelina Sanchez" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Angelina Sanchez</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DIRECCIÓN DE DISEÑO</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Angelina Sánchez es diseñadora gráfica y especialista en diseño de tipografías (FADU-UBA). Desde 2005 dicta clases en la Universidad Nacional de Lanús (UNLa) en materias vinculadas al diseño editorial y uso tipográfico. Trabaja en forma independiente en proyectos de identidad visual, difusión y diseño editorial asociados al ámbito de la cultura y la música independiente.
-Participó en proyectos colaborativos en diseño, investigación y difusión como «Soytutype» fundidiora tipográfica; «AEZpress» letterpress; «Epígrafes porteños» tipografía en fachadas de Bs. As.; «Etnotipografías» proyecto de diseño en UNLa.; «Birras y letras» y «Chancho-va» colectivos de diseño tipográfico y divulgación.
-Algunos de sus diseños fueron seleccionados en la Bienal Latinoamericana «Tipos Latinos» y en la Bienal de Diseño FADU. «Ruda», tipografía publicada en Google Fonts recibió en 2023 la distinción del Sello Buen Diseño argentino y es utilizada actualmente en la identidad visual de la Escuela de Bellas Artes (ESAD) de Reims en Francia.</p>
-    </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- EQUIPO EDITORIAÑ -->
-<section id="equipodirectivo" class="pt-6 pb-6 px-4 bg-black">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-white text-2xl sm:text-3xl font-bold px-6 py-3 rounded-sm shadow-lg inline-block uppercase">
-      EQUIPO EDITORIAL
-    </h2>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
-
-    <!-- Estefi -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/emilia (1).jpg" alt="Estefi Fondevila Sancet" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-2">Emilia Di Nuzzo</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">REDACCION Y CONTENIDO</h3>
-        <p class="text-sm text-white/90 mb-4 text-left">María Emilia Di Nuzzo es Diseñadora Industrial UNLa y maestranda en Metodologías de la Investigación Científica en la misma institución. Posee un posgrado en Diseño de Juegos, Juguetes e Interfaces Lúdicas FADU-UBA. Su perfil académico se ha centrado en el diseño inclusivo y en el estudio y aplicación de metodologías de diseño.
-
-Desde 2021 se desempeña como docente en las materias Métodos de Diseño , Semiótica Aplicada al Diseño e Historia Social del Diseño I y II . Actualmente, su campo de trabajo se orienta al desarrollo de soluciones proyectuales basadas en metodologías de diseño, dentro de una red de Talleres Protegidos del Área Metropolitana de Buenos Aires (AMBA), con foco en la mejora de procesos y entornos inclusivos. </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Diana -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/andrea.jpeg" alt="Diana Corvalán" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Andrea Baffiggi</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DISEÑO EDITORIAL</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Andrea Soledad Baffigi, Licenciada en Diseño y Comunicación Visual graduada en la UNLa. Desde el 2017 se desempeña como docente investigadora en dicha institución educativa, actualmente formando parte la cátedra de Espacio Tipográfico 1 y Taller de Diseño Orientado. Además, forma parte del equipo docente de Tramo Inicial a la carrera y coopera en la organización y gestión de los Talleres Finales Integradores y el Laboratorio de Diseño. 
-En 2024 se incorporó en la Diplomatura en Artes del Libro (UNA) como docente de las Clínicas de Diseño de proyectos editoriales. 
-Fuera del ámbito académico, es diseñadora freelance. </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Clara -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/chanqui.jpeg" alt="Edgardo Chanquia" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4 ">Edgardo Chanquia</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DISEÑO DE CONTENIDO</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Edgardo Rafael Chanquia, es Magister en Metodología de la Investigación Científica UNLa. Posee los títulos de Diseñador Industrial UNLP, Prof. En Diseño Industrial UNLP y Diseñador Gráfico ESAV. Cuenta con una amplia experiencia previa en el área de la investigación académica. Actualmente en la UNLa se desempeña como profesor adjunto concursado en las asignaturas: Dibujo Técnico; Morfología; Desarrollos Visuales; Taller de Diseño Industrial 1 (Formación Básica) y Taller de Diseño Industrial 3, de la Lic. en Diseño Industrial. Además, es docente del Seminario en Diseño de Paneles de Presentación de Productos y está a cargo de la organización, montaje y publicación de muestras y productos de los estudiantes de la Licenciatura en Diseño Industrial. Es Miembro del Consejo Departamental del Departamento de Humanidades y Artes de la UNLa. </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Angelina -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/melisa.jpeg" alt="Melisa Cerda" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Melisa Cerda</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DISEÑO VISUAL</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Melisa Beatriz Cerda es
-Licenciada en Diseño y Comunicación Visual (UNLa).
-Docente e Investigadora en la UNLa.
-Diseñadora y desarrolladora web. Actualmente forma parte del equipo de investigación de Espacio tipográfico.</p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- COMITÉ EDITORIAL -->
-<section id="comiteeditorial" class="pt-6 pb-6 px-4 bg-black">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-white text-2xl sm:text-3xl font-bold px-6 py-3 rounded-sm shadow-lg inline-block uppercase">
-      COMITÉ EDITORIAL
-    </h2>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
-
-    <!-- Guillermo -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/guillermo-andrade_grayscale_enhanced.jpg" alt="Guillermo Andrade" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-2">Guillermo Andrade</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DIRECCIÓN LIC. DISEÑO INDUSTRIAL</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Guillermo Andrade es Diseñador Industrial y Magister en Marketing Internacional. Actualmente se encuentra en la realización de su tesis de Doctorado en Artes. Se desempeña como Director del  posgrado "Especialización en Tecnologías de Fabricación Digital", Universidad Nacional de Lanús,  y Director de la carrera de grado "Licenciatura en Diseño Industrial" ambas en la Universidad Nacional de Lanús. En su carrera como Investigador se destaca su designación como Investigador categoría II del sistemas de incentivos de la Nación En su carrera docente se desarrolla como Profesor Titular de la Universidad Nacional de La Plata y Profesor Asociado de la Universidad Nacional de Lanús. Es Miembro del Consejo departamental. Departamento Humanidades y Artes de Universidad Nacional de Lanús. Evaluador externo de proyectos de Ciencia, Tecnología e Innovación Productiva (Agencia Nacional de Promoción Científica y Tecnológica, Consejo Interuniversitario Nacional)  </p> </div>
-    
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Andrea -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/andrea-gergich_grayscale_enhanced.jpg" alt="Andrea Gergich" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Andrea Gergich</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">DIRECCIÓN DISEÑO Y COMUNICACIÓN VISUAL</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Andrea Gergich es Diseñadora Gráfica, Magister en Diseño Comunicacional (FADU, UBA), y doctoranda en Historia del Arte (EIDAES-UNSAM). Docente universitaria e investigadora, especializada en historia del diseño gráfico en Argentina y cultura gráfica local. Coordinadora Académica de la Licenciatura en Diseño y Comunicación Visual (UNLa) y Coordinadora técnica DyCV en el LaD-Laboratorio de Diseño, Departamento de Humanidades y Artes (UNLa).  Titular de Historia Social del Diseño y Coordinadora del Taller de Trabajo Final Integrador en la Licenciatura en Diseño y Comunicación Visual (UNLa). Co-titular del Seminario de grado Historia del diseño en Argentina, y docente concursada en Historia de la Comunicación Visual en la Carrera de Diseño Gráfico (FADU, UBA). Titular del Seminario de posgrado Imagen y diseño. La construcción de las visualidades modernas, en la Maestría en Diseño Comunicacional (FADU, UBA).  Investigadora y directora de proyectos Amílcar Herrera (UNLa), UBACyT y PIA (FADU, UBA), Mecenazgo (CABA), e investigadora externa (CIAP-UNSAM-CONICET). Autora de artículos en revistas especializadas y capítulos de libros; disertante en jornadas, encuentros y congresos nacionales e internacionales. Se desempeñó como Diseñadora y Coordinadora del equipo de Diseño y Comunicación del Campus Virtual UNLa (2008-2020), y en Fundación Gutenberg fue Directora de Estudios de Nivel Superior, a cargo de las carreras de Diseño Gráfico y Producción Gráfica (2001-2018). En el ámbito profesional desarrolló proyectos de diseño en el área educativa y editorial.</p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Cecilia -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/dorado_grayscale_enhanced.png" alt="Cecilia Dorado" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Cecilia Dorado</p>
-         <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">COORDINACIÓN GENERAL DEL LAD</h3>
-        <p class="text-sm text-white/90 mb-4 text-left"> Cecilia Dorado. Diseñadora Textil FADU UBA. Especialización en Gestión de la Tecnología y la Innovación UNSAM, y Diplomatura en Desarrollo Local y Economía Social FLACSO.
-Docente adjunta e investigadora de la Licenciatura en Diseño Industrial y coordinadora general del LAD Laboratorio de Diseño de la UNLA.
-Se dedica a la investigación en el área del diseño textil, en temáticas como:  innovación en sustentabilidad de nuevos biotextiles a partir de la revalorización de descartes, tecnología portable en textiles e indumentaria, teñido de cartas de color para textiles en restauración y elaboración de hilado a partir de la chala de maíz.
-
-Además, es diseñadora en el Centro de Diseño Industrial de Instituto Nacional de Tecnología Industrial. Responsable del Biofablab y de la línea de trabajo "Materiales, procesos y productos innovadores biobasados". Se dedica a la Investigación, desarrollo y transferencia al medio productivo. Participación y coordinación en proyectos sobre diseño sustentable, cadenas de valor y materiales sustentables. </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-    <!-- Diego -->
-    <div class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]">
-      <img src="images/diego-velazco_grayscale_enhanced.jpg" alt="Diego Velazco" class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto">
-      <div class="flex-grow">
-        <p class="text-md text-white/90 font-bold mb-4">Diego Velazco</p>
-        <div class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-        <h3 class="text-md font-semibold mb-2">COORDINACIÓN TÉCNICA DEL LAD</h3>
-        <p class="text-sm text-white/90 mb-4 text-left">  Diego Velazco es Diseñador Industrial egresado de la Facultad de Artes de la Universidad Nacional de la Plata (UNLP) y Especialista en Metodología de la Investigación Científica, por la Universidad de Nacional de Lanús (UNLa). Coordinador académico de la Licenciatura en Diseño Industrial (UNLa) y Coordinador Técnico del Laboratorio de Diseño (LAD-UNLA). Profesor Adjunto concursado de Fundamentos de la forma, en el Departamento de Diseño Industrial (FDA-UNLP). Profesor adjunto concursado de Modelado Digital, Taller de Diseño Industrial V y Taller de Trabajo Integrador Final de la Licenciatura en Diseño Industrial (UNLa). Docente de Posgrado en Modelado Digital, de la Especialización en Tecnologías de Fabricación Digital (UNLa). Docente en cursos de formación y capacitación profesional en la Escuela de Oficios Felipe Vallese (UNLa) y en el Instituto de Actualización Empresaria de la Asociación de Industriales Metalúrgicos de la República Argentina (IAEA-ADIMRA).  Director y codirector de proyectos Amílcar Herrera (UNLa), investigador en Proyectos Asociativos de Diseño - PAD (MINCyT), PROCODAS (MINCyT) y PIO (CONICET). Y evaluador del banco de evaluadores Agencia Nacional de Promoción de la Investigación, el Desarrollo Tecnológico y la Innovación. Docente especializado en la enseñanza de software de presentación, modelado y fabricación digital de objetos. Miembro del Jurado en concursos de diseño de índole nacional y jurado evaluador en concursos docentes universitarios. Disertante en jornadas y congresos a nivel nacional e internacional. Profesional independiente en el área de diseño y producción de mobiliario y como capacitador en herramientas de modelado digital tridimensional para el sector privado.  </p>
-      </div>
-      <a href="mailto:dsbladunla@gmail.com" class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto">Contacto</a>
-    </div>
-
-  </div>
-</section>
-
-
-
-  <br>
-
- <!--PREFOOTER -->
-
-<section class="bg-black text-white py-10 px-4 font-outfit">
-  <!-- Grid superior -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-
-    <!-- CONSULTORÍA -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
-      </ul>
-    </div>
-
-    <!-- REDES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">REDES</h2>
-      <div class="flex space-x-4 text-xl">
-        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
-          <i class="fab fa-instagram"></i>
+        <a
+          href="buscador.html"
+          target="_blank"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2"
+        >
+          <i class="fas fa-search"></i>
+          <span>Buscador</span>
         </a>
       </div>
-      <div class="mt-4 text-sm leading-relaxed">
-        <p>Lanús, Argentina</p>
-        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
+    </div>
+
+    <!-- EQUIPO DIRECTIVO -->
+    <section id="equipodirectivo" class="pt-20 pb-6 px-4 bg-black">
+      <!-- pt-20 agrega más espacio arriba -->
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-white text-2xl sm:text-3xl font-bold px-6 py-3 rounded-sm shadow-lg inline-block uppercase"
+        >
+          EQUIPO DIRECTIVO
+        </h2>
       </div>
-    </div>
 
-    <!-- SECCIONES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
-      </ul>
-    </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16"
+      >
+        <!-- Estefi -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/estefi_grayscale_enhanced.jpg"
+            alt="Estefi Fondevila Sancet"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-2">
+              Estefi Fondevila Sancet
+            </p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DIRECCIÓN EDITORIAL DI</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Estefanía Fondevila Sancet, es Especialista en Metodología de la
+              Investigación Científica UNLa, Diplomada en Ciencia y Tecnología
+              UNQ y programadora web, Responsable de la coordinacion de
+              Investigación del Departamento de Humanidades y Artes de la UNLa,
+              fundadora del HUB de Diseño Industrial de la UNLa, desarrolla
+              herramientas de planificación, diagnóstico, desarrollo y
+              seguimiento de proyectos y emprendimientos. Articula con empresas,
+              instituciones y equipos interdisciplinarios. Se desempeña como
+              Directora de proyectos de investigación, de becarios y pasantes,
+              con instituciones nacionales e internacionales. Actualmente su
+              actividad docente se desarrolla en UNLa, como profesora adjunta
+              concursada en la materia Ciencia aplicada al Diseño Industrial,
+              Taller de Prácticas Preprofesionales y en Taller Integrador Final
+              en la Licenciatura en Diseño Industrial. Participa de redes
+              nacionales de Gestión de la Ciencia y la Tecnología. 1er premio
+              innovar 2012 y 2016, Distinguida con Diploma de Honor en el
+              concurso Arte, ciencia, tecnologia e innovación
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-   <!-- LOGO -->
-     <div class="flex items-center justify-center gap-x-8">
-  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
-  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
-</div>
-    
-    </div>
-  </div>
+        <!-- Diana -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/diana.jpeg"
+            alt="Diana Corvalán"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Diana Corvalán</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DIRECCIÓN EDITORIAL DyCV</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Diana G. Corvalán es Diseñadora gráfica egresada de FADU, UBA,
+              tiene estudios de posgrado en Comunicación y Creación Cultural, en
+              el instituto Walter Benjamin en convenio con CAECE. Realizó la
+              carrera docente especializada en arquitectura, diseño y urbanismo
+              en FADU UBA. Se desempeñó como docente en diferentes
+              universidades, donde también coordinó proyectos de cooperación y
+              de extensión con instituciones nacionales e internacionales. En la
+              actualidad su actividad docente se concentra en UNLa, es
+              coordinadora académica de la Licenciatura en Diseño y Comunicación
+              Visual y es profesora asociada concursada en la materia Espacio
+              Tipográfico 1 en DyCV y en la materia Imagen, tipografía e
+              identidad cultural en la Licenciatura en Audiovisión. Participa de
+              equipos de investigación, redes y grupos de estudio vinculados con
+              la tipografía, la caligrafía, el libro y la cultura
+              gráfica.Siempre interesada por el universo de la imagen y el
+              diseño en general, ávida lectora, le interesan las diferentes
+              dimensiones del mundo
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-  <!-- Línea y grid inferior -->
-  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
-    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
-    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
-    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
-    <p>DSB LAD 2025 © Todos los derechos reservados</p>
-  </div>
-</section>
+        <!-- Clara -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/clara.jpeg"
+            alt="Clara Tapia"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Clara Tapia</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DIRECCIÓN CONTENIDO</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Clara Tapia es Doctora en Artes, y Diseñadora Industrial (UNLP).
+              Ganadora de la Beca de Estancia Corta de investigación doctoral
+              BEC.AR en el Politécnico de Milano. Donde estudió en el Doctorado
+              de Investigación en Diseño POLIMI y trabajó en el laboratorio de
+              fabricación digital Polifactory. Sus proyectos cruzan el diseño,
+              la industria textil y el arte. Es Profesora Adjunta de Historia y
+              Metodología del Diseño (UNLa) y ayudante en Historia del Diseño
+              Industrial (UNLP). Como investigadora trabaja en programas de I+D
+              para promover la innovación en la economía social. Es performer y
+              diseñadora de vestuario en varios colectivos de artistas de la
+              ciudad de La Plata.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
- 
+        <!-- Angelina -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/angelina.jpeg"
+            alt="Angelina Sanchez"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Angelina Sanchez</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DIRECCIÓN DE DISEÑO</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Angelina Sánchez es diseñadora gráfica y especialista en diseño de
+              tipografías (FADU-UBA). Desde 2005 dicta clases en la Universidad
+              Nacional de Lanús (UNLa) en materias vinculadas al diseño
+              editorial y uso tipográfico. Trabaja en forma independiente en
+              proyectos de identidad visual, difusión y diseño editorial
+              asociados al ámbito de la cultura y la música independiente.
+              Participó en proyectos colaborativos en diseño, investigación y
+              difusión como «Soytutype» fundidiora tipográfica; «AEZpress»
+              letterpress; «Epígrafes porteños» tipografía en fachadas de Bs.
+              As.; «Etnotipografías» proyecto de diseño en UNLa.; «Birras y
+              letras» y «Chancho-va» colectivos de diseño tipográfico y
+              divulgación. Algunos de sus diseños fueron seleccionados en la
+              Bienal Latinoamericana «Tipos Latinos» y en la Bienal de Diseño
+              FADU. «Ruda», tipografía publicada en Google Fonts recibió en 2023
+              la distinción del Sello Buen Diseño argentino y es utilizada
+              actualmente en la identidad visual de la Escuela de Bellas Artes
+              (ESAD) de Reims en Francia.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </section>
 
+    <!-- EQUIPO EDITORIAÑ -->
+    <section id="equipoeditorial" class="pt-6 pb-6 px-4 bg-black">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-white text-2xl sm:text-3xl font-bold px-6 py-3 rounded-sm shadow-lg inline-block uppercase"
+        >
+          EQUIPO EDITORIAL
+        </h2>
+      </div>
 
-<!-- JS para abrir mail -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16"
+      >
+        <!-- Estefi -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/emilia (1).jpg"
+            alt="Estefi Fondevila Sancet"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-2">Emilia Di Nuzzo</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">REDACCION Y CONTENIDO</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              María Emilia Di Nuzzo es Diseñadora Industrial UNLa y maestranda
+              en Metodologías de la Investigación Científica en la misma
+              institución. Posee un posgrado en Diseño de Juegos, Juguetes e
+              Interfaces Lúdicas FADU-UBA. Su perfil académico se ha centrado en
+              el diseño inclusivo y en el estudio y aplicación de metodologías
+              de diseño. Desde 2021 se desempeña como docente en las materias
+              Métodos de Diseño , Semiótica Aplicada al Diseño e Historia Social
+              del Diseño I y II . Actualmente, su campo de trabajo se orienta al
+              desarrollo de soluciones proyectuales basadas en metodologías de
+              diseño, dentro de una red de Talleres Protegidos del Área
+              Metropolitana de Buenos Aires (AMBA), con foco en la mejora de
+              procesos y entornos inclusivos.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-<script>
-  document.getElementById('contactoMail').addEventListener('click', function (e) {
-    e.preventDefault();
+        <!-- Diana -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/andrea.jpeg"
+            alt="Diana Corvalán"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Andrea Baffiggi</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DISEÑO EDITORIAL</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Andrea Soledad Baffigi, Licenciada en Diseño y Comunicación Visual
+              graduada en la UNLa. Desde el 2017 se desempeña como docente
+              investigadora en dicha institución educativa, actualmente formando
+              parte la cátedra de Espacio Tipográfico 1 y Taller de Diseño
+              Orientado. Además, forma parte del equipo docente de Tramo Inicial
+              a la carrera y coopera en la organización y gestión de los
+              Talleres Finales Integradores y el Laboratorio de Diseño. En 2024
+              se incorporó en la Diplomatura en Artes del Libro (UNA) como
+              docente de las Clínicas de Diseño de proyectos editoriales. Fuera
+              del ámbito académico, es diseñadora freelance.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+        <!-- Clara -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/chanqui.jpeg"
+            alt="Edgardo Chanquia"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Edgardo Chanquia</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DISEÑO DE CONTENIDO</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Edgardo Rafael Chanquia, es Magister en Metodología de la
+              Investigación Científica UNLa. Posee los títulos de Diseñador
+              Industrial UNLP, Prof. En Diseño Industrial UNLP y Diseñador
+              Gráfico ESAV. Cuenta con una amplia experiencia previa en el área
+              de la investigación académica. Actualmente en la UNLa se desempeña
+              como profesor adjunto concursado en las asignaturas: Dibujo
+              Técnico; Morfología; Desarrollos Visuales; Taller de Diseño
+              Industrial 1 (Formación Básica) y Taller de Diseño Industrial 3,
+              de la Lic. en Diseño Industrial. Además, es docente del Seminario
+              en Diseño de Paneles de Presentación de Productos y está a cargo
+              de la organización, montaje y publicación de muestras y productos
+              de los estudiantes de la Licenciatura en Diseño Industrial. Es
+              Miembro del Consejo Departamental del Departamento de Humanidades
+              y Artes de la UNLa.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-    const asunto = 'Consulta sobre la revista DSB LAD';
-    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+        <!-- Angelina -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/melisa.jpeg"
+            alt="Melisa Cerda"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Melisa Cerda</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">DISEÑO VISUAL</h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Melisa Beatriz Cerda es Licenciada en Diseño y Comunicación Visual
+              (UNLa). Docente e Investigadora en la UNLa. Diseñadora y
+              desarrolladora web. Actualmente forma parte del equipo de
+              investigación de Espacio tipográfico.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </section>
 
-    const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+    <!-- COMITÉ EDITORIAL -->
+    <section id="comiteeditorial" class="pt-6 pb-6 px-4 bg-black">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-white text-2xl sm:text-3xl font-bold px-6 py-3 rounded-sm shadow-lg inline-block uppercase"
+        >
+          COMITÉ EDITORIAL
+        </h2>
+      </div>
 
-    window.location.href = mailtoLink;
-  });
-</script>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16"
+      >
+        <!-- Guillermo -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/guillermo-andrade_grayscale_enhanced.jpg"
+            alt="Guillermo Andrade"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-2">
+              Guillermo Andrade
+            </p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">
+              DIRECCIÓN LIC. DISEÑO INDUSTRIAL
+            </h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Guillermo Andrade es Diseñador Industrial y Magister en Marketing
+              Internacional. Actualmente se encuentra en la realización de su
+              tesis de Doctorado en Artes. Se desempeña como Director del
+              posgrado "Especialización en Tecnologías de Fabricación Digital",
+              Universidad Nacional de Lanús, y Director de la carrera de grado
+              "Licenciatura en Diseño Industrial" ambas en la Universidad
+              Nacional de Lanús. En su carrera como Investigador se destaca su
+              designación como Investigador categoría II del sistemas de
+              incentivos de la Nación En su carrera docente se desarrolla como
+              Profesor Titular de la Universidad Nacional de La Plata y Profesor
+              Asociado de la Universidad Nacional de Lanús. Es Miembro del
+              Consejo departamental. Departamento Humanidades y Artes de
+              Universidad Nacional de Lanús. Evaluador externo de proyectos de
+              Ciencia, Tecnología e Innovación Productiva (Agencia Nacional de
+              Promoción Científica y Tecnológica, Consejo Interuniversitario
+              Nacional)
+            </p>
+          </div>
 
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
+        <!-- Andrea -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/andrea-gergich_grayscale_enhanced.jpg"
+            alt="Andrea Gergich"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Andrea Gergich</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">
+              DIRECCIÓN DISEÑO Y COMUNICACIÓN VISUAL
+            </h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Andrea Gergich es Diseñadora Gráfica, Magister en Diseño
+              Comunicacional (FADU, UBA), y doctoranda en Historia del Arte
+              (EIDAES-UNSAM). Docente universitaria e investigadora,
+              especializada en historia del diseño gráfico en Argentina y
+              cultura gráfica local. Coordinadora Académica de la Licenciatura
+              en Diseño y Comunicación Visual (UNLa) y Coordinadora técnica DyCV
+              en el LaD-Laboratorio de Diseño, Departamento de Humanidades y
+              Artes (UNLa). Titular de Historia Social del Diseño y Coordinadora
+              del Taller de Trabajo Final Integrador en la Licenciatura en
+              Diseño y Comunicación Visual (UNLa). Co-titular del Seminario de
+              grado Historia del diseño en Argentina, y docente concursada en
+              Historia de la Comunicación Visual en la Carrera de Diseño Gráfico
+              (FADU, UBA). Titular del Seminario de posgrado Imagen y diseño. La
+              construcción de las visualidades modernas, en la Maestría en
+              Diseño Comunicacional (FADU, UBA). Investigadora y directora de
+              proyectos Amílcar Herrera (UNLa), UBACyT y PIA (FADU, UBA),
+              Mecenazgo (CABA), e investigadora externa (CIAP-UNSAM-CONICET).
+              Autora de artículos en revistas especializadas y capítulos de
+              libros; disertante en jornadas, encuentros y congresos nacionales
+              e internacionales. Se desempeñó como Diseñadora y Coordinadora del
+              equipo de Diseño y Comunicación del Campus Virtual UNLa
+              (2008-2020), y en Fundación Gutenberg fue Directora de Estudios de
+              Nivel Superior, a cargo de las carreras de Diseño Gráfico y
+              Producción Gráfica (2001-2018). En el ámbito profesional
+              desarrolló proyectos de diseño en el área educativa y editorial.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-<script>
-  document.getElementById('formComunidad').addEventListener('submit', async function (e) {
-    e.preventDefault();
+        <!-- Cecilia -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/dorado_grayscale_enhanced.png"
+            alt="Cecilia Dorado"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Cecilia Dorado</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">
+              COORDINACIÓN GENERAL DEL LAD
+            </h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Cecilia Dorado. Diseñadora Textil FADU UBA. Especialización en
+              Gestión de la Tecnología y la Innovación UNSAM, y Diplomatura en
+              Desarrollo Local y Economía Social FLACSO. Docente adjunta e
+              investigadora de la Licenciatura en Diseño Industrial y
+              coordinadora general del LAD Laboratorio de Diseño de la UNLA. Se
+              dedica a la investigación en el área del diseño textil, en
+              temáticas como: innovación en sustentabilidad de nuevos
+              biotextiles a partir de la revalorización de descartes, tecnología
+              portable en textiles e indumentaria, teñido de cartas de color
+              para textiles en restauración y elaboración de hilado a partir de
+              la chala de maíz. Además, es diseñadora en el Centro de Diseño
+              Industrial de Instituto Nacional de Tecnología Industrial.
+              Responsable del Biofablab y de la línea de trabajo "Materiales,
+              procesos y productos innovadores biobasados". Se dedica a la
+              Investigación, desarrollo y transferencia al medio productivo.
+              Participación y coordinación en proyectos sobre diseño
+              sustentable, cadenas de valor y materiales sustentables.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
 
-    const nombre = document.getElementById('nombreUsuario').value.trim();
-    const email = document.getElementById('correoUsuario').value.trim();
+        <!-- Diego -->
+        <div
+          class="rounded-md p-6 bg-bordooscuro text-white shadow-md flex flex-col justify-between text-center hover:scale-105 transition min-h-[520px]"
+        >
+          <img
+            src="images/diego-velazco_grayscale_enhanced.jpg"
+            alt="Diego Velazco"
+            class="w-60 h-60 rounded-sm mb-4 object-cover mx-auto"
+          />
+          <div class="flex-grow">
+            <p class="text-md text-white/90 font-bold mb-4">Diego Velazco</p>
+            <div
+              class="border-t-4 border-violaceo mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+            ></div>
+            <h3 class="text-md font-semibold mb-2">
+              COORDINACIÓN TÉCNICA DEL LAD
+            </h3>
+            <p class="text-sm text-white/90 mb-4 text-left">
+              Diego Velazco es Diseñador Industrial egresado de la Facultad de
+              Artes de la Universidad Nacional de la Plata (UNLP) y Especialista
+              en Metodología de la Investigación Científica, por la Universidad
+              de Nacional de Lanús (UNLa). Coordinador académico de la
+              Licenciatura en Diseño Industrial (UNLa) y Coordinador Técnico del
+              Laboratorio de Diseño (LAD-UNLA). Profesor Adjunto concursado de
+              Fundamentos de la forma, en el Departamento de Diseño Industrial
+              (FDA-UNLP). Profesor adjunto concursado de Modelado Digital,
+              Taller de Diseño Industrial V y Taller de Trabajo Integrador Final
+              de la Licenciatura en Diseño Industrial (UNLa). Docente de
+              Posgrado en Modelado Digital, de la Especialización en Tecnologías
+              de Fabricación Digital (UNLa). Docente en cursos de formación y
+              capacitación profesional en la Escuela de Oficios Felipe Vallese
+              (UNLa) y en el Instituto de Actualización Empresaria de la
+              Asociación de Industriales Metalúrgicos de la República Argentina
+              (IAEA-ADIMRA). Director y codirector de proyectos Amílcar Herrera
+              (UNLa), investigador en Proyectos Asociativos de Diseño - PAD
+              (MINCyT), PROCODAS (MINCyT) y PIO (CONICET). Y evaluador del banco
+              de evaluadores Agencia Nacional de Promoción de la Investigación,
+              el Desarrollo Tecnológico y la Innovación. Docente especializado
+              en la enseñanza de software de presentación, modelado y
+              fabricación digital de objetos. Miembro del Jurado en concursos de
+              diseño de índole nacional y jurado evaluador en concursos docentes
+              universitarios. Disertante en jornadas y congresos a nivel
+              nacional e internacional. Profesional independiente en el área de
+              diseño y producción de mobiliario y como capacitador en
+              herramientas de modelado digital tridimensional para el sector
+              privado.
+            </p>
+          </div>
+          <a
+            href="mailto:dsbladunla@gmail.com"
+            class="bg-white text-violaceo font-bold px-4 py-2 rounded-xl hover:bg-[#e6e6e6] transition mt-auto"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </section>
 
-    if (!nombre || !email) return;
+    <br />
 
-    // Reemplazá esta URL con la que te dio SheetBest
-    const endpoint = "https://api.sheetbest.com/sheets/5c1c5dc7-d22e-4014-95d7-5005d25b56c2";
+    <!--PREFOOTER -->
 
-    const data = {
-      nombre: nombre,
-      email: email
-    };
+    <section class="bg-black text-white py-10 px-4 font-outfit">
+      <!-- Grid superior -->
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm"
+      >
+        <!-- CONSULTORÍA -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >DSB LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dirección Editorial y Técnica</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Redacción, Diseño y contenidos</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Comitee Editorial</a
+              >
+            </li>
+          </ul>
+        </div>
 
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        <!-- REDES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">REDES</h2>
+          <div class="flex space-x-4 text-xl">
+            <a
+              href="https://www.instagram.com/lad.unla/?hl=es-la"
+              target="_blank"
+              class="hover:text-pastelviolet transition-colors"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="mt-4 text-sm leading-relaxed">
+            <p>Lanús, Argentina</p>
+            <p>
+              <a
+                href="mailto:dsbladunla@gmail.com"
+                class="hover:text-pastelviolet transition-colors"
+                >dsbladunla@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- SECCIONES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Numeros</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dossiers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Guias</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Equipo</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- LOGO -->
+        <div class="flex items-center justify-center gap-x-8">
+          <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
+          <img
+            src="images/LAD-logo chico.png"
+            alt="Logo lad"
+            class="w-auto h-20"
+          />
+        </div>
+      </div>
+
+      <!-- Línea y grid inferior -->
+      <div
+        class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left"
+      >
+        <a
+          href="politicasdeprivacidad.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de privacidad</a
+        >
+        <a
+          href="politicasdecookies.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de Cookies</a
+        >
+        <a
+          href="terminosycondiciones.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Términos y condiciones</a
+        >
+        <p>DSB LAD 2025 © Todos los derechos reservados</p>
+      </div>
+    </section>
+
+    <!-- JS para abrir mail -->
+
+    <script>
+      document
+        .getElementById("contactoMail")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const nombre =
+            document.getElementById("nombreUsuario")?.value || "[Nombre]";
+
+          const asunto = "Consulta sobre la revista DSB LAD";
+          const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(
+            nombre
+          )}`;
+
+          const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
+            asunto
+          )}&body=${cuerpo}`;
+
+          window.location.href = mailtoLink;
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("formComunidad")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const nombre = document.getElementById("nombreUsuario").value.trim();
+          const email = document.getElementById("correoUsuario").value.trim();
+
+          if (!nombre || !email) return;
+
+          // Reemplazá esta URL con la que te dio SheetBest
+          const endpoint =
+            "https://api.sheetbest.com/sheets/5c1c5dc7-d22e-4014-95d7-5005d25b56c2";
+
+          const data = {
+            nombre: nombre,
+            email: email,
+          };
+
+          try {
+            const response = await fetch(endpoint, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              document
+                .getElementById("mensajeSuscripcion")
+                .classList.remove("hidden");
+              document.getElementById("formComunidad").reset();
+            } else {
+              alert("Hubo un error al enviar tus datos. Intentá más tarde.");
+            }
+          } catch (error) {
+            alert("Error de red. Verificá tu conexión.");
+            console.error(error);
+          }
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("formComunidad")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Evita envío tradicional
+
+          // Aquí puedes agregar la integración con un backend o Google Forms
+
+          // Mostrar mensaje de confirmación
+          const mensaje = document.getElementById("mensajeSuscripcion");
+          mensaje.classList.remove("hidden");
+
+          // Opcional: limpiar formulario
+          this.reset();
+
+          // Opcional: ocultar mensaje después de unos segundos
+          setTimeout(() => {
+            mensaje.classList.add("hidden");
+          }, 5000);
+        });
+    </script>
+
+    <!-- JS para mostrar barra fija -->
+
+    <script>
+      const toggleButton = document.getElementById("toggle-tabs");
+      const tabBar = document.getElementById("tab-bar");
+
+      toggleButton.addEventListener("click", () => {
+        tabBar.classList.toggle("hidden");
+        tabBar.classList.toggle("flex");
       });
+    </script>
 
-      if (response.ok) {
-        document.getElementById('mensajeSuscripcion').classList.remove('hidden');
-        document.getElementById('formComunidad').reset();
-      } else {
-        alert("Hubo un error al enviar tus datos. Intentá más tarde.");
-      }
-    } catch (error) {
-      alert("Error de red. Verificá tu conexión.");
-      console.error(error);
-    }
-  });
-</script>
+    <!-- JS para mostrar barra nav -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const icon = document.getElementById("menu-icon");
 
-<script>
-  document.getElementById('formComunidad').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita envío tradicional
+        if (toggle && menu) {
+          toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+            menu.classList.toggle("flex-col");
+            menu.classList.toggle("absolute");
+            menu.classList.toggle("top-full");
+            menu.classList.toggle("left-0");
+            menu.classList.toggle("bg-[#3e2d4f]");
+            menu.classList.toggle("w-full");
+            menu.classList.toggle("p-4");
+            menu.classList.toggle("shadow-md");
+            menu.classList.toggle("z-40");
 
-    // Aquí puedes agregar la integración con un backend o Google Forms
-
-    // Mostrar mensaje de confirmación
-    const mensaje = document.getElementById('mensajeSuscripcion');
-    mensaje.classList.remove('hidden');
-
-    // Opcional: limpiar formulario
-    this.reset();
-
-    // Opcional: ocultar mensaje después de unos segundos
-    setTimeout(() => {
-      mensaje.classList.add('hidden');
-    }, 5000);
-  });
-</script>
-
-<!-- JS para mostrar barra fija -->
-
-<script>
-  const toggleButton = document.getElementById('toggle-tabs');
-  const tabBar = document.getElementById('tab-bar');
-
-  toggleButton.addEventListener('click', () => {
-    tabBar.classList.toggle('hidden');
-    tabBar.classList.toggle('flex');
-  });
-</script>
-
-<!-- JS para mostrar barra nav -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const icon = document.getElementById('menu-icon');
-
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        menu.classList.toggle('flex-col');
-        menu.classList.toggle('absolute');
-        menu.classList.toggle('top-full');
-        menu.classList.toggle('left-0');
-        menu.classList.toggle('bg-[#3e2d4f]');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('p-4');
-        menu.classList.toggle('shadow-md');
-        menu.classList.toggle('z-40');
-
-        // Cambiar icono ☰ ⇄ ✖
-        if (menu.classList.contains('hidden')) {
-          icon.innerHTML = '&#9776;';
-        } else {
-          icon.innerHTML = '&#10005;';
+            // Cambiar icono ☰ ⇄ ✖
+            if (menu.classList.contains("hidden")) {
+              icon.innerHTML = "&#9776;";
+            } else {
+              icon.innerHTML = "&#10005;";
+            }
+          });
         }
       });
-    }
-  });
-</script>
- 
-
-
-  
- 
+    </script>
   </body>
 </html>

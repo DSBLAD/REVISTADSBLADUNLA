@@ -1,442 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSBLAD</title>
 
- <!DOCTYPE html>
-    <html lang="es">
+    <!-- Meta para redes sociales -->
+    <meta property="og:title" content="INKAO" />
+    <meta property="og:description" content="Estudio de Diseño" />
+    <meta
+      property="og:image"
+      content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://blomstfrisk.github.io/WEB-INKAO/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DSBLAD</title>
-    
-      <!-- Meta para redes sociales -->
-      <meta property="og:title" content="INKAO" />
-      <meta property="og:description" content="Estudio de Diseño" />
-      <meta property="og:image" content="https://blomstfrisk.github.io/WEB-INKAO/images/logorectangularnegro.jpg" />
-      <meta property="og:url" content="https://blomstfrisk.github.io/WEB-INKAO/" />
-      <meta name="twitter:card" content="summary_large_image" />
-    
-      <!-- Icono -->
-      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="style.css" />
-    
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Icono -->
+    <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 
-      <!--googlefonts -->
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css" />
 
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    
+    <!--googlefonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          celeste: '#0c6d99',
-          celestonoscuro: '#1394ad',
-          azulpetrol: '#168AAD',
-          azulverdoso: '#34A0A4',
-          verdepetroloscuro: '#036666',
-          verdepetroleo: '#14746F',
-          verdepetro: '#248277',
-          amarillooro: '#D7B04B',
-          amarillo: '#FFCF56',
-          fondocalido: '#FDFCFB',
-          black: '#000000',
-          Gris: '#4d4d4d',
-          Amarillo: '#f3be13',
-          Turquesa: '#26a7a6',
-          cyanoscuroelegante: '#006D77',
-          turquesaprofundo: '#007C91',
-          violetweb: '#7F5AF0',
-          pastelviolet: '#CBB7E2',
-          darkviolet: '#3D2C54', 
-          bordoviolet: '#A45C84',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              celeste: "#0c6d99",
+              celestonoscuro: "#1394ad",
+              azulpetrol: "#168AAD",
+              azulverdoso: "#34A0A4",
+              verdepetroloscuro: "#036666",
+              verdepetroleo: "#14746F",
+              verdepetro: "#248277",
+              amarillooro: "#D7B04B",
+              amarillo: "#FFCF56",
+              fondocalido: "#FDFCFB",
+              black: "#000000",
+              Gris: "#4d4d4d",
+              Amarillo: "#f3be13",
+              Turquesa: "#26a7a6",
+              cyanoscuroelegante: "#006D77",
+              turquesaprofundo: "#007C91",
+              violetweb: "#7F5AF0",
+              pastelviolet: "#CBB7E2",
+              darkviolet: "#3D2C54",
+              bordoviolet: "#A45C84",
+            },
+            fontSize: {
+              "2xl": "1.5rem",
+              "3xl": "1.875rem",
+              "4xl": "2.25rem",
+              "5xl": "3rem",
+              "6xl": "3.75rem",
+            },
+            fontWeight: {
+              normal: 400,
+              medium: 500,
+              bold: 700,
+            },
+            fontFamily: {
+              sans: ['"FF Good Pro Wide Light"', "sans-serif"],
+              condblack: ['"FF Good Pro Cond Black"', "sans-serif"],
+              "barlow-condensed": ['"Barlow Condensed"', "sans-serif"],
+            },
+          },
         },
-        fontSize: {
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '3.75rem',
-        },
-        fontWeight: {
-          normal: 400,
-          medium: 500,
-          bold: 700,
-        },
-        fontFamily: {
-          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
-          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
-          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+      };
+    </script>
 
-<!-- FUENTES PERSONALIZADAS -->
-<style>
-@font-face {
-  font-family: 'FF Good Pro Cond Black';
-  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+    <!-- FUENTES PERSONALIZADAS -->
+    <style>
+      @font-face {
+        font-family: "FF Good Pro Cond Black";
+        src: url("fonts/ff-good-pro-cond-black.woff") format("woff");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
 
-@font-face {
-  font-family: 'FF Good Pro Wide Light';
-  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
-       url('fonts/ff-good-pro-wide-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-        html {
-          scroll-behavior: smooth;
+      @font-face {
+        font-family: "FF Good Pro Wide Light";
+        src: url("fonts/ff-good-pro-wide-light.woff2") format("woff2"),
+          url("fonts/ff-good-pro-wide-light.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
         }
-    
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
-    
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out forwards;
-        }
-    
-        .animate-fade-in-delay {
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
-      </style>
-    </head>
+      }
 
-      
-    
-    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
-    
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
 
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+      .animate-fade-in-delay {
+        animation: fadeIn 1.2s ease-out 0.3s forwards;
+      }
+    </style>
+  </head>
 
+  <body class="bg-white text-[#222] font-sans pt-20">
+    <!-- Compensa altura del menú fijo -->
 
-  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
-  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
-    
-    <!-- Logo -->
-    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
-    </a>
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
-       
-  </div>
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
- 
-    <!-- Botón hamburguesa visible solo en sm y md -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
-        <span id="menu-icon">&#9776;</span>
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between"
+    >
+      <div
+        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
+      >
+        <!-- Logo -->
+        <a
+          href="https://www.instagram.com/lad.unla/?hl=es-la"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline"
+        >
+          <img
+            src="./images/n1.png"
+            alt="LAD Logo"
+            class="h-10 sm:h-12 md:h-14 w-auto object-contain"
+          />
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa visible solo en sm y md -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+          <span id="menu-icon">&#9776;</span>
+        </button>
+      </div>
+
+      <!-- Menú visible en LG y desplegable en SM/MD -->
+
+      <ul
+        id="menu"
+        class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white"
+      >
+        <li>
+          <a
+            href="sobredsb.html"
+            class="block w-full py-1 hover:text-pastelviolet"
+            >Sobre DSB LAD</a
+          >
+        </li>
+
+        <li>
+          <a
+            id="contactoMail"
+            href="mailto:dsbladunla@gmail.com"
+            class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Contacto</span>
+          </a>
+        </li>
+        <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+          <a
+            href="index.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/ar.png"
+              alt="Español"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+          <a
+            href="indexen.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/us.png"
+              alt="English"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Botón para mostrar barra de pestañas en mobile -->
+    <div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
+      <button id="toggle-tabs" class="text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
-  
-    <!-- Menú visible en LG y desplegable en SM/MD -->
 
-     <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
-       
-      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
-      
-      
-      <li>
-  <a id="contactoMail" href="mailto:dsbladunla@gmail.com" 
-     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
-    <i class="fas fa-envelope"></i>
-    <span>Contacto</span>
-  </a>
-</li>
-      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
-        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+    <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+
+    <div
+      id="tab-bar"
+      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner"
+    >
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base"
+      >
+        <a
+          href="convocatoria.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Convocatorias
         </a>
-        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
+
+        <a
+          href="unidadequipo.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Equipo editorial
         </a>
-      </li>
-    </ul>
-  </nav>
 
-  
-<!-- Botón para mostrar barra de pestañas en mobile -->
-<div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
-  <button id="toggle-tabs" class="text-2xl focus:outline-none">
-    <i class="fas fa-bars"></i>
-  </button>
-</div>
+        <a
+          href="infolectores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Lectores
+        </a>
 
+        <a
+          href="infoautores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Autores
+        </a>
 
- 
+        <a
+          href="infobibliotecarios.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200"
+        >
+          Bibliotecarios
+        </a>
 
-<!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+        <a
+          href="etica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Buenas prácticas
+        </a>
 
-<div id="tab-bar" class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner">
+        <a
+          href="politicas.html"
+          class="w-full sm:w-auto text-center bg-gray-100 text-black px-4 py-2 rounded-sm transition duration-200"
+          style="pointer-events: none"
+        >
+          Políticas
+        </a>
 
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
-  
+        <a
+          href="#envios"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Envios
+        </a>
 
-      <a href="convocatoria.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Convocatorias
-  </a>
-    
-    <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Equipo editorial
-    </a>
-    
-    <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Lectores
-    </a>
+        <a
+          href="estadistica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Estadísticas
+        </a>
 
-    <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Autores
-    </a>
-
-    <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
-      Bibliotecarios
-    </a>
-
-    <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Buenas prácticas
-    </a>
-
-<a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Políticas
-    </a>
-
-    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Envios
-    </a>
-
-    <a href="estadistica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Estadísticas
-  </a>
-
-    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
-  <i class="fas fa-search"></i>
-  <span>Buscador</span>
-</a>
-        
-</div>
-</div>
-
-  </div>
-</div>
-
-
-	<!-- Políticas de cookies con ancho mayor -->
-<section id="cookies" class="py-10 px-6 bg-black">
-  <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
-    <h2 class="text-2xl text-black font-semibold mb-6 text-center">Política de Cookies</h2>
-     <div class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-    <div class="text-black text-sm leading-relaxed space-y-6 text-left">
-
-<div class="w-full max-w-full sm:max-w-[20cm] mx-auto px-6 py-10 bg-white rounded-md">
-      <!-- contenido markdown -->
-      <div class="markdown prose w-full break-words dark:prose-invert light">
-
-        <p>Última actualización: 30 de junio 2025</p>
-        <br>
-
-        <p><strong>1. Introducción<br></strong>
-        Bienvenido a la revista <strong>DSB LAD</strong>. Queremos informarte sobre el uso de cookies en nuestro sitio web y cómo afecta tu experiencia como usuario.</p>
-        <br>
-
-        <p><strong>2. ¿Qué son las Cookies?<br></strong>
-        Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Estas herramientas tecnológicas nos permiten mejorar la funcionalidad de nuestro sitio y ofrecerte una experiencia más personalizada.</p>
-        <br>
-
-        <p><strong>3. Tipos de Cookies que Utilizamos<br></strong>
-        <strong>Cookies Esenciales:</strong> Necesarias para el funcionamiento básico del sitio y para proporcionarte los servicios que solicitas.<br>
-        <strong>Cookies Analíticas:</strong> Nos ayudan a entender cómo interactúas con nuestro sitio, permitiéndonos mejorar continuamente.<br>
-        <strong>Cookies de Publicidad:</strong> Utilizadas para mostrarte anuncios relevantes basados en tus preferencias y comportamientos de navegación.</p>
-        <br>
-
-        <p><strong>4. Consentimiento para el Uso de Cookies<br></strong>
-        Al acceder a nuestro sitio, aceptas el uso de cookies de acuerdo con esta política. Si no estás de acuerdo, ajusta la configuración de tu navegador o abandona nuestro sitio.</p>
-        <br>
-
-        <p><strong>5. Uso de Cookies en la Comunidad Europea y Estados Unidos<br></strong>
-        <strong>DSB LAD</strong> cumple con las regulaciones de privacidad de la Unión Europea, incluido el Reglamento General de Protección de Datos (GDPR), y de Estados Unidos. Al utilizar nuestro sitio desde estos lugares, aceptas el uso de cookies de acuerdo con esta política.</p>
-        <br>
-
-        <p><strong>6. Gestión de Cookies<br></strong>
-        Puedes gestionar las preferencias de cookies a través de la configuración de tu navegador. Ten en cuenta que la desactivación de ciertas cookies puede afectar la funcionalidad del sitio.</p>
-        <br>
-
-        <p><strong>7. Cambios en la Política de Cookies<br></strong>
-        Nos reservamos el derecho de actualizar esta política para reflejar cambios en nuestras prácticas y la legislación aplicable. Te recomendamos revisar esta página periódicamente para estar informado.</p>
-        <br>
-
-        <p><strong>8. Contacto<br></strong>
-        Si tienes alguna pregunta sobre nuestra política de cookies, no dudes en ponerte en contacto con nosotros a través de <a href="mailto:dsbladunla@gmail.com" class="text-darkviolet hover:underline"><strong> dsbladunla@gmail.com</strong></a>.</p>
-
-      </div>
-</div>
-    </div>
-
-    <br>
-
-<div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mt-6">
-<a href="politicas.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    VOLVER A POLITICAS
-  </a>
-  <a href="index.html" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    INICIO
-  </a>
-</div>
-
-  </div>
-
-</section>
-
-
-
-<!--PREFOOTER -->
-
-<section class="bg-black text-white py-10 px-4 font-outfit">
-  <!-- Grid superior -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-
-    <!-- CONSULTORÍA -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
-      </ul>
-    </div>
-
-    <!-- REDES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">REDES</h2>
-      <div class="flex space-x-4 text-xl">
-        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
-          <i class="fab fa-instagram"></i>
+        <a
+          href="buscador.html"
+          target="_blank"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2"
+        >
+          <i class="fas fa-search"></i>
+          <span>Buscador</span>
         </a>
       </div>
-      <div class="mt-4 text-sm leading-relaxed">
-        <p>Lanús, Argentina</p>
-        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
+    </div>
+
+    <!-- Políticas de cookies con ancho mayor -->
+    <section id="cookies" class="py-10 px-6 bg-black">
+      <div class="mx-auto px-6 py-10 bg-white rounded-md max-w-5xl">
+        <h2 class="text-2xl text-black font-semibold mb-6 text-center">
+          Política de Cookies
+        </h2>
+        <div
+          class="border-t-2 border-pastelviolet mt-10 pt-6 text-xs text-center grid grid-cols-1 md:grid-cols-4 gap-4"
+        ></div>
+        <div class="text-black text-sm leading-relaxed space-y-6 text-left">
+          <div
+            class="w-full max-w-full sm:max-w-[20cm] mx-auto px-6 py-10 bg-white rounded-md"
+          >
+            <!-- contenido markdown -->
+            <div
+              class="markdown prose w-full break-words dark:prose-invert light"
+            >
+              <p>Última actualización: 30 de junio 2025</p>
+              <br />
+
+              <p>
+                <strong>1. Introducción<br /></strong> Bienvenido a la revista
+                <strong>DSB LAD</strong>. Queremos informarte sobre el uso de
+                cookies en nuestro sitio web y cómo afecta tu experiencia como
+                usuario.
+              </p>
+              <br />
+
+              <p>
+                <strong>2. ¿Qué son las Cookies?<br /></strong> Las cookies son
+                pequeños archivos de texto que se almacenan en tu dispositivo
+                cuando visitas un sitio web. Estas herramientas tecnológicas nos
+                permiten mejorar la funcionalidad de nuestro sitio y ofrecerte
+                una experiencia más personalizada.
+              </p>
+              <br />
+
+              <p>
+                <strong>3. Tipos de Cookies que Utilizamos<br /></strong>
+                <strong>Cookies Esenciales:</strong> Necesarias para el
+                funcionamiento básico del sitio y para proporcionarte los
+                servicios que solicitas.<br />
+                <strong>Cookies Analíticas:</strong> Nos ayudan a entender cómo
+                interactúas con nuestro sitio, permitiéndonos mejorar
+                continuamente.<br />
+                <strong>Cookies de Publicidad:</strong> Utilizadas para
+                mostrarte anuncios relevantes basados en tus preferencias y
+                comportamientos de navegación.
+              </p>
+              <br />
+
+              <p>
+                <strong>4. Consentimiento para el Uso de Cookies<br /></strong>
+                Al acceder a nuestro sitio, aceptas el uso de cookies de acuerdo
+                con esta política. Si no estás de acuerdo, ajusta la
+                configuración de tu navegador o abandona nuestro sitio.
+              </p>
+              <br />
+
+              <p>
+                <strong
+                  >5. Uso de Cookies en la Comunidad Europea y Estados Unidos<br
+                /></strong>
+                <strong>DSB LAD</strong> cumple con las regulaciones de
+                privacidad de la Unión Europea, incluido el Reglamento General
+                de Protección de Datos (GDPR), y de Estados Unidos. Al utilizar
+                nuestro sitio desde estos lugares, aceptas el uso de cookies de
+                acuerdo con esta política.
+              </p>
+              <br />
+
+              <p>
+                <strong>6. Gestión de Cookies<br /></strong> Puedes gestionar
+                las preferencias de cookies a través de la configuración de tu
+                navegador. Ten en cuenta que la desactivación de ciertas cookies
+                puede afectar la funcionalidad del sitio.
+              </p>
+              <br />
+
+              <p>
+                <strong>7. Cambios en la Política de Cookies<br /></strong> Nos
+                reservamos el derecho de actualizar esta política para reflejar
+                cambios en nuestras prácticas y la legislación aplicable. Te
+                recomendamos revisar esta página periódicamente para estar
+                informado.
+              </p>
+              <br />
+
+              <p>
+                <strong>8. Contacto<br /></strong> Si tienes alguna pregunta
+                sobre nuestra política de cookies, no dudes en ponerte en
+                contacto con nosotros a través de
+                <a
+                  href="mailto:dsbladunla@gmail.com"
+                  class="text-darkviolet hover:underline"
+                  ><strong> dsbladunla@gmail.com</strong></a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mt-6">
+          <a
+            href="politicas.html"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            VOLVER A POLITICAS
+          </a>
+          <a
+            href="index.html"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            INICIO
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- SECCIONES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
-      </ul>
-    </div>
+    <!--PREFOOTER -->
 
-    <!-- LOGO -->
-     <div class="flex items-center justify-center gap-x-8">
-  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
-  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
-</div>
-    
-    </div>
-  </div>
+    <section class="bg-black text-white py-10 px-4 font-outfit">
+      <!-- Grid superior -->
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm"
+      >
+        <!-- CONSULTORÍA -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >DSB LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dirección Editorial y Técnica</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Redacción, Diseño y contenidos</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Comitee Editorial</a
+              >
+            </li>
+          </ul>
+        </div>
 
-  <!-- Línea y grid inferior -->
-  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
-    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
-    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
-    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
-    <p>DSB LAD 2025 © Todos los derechos reservados</p>
-  </div>
-</section>
+        <!-- REDES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">REDES</h2>
+          <div class="flex space-x-4 text-xl">
+            <a
+              href="https://www.instagram.com/lad.unla/?hl=es-la"
+              target="_blank"
+              class="hover:text-pastelviolet transition-colors"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="mt-4 text-sm leading-relaxed">
+            <p>Lanús, Argentina</p>
+            <p>
+              <a
+                href="mailto:dsbladunla@gmail.com"
+                class="hover:text-pastelviolet transition-colors"
+                >dsbladunla@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
 
-  
-   <!-- JS para abrir mail -->
+        <!-- SECCIONES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Numeros</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dossiers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Guias</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Equipo</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
 
-<script>
-  document.getElementById('contactoMail').addEventListener('click', function (e) {
-    e.preventDefault();
+        <!-- LOGO -->
+        <div class="flex items-center justify-center gap-x-8">
+          <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
+          <img
+            src="images/LAD-logo chico.png"
+            alt="Logo lad"
+            class="w-auto h-20"
+          />
+        </div>
+      </div>
 
-    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
+      <!-- Línea y grid inferior -->
+      <div
+        class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left"
+      >
+        <a
+          href="politicasdeprivacidad.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de privacidad</a
+        >
+        <a
+          href="politicasdecookies.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de Cookies</a
+        >
+        <a
+          href="terminosycondiciones.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Términos y condiciones</a
+        >
+        <p>DSB LAD 2025 © Todos los derechos reservados</p>
+      </div>
+    </section>
 
-    const asunto = 'Consulta sobre la revista DSB LAD';
-    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
+    <!-- JS para abrir mail -->
 
-    const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+    <script>
+      document
+        .getElementById("contactoMail")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
 
-    window.location.href = mailtoLink;
-  });
-</script>
+          const nombre =
+            document.getElementById("nombreUsuario")?.value || "[Nombre]";
 
-<!-- JS para mostrar barra fija -->
+          const asunto = "Consulta sobre la revista DSB LAD";
+          const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(
+            nombre
+          )}`;
 
-<script>
-  const toggleButton = document.getElementById('toggle-tabs');
-  const tabBar = document.getElementById('tab-bar');
+          const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
+            asunto
+          )}&body=${cuerpo}`;
 
-  toggleButton.addEventListener('click', () => {
-    tabBar.classList.toggle('hidden');
-    tabBar.classList.toggle('flex');
-  });
-</script>
+          window.location.href = mailtoLink;
+        });
+    </script>
 
-<!-- JS para mostrar barra nav -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const icon = document.getElementById('menu-icon');
+    <!-- JS para mostrar barra fija -->
 
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        menu.classList.toggle('flex-col');
-        menu.classList.toggle('absolute');
-        menu.classList.toggle('top-full');
-        menu.classList.toggle('left-0');
-        menu.classList.toggle('bg-[#3e2d4f]');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('p-4');
-        menu.classList.toggle('shadow-md');
-        menu.classList.toggle('z-40');
+    <script>
+      const toggleButton = document.getElementById("toggle-tabs");
+      const tabBar = document.getElementById("tab-bar");
 
-        // Cambiar icono ☰ ⇄ ✖
-        if (menu.classList.contains('hidden')) {
-          icon.innerHTML = '&#9776;';
-        } else {
-          icon.innerHTML = '&#10005;';
+      toggleButton.addEventListener("click", () => {
+        tabBar.classList.toggle("hidden");
+        tabBar.classList.toggle("flex");
+      });
+    </script>
+
+    <!-- JS para mostrar barra nav -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const icon = document.getElementById("menu-icon");
+
+        if (toggle && menu) {
+          toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+            menu.classList.toggle("flex-col");
+            menu.classList.toggle("absolute");
+            menu.classList.toggle("top-full");
+            menu.classList.toggle("left-0");
+            menu.classList.toggle("bg-[#3e2d4f]");
+            menu.classList.toggle("w-full");
+            menu.classList.toggle("p-4");
+            menu.classList.toggle("shadow-md");
+            menu.classList.toggle("z-40");
+
+            // Cambiar icono ☰ ⇄ ✖
+            if (menu.classList.contains("hidden")) {
+              icon.innerHTML = "&#9776;";
+            } else {
+              icon.innerHTML = "&#10005;";
+            }
+          });
         }
       });
-    }
-  });
-</script>
- 
-
- 
+    </script>
   </body>
 </html>
-
-
