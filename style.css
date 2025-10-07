@@ -146,6 +146,65 @@ h2 {
   font-size: larger;
 }
 
+.square {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.square-1 {
+  border-left: 30px solid var(--front-color);
+  border-right: 20px solid var(--front-color);
+}
+
+.square-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 20px solid var(--front-color);
+  border-bottom: 10px solid var(--front-color);
+}
+
+.square-2 span {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: var(--front-color);
+}
+
+.square-3 {
+  border-left: 10px solid var(--front-color);
+  border-right: 30px solid var(--front-color);
+  display: flex;
+  justify-content: center;
+}
+
+.square-3 span {
+  display: block;
+  height: 100%;
+  width: 10px;
+  background-color: var(--front-color);
+}
+
+.square-4 {
+  border-top: 40px solid var(--front-color);
+  border-bottom: 10px solid var(--front-color);
+}
+
+#guias {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--front-color);
+}
+
+#guias h2 {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--front-color);
+}
+
 @media (max-width: 1250px) {
   .home-header {
     padding-top: 100px;
