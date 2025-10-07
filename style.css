@@ -110,6 +110,13 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding-bottom: 150px;
+  height: 100vh;
+  justify-content: center;
+}
+
+#dossiers {
+  height: 100vh;
+  justify-content: center;
 }
 
 #numeros h2,
