@@ -37,6 +37,18 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -131,7 +143,7 @@
     </style>
   </head>
 
-  <body class="bg-white text-[#222] font-sans pt-20">
+  <body class="home bg-white text-[#222] font-sans pt-20">
     <!-- Compensa altura del menú fijo -->
 
     <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
@@ -150,7 +162,7 @@
           class="hover:underline"
         >
           <img
-            src="./images/n1.png"
+            src="./images/logo-lad.png"
             alt="LAD Logo"
             class="h-10 sm:h-12 md:h-14 w-auto object-contain"
           />
@@ -305,61 +317,39 @@
 
     <!-- HERO principal con texto y logo al costado -->
 
-    <section>
-      <div
-        id="fs"
-        class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-1 gap-12"
-      >
-        <!-- Logo + Carteles -->
-        <div class="md:w-1/2 flex justify-center relative">
-          <!-- Imagen de fondo -->
-          <img src="images/n1.png" alt="Logo n1" class="w-full max-w-2xl" />
-
-          <!-- Cartel "Numero 1" -->
-          <div
-            class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm"
-          >
-            Numero 1
-          </div>
-
-          <!-- Cartel "DSB LAD LANZAMIENTO..." encima de la imagen -->
-          <div
-            class="absolute top-20 right-20 bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-4 py-2 rounded-sm text-3xl leading-tight shadow-md"
-          >
-            <div>DSB LAD</div>
-            <div>LANZAMIENTO</div>
-            <div>Diseño sin Barreras</div>
+    <section class="home-header">
+      <!-- Logo + Carteles -->
+      <!-- Imagen de fondo -->
+      <div class="home-header-cover-img">
+        <div class="home-header-title">
+          <h1>DSB LAD</h1>
+          <h2>revista de diseño</h2>
+        </div>
+        <div class="home-header-subtitle">
+          <div>
+            <h2>#1</h2>
+            <span>lanzamiento</span>
           </div>
         </div>
-
-        <!-- Texto -->
-        <div class="md:w-1/2 text-center md:text-left">
-          <h1
-            class="text-6xl md:text-8xl text-darkviolet font-barlow-condensed mb-2"
-          >
-            DSB LAD
-          </h1>
-
-          <h2
-            class="text-3xl md:text-5xl text-black font-bold mb-6 leading-tight"
-          >
-            REVISTA DE DISEÑO
-          </h2>
-
-          <div
-            class="text-black text-sm leading-relaxed space-y-6 text-justify sm:text-left"
-          >
-            <strong>DSB</strong> es una publicación del Laboratorio de Diseño
-            (LAD), con un enfoque de revista de divulgación académica. Se
-            orienta hacia las áreas del Diseño Industrial, Diseño y Comunicación
-            Visual para poner el foco en la divulgación de actividades
-            académicas y de investigación tanto de grado como posgrado. Su
-            objetivo principal es constituirse como un espacio plural para la
-            producción y difusión de conocimientos y desarrollos vinculados al
-            diseño, tanto en su dimensión académica como profesional. Para
-            permitir así el diálogo entre la comunidad, el ámbito educativo, el
-            ejercicio profesional y el público general interesado en el diseño.
-            <br />
+        <div class="home-header-cover-img-inner"></div>
+      </div>
+      <!-- Texto -->
+      <div class="home-header-text-container">
+        <div class="home-header-description">
+          <p>
+            <strong class="fira-sans-bold">DSB</strong> es una publicación del
+            Laboratorio de Diseño (LAD), con un enfoque de revista de
+            divulgación académica. Se orienta hacia las áreas del Diseño
+            Industrial, Diseño y Comunicación Visual para poner el foco en la
+            divulgación de actividades académicas y de investigación tanto de
+            grado como posgrado. Su objetivo principal es constituirse como un
+            espacio plural para la producción y difusión de conocimientos y
+            desarrollos vinculados al diseño, tanto en su dimensión académica
+            como profesional. Para permitir así el diálogo entre la comunidad,
+            el ámbito educativo, el ejercicio profesional y el público general
+            interesado en el diseño.
+          </p>
+          <p>
             Ofrece la participación para investigadores, docentes, profesionales
             y estudiantes vinculados al campo del diseño, por medio de
             artículos, ensayos académicos, reseñas críticas, comunicaciones
@@ -370,33 +360,34 @@
             énfasis en lo visual, donde se podrán mostrar resultados de la
             experiencia desarrollo de producto, trabajos de estudiantes,
             propuestas docentes y entrevistas.
+            <br />
 
-            <p class="text-md text-black mb-6">
-              <strong> Te invitamos a que conozcas nuestra publicación.</strong>
-            </p>
-          </div>
+            <strong class="fira-sans-bold">
+              Te invitamos a que conozcas nuestra publicación.</strong
+            >
+          </p>
+        </div>
 
-          <!-- Botones en fila -->
-          <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
-            <a
-              href="#numeros"
-              class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
-            >
-              NUMEROS
-            </a>
-            <a
-              href="#dossiers"
-              class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
-            >
-              DOSSIERS
-            </a>
-            <a
-              href="#guias"
-              class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
-            >
-              GUIAS
-            </a>
-          </div>
+        <!-- Botones en fila -->
+        <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
+          <a
+            href="#numeros"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            NUMEROS
+          </a>
+          <a
+            href="#dossiers"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            DOSSIERS
+          </a>
+          <a
+            href="#guias"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            GUIAS
+          </a>
         </div>
       </div>
     </section>
@@ -1311,7 +1302,8 @@
     </script>
 
     <!-- JS para aceptar popup 25 seg -->
-
+    <!-- Pop up convocatoria. Comentado hasta volver a abrirla. -->
+    <!-- 
     <script>
       setTimeout(() => {
         document
@@ -1321,15 +1313,15 @@
     </script>
 
     <script>
-      // Mostrar el popup tras 10 segundos si no fue cerrado esta sesión
-      window.addEventListener("DOMContentLoaded", () => {
-        if (!sessionStorage.getItem("popupCerrado")) {
-          setTimeout(() => {
+     // Mostrar el popup tras 10 segundos si no fue cerrado esta sesión
+       window.addEventListener("DOMContentLoaded", () => {
+       if (!sessionStorage.getItem("popupCerrado")) {
+         setTimeout(() => {
             const popup = document.getElementById("popupConvocatoria");
-            if (popup) popup.classList.remove("hidden");
-          }, 60000); // 60 segundos
-        }
-      });
+             if (popup) popup.classList.remove("hidden");
+           }, 60000); //60 segundos
+          }
+        });
 
       // Cerrar popup manualmente y guardar en sessionStorage
       function cerrarPopupConvocatoria() {
@@ -1337,7 +1329,7 @@
         if (popup) popup.classList.add("hidden");
         sessionStorage.setItem("popupCerrado", "true");
       }
-    </script>
+    </script> -->
 
     <!-- JS para aceptar cookies-->
 

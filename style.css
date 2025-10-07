@@ -1,0 +1,117 @@
+:root {
+  --bg-color: #167676;
+  --front-color: white;
+}
+
+.home {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.fira-sans-bold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.home-header {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.home-header-cover-img {
+  height: 550px;
+  width: 550px;
+  border: 5px solid var(--front-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-header-cover-img-inner {
+  height: 100px;
+  width: 100px;
+  background-color: var(--front-color);
+}
+
+.home-header-title {
+  width: 200px;
+  height: 250px;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.home-header-subtitle {
+  width: 150px;
+  height: 150px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+.home-header-subtitle div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--front-color);
+}
+
+.home-header-subtitle h2 {
+  font-size: 50px;
+  font-weight: 100;
+  text-align: right;
+}
+
+.home-header-text-container {
+  height: 600px;
+  padding: 0 0 0 70px;
+  color: var(--front-color);
+}
+
+.home-header h1,
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--front-color);
+}
+
+.home-header h1 {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.home-header-description {
+  max-width: 550px;
+}
+
+.home-header-description p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1250px) {
+  .home-header {
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-header-text-container {
+    padding: 50px 0 0 0;
+    margin-bottom: 100px;
+  }
+  .home-header-cover-img {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-header-cover-img {
+    width: 80%;
+  }
+}
