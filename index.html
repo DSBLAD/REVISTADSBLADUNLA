@@ -22,9 +22,6 @@
     <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="style.css" />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -91,7 +88,7 @@
               bold: 700,
             },
             fontFamily: {
-              sans: ['"FF Good Pro Wide Light"', "sans-serif"],
+              sans: ['"Fira Sans"', "sans-serif"],
               condblack: ['"FF Good Pro Cond Black"', "sans-serif"],
               "barlow-condensed": ['"Barlow Condensed"', "sans-serif"],
             },
@@ -100,69 +97,8 @@
       };
     </script>
 
-    <!-- Animaciones personalizadas -->
-    <style>
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fade-in {
-        animation: fadeIn 1.2s ease-out forwards;
-      }
-
-      .animate-fade-in-delay {
-        animation: fadeIn 1.2s ease-out 0.3s forwards;
-      }
-    </style>
-
-    <!-- FUENTES PERSONALIZADAS -->
-    <style>
-      @font-face {
-        font-family: "FF Good Pro Cond Black";
-        src: url("fonts/ff-good-pro-cond-black.woff") format("woff");
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "FF Good Pro Wide Light";
-        src: url("fonts/ff-good-pro-wide-light.woff2") format("woff2"),
-          url("fonts/ff-good-pro-wide-light.woff") format("woff");
-        font-weight: 300;
-        font-style: normal;
-        font-display: swap;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fade-in {
-        animation: fadeIn 1.2s ease-out forwards;
-      }
-
-      .animate-fade-in-delay {
-        animation: fadeIn 1.2s ease-out 0.3s forwards;
-      }
-    </style>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body class="home bg-white text-[#222] font-sans pt-20">
@@ -632,7 +568,7 @@
         </div>
 
         <div class="flex justify-between">
-          <div>
+          <div class="w-3/4">
             <label
               for="correoUsuario"
               class="text-left block text-sm font-medium text-white mb-1"
@@ -642,7 +578,7 @@
               id="correoUsuario"
               type="email"
               placeholder="juan@mail.com"
-              class="flex-grow px-4 py-2 border border-gray-300 focus:outline-none"
+              class="flex-grow px-4 py-2 border border-gray-300 focus:outline-none w-full"
               required
             />
           </div>
