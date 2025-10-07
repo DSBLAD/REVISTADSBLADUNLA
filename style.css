@@ -112,7 +112,8 @@ h2 {
   padding-bottom: 150px;
 }
 
-#numeros h2 {
+#numeros h2,
+#dossiers h2 {
   font-size: xx-large;
   font-weight: 700;
   text-align: center;
