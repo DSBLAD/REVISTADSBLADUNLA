@@ -100,6 +100,28 @@
       };
     </script>
 
+    <!-- Animaciones personalizadas -->
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
+
+      .animate-fade-in-delay {
+        animation: fadeIn 1.2s ease-out 0.3s forwards;
+      }
+    </style>
+
     <!-- FUENTES PERSONALIZADAS -->
     <style>
       @font-face {
@@ -226,7 +248,7 @@
     </nav>
 
     <!-- Botón para mostrar barra de pestañas en mobile -->
-    <div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
+    <div class="sm:hidden flex justify-end px-6 py-2 text-white">
       <button id="toggle-tabs" class="text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
@@ -236,7 +258,7 @@
 
     <div
       id="tab-bar"
-      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner"
+      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base text-white w-full shadow-inner"
     >
       <div
         class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base"
@@ -392,54 +414,43 @@
       </div>
     </section>
 
-    <!-- Animaciones personalizadas -->
-    <style>
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fade-in {
-        animation: fadeIn 1.2s ease-out forwards;
-      }
-
-      .animate-fade-in-delay {
-        animation: fadeIn 1.2s ease-out 0.3s forwards;
-      }
-    </style>
-
     <!-- Sección de estudios -->
-    <section id="numeros" class="py-10 px-6 bg-darkviolet">
-      <h2 class="text-3xl font-semibold text-center mb-10 text-white">
-        NUMEROS DSB LAD
-      </h2>
-      <div
-        class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"
-      ></div>
+    <section id="numeros">
+      <h2>NÚMEROS DSB LAD</h2>
+      <div class="dsb-edition-card mt-10 mb-10">
+        <a href="n1.html" target="_blank">
+          <img src="./images/tapa-nro-1.png" alt="Tapa revista DSB número 1" />
+        </a>
+        <div class="text-container">
+          <div>
+            <h3>DISEÑO SIN BARRERAS</h3>
+            <p>#1</p>
+            <p>Número especial de Lanzamiento</p>
+          </div>
+          <a href="n1.html" target="_blank" class="font-bold px-4 py-2">
+            Ver número
+          </a>
+        </div>
+      </div>
 
-      <section id="asesorias-1">
+      <!-- Sección de números futuros comentada -->
+      <!-- <section id="numeros-dsb-lad">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
-          <!-- Tarjeta 1 -->
+          <!- Tarjeta 1 ->
           <div>
             <div
               class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 transition-all duration-300 transform hover:scale-105 text-center"
             >
-              <!-- Contenedor relativo para superponer cartel sobre imagen -->
+              <!- Contenedor relativo para superponer cartel sobre imagen ->
               <div class="relative mb-4 w-fit mx-auto">
-                <!-- Imagen del número -->
+                <!- Imagen del número ->
                 <img
                   src="images/n1.png"
                   alt="Número 1"
                   class="w-20 h-20 object-contain"
                 />
 
-                <!-- Cartel centrado encima de la imagen -->
+                <!- Cartel centrado encima de la imagen ->
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
                     class="bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-1 py-1 rounded-sm text-[10px] leading-tight text-center shadow min-w-[90px]"
@@ -451,23 +462,23 @@
                 </div>
               </div>
 
-              <!-- Texto descriptivo -->
+              <!- Texto descriptivo ->
               <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-              <p class="mb-4">NUMERO 1.</p>
-              <p>Numero especial de Lanzamiento</p>
+              <p class="mb-4">#1</p>
+              <p>Número especial de Lanzamiento</p>
               <br />
               <a
                 href="n1.html"
                 target="_blank"
                 class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition"
               >
-                Ver numero
+                Ver número
               </a>
               <br /><br />
             </div>
           </div>
 
-          <!-- Tarjeta 2 -->
+          <!- Tarjeta 2 ->
 
           <div>
             <div
@@ -480,7 +491,7 @@
                   class="mx-auto w-20 h-20 object-contain"
                 />
               </div>
-              <!-- Cartel "Numero 1" -->
+              <!- Cartel "Numero 1" ->
               <div
                 class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm"
               >
@@ -501,7 +512,7 @@
             </div>
           </div>
 
-          <!-- Tarjeta 3 -->
+          <!- Tarjeta 3 ->
 
           <div>
             <div
@@ -514,7 +525,7 @@
                   class="mx-auto w-20 h-20 object-contain"
                 />
               </div>
-              <!-- Cartel "Numero 1" -->
+              <!- Cartel "Numero 1" ->
               <div
                 class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm"
               >
@@ -535,7 +546,7 @@
             </div>
           </div>
 
-          <!-- Tarjeta 4 -->
+          <!- Tarjeta 4 ->
 
           <div>
             <div
@@ -548,7 +559,7 @@
                   class="mx-auto w-20 h-20 object-contain"
                 />
               </div>
-              <!-- Cartel "Numero 1" -->
+              <!- Cartel "Numero 1" ->
               <div
                 class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm"
               >
@@ -569,7 +580,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </section>
 
     <!-- Sección de estudios -->
