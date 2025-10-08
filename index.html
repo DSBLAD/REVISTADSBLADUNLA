@@ -54,6 +54,8 @@
         theme: {
           extend: {
             colors: {
+              bg: "#167676",
+              secondbg: "#b29dca",
               celeste: "#0c6d99",
               celestonoscuro: "#1394ad",
               azulpetrol: "#168AAD",
@@ -101,7 +103,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="home bg-white text-[#222] font-sans pt-20">
+  <body class="home text-[#222] font-sans pt-20">
     <!-- Compensa altura del menú fijo -->
 
     <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
@@ -248,12 +250,13 @@
           Políticas
         </a>
 
-        <a
+        <!-- oculto porque no está operativo -->
+        <!-- <a
           href="#envios"
           class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
         >
           Envios
-        </a>
+        </a> -->
 
         <a
           href="estadistica.html"
@@ -352,24 +355,30 @@
 
     <!-- Sección de números -->
     <section id="numeros">
-      <h2>NÚMEROS DSB LAD</h2>
-      <div class="dsb-edition-card mt-10 mb-10">
-        <a href="n1.html" target="_blank">
-          <img
-            class="hover: transition-all duration-300 transform hover:scale-105"
-            src="./images/tapa-nro-1.png"
-            alt="Tapa revista DSB número 1"
-          />
-        </a>
-        <div class="text-container">
-          <div>
-            <h3>DISEÑO SIN BARRERAS</h3>
-            <p>#1</p>
-            <p>Número especial de Lanzamiento</p>
-          </div>
-          <a href="n1.html" target="_blank" class="font-bold px-4 py-2">
-            Ver número
+      <div class="img-container">
+        <img class="w-full" src="images/mockup-revista.jpg" alt="" />
+      </div>
+      <!-- <img src="images/mockup-revista.jpg" alt="" /> -->
+      <div class="flex flex-col ml-20 w-1/2">
+        <h2>NÚMEROS DSB LAD</h2>
+        <div class="dsb-edition-card mt-10 mb-10">
+          <a href="n1.html" target="_blank">
+            <img
+              class="mb-10 hover: transition-all duration-300 transform hover:scale-105"
+              src="./images/tapa-nro-1.png"
+              alt="Tapa revista DSB número 1"
+            />
           </a>
+          <div class="text-container">
+            <div>
+              <h3>DISEÑO SIN BARRERAS</h3>
+              <p>#1</p>
+              <p>Número especial de Lanzamiento</p>
+            </div>
+            <a href="n1.html" target="_blank" class="mt-10 font-bold px-4 py-2">
+              Ver número
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -379,11 +388,15 @@
       id="dossiers"
       class="flex flex-col items-center py-10 px-6 bg-black"
     >
+      <div class="lines">
+        <div></div>
+      </div>
       <h2>DOSSIERS DSB LAD</h2>
+
       <div class="dsb-edition-card mt-10 mb-10">
         <a href="#" target="_blank">
           <img
-            class="hover: transition-all duration-300 transform hover:scale-105"
+            class="mb-10 hover: transition-all duration-300 transform hover:scale-105"
             src="./images/tapa-nro-1.png"
             alt="Tapa dossier DSB número 1"
           />
@@ -394,7 +407,7 @@
             <p>DOSSIER 1</p>
             <p>Número especial 5 años del LAD</p>
           </div>
-          <a href="#" target="_blank" class="font-bold px-4 py-2">
+          <a href="#" target="_blank" class="mt-10 font-bold px-4 py-2">
             Ver dossier
           </a>
         </div>
@@ -402,7 +415,7 @@
     </section>
 
     <!-- Sección de estudios -->
-    <section id="guias" class="py-10 px-6 bg-pastelviolet">
+    <section id="guias" class="py-10 px-6 bg-secondbg">
       <h2 class="text-3xl font-semibold text-center mb-10 text-white">
         GUíA PARA AUTORES Y LECTORES DSB LAD
       </h2>
@@ -464,7 +477,7 @@
 
     <!-- Sobre -->
 
-    <section id="sobre" class="py-20 px-6 bg-white text-center">
+    <section id="sobre" class="py-20 px-6 bg-gray-200 text-center">
       <div class="mx-auto px-6 py-20 bg-gris rounded-2xl max-w-3xl">
         <h2 class="text-3xl text-black font-semibold mb-6">
           Sobre DISEÑO SIN BARRERAS
@@ -584,7 +597,7 @@
           </div>
           <button
             type="submit"
-            class="bg-black text-white px-4 py-2 hover:bg-pastelviolet transition"
+            class="mt-5 bg-black text-white px-4 py-2 hover:bg-pastelviolet transition"
           >
             Suscribirme
           </button>
@@ -644,7 +657,7 @@
     <!-- Botón de cita -->
     <button
       id="abrirCita"
-      class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2 bg-darkviolet text-white text-base py-2 px-4 rounded-md shadow-lg hover:bg-Gris transition"
+      class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2 bg-darkviolet text-white text-base py-2 px-4 shadow-lg hover:bg-Gris transition"
     >
       <i class="fas fa-quote-right"></i> Citar revista
     </button>
@@ -654,7 +667,7 @@
       id="modalCita"
       class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
     >
-      <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full relative">
+      <div class="bg-white shadow-lg p-6 max-w-md w-full relative">
         <button
           id="cerrarCita"
           class="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl"
@@ -673,7 +686,7 @@
         <div class="text-right">
           <button
             id="copiarCita"
-            class="bg-gray-300 hover:bg-gray-400 text-black text-sm font-medium px-4 py-2 rounded transition"
+            class="bg-gray-300 hover:bg-gray-400 text-black text-sm font-medium px-4 py-2 transition"
           >
             Copiar cita
           </button>
@@ -749,7 +762,7 @@
             </li>
             <li>
               <a href="#" class="hover:text-pastelviolet transition-colors"
-                >Comitee Editorial</a
+                >Comité Editorial</a
               >
             </li>
           </ul>
@@ -812,12 +825,8 @@
         </div>
 
         <!-- LOGO -->
-        <div class="flex items-center justify-center gap-x-8">
-          <img
-            src="images/LAD-logo chico.png"
-            alt="Logo lad"
-            class="w-auto h-20"
-          />
+        <div class="flex justify-center gap-x-8">
+          <img src="images/logo-lad.png" alt="Logo lad" class="w-auto h-20" />
         </div>
       </div>
 
