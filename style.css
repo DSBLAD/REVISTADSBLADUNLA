@@ -146,8 +146,24 @@ h2 {
   justify-content: center;
 }
 
+#primer-numero {
+  color: var(--front-color);
+  position: relative;
+}
+
+.primer-numero-descripcion {
+  background-color: var(--bg-color);
+  padding: 50px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+}
+
 #numeros h2,
-#dossiers h2 {
+#dossiers h2,
+#primer-numero h2 {
   font-size: xx-large;
   font-weight: 700;
 }
@@ -265,6 +281,10 @@ h2 {
   .home-header-cover-img {
     margin-top: 100px;
   }
+  #primer-numero img {
+    height: 100vh;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 900px) {
@@ -293,5 +313,12 @@ h2 {
   }
   .lines {
     display: none;
+  }
+  .primer-numero-descripcion {
+    position: initial;
+    width: 100%;
+  }
+  #primer-numero {
+    position: unset;
   }
 }

@@ -110,19 +110,11 @@
     <nav
       class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between"
     >
-      <div
-        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
-      >
-        <!-- Logo -->
-        <a
-          href="https://www.instagram.com/lad.unla/?hl=es-la"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:underline"
-        >
+      <div class="flex items-center gap-2 text-lg sm:text-xl">
+        <a href="index.html" rel="noopener noreferrer">
           <img
-            src="./images/logo-lad.png"
-            alt="LAD Logo"
+            src="./images/logo-home.png"
+            alt="Página de inicio"
             class="h-10 sm:h-12 md:h-14 w-auto object-contain"
           />
         </a>
@@ -233,41 +225,45 @@
       </ul>
     </nav>
 
-    <!-- Contenido central: revista embebida -->
-    <section id="cookies" class="mt-[45px] py-2 px-2 bg-black">
-      <div
-        class="mx-auto px-2 py-2 bg-black rounded-md max-w-7xl text-black text-xs leading-relaxed"
-      ></div>
-    </section>
-    <!-- Botón de descarga -->
-    <div class="text-center mt-4">
-      <button
-        id="descargarPDF"
-        class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white text-base py-2 px-4 rounded-md transition"
-      >
-        <i class="fas fa-download"></i> Descargar revista (PDF)
-      </button>
-      <a
-        id="enlaceDescarga"
-        href="https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf"
-        target="_blank"
-        style="display: none"
-      ></a>
-      <p class="text-sm text-gray-400 mt-2">
+    <section id="primer-numero">
+      <div class="primer-numero-descripcion flex flex-col justify-between">
+        <div>
+          <h2>DSB LAD</h2>
+          <h3>diseño sin barreras</h3>
+          <p class="mt-6">Descargá el primer número de la revista DSB LAD</p>
+          <div class="flex flex-col gap-6 mt-6">
+            <button
+              id="descargarPDF"
+              class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white text-base py-2 px-4 transition"
+            >
+              <i class="fas fa-download"></i> Descargar revista (PDF)
+            </button>
+            <!-- Comento porque no está operativo 
+             <p class="text-sm text-gray-400 mt-2">
         Descargas: <span id="contadorDescargas">0</span>
-      </p>
-    </div>
-
-    <!-- Botón desagregado -->
-    <div class="flex justify-center mt-4">
-      <a
-        href="n1desagregado.html"
-        target="_blank"
-        class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white text-base py-2 px-4 rounded-md transition"
-      >
-        <i class="fas fa-book-open"></i> Ir al número desagregado
-      </a>
-    </div>
+      </p> -->
+            <a
+              id="enlaceDescarga"
+              href="https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf"
+              target="_blank"
+              style="display: none"
+            ></a>
+            <a
+              href="n1desagregado.html"
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-[#4B145F] hover:bg-pastelviolet text-white text-base py-2 px-4 transition"
+            >
+              <i class="fas fa-book-open"></i> Ir al número desagregado
+            </a>
+          </div>
+        </div>
+        <p class="mt-3 text-xs font-light">
+          Publicación anual del LAD - Laboratorio de Diseño- Departamento de
+          Humanidades y Artes - Universidad Nacional de Lanús - Argentina
+        </p>
+      </div>
+      <img src="images/mockup-nro1.jpg" alt="" />
+    </section>
 
     <!-- Botón de cita -->
     <button
