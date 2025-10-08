@@ -102,7 +102,6 @@
 }
 
 .home-header-text-container {
-  height: 600px;
   padding: 0 0 0 70px;
   color: var(--front-color);
 }
@@ -268,8 +267,31 @@ h2 {
   }
 }
 
+@media (max-width: 900px) {
+  #numeros .img-container {
+    display: none;
+  }
+}
+
 @media (max-width: 700px) {
   .home-header-cover-img {
     width: 80%;
+  }
+  .home-header-text-container {
+    padding: 30px;
+  }
+  .home-header {
+    padding-top: 0;
+    justify-content: start;
+  }
+  .dsb-edition-card {
+    width: 100%;
+  }
+  #numeros,
+  #dossiers {
+    height: fit-content;
+  }
+  .lines {
+    display: none;
   }
 }
