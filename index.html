@@ -1,1151 +1,1224 @@
- 
- <!DOCTYPE html>
-    <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSBLAD</title>
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DSBLAD</title>
-    
-      <!-- Meta para redes sociales -->
-      <meta property="og:title" content="DSB LAD" />
-      <meta property="og:description" content="Revista de Diseño" />
-      <meta property="og:image" content="https://dsblad.github.io/REVISTADSBLADUNLA/images/n5.png" />
-      <meta property="og:url" content="https://dsblad.github.io/REVISTADSBLADUNLA/" />
-      <meta name="twitter:card" content="summary_large_image" />
-    
-      <!-- Icono -->
-      <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
-      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    
-      <!-- Estilos personalizados -->
-      <link rel="stylesheet" href="style.css" />
-    
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Meta para redes sociales -->
+    <meta property="og:title" content="DSB LAD" />
+    <meta property="og:description" content="Revista de Diseño" />
+    <meta
+      property="og:image"
+      content="https://dsblad.github.io/REVISTADSBLADUNLA/images/n5.png"
+    />
+    <meta
+      property="og:url"
+      content="https://dsblad.github.io/REVISTADSBLADUNLA/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-      <!--googlefonts -->
+    <!-- Icono -->
+    <link rel="icon" href="favicon_hub_only_rounded.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    
+    <!--googlefonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          celeste: '#0c6d99',
-          celestonoscuro: '#1394ad',
-          azulpetrol: '#168AAD',
-          azulverdoso: '#34A0A4',
-          verdepetroloscuro: '#036666',
-          verdepetroleo: '#14746F',
-          verdepetro: '#248277',
-          amarillooro: '#D7B04B',
-          amarillo: '#FFCF56',
-          fondocalido: '#FDFCFB',
-          black: '#000000',
-          Gris: '#4d4d4d',
-          Amarillo: '#f3be13',
-          Turquesa: '#26a7a6',
-          cyanoscuroelegante: '#006D77',
-          turquesaprofundo: '#007C91',
-          violetweb: '#7F5AF0',
-          pastelviolet: '#CBB7E2',
-          darkviolet: '#3D2C54', 
-          bordoviolet: '#A45C84',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "#167676",
+              secondbg: "#b29dca",
+              celeste: "#0c6d99",
+              celestonoscuro: "#1394ad",
+              azulpetrol: "#168AAD",
+              azulverdoso: "#34A0A4",
+              verdepetroloscuro: "#036666",
+              verdepetroleo: "#14746F",
+              verdepetro: "#248277",
+              amarillooro: "#D7B04B",
+              amarillo: "#FFCF56",
+              fondocalido: "#FDFCFB",
+              black: "#000000",
+              Gris: "#4d4d4d",
+              Amarillo: "#f3be13",
+              Turquesa: "#26a7a6",
+              cyanoscuroelegante: "#006D77",
+              turquesaprofundo: "#007C91",
+              violetweb: "#7F5AF0",
+              pastelviolet: "#CBB7E2",
+              darkviolet: "#3D2C54",
+              bordoviolet: "#A45C84",
+            },
+            fontSize: {
+              "2xl": "1.5rem",
+              "3xl": "1.875rem",
+              "4xl": "2.25rem",
+              "5xl": "3rem",
+              "6xl": "3.75rem",
+            },
+            fontWeight: {
+              normal: 400,
+              medium: 500,
+              bold: 700,
+            },
+            fontFamily: {
+              sans: ['"Fira Sans"', "sans-serif"],
+              condblack: ['"FF Good Pro Cond Black"', "sans-serif"],
+              "barlow-condensed": ['"Barlow Condensed"', "sans-serif"],
+            },
+          },
         },
-        fontSize: {
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '3.75rem',
-        },
-        fontWeight: {
-          normal: 400,
-          medium: 500,
-          bold: 700,
-        },
-        fontFamily: {
-          sans: ['"FF Good Pro Wide Light"', 'sans-serif'],
-          condblack: ['"FF Good Pro Cond Black"', 'sans-serif'],
-          'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+      };
+    </script>
 
-<!-- FUENTES PERSONALIZADAS -->
-<style>
-@font-face {
-  font-family: 'FF Good Pro Cond Black';
-  src: url('fonts/ff-good-pro-cond-black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-@font-face {
-  font-family: 'FF Good Pro Wide Light';
-  src: url('fonts/ff-good-pro-wide-light.woff2') format('woff2'),
-       url('fonts/ff-good-pro-wide-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-        html {
-          scroll-behavior: smooth;
-        }
-    
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-    
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out forwards;
-        }
-    
-        .animate-fade-in-delay {
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
-      </style>
-    </head>
+  <body class="home text-[#222] font-sans pt-20">
+    <!-- Compensa altura del menú fijo -->
 
-      
-    
-    <body class="bg-white text-[#222] font-sans pt-20"> <!-- Compensa altura del menú fijo -->
-    
-<!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
-
-  <nav class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between">
-  <div class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet">
-    
-    <!-- Logo -->
-    <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <img src="./images/n1.png" alt="LAD Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain" />
-    </a>
-
-       
-  </div>
-
- 
-    <!-- Botón hamburguesa visible solo en sm y md -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
-        <span id="menu-icon">&#9776;</span>
-      </button>
-    </div>
-  
-    <!-- Menú visible en LG y desplegable en SM/MD -->
-
-     <ul id="menu" class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white">
-       
-      <li><a href="sobredsb.html" class="block w-full py-1 hover:text-pastelviolet">Sobre DSB LAD</a></li>
-      
-      
-      <li>
-  <a id="contactoMail" href="mailto:dsbladunla@gmail.com" 
-     class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2">
-    <i class="fas fa-envelope"></i>
-    <span>Contacto</span>
-  </a>
-</li>
-      <li class="flex flex-row gap-2 mt-2 lg:mt-0">
-        <a href="index.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/ar.png" alt="Español" class="w-6 h-4 rounded-sm" />
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between"
+    >
+      <div
+        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
+      >
+        <!-- Logo -->
+        <a
+          href="https://www.instagram.com/lad.unla/?hl=es-la"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline"
+        >
+          <img
+            src="./images/logo-lad.png"
+            alt="LAD Logo"
+            class="h-10 sm:h-12 md:h-14 w-auto object-contain"
+          />
         </a>
-        <a href="indexen.html" class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100">
-          <img src="./images/us.png" alt="English" class="w-6 h-4 rounded-sm" />
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  
-<!-- Botón para mostrar barra de pestañas en mobile -->
-<div class="sm:hidden flex justify-end px-6 py-2 bg-[#4B145F] text-white">
-  <button id="toggle-tabs" class="text-2xl focus:outline-none">
-    <i class="fas fa-bars"></i>
-  </button>
-</div>
-
-
- 
-
-<!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
-
-<div id="tab-bar" class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base bg-[#4B145F] text-white w-full shadow-inner">
-
-  <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base">
-  
-
-      <a href="convocatoria.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Convocatorias
-  </a>
-    
-    <a href="unidadequipo.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Equipo editorial
-    </a>
-    
-    <a href="infolectores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Lectores
-    </a>
-
-    <a href="infoautores.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Autores
-    </a>
-
-    <a href="infobibliotecarios.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200">
-      Bibliotecarios
-    </a>
-
-    <a href="etica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Buenas prácticas
-    </a>
-
-<a href="politicas.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Políticas
-    </a>
-
-    <a href="#envios" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-      Envios
-    </a>
-
-    <a href="estadistica.html" class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200">
-    Estadísticas
-  </a>
-
-    <a href="buscador.html" target="_blank" class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2">
-  <i class="fas fa-search"></i>
-  <span>Buscador</span>
-</a>
-        
-</div>
-</div>
-
-  
-  <!-- HERO principal con texto y logo al costado -->
-
-  <section>
-
- <div id="fs" class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-1 gap-12">
-
-  <!-- Logo + Carteles -->
-<div class="md:w-1/2 flex justify-center relative">
-  <!-- Imagen de fondo -->
-  <img src="images/n1.png" alt="Logo n1" class="w-full max-w-2xl" />
-
-  <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Numero 1
-  </div>
-
-  <!-- Cartel "DSB LAD LANZAMIENTO..." encima de la imagen -->
-  <div class="absolute top-20 right-20 bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-4 py-2 rounded-sm text-3xl leading-tight shadow-md">
-    <div>DSB LAD</div>
-    <div>LANZAMIENTO</div>
-    <div>Diseño sin Barreras</div>
-  </div>
-</div>
-
-
- 
-  <!-- Texto -->
-  <div class="md:w-1/2 text-center md:text-left">
-    <h1 class="text-6xl md:text-8xl text-darkviolet font-barlow-condensed mb-2">DSB LAD</h1>
-
-    <h2 class="text-3xl md:text-5xl text-black font-bold mb-6 leading-tight">REVISTA DE DISEÑO</h2>
-
-   <div class="text-black text-sm leading-relaxed space-y-6 text-justify sm:text-left">
-
-<strong>DSB</strong> es una publicación del Laboratorio de Diseño (LAD), con un enfoque de revista de divulgación académica. Se orienta hacia las áreas del Diseño Industrial, Diseño y Comunicación Visual para poner el foco en la divulgación de actividades académicas y de investigación tanto de grado como posgrado. Su objetivo principal es constituirse como un espacio plural para la producción y difusión de conocimientos y desarrollos vinculados al diseño, tanto en su dimensión académica como profesional. Para permitir así el diálogo entre la comunidad, el ámbito educativo, el ejercicio profesional y el público general interesado en el diseño. 
-<br>
- Ofrece la participación para investigadores, docentes, profesionales y estudiantes vinculados al campo del diseño, por medio de artículos, ensayos académicos, reseñas críticas, comunicaciones visuales breves y proyectos teóricos dentro de los campos del Diseño Industrial y de Comunicación Visual, y otras disciplinas afines, tanto desde una perspectiva disciplinar como interdisciplinar.comunicación breve y propone una presentación con énfasis en lo visual, donde se podrán mostrar resultados de la experiencia desarrollo de producto, trabajos de estudiantes, propuestas docentes y entrevistas.
-
-  </p>
-  
-    <p class="text-md text-black mb-6">
-      <strong> Te invitamos a que conozcas nuestra publicación.</strong>
-    </p>
-   </div>
-
-   <!-- Botones en fila -->
-<div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
-  <a href="#numeros" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    NUMEROS
-  </a>
-  <a href="#dossiers" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    DOSSIERS
-  </a>
-  <a href="#guias" class="h-12 flex items-center justify-center bg-black text-white px-2 rounded-md text-sm font-bold shadow hover:bg-darkviolet transition text-center">
-    GUIAS
-  </a>
-</div>
-</div>
-</div>
-
-</section>
-
- 
-  
-  <!-- Animaciones personalizadas -->
-  <style>
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
-    .animate-fade-in {
-      animation: fadeIn 1.2s ease-out forwards;
-    }
-  
-    .animate-fade-in-delay {
-      animation: fadeIn 1.2s ease-out 0.3s forwards;
-    }
-  </style>
-
-  <!-- Sección de estudios -->
-<section id="numeros" class="py-10 px-6 bg-darkviolet">
-  <h2 class="text-3xl font-semibold text-center mb-10 text-white">NUMEROS DSB LAD</h2>
-   <div class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-
-    <section id="asesorias">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
-
-    <!-- Tarjeta 1 -->
-<div>
-  <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 transition-all duration-300 transform hover:scale-105 text-center">
-    
-   
-     <!-- Contenedor relativo para superponer cartel sobre imagen -->
-<div class="relative mb-4 w-fit mx-auto">
-  <!-- Imagen del número -->
-  <img src="images/n1.png" alt="Número 1" class="w-20 h-20 object-contain" />
-
-  <!-- Cartel centrado encima de la imagen -->
-  <div class="absolute inset-0 flex items-center justify-center">
-    <div class="bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-1 py-1 rounded-sm text-[10px] leading-tight text-center shadow min-w-[90px]">
-      <div>DSB LAD</div>
-      <div>LANZAMIENTO</div>
-      <div>Diseño sin Barreras</div>
-    </div>
-  </div>
-</div>
-
-    <!-- Texto descriptivo -->
-    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-    <p class="mb-4">NUMERO 1.</p>
-    <p>Numero especial de Lanzamiento</p>
-    <br>
-    <a href="n1.html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">
-      Ver numero
-    </a>
-    <br><br>
-  </div>
-</div>
-
-
-    <!-- Tarjeta 2 -->
-     
-    <div>
-      <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Proximamente
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">NUMERO 2. </p>
-        <p>  Hacia una epistemología del diseño</p>
-        <br>
-        <a href=".html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver numero</a>
-      <br>
-      <br>
       </div>
-    </div>
 
-    <!-- Tarjeta 3 -->
-     
-    <div>
-      <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Proximamente
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">NUMERO 3. </p>
-          <p> El Diseño como factor de innovación</p>
-        <br>
-        <a href=".html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver numero</a>
-      <br>
-      <br>
+      <!-- Botón hamburguesa visible solo en sm y md -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+          <span id="menu-icon">&#9776;</span>
+        </button>
       </div>
-    </div>
 
-    <!-- Tarjeta 4 -->
-     
-    <div>
-      <div class="bg-darkviolet text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n6.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Proximamente
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">NUMERO 4. </p>
-        <p> La necesaria mirada crítica del diseño</p>
-        <br>
-        <a href=".html" target="_blank" class="bg-black text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver numero</a>
-      <br>
-      <br>
-      </div>
-    </div>
+      <!-- Menú visible en LG y desplegable en SM/MD -->
 
-    
+      <ul
+        id="menu"
+        class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white"
+      >
+        <li>
+          <a
+            href="unidadequipo.html"
+            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+          >
+            Equipo editorial
+          </a>
+        </li>
+        <li>
+          <a
+            href="infolectores.html"
+            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+          >
+            Lectores
+          </a>
+        </li>
+        <li>
+          <a
+            href="infoautores.html"
+            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+          >
+            Autores
+          </a>
+        </li>
+        <li>
+          <a
+            href="infobibliotecarios.html"
+            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200"
+          >
+            Bibliotecarios
+          </a>
+        </li>
+        <li>
+          <a
+            href="etica.html"
+            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+          >
+            Buenas prácticas
+          </a>
+        </li>
+        <li>
+          <a
+            href="politicas.html"
+            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+          >
+            Políticas
+          </a>
+        </li>
+        <li>
+          <a
+            href="sobredsb.html"
+            class="block w-full py-1 hover:text-pastelviolet"
+            >Sobre DSB LAD</a
+          >
+        </li>
 
-    
-      </section>
+        <li>
+          <a
+            id="contactoMail"
+            href="mailto:dsbladunla@gmail.com"
+            class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Contacto</span>
+          </a>
+        </li>
+        <!-- íconos para traducción oultos hasta que tengamos traducciones
+        <li class="flex flex-row gap-2 mt-2 lg:mt-0">
+          <a
+            href="index.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/ar.png"
+              alt="Español"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+          <a
+            href="indexen.html"
+            class="flex items-center gap-1 bg-black text-[#80142f] text-sm px-2 py-1 rounded-md shadow hover:bg-gray-100"
+          >
+            <img
+              src="./images/us.png"
+              alt="English"
+              class="w-6 h-4 rounded-sm"
+            />
+          </a>
+        </li> -->
+      </ul>
+    </nav>
 
-  </div>
-</section>
-
-<!-- Sección de estudios -->
-<section id="dossiers" class="py-10 px-6 bg-black">
-  <h2 class="text-3xl font-semibold text-center mb-10 text-white">DOSSIERS DSB LAD</h2>
-   <div class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-
-    <section id="asesorias">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
-
-    <!-- Tarjeta 1 -->
-<div>
-  <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 transition-all duration-300 transform hover:scale-105 text-center">
-    
-   
-     <!-- Contenedor relativo para superponer cartel sobre imagen -->
-<div class="relative mb-4 w-fit mx-auto">
-  <!-- Imagen del número -->
-  <img src="images/n2.png" alt="Dossier 1" class="w-20 h-20 object-contain" />
-
-  <!-- Cartel centrado encima de la imagen -->
-  <div class="absolute inset-0 flex items-center justify-center">
-    <div class="bg-white bg-opacity-60 text-darkviolet font-bold font-barlow-condensed px-1 py-1 rounded-sm text-[10px] leading-tight text-center shadow min-w-[90px]">
-      <div>DSB LAD</div>
-      <div>LANZAMIENTO</div>
-      <div>5 años del LAD</div>
-    </div>
-  </div>
-</div>
-
-    <!-- Texto descriptivo -->
-    <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-    <p class="mb-4">DOSSIER 1.</p>
-    <p>Numero especial 5 años del LAD</p>
-    <br>
-    <a href=".html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">
-      Ver dossier
-    </a>
-    <br><br>
-  </div>
-</div>
-
-
-    <!-- Tarjeta 2 -->
-     
-    <div>
-      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Proximamente
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">DOSSIER 2. </p>
-        <p>  Practicas preprofesionales en el Diseño</p>
-        <br>
-        <a href=".html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver dossier</a>
-      <br>
-      <br>
-      </div>
-    </div>
-
-    <!-- Tarjeta 3 -->
-     
-    <div>
-      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Proximamente
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">DOSSIER 3. </p>
-          <p> Los TIFs como motor de innovación</p>
-        <br>
-        <a href=".html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver dossier</a>
-      <br>
-      <br>
-      </div>
-    </div>
-
-    <!-- Tarjeta 4 -->
-     
-    <div>
-      <div class="bg-black text-white p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-darkviolet bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    Proximamente
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">DOSSIER 4. </p>
-        <p> Investigación, ciencia y tecnologia del diseño</p>
-        <br>
-        <a href=".html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver dossier</a>
-      <br>
-      <br>
-      </div>
-    </div>
-
-      </section>
-
-  </div>
-</section>
-
-<!-- Sección de estudios -->
-<section id="guias" class="py-10 px-6 bg-pastelviolet">
-  <h2 class="text-3xl font-semibold text-center mb-10 text-white">GUIA PARA AUTORES Y LECTORES DSB LAD</h2>
-   <div class="border-t-2 border-white mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-
-    <section id="asesorias">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
-
-  
-  <!-- Tarjeta 1 -->
-     
-    <div>
-      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n3.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    POLITICAS
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">POLITICAS EDITORIALES.</p>
-       
-        <br>
-        <a href="politicas.html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
-      <br>
-      <br>
-      </div>
-    </div>
-    
-    <!-- Tarjeta 2 -->
-     
-    <div>
-      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n5.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    GUIA DE AUTORES
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">GUIA DE AUTORES.</p>
-       
-        <br>
-        <a href=".html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
-      <br>
-      <br>
-      </div>
-    </div>
-
-    <!-- Tarjeta 3 -->
-     
-    <div>
-      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n1.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    REGLAMENTO
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">REGLAMENMTO.</p>
-        
-        <br>
-        <a href=".html" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
-      <br>
-      <br>
-      </div>
-    </div>
-
-    <!-- Tarjeta 4 -->
-     
-    <div>
-      <div class="bg-pastelviolet text-black p-6 rounded-lg shadow hover:bg-Gris/30 hover: transition-all duration-300 transform hover:scale-105 text-center">
-       <div class="mb-4">
-  <img src="images/n4.png" alt="Número 1" class="mx-auto w-20 h-20 object-contain" />
-</div>
- <!-- Cartel "Numero 1" -->
-  <div class="absolute top-4 left-4 bg-black bg-opacity-90 text-white px-3 py-1 rounded-lg text-sm">
-    MODELOS
-  </div>
-        <h3 class="text-m font-bold mb-2">DISEÑO SIN BARRERAS</h3>
-        <p class="mb-4">MODELOS. </p>
-       
-        <br>
-        <a href="documents/DSB LAD - Plantilla para articulo - doc v3 (1).docx" target="_blank" class="bg-darkviolet text-white font-bold px-4 py-2 rounded-xl hover:bg-gray-100 transition">Ver</a>
-      <br>
-      <br>
-      </div>
-    </div>
-
-    
-
-    
-      </section>
-
-  </div>
-</section>
-
-  <!-- Sobre -->
-
-   <section id="sobre" class="py-20 px-6 bg-white text-center">
-  <div class="mx-auto px-6 py-20 bg-gris rounded-2xl max-w-3xl">
-    <h2 class="text-3xl text-black font-semibold mb-6">Sobre DISEÑO SIN BARRERAS</h2>
-     <div class="border-t-2 border-darkviolet mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"></div>
-    <div class="text-black text-lg leading-relaxed space-y-6 text-justify sm:text-left">
-  <p><strong>DSB LAD – Diseño Sin Barreras</strong> es una revista de diseño que promueve la comunicación, la visibilización de los procesos proyectuales académicos, la accesibilidad, la inclusión y la innovación en los procesos creativos y productivos. Nace dentro del Laboratorio de Diseño (LAD) como un espacio editorial colaborativo que articula saberes, experiencias y herramientas desde una perspectiva crítica y transformadora del diseño.</p>
-
-<p>La publicación se construye como una plataforma para visibilizar proyectos, ideas y prácticas que apuestan a un diseño más equitativo, comprometido con el entorno y centrado en las personas. Cada número invita a reflexionar sobre los desafíos contemporáneos del diseño, desde lo social, lo cultural, lo técnico y lo humano.</p>
-
-<p>Creemos que un <strong>diseño inclusivo, consciente y situado</strong> puede abrir caminos, derribar barreras y generar un impacto positivo real. Por eso, DSB LAD reúne voces diversas, promueve el diálogo interdisciplinario y apuesta a la producción de contenidos que inspiren, cuestionen y propongan.</p>
-
-<p>La revista integra herramientas del diseño industrial, gráfico y digital, junto con enfoques de investigación, docencia y activismo. Se proyecta como un puente entre profesionales, estudiantes, colectivos y comunidades que entienden el diseño como una herramienta de transformación.</p>
-
-<p><strong>DSB LAD</strong> te invita a ser parte de un movimiento editorial donde diseñar es también incluir, escuchar, repensar y crear con sentido. Porque el diseño sin barreras no es una meta, sino un camino que se construye colectivamente.</p>
-
-<p>En cada edición, abrimos un espacio para pensar, compartir y avanzar hacia un diseño más accesible, abierto y comprometido con el presente y el futuro.</p>
- </div>
-  </div>
-
-  <div class="text-center mt-8">
-    <a href="https://forms.gle/ooY7STk95Atw5QrW6" target="_blank" rel="noopener noreferrer"
-       class="inline-block bg-black text-white text-m font-semibold px-4 py-3 rounded-lg shadow-md hover:bg-darkviolet transition">
-      Quiero formar parte y te acerco mi propuesta
-    </a>
-  </div>
-  <p class="text-sm text-gray-400 mt-2 text-center">
-  Visitas al sitio: <span id="contadorVisitas">0</span>
-</p>
-
-</section>
-
-
-    
-<!-- Comunidad -->
-<section id="comunidad" class="py-20 px-6 bg-darkviolet text-center">
-  <h2 class="text-3xl font-semibold mb-6 text-white">Sumate a las novedades de DSB LAD</h2>
-  <p class="max-w-xl mx-auto mb-6 text-lg text-white">
-    Recibí novedades y muchas cosas más.
-  </p>
-
-  <!-- Formulario -->
-  <form id="formComunidad" class="max-w-xl mx-auto space-y-4">
-    <div class="text-left">
-      <label for="nombreUsuario" class="block text-sm font-medium text-white mb-1">Tu nombre:</label>
-      <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ej: Juan Pérez"
-             class="w-full rounded-md border-gray-300 shadow-sm focus:border-azulino focus:ring focus:ring-azulino focus:ring-opacity-50 p-2" required>
-    </div>
-
-    <div class="flex">
-      <input
-        id="correoUsuario"
-        type="email"
-        placeholder="Tu correo electrónico"
-        class="flex-grow px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none"
-        required
-      />
-      <button type="submit"
-        class="bg-black text-white px-4 py-2 rounded-r-md hover:bg-pastelviolet transition">
-        Suscribirme
+    <!-- AMBAS BARRAS DE PESTAÑAS DESKTOP Y MOBILE OCULTAS PORQUE UNIFIQUÉ LAS BARRAS EN UNA -->
+    <!-- Botón para mostrar barra de pestañas en mobile -->
+    <!-- <div class="sm:hidden flex justify-end px-6 py-2 text-white">
+      <button id="toggle-tabs" class="text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
       </button>
-    </div>
-  </form>
+    </div> -->
+    <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
+    <!-- 
+    <div
+      id="tab-bar"
+      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base text-white w-full shadow-inner"
+    >
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base"
+      >
+        <a
+          href="convocatoria.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Convocatorias
+        </a>
 
-  <!-- Mensaje de confirmación -->
-  <p id="mensajeSuscripcion" class="mt-6 text-green-100 hidden">¡Gracias por suscribirte!</p>
-</section>
+        <a
+          href="unidadequipo.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Equipo editorial
+        </a>
 
+        <a
+          href="infolectores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Lectores
+        </a>
 
-<!-- Banner modal de cookies centrado -->
- <div id="cookieOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center pointer-events-auto">
-  <div id="cookieBanner" class="bg-white rounded-xl shadow-xl p-6 w-full max-w-md mx-auto flex flex-col pointer-events-auto">
-   
-    <h2 class="text-xl font-bold mb-4 text-darkviolet">Tu privacidad es importante</h2>
-    <p class="text-sm text-gray-700 mb-6">
-      En la Revista DSB LAD usamos cookies y tecnologías similares para mejorar tu experiencia. Al continuar, aceptás nuestras
-      <a href="politicasdecookies.html" target="_blank" class="underline text-bold text-darkviolet">cookies</a>,
-      <a href="politicasdeprivacidad.html" target="_blank" class="underline text-bold text-darkviolet">política de privacidad</a> y
-      <a href="terminosycondiciones.html" target="_blank" class="underline text-bold text-darkviolet">términos y condiciones</a>.
-    </p>
-    <button id="aceptarCookies" class="mt-2 bg-darkviolet text-white font-semibold py-2 rounded hover:bg-Gris transition">
-      Aceptar y continuar
-    </button>
-  </div>
-</div>
+        <a
+          href="infoautores.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Autores
+        </a>
 
-<!-- Botón de cita -->
-<button id="abrirCita" class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2 bg-darkviolet text-white text-base py-2 px-4 rounded-md shadow-lg hover:bg-Gris transition">
-  <i class="fas fa-quote-right"></i> Citar revista
-</button>
+        <a
+          href="infobibliotecarios.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200"
+        >
+          Bibliotecarios
+        </a>
 
-<!-- Modal de cita -->
-<div id="modalCita" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full relative">
-    <button id="cerrarCita" class="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
-    <h3 class="text-lg font-bold mb-3 text-darkviolet">Cómo citar esta revista</h3>
-    <p id="textoCita" class="text-sm text-gray-700 mb-4">
-      Autor del artículo, Título del artículo, Numero (1). Revista DSB LAD (2025). <em>Diseño sin barreras</em>. Universidad Nacional de Lanús. Recuperado de http://dsblad.unla.edu.ar/. Editorial LAD UNLa. 
-    </p>
-    <p class="text-xs text-gray-500 mb-4">Formato APA 7ª edición</p>
-    <div class="text-right">
-    <button id="copiarCita" class="bg-gray-300 hover:bg-gray-400 text-black text-sm font-medium px-4 py-2 rounded transition">
-      Copiar cita
-    </button>
-    </div>
-  </div>
-</div>
+        <a
+          href="etica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Buenas prácticas
+        </a>
 
-<!-- POPUP CONVOCATORIA OCULTO INICIALMENTE -->
-<div id="popupConvocatoria" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
-  <a href="convocatoria.html" class="block">
-    <div class="relative w-80 max-w-full">
+        <a
+          href="politicas.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Políticas
+        </a>
+
+         <a
+          href="#envios"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Envios
+        </a> 
+
+        <a
+          href="estadistica.html"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+        >
+          Estadísticas
+        </a> 
+
+        <a
+          href="buscador.html"
+          target="_blank"
+          class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2"
+        >
+          <i class="fas fa-search"></i>
+          <span>Buscador</span>
+        </a> 
+      </div>
+    </div> -->
+
+    <!-- HERO principal con texto y logo al costado -->
+
+    <section class="home-header">
       <!-- Imagen -->
-      <img src="images/popup.png" alt="Convocatoria" class="w-full rounded-xl shadow-xl" />
-
-      <!-- Botón de cierre -->
-<button onclick="document.getElementById('popupConvocatoria').classList.add('hidden')"
-        class="absolute top-2 right-2 bg-darkviolet text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-pastelviolet transition text-lg font-bold z-50">
-  &times;
-</button>
-
-      
-      <!-- Cartel superpuesto -->
-      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-xl">
-        <span class="text-white font-semibold text-lg sm:text-3xl text-center">Más info: click aquí</span>
+      <div class="home-header-cover-img">
+        <div class="home-header-title">
+          <h1>DSB LAD</h1>
+          <h2>revista de diseño</h2>
+        </div>
+        <div class="home-header-subtitle">
+          <div>
+            <h2>#1</h2>
+            <span>lanzamiento</span>
+          </div>
+        </div>
+        <div class="home-header-cover-img-inner"></div>
       </div>
-    </div>
-  </a>
-</div>
+      <!-- Texto -->
+      <div class="home-header-text-container">
+        <div class="home-header-description">
+          <p>
+            <strong class="fira-sans-bold">DSB</strong> es una publicación del
+            Laboratorio de Diseño (LAD), con un enfoque de revista de
+            divulgación académica. Se orienta hacia las áreas del Diseño
+            Industrial, Diseño y Comunicación Visual para poner el foco en la
+            divulgación de actividades académicas y de investigación tanto de
+            grado como posgrado. Su objetivo principal es constituirse como un
+            espacio plural para la producción y difusión de conocimientos y
+            desarrollos vinculados al diseño, tanto en su dimensión académica
+            como profesional. Para permitir así el diálogo entre la comunidad,
+            el ámbito educativo, el ejercicio profesional y el público general
+            interesado en el diseño.
+          </p>
+          <p>
+            Ofrece la participación para investigadores, docentes, profesionales
+            y estudiantes vinculados al campo del diseño, por medio de
+            artículos, ensayos académicos, reseñas críticas, comunicaciones
+            visuales breves y proyectos teóricos dentro de los campos del Diseño
+            Industrial y de Comunicación Visual, y otras disciplinas afines,
+            tanto desde una perspectiva disciplinar como
+            interdisciplinar.comunicación breve y propone una presentación con
+            énfasis en lo visual, donde se podrán mostrar resultados de la
+            experiencia desarrollo de producto, trabajos de estudiantes,
+            propuestas docentes y entrevistas.
+            <br />
 
+            <strong class="fira-sans-bold">
+              Te invitamos a que conozcas nuestra publicación.</strong
+            >
+          </p>
+        </div>
 
+        <!-- Botones en fila -->
+        <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
+          <a
+            href="#numeros"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            NÚMEROS
+          </a>
+          <a
+            href="#dossiers"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            DOSSIERS
+          </a>
+          <a
+            href="#guias"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-darkviolet transition text-center"
+          >
+            GUÍAS
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Sección de números -->
+    <section id="numeros">
+      <div class="img-container">
+        <img class="w-full" src="images/mockup-revista.jpg" alt="" />
+      </div>
+      <div class="flex flex-col ml-20 w-1/2">
+        <h2>NÚMEROS DSB LAD</h2>
+        <div class="dsb-edition-card mt-10 mb-10">
+          <a href="n1.html" target="_blank">
+            <img
+              class="mb-10 hover: transition-all duration-300 transform hover:scale-105"
+              src="./images/tapa-nro-1.png"
+              alt="Tapa revista DSB número 1"
+            />
+          </a>
+          <div class="text-container">
+            <div>
+              <h3>DISEÑO SIN BARRERAS</h3>
+              <p>#1</p>
+              <p>Número especial de Lanzamiento</p>
+            </div>
+            <a href="n1.html" target="_blank" class="mt-10 font-bold px-4 py-2">
+              Ver número
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Sección de dossiers -->
+    <section
+      id="dossiers"
+      class="flex flex-col items-center py-10 px-6 bg-black"
+    >
+      <div class="lines">
+        <div></div>
+      </div>
+      <h2>DOSSIERS DSB LAD</h2>
 
+      <div class="dsb-edition-card mt-10 mb-10">
+        <a href="#" target="_blank">
+          <img
+            class="mb-10 hover: transition-all duration-300 transform hover:scale-105"
+            src="./images/tapa-nro-1.png"
+            alt="Tapa dossier DSB número 1"
+          />
+        </a>
+        <div class="text-container">
+          <div>
+            <h3>DISEÑO SIN BARRERAS</h3>
+            <p>DOSSIER 1</p>
+            <p>Número especial 5 años del LAD</p>
+          </div>
+          <a href="#" target="_blank" class="mt-10 font-bold px-4 py-2">
+            Ver dossier
+          </a>
+        </div>
+      </div>
+    </section>
 
-<!--PREFOOTER -->
+    <!-- Sección de estudios -->
+    <section id="guias" class="py-10 px-6 bg-secondbg">
+      <h2 class="text-3xl font-semibold text-center mb-10 text-white">
+        GUíA PARA AUTORES Y LECTORES DSB LAD
+      </h2>
 
-<section class="bg-black text-white py-10 px-4 font-outfit">
-  <!-- Grid superior -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+        <!-- Tarjeta 1 -->
+        <div class="item-guia flex flex-col items-center">
+          <div class="square square-1"></div>
+          <p class="font-bold mb-5 mt-3">Políticas Editoriales</p>
+          <a
+            href="politicas.html"
+            target="_blank"
+            class="bg-darkviolet text-white font-bold px-4 py-2 hover:bg-gray-100 hover:text-black transition"
+            >Ver</a
+          >
+        </div>
 
-    <!-- CONSULTORÍA -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">DSB LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">LAD</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dirección Editorial y Técnica</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Redacción, Diseño y contenidos</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Comitee Editorial</a></li>
-      </ul>
-    </div>
+        <!-- Tarjeta 2 -->
+        <div class="item-guia flex flex-col items-center">
+          <div class="square square-2">
+            <span></span>
+          </div>
+          <p class="font-bold mb-5 mt-3">Guía de Autores</p>
+          <a
+            href="infoautores.html"
+            target="_blank"
+            class="bg-darkviolet text-white font-bold px-4 py-2 hover:bg-gray-100 hover:text-black transition"
+            >Ver</a
+          >
+        </div>
 
-    <!-- REDES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">REDES</h2>
-      <div class="flex space-x-4 text-xl">
-        <a href="https://www.instagram.com/lad.unla/?hl=es-la" target="_blank" class="hover:text-pastelviolet transition-colors">
-          <i class="fab fa-instagram"></i>
+        <!-- Tarjeta 3 -->
+        <div class="item-guia flex flex-col items-center">
+          <div class="square square-3">
+            <span></span>
+          </div>
+          <p class="font-bold mb-5 mt-3">Reglamento</p>
+          <a
+            href="etica.html"
+            target="_blank"
+            class="bg-darkviolet text-white font-bold px-4 py-2 hover:bg-gray-100 hover:text-black transition"
+            >Ver</a
+          >
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="item-guia flex flex-col items-center">
+          <div class="square square-4"></div>
+          <p class="font-bold mb-5 mt-3">Modelos</p>
+          <a
+            href="documents/DSB LAD - Plantilla para articulo - doc v3 (1).docx"
+            target="_blank"
+            class="bg-darkviolet text-white font-bold px-4 py-2 hover:bg-gray-100 hover:text-black transition"
+            >Ver</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+
+    <section id="sobre" class="py-20 px-6 bg-gray-200">
+      <div class="mx-auto px-6 py-20 bg-gris max-w-3xl">
+        <h2 class="text-3xl text-black font-semibold mb-6 text-center">
+          Sobre DISEÑO SIN BARRERAS
+        </h2>
+        <div
+          class="border-t-2 border-darkviolet mt-10 pt-6 text-xs text-left grid grid-cols-1 md:grid-cols-4 gap-4"
+        ></div>
+        <div class="text-black text-lg leading-relaxed space-y-6">
+          <p>
+            <strong>DSB LAD – Diseño Sin Barreras</strong> es una revista de
+            diseño que promueve la comunicación, la visibilización de los
+            procesos proyectuales académicos, la accesibilidad, la inclusión y
+            la innovación en los procesos creativos y productivos. Nace dentro
+            del Laboratorio de Diseño (LAD) como un espacio editorial
+            colaborativo que articula saberes, experiencias y herramientas desde
+            una perspectiva crítica y transformadora del diseño.
+          </p>
+
+          <p>
+            La publicación se construye como una plataforma para visibilizar
+            proyectos, ideas y prácticas que apuestan a un diseño más
+            equitativo, comprometido con el entorno y centrado en las personas.
+            Cada número invita a reflexionar sobre los desafíos contemporáneos
+            del diseño, desde lo social, lo cultural, lo técnico y lo humano.
+          </p>
+
+          <p>
+            Creemos que un
+            <strong>diseño inclusivo, consciente y situado</strong> puede abrir
+            caminos, derribar barreras y generar un impacto positivo real. Por
+            eso, DSB LAD reúne voces diversas, promueve el diálogo
+            interdisciplinario y apuesta a la producción de contenidos que
+            inspiren, cuestionen y propongan.
+          </p>
+
+          <p>
+            La revista integra herramientas del diseño industrial, gráfico y
+            digital, junto con enfoques de investigación, docencia y activismo.
+            Se proyecta como un puente entre profesionales, estudiantes,
+            colectivos y comunidades que entienden el diseño como una
+            herramienta de transformación.
+          </p>
+
+          <p>
+            <strong>DSB LAD</strong> te invita a ser parte de un movimiento
+            editorial donde diseñar es también incluir, escuchar, repensar y
+            crear con sentido. Porque el diseño sin barreras no es una meta,
+            sino un camino que se construye colectivamente.
+          </p>
+
+          <p>
+            En cada edición, abrimos un espacio para pensar, compartir y avanzar
+            hacia un diseño más accesible, abierto y comprometido con el
+            presente y el futuro.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a
+          href="https://forms.gle/ooY7STk95Atw5QrW6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-black text-white text-m font-semibold px-4 py-3 shadow-md hover:bg-darkviolet transition"
+        >
+          Quiero formar parte y te acerco mi propuesta
         </a>
       </div>
-      <div class="mt-4 text-sm leading-relaxed">
-        <p>Lanús, Argentina</p>
-        <p><a href="mailto:dsbladunla@gmail.com" class="hover:text-pastelviolet transition-colors">dsbladunla@gmail.com</a></p>
+      <p class="text-sm text-gray-400 mt-2 text-center">
+        Visitas al sitio: <span id="contadorVisitas">0</span>
+      </p>
+    </section>
+
+    <!-- sección oculta porque no sabemos si funciona -- Comunidad -->
+    <!-- <section id="comunidad" class="py-20 px-6 bg-darkviolet text-center">
+      <h2 class="text-3xl font-semibold mb-6 text-white">
+        Sumate a las novedades de DSB LAD
+      </h2>
+      <p class="max-w-xl mx-auto mb-6 text-lg text-white">
+        Recibí novedades y muchas cosas más.
+      </p>
+
+      <form id="formComunidad" class="max-w-xl mx-auto space-y-4">
+        <div class="text-left">
+          <label
+            for="nombreUsuario"
+            class="block text-sm font-medium text-white mb-1"
+            >Tu nombre:</label
+          >
+          <input
+            type="text"
+            id="nombreUsuario"
+            name="nombreUsuario"
+            placeholder="Ej: Juan Pérez"
+            class="w-full border-gray-300 shadow-sm focus:border-azulino focus:ring focus:ring-azulino focus:ring-opacity-50 p-2"
+            required
+          />
+        </div>
+
+        <div class="flex justify-between">
+          <div class="w-3/4">
+            <label
+              for="correoUsuario"
+              class="text-left block text-sm font-medium text-white mb-1"
+              >Tu email:</label
+            >
+            <input
+              id="correoUsuario"
+              type="email"
+              placeholder="juan@mail.com"
+              class="flex-grow px-4 py-2 border border-gray-300 focus:outline-none w-full"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="mt-5 bg-black text-white px-4 py-2 hover:bg-pastelviolet transition"
+          >
+            Suscribirme
+          </button>
+        </div>
+      </form>
+
+      <p id="mensajeSuscripcion" class="mt-6 text-green-100 hidden">
+        ¡Gracias por suscribirte!
+      </p>
+    </section> -->
+
+    <!-- Banner modal de cookies centrado -->
+    <div
+      id="cookieOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center pointer-events-auto"
+    >
+      <div
+        id="cookieBanner"
+        class="bg-white rounded-xl shadow-xl p-6 w-full max-w-md mx-auto flex flex-col pointer-events-auto"
+      >
+        <h2 class="text-xl font-bold mb-4 text-darkviolet">
+          Tu privacidad es importante
+        </h2>
+        <p class="text-sm text-gray-700 mb-6">
+          En la Revista DSB LAD usamos cookies y tecnologías similares para
+          mejorar tu experiencia. Al continuar, aceptás nuestras
+          <a
+            href="politicasdecookies.html"
+            target="_blank"
+            class="underline text-bold text-darkviolet"
+            >cookies</a
+          >,
+          <a
+            href="politicasdeprivacidad.html"
+            target="_blank"
+            class="underline text-bold text-darkviolet"
+            >política de privacidad</a
+          >
+          y
+          <a
+            href="terminosycondiciones.html"
+            target="_blank"
+            class="underline text-bold text-darkviolet"
+            >términos y condiciones</a
+          >.
+        </p>
+        <button
+          id="aceptarCookies"
+          class="mt-2 bg-darkviolet text-white font-semibold py-2 rounded hover:bg-Gris transition"
+        >
+          Aceptar y continuar
+        </button>
       </div>
     </div>
 
-    <!-- SECCIONES -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Numeros</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Dossiers</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Guias</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Equipo</a></li>
-        <li><a href="#" class="hover:text-pastelviolet transition-colors">Contacto</a></li>
-      </ul>
+    <!-- Botón de cita -->
+    <button
+      id="abrirCita"
+      class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2 bg-darkviolet text-white text-base py-2 px-4 shadow-lg hover:bg-Gris transition"
+    >
+      <i class="fas fa-quote-right"></i> Citar revista
+    </button>
+
+    <!-- Modal de cita -->
+    <div
+      id="modalCita"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white shadow-lg p-6 max-w-md w-full relative">
+        <button
+          id="cerrarCita"
+          class="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl"
+        >
+          &times;
+        </button>
+        <h3 class="text-lg font-bold mb-3 text-darkviolet">
+          Cómo citar esta revista
+        </h3>
+        <p id="textoCita" class="text-sm text-gray-700 mb-4">
+          Autor del artículo, Título del artículo, Numero (1). Revista DSB LAD
+          (2025). <em>Diseño sin barreras</em>. Universidad Nacional de Lanús.
+          Recuperado de http://dsblad.unla.edu.ar/. Editorial LAD UNLa.
+        </p>
+        <p class="text-xs text-gray-500 mb-4">Formato APA 7ª edición</p>
+        <div class="text-right">
+          <button
+            id="copiarCita"
+            class="bg-gray-300 hover:bg-gray-400 text-black text-sm font-medium px-4 py-2 transition"
+          >
+            Copiar cita
+          </button>
+        </div>
+      </div>
     </div>
 
-   <!-- LOGO -->
-     <div class="flex items-center justify-center gap-x-8">
-  <img src="images/n1.png" alt="Logo dsb" class="w-auto h-20" />
-  <img src="images/LAD-logo chico.png" alt="Logo lad" class="w-auto h-20" />
-</div>
+    <!-- POPUP CONVOCATORIA OCULTO INICIALMENTE -->
+    <div
+      id="popupConvocatoria"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
+    >
+      <a href="convocatoria.html" class="block">
+        <div class="relative w-80 max-w-full">
+          <!-- Imagen -->
+          <img
+            src="images/popup.png"
+            alt="Convocatoria"
+            class="w-full rounded-xl shadow-xl"
+          />
 
-    
+          <!-- Botón de cierre -->
+          <button
+            onclick="document.getElementById('popupConvocatoria').classList.add('hidden')"
+            class="absolute top-2 right-2 bg-darkviolet text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-pastelviolet transition text-lg font-bold z-50"
+          >
+            &times;
+          </button>
+
+          <!-- Cartel superpuesto -->
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-xl"
+          >
+            <span
+              class="text-white font-semibold text-lg sm:text-3xl text-center"
+              >Más info: click aquí</span
+            >
+          </div>
+        </div>
+      </a>
     </div>
-  </div>
 
-  <!-- Línea y grid inferior -->
-  <div class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left">
-    <a href="politicasdeprivacidad.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de privacidad</a>
-    <a href="politicasdecookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Política de Cookies</a>
-    <a href="terminosycondiciones.html" target="_blank" rel="noopener noreferrer" class="hover:text-pastelviolet transition-colors">Términos y condiciones</a>
-    <p>DSB LAD 2025 © Todos los derechos reservados</p>
-  </div>
-</section>
+    <!--PREFOOTER -->
 
-<!-- JS para mostrar barra fija -->
+    <section class="bg-black text-white py-10 px-4 font-outfit">
+      <!-- Grid superior -->
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm"
+      >
+        <!-- CONSULTORÍA -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >DSB LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >LAD</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dirección Editorial y Técnica</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Redacción, Diseño y contenidos</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Comité Editorial</a
+              >
+            </li>
+          </ul>
+        </div>
 
-<script>
-  const toggleButton = document.getElementById('toggle-tabs');
-  const tabBar = document.getElementById('tab-bar');
+        <!-- REDES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">REDES</h2>
+          <div class="flex space-x-4 text-xl">
+            <a
+              href="https://www.instagram.com/lad.unla/?hl=es-la"
+              target="_blank"
+              class="hover:text-pastelviolet transition-colors"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="mt-4 text-sm leading-relaxed">
+            <p>Lanús, Argentina</p>
+            <p>
+              <a
+                href="mailto:dsbladunla@gmail.com"
+                class="hover:text-pastelviolet transition-colors"
+                >dsbladunla@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
 
-  toggleButton.addEventListener('click', () => {
-    tabBar.classList.toggle('hidden');
-    tabBar.classList.toggle('flex');
-  });
-</script>
+        <!-- SECCIONES -->
+        <div>
+          <h2 class="text-lg font-bold mb-3">SECCIONES</h2>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Numeros</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Dossiers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Guias</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Equipo</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pastelviolet transition-colors"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
 
+        <!-- LOGO -->
+        <div class="flex justify-center gap-x-8">
+          <img src="images/logo-lad.png" alt="Logo lad" class="w-auto h-20" />
+        </div>
+      </div>
 
-<!-- JS para mostrar/ocultar cita -->
-<script>
-  document.getElementById('abrirCita').addEventListener('click', () => {
-    document.getElementById('modalCita').classList.remove('hidden');
-  });
+      <!-- Línea y grid inferior -->
+      <div
+        class="max-w-7xl mx-auto border-t-2 border-white mt-10 pt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-left"
+      >
+        <a
+          href="politicasdeprivacidad.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de privacidad</a
+        >
+        <a
+          href="politicasdecookies.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Política de Cookies</a
+        >
+        <a
+          href="terminosycondiciones.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-pastelviolet transition-colors"
+          >Términos y condiciones</a
+        >
+        <p>DSB LAD 2025 © Todos los derechos reservados</p>
+      </div>
+    </section>
 
-  document.getElementById('cerrarCita').addEventListener('click', () => {
-    document.getElementById('modalCita').classList.add('hidden');
-  });
+    <!-- JS para mostrar barra fija -->
 
-  // También cerrar si se hace clic fuera del modal
-  document.getElementById('modalCita').addEventListener('click', (e) => {
-    if (e.target.id === 'modalCita') {
-      e.target.classList.add('hidden');
-    }
-  });
-</script>
+    <script>
+      const toggleButton = document.getElementById("toggle-tabs");
+      const tabBar = document.getElementById("tab-bar");
 
-<script>
-  document.getElementById("copiarCita").addEventListener("click", () => {
-    const texto = document.getElementById("textoCita").innerText;
-    navigator.clipboard.writeText(texto).then(() => {
-      alert("Cita copiada al portapapeles");
-    });
-  });
-</script>
+      toggleButton.addEventListener("click", () => {
+        tabBar.classList.toggle("hidden");
+        tabBar.classList.toggle("flex");
+      });
+    </script>
 
-<!-- JS para aceptar popup 25 seg -->
+    <!-- JS para mostrar/ocultar cita -->
+    <script>
+      document.getElementById("abrirCita").addEventListener("click", () => {
+        document.getElementById("modalCita").classList.remove("hidden");
+      });
 
-<script>
-  setTimeout(() => {
-    document.getElementById('popupConvocatoria')?.classList.remove('hidden');
-  }, 25000); // 25000 ms = 25 segundos
-</script>
+      document.getElementById("cerrarCita").addEventListener("click", () => {
+        document.getElementById("modalCita").classList.add("hidden");
+      });
 
-<script>
-  // Mostrar el popup tras 10 segundos si no fue cerrado esta sesión
-  window.addEventListener('DOMContentLoaded', () => {
-    if (!sessionStorage.getItem('popupCerrado')) {
+      // También cerrar si se hace clic fuera del modal
+      document.getElementById("modalCita").addEventListener("click", (e) => {
+        if (e.target.id === "modalCita") {
+          e.target.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      document.getElementById("copiarCita").addEventListener("click", () => {
+        const texto = document.getElementById("textoCita").innerText;
+        navigator.clipboard.writeText(texto).then(() => {
+          alert("Cita copiada al portapapeles");
+        });
+      });
+    </script>
+
+    <!-- JS para aceptar popup 25 seg -->
+    <!-- Pop up convocatoria. Comentado hasta volver a abrirla. -->
+    <!-- 
+    <script>
       setTimeout(() => {
-        const popup = document.getElementById('popupConvocatoria');
-        if (popup) popup.classList.remove('hidden');
-      }, 60000); // 60 segundos
-    }
-  });
+        document
+          .getElementById("popupConvocatoria")
+          ?.classList.remove("hidden");
+      }, 25000); // 25000 ms = 25 segundos
+    </script>
 
-  // Cerrar popup manualmente y guardar en sessionStorage
-  function cerrarPopupConvocatoria() {
-    const popup = document.getElementById('popupConvocatoria');
-    if (popup) popup.classList.add('hidden');
-    sessionStorage.setItem('popupCerrado', 'true');
-  }
-</script>
+    <script>
+     // Mostrar el popup tras 10 segundos si no fue cerrado esta sesión
+       window.addEventListener("DOMContentLoaded", () => {
+       if (!sessionStorage.getItem("popupCerrado")) {
+         setTimeout(() => {
+            const popup = document.getElementById("popupConvocatoria");
+             if (popup) popup.classList.remove("hidden");
+           }, 60000); //60 segundos
+          }
+        });
 
-
-<!-- JS para aceptar cookies-->
-
-<script>
-  document.getElementById('cookieOverlay').addEventListener('click', function(e) {
-    // Si se hace clic fuera del banner, que no cierre ni interfiera
-    if (e.target === this) e.stopPropagation();
-  });
-
-  document.querySelectorAll('#cookieBanner a').forEach(a => {
-    a.addEventListener('click', function(e) {
-      // Dejamos pasar el clic para abrir el enlace
-      e.stopPropagation();
-    });
-  });
-</script>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const overlay = document.getElementById('cookieOverlay');
-    const banner = document.getElementById('cookieBanner');
-    const boton = document.getElementById('aceptarCookies');
-    const enlaces = document.querySelectorAll('a');
-
-   function bloquearEnlaces() {
-  enlaces.forEach(link => {
-    // No bloquear enlaces dentro del banner de cookies
-    if (!link.closest('#cookieBanner')) {
-      link.dataset.href = link.getAttribute('href');
-      link.setAttribute('href', '#');
-      link.style.pointerEvents = 'none';
-      link.classList.add('opacity-50');
-    }
-  });
-}
-
-    function restaurarEnlaces() {
-      enlaces.forEach(link => {
-        if (link.dataset.href) {
-          link.setAttribute('href', link.dataset.href);
-          link.style.pointerEvents = 'auto';
-          link.classList.remove('opacity-50');
-        }
-      });
-    }
-
-    if (!localStorage.getItem('cookiesAceptadas')) {
-      overlay.classList.remove('hidden');
-      bloquearEnlaces();
-    } else {
-      overlay.remove();
-    }
-
-    boton.addEventListener('click', () => {
-      localStorage.setItem('cookiesAceptadas', 'true');
-      overlay.remove();
-      restaurarEnlaces();
-    });
-  });
-</script>
-
-
-
-<script>
-  document.getElementById('contactoMail').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const nombre = document.getElementById('nombreUsuario')?.value || '[Nombre]';
-
-    const asunto = 'Consulta sobre la revista DSB LAD';
-    const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(nombre)}`;
-
-    const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
-
-    window.location.href = mailtoLink;
-  });
-</script>
-
-<script>
-  document.getElementById('formComunidad').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const nombre = document.getElementById('nombreUsuario').value.trim();
-    const email = document.getElementById('correoUsuario').value.trim();
-
-    if (!nombre || !email) return;
-
-    // Usamos nuestra API personalizada en Vercel para ocultar la API key de SheetBest
-    const endpoint = "https://guardar-api-sheetbest.vercel.app/api/guardarSuscripcion";
-
-    const data = {
-      nombre: nombre,
-      email: email
-    };
-
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-        document.getElementById('mensajeSuscripcion').classList.remove('hidden');
-        document.getElementById('formComunidad').reset();
-      } else {
-        alert("Hubo un error al enviar tus datos. Intentá más tarde.");
+      // Cerrar popup manualmente y guardar en sessionStorage
+      function cerrarPopupConvocatoria() {
+        const popup = document.getElementById("popupConvocatoria");
+        if (popup) popup.classList.add("hidden");
+        sessionStorage.setItem("popupCerrado", "true");
       }
-    } catch (error) {
-      alert("Error de red. Verificá tu conexión.");
-      console.error(error);
-    }
-  });
-</script>
+    </script> -->
 
-<script>
-  document.getElementById('formComunidad').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita envío tradicional
+    <!-- JS para aceptar cookies-->
 
-    // Aquí puedes agregar la integración con un backend o Google Forms
+    <script>
+      document
+        .getElementById("cookieOverlay")
+        .addEventListener("click", function (e) {
+          // Si se hace clic fuera del banner, que no cierre ni interfiera
+          if (e.target === this) e.stopPropagation();
+        });
 
-    // Mostrar mensaje de confirmación
-    const mensaje = document.getElementById('mensajeSuscripcion');
-    mensaje.classList.remove('hidden');
+      document.querySelectorAll("#cookieBanner a").forEach((a) => {
+        a.addEventListener("click", function (e) {
+          // Dejamos pasar el clic para abrir el enlace
+          e.stopPropagation();
+        });
+      });
+    </script>
 
-    // Opcional: limpiar formulario
-    this.reset();
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("cookieOverlay");
+        const banner = document.getElementById("cookieBanner");
+        const boton = document.getElementById("aceptarCookies");
+        const enlaces = document.querySelectorAll("a");
 
-    // Opcional: ocultar mensaje después de unos segundos
-    setTimeout(() => {
-      mensaje.classList.add('hidden');
-    }, 5000);
-  });
-</script>
+        function bloquearEnlaces() {
+          enlaces.forEach((link) => {
+            // No bloquear enlaces dentro del banner de cookies
+            if (!link.closest("#cookieBanner")) {
+              link.dataset.href = link.getAttribute("href");
+              link.setAttribute("href", "#");
+              link.style.pointerEvents = "none";
+              link.classList.add("opacity-50");
+            }
+          });
+        }
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+        function restaurarEnlaces() {
+          enlaces.forEach((link) => {
+            if (link.dataset.href) {
+              link.setAttribute("href", link.dataset.href);
+              link.style.pointerEvents = "auto";
+              link.classList.remove("opacity-50");
+            }
+          });
+        }
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
-    authDomain: "descargaspdfdsb.firebaseapp.com",
-    projectId: "descargaspdfdsb",
-    storageBucket: "descargaspdfdsb.appspot.com",
-    messagingSenderId: "305859273500",
-    appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
-    measurementId: "G-Q3R5X04YB3",
-    databaseURL: "https://descargaspdfdsb-default-rtdb.firebaseio.com/"
-    
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const db = getDatabase(app);
-
-  // DESCARGAS REVISTA NUMERO 1
-  const contadorRef = ref(db, 'descargas/numero1');
-  const enlaceDescarga = document.getElementById('enlaceDescarga');
-
-  // Mostrar contador de descargas
-  onValue(contadorRef, (snapshot) => {
-    const count = snapshot.val() || 0;
-    document.getElementById('contadorDescargas').textContent = count;
-  });
-
-  // Botón de descarga
-const btnDescarga = document.getElementById('descargarPDF');
-if (btnDescarga) {
-  btnDescarga.addEventListener('click', () => {
-    enlaceDescarga.click();
-    runTransaction(contadorRef, (current) => (current || 0) + 1).catch((error) => {
-      console.error("Error al actualizar contador de descargas:", error);
-    });
-  });
-}
-
-
-  // CONTADOR DE VISITAS AL INDEX
-const visitasRef = ref(db, 'visitas/index');
-
-function formatearNumero(num) {
-  return new Intl.NumberFormat('es-AR').format(num);
-}
-
-onValue(visitasRef, (snapshot) => {
-  const count = snapshot.val() || 0;
-  const contador = document.getElementById('contadorVisitas');
-  if (contador) contador.textContent = formatearNumero(count);
-});
-
-runTransaction(visitasRef, (current) => (current || 0) + 1).catch((error) => {
-  console.error("Error al actualizar contador de visitas:", error);
-});
-
-</script>
-
-<!-- JS para mostrar barra nav -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const icon = document.getElementById('menu-icon');
-
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        menu.classList.toggle('flex-col');
-        menu.classList.toggle('absolute');
-        menu.classList.toggle('top-full');
-        menu.classList.toggle('left-0');
-        menu.classList.toggle('bg-[#3e2d4f]');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('p-4');
-        menu.classList.toggle('shadow-md');
-        menu.classList.toggle('z-40');
-
-        // Cambiar icono ☰ ⇄ ✖
-        if (menu.classList.contains('hidden')) {
-          icon.innerHTML = '&#9776;';
+        if (!localStorage.getItem("cookiesAceptadas")) {
+          overlay.classList.remove("hidden");
+          bloquearEnlaces();
         } else {
-          icon.innerHTML = '&#10005;';
+          overlay.remove();
+        }
+
+        boton.addEventListener("click", () => {
+          localStorage.setItem("cookiesAceptadas", "true");
+          overlay.remove();
+          restaurarEnlaces();
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .getElementById("contactoMail")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const nombre =
+            document.getElementById("nombreUsuario")?.value || "[Nombre]";
+
+          const asunto = "Consulta sobre la revista DSB LAD";
+          const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(
+            nombre
+          )}`;
+
+          const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
+            asunto
+          )}&body=${cuerpo}`;
+
+          window.location.href = mailtoLink;
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("formComunidad")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const nombre = document.getElementById("nombreUsuario").value.trim();
+          const email = document.getElementById("correoUsuario").value.trim();
+
+          if (!nombre || !email) return;
+
+          // Usamos nuestra API personalizada en Vercel para ocultar la API key de SheetBest
+          const endpoint =
+            "https://guardar-api-sheetbest.vercel.app/api/guardarSuscripcion";
+
+          const data = {
+            nombre: nombre,
+            email: email,
+          };
+
+          try {
+            const response = await fetch(endpoint, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              document
+                .getElementById("mensajeSuscripcion")
+                .classList.remove("hidden");
+              document.getElementById("formComunidad").reset();
+            } else {
+              alert("Hubo un error al enviar tus datos. Intentá más tarde.");
+            }
+          } catch (error) {
+            alert("Error de red. Verificá tu conexión.");
+            console.error(error);
+          }
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("formComunidad")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Evita envío tradicional
+
+          // Aquí puedes agregar la integración con un backend o Google Forms
+
+          // Mostrar mensaje de confirmación
+          const mensaje = document.getElementById("mensajeSuscripcion");
+          mensaje.classList.remove("hidden");
+
+          // Opcional: limpiar formulario
+          this.reset();
+
+          // Opcional: ocultar mensaje después de unos segundos
+          setTimeout(() => {
+            mensaje.classList.add("hidden");
+          }, 5000);
+        });
+    </script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+      import {
+        getDatabase,
+        ref,
+        onValue,
+        runTransaction,
+      } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
+        authDomain: "descargaspdfdsb.firebaseapp.com",
+        projectId: "descargaspdfdsb",
+        storageBucket: "descargaspdfdsb.appspot.com",
+        messagingSenderId: "305859273500",
+        appId: "1:305859273500:web:92dbe25f6c47f3223450d9",
+        measurementId: "G-Q3R5X04YB3",
+        databaseURL: "https://descargaspdfdsb-default-rtdb.firebaseio.com/",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const db = getDatabase(app);
+
+      // DESCARGAS REVISTA NUMERO 1
+      const contadorRef = ref(db, "descargas/numero1");
+      const enlaceDescarga = document.getElementById("enlaceDescarga");
+
+      // Mostrar contador de descargas
+      onValue(contadorRef, (snapshot) => {
+        const count = snapshot.val() || 0;
+        document.getElementById("contadorDescargas").textContent = count;
+      });
+
+      // Botón de descarga
+      const btnDescarga = document.getElementById("descargarPDF");
+      if (btnDescarga) {
+        btnDescarga.addEventListener("click", () => {
+          enlaceDescarga.click();
+          runTransaction(contadorRef, (current) => (current || 0) + 1).catch(
+            (error) => {
+              console.error(
+                "Error al actualizar contador de descargas:",
+                error
+              );
+            }
+          );
+        });
+      }
+
+      // CONTADOR DE VISITAS AL INDEX
+      const visitasRef = ref(db, "visitas/index");
+
+      function formatearNumero(num) {
+        return new Intl.NumberFormat("es-AR").format(num);
+      }
+
+      onValue(visitasRef, (snapshot) => {
+        const count = snapshot.val() || 0;
+        const contador = document.getElementById("contadorVisitas");
+        if (contador) contador.textContent = formatearNumero(count);
+      });
+
+      runTransaction(visitasRef, (current) => (current || 0) + 1).catch(
+        (error) => {
+          console.error("Error al actualizar contador de visitas:", error);
+        }
+      );
+    </script>
+
+    <!-- JS para mostrar barra nav -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const icon = document.getElementById("menu-icon");
+
+        if (toggle && menu) {
+          toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+            menu.classList.toggle("flex-col");
+            menu.classList.toggle("absolute");
+            menu.classList.toggle("top-full");
+            menu.classList.toggle("left-0");
+            menu.classList.toggle("bg-[#3e2d4f]");
+            menu.classList.toggle("w-full");
+            menu.classList.toggle("p-4");
+            menu.classList.toggle("shadow-md");
+            menu.classList.toggle("z-40");
+
+            // Cambiar icono ☰ ⇄ ✖
+            if (menu.classList.contains("hidden")) {
+              icon.innerHTML = "&#9776;";
+            } else {
+              icon.innerHTML = "&#10005;";
+            }
+          });
         }
       });
-    }
-  });
-</script>
-
-
-
-
-
-  
- 
+    </script>
   </body>
 </html>

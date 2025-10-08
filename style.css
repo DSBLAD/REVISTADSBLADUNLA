@@ -1,0 +1,297 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --bg-color: #167676;
+  --front-color: white;
+  --button-bg: #537fd0;
+  --secondbg-color: #b29dca;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1.2s ease-out 0.3s forwards;
+}
+
+.home {
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--bg-color);
+}
+
+.fira-sans-bold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.home-header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.home-header-cover-img {
+  height: 550px;
+  width: 550px;
+  border: 5px solid var(--front-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-header-cover-img-inner {
+  height: 50px;
+  width: 50px;
+  background-color: var(--front-color);
+}
+
+.home-header-title {
+  width: 200px;
+  height: 250px;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.home-header-subtitle {
+  font-family: "IBM Plex Mono", monospace;
+  width: 200px;
+  height: 150px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+.home-header-subtitle div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--front-color);
+}
+
+.home-header-subtitle h2 {
+  font-size: 50px;
+  font-weight: 100;
+  text-align: right;
+}
+
+.home-header-subtitle span {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.home-header-text-container {
+  padding: 0 0 0 70px;
+  color: var(--front-color);
+}
+
+.home-header h1,
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--front-color);
+}
+
+.home-header h1 {
+  font-size: 90px;
+  line-height: 90px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.home-header-description {
+  max-width: 550px;
+}
+
+.home-header-description p {
+  margin-bottom: 15px;
+}
+
+#numeros {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 150px;
+  height: 100vh;
+}
+
+#numeros .img-container {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#dossiers {
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+}
+
+#numeros h2,
+#dossiers h2 {
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.dsb-edition-card {
+  color: var(--front-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.dsb-edition-card .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dsb-edition-card .text-container a {
+  background-color: var(--button-bg);
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.dsb-edition-card img {
+  box-shadow: 5px 5px 58px 1px rgba(0, 0, 0, 0.42);
+}
+
+.dsb-edition-card h3 {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.lines {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  border-bottom: 10px solid var(--front-color);
+}
+
+.lines div {
+  height: 40px;
+  background-color: var(--front-color);
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.square-1 {
+  border-left: 30px solid var(--front-color);
+  border-right: 20px solid var(--front-color);
+}
+
+.square-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 20px solid var(--front-color);
+  border-bottom: 10px solid var(--front-color);
+}
+
+.square-2 span {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: var(--front-color);
+}
+
+.square-3 {
+  border-left: 10px solid var(--front-color);
+  border-right: 30px solid var(--front-color);
+  display: flex;
+  justify-content: center;
+}
+
+.square-3 span {
+  display: block;
+  height: 100%;
+  width: 10px;
+  background-color: var(--front-color);
+}
+
+.square-4 {
+  border-top: 40px solid var(--front-color);
+  border-bottom: 10px solid var(--front-color);
+}
+
+#guias {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--front-color);
+}
+
+#guias h2 {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--front-color);
+}
+
+@media (max-width: 1250px) {
+  .home-header {
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-header-text-container {
+    padding: 50px 0 0 0;
+    margin-bottom: 100px;
+  }
+  .home-header-cover-img {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  #numeros .img-container {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-header-cover-img {
+    width: 80%;
+  }
+  .home-header-text-container {
+    padding: 30px;
+  }
+  .home-header {
+    padding-top: 0;
+    justify-content: start;
+  }
+  .dsb-edition-card {
+    width: 100%;
+  }
+  #numeros,
+  #dossiers {
+    height: fit-content;
+  }
+  .lines {
+    display: none;
+  }
+}
