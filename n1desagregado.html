@@ -227,11 +227,14 @@
     </nav>
 
     <section id="primer-numero-desagregado" class="bg-black">
-      <h2>Artículos DSB LAD #1</h2>
+      <h2>Artículos Extendidos DSB LAD #1</h2>
       <div id="contenedor-articulos" class="flex gap-10 flex-wrap"></div>
 
       <h2>Comunicaciones Breves DSB LAD #1</h2>
       <div id="contenedor-comunicaciones" class="flex gap-10 flex-wrap"></div>
+
+      <h2>Editorial y Entrevistas DSB LAD #1</h2>
+      <div id="contenedor-otros" class="flex gap-10 flex-wrap"></div>
 
       <script>
         const articulos = [
@@ -249,13 +252,6 @@
             subtitulo: "Diseño accesible orientado a las neurodivergencias",
             tipo: "A",
             ruta: "06_covas-neuroconvivir",
-          },
-          {
-            autor: "D´Amico, Enrique",
-            titulo: "Diseño, poética y bien común",
-            subtitulo: "Entrevista a María Gemma Sánchez",
-            tipo: "A",
-            ruta: "07_damico-poetica",
           },
           {
             autor: "Dorado, Cecilia",
@@ -418,44 +414,78 @@
             tipo: "C",
             ruta: "21_bozzani_editorial",
           },
+          {
+            autor: "D´Amico, Enrique",
+            titulo: "Diseño, poética y bien común",
+            subtitulo: "Entrevista a María Gemma Sánchez",
+            tipo: "A",
+            ruta: "07_damico-poetica",
+          },
         ];
 
         const contenedorArticulos = document.getElementById(
           "contenedor-articulos"
         );
 
-        articulos.forEach((item) => {
-          const card = document.createElement("div");
-          card.className = "article-card";
+        function renderPublicaciones({
+          data = [],
+          contenedorId,
+          carpetaDocs = "./documents/n01/desagregado/",
+          carpetaImgs = "./images/n1-desagregado-img/",
+          placeholderImg = "./images/n1-desagregado-img/placeholder.png",
+          numeroEdicion = "DSB LAD #1",
+        }) {
+          const contenedor = document.getElementById(contenedorId);
+          if (!contenedor) return;
 
-          const autor = item?.autor || "";
-          const titulo = item?.titulo || "";
-          const subtitulo = item?.subtitulo || "";
-          const enlaceDescarga = item?.ruta
-            ? `./documents/n01/desagregado/${item.ruta}.pdf`
-            : "";
+          data.forEach((item) => {
+            const card = document.createElement("div");
+            card.className = "article-card";
 
-          card.innerHTML = `
+            const autor = item?.autor || "";
+            const titulo = item?.titulo || "";
+            const subtitulo = item?.subtitulo || "";
+            const enlaceDescarga = item?.ruta
+              ? `${carpetaDocs}${item.ruta}.pdf`
+              : "";
+
+            card.innerHTML = `
       <div class="img-container"></div>
       <div class="article-card-description mt-3 flex flex-col justify-between">
         <p>${autor}</p>
         <p class="font-bold tracking-wide">${titulo}</p>
         <span class="font-light text-sm">${subtitulo}</span>
         <a href="${enlaceDescarga}" target="_blank">Descargar PDF</a>
-        <p class="text-xs mt-2">DSB LAD #1</p>
+        <p class="text-xs mt-2">${numeroEdicion}</p>
       </div>
     `;
 
-          // imagen con fallback
-          const imagen = document.createElement("img");
-          imagen.src = `./images/n1-desagregado-img/${item.ruta}.png`;
-          imagen.alt = `${titulo}`;
-          imagen.onerror = () => {
-            imagen.src = "./images/n1-desagregado-img/placeholder.png";
-          };
-          card.querySelector(".img-container").appendChild(imagen);
+            // Imagen con fallback
+            const imagen = document.createElement("img");
+            imagen.src = `${carpetaImgs}${item.ruta}.png`;
+            imagen.alt = titulo;
+            imagen.onerror = () => {
+              imagen.src = placeholderImg;
+            };
 
-          contenedorArticulos.appendChild(card);
+            card.querySelector(".img-container").appendChild(imagen);
+            contenedor.appendChild(card);
+          });
+        }
+
+        renderPublicaciones({
+          data: articulos,
+          contenedorId: "contenedor-articulos",
+        });
+
+        renderPublicaciones({
+          data: comunicacionesBreves,
+          contenedorId: "contenedor-comunicaciones",
+        });
+
+        renderPublicaciones({
+          data: otros,
+          contenedorId: "contenedor-otros",
         });
       </script>
     </section>
