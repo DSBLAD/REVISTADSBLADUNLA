@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DSBLAD Nro 1</title>
+    <title>DSBLAD</title>
 
     <!-- Meta para redes sociales -->
     <meta property="og:title" content="DSBLAD" />
@@ -105,7 +105,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="bg-white text-[#222] font-sans pt-12">
+  <body class="bg-black text-[#222] font-sans pt-5">
+    <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
     <nav
       class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 px-6 py-3 flex items-center justify-between"
     >
@@ -224,10 +225,13 @@
         </li> -->
       </ul>
     </nav>
+
     <section id="primer-numero-desagregado" class="bg-black">
       <h2>Artículos DSB LAD #1</h2>
+      <div id="contenedor-articulos" class="flex gap-10 flex-wrap"></div>
 
-      <div id="contenedor" class="flex gap-10 flex-wrap"></div>
+      <h2>Comunicaciones Breves DSB LAD #1</h2>
+      <div id="contenedor-comunicaciones" class="flex gap-10 flex-wrap"></div>
 
       <script>
         const articulos = [
@@ -416,7 +420,9 @@
           },
         ];
 
-        const contenedor = document.getElementById("contenedor");
+        const contenedorArticulos = document.getElementById(
+          "contenedor-articulos"
+        );
 
         articulos.forEach((item) => {
           const card = document.createElement("div");
@@ -449,7 +455,7 @@
           };
           card.querySelector(".img-container").appendChild(imagen);
 
-          contenedor.appendChild(card);
+          contenedorArticulos.appendChild(card);
         });
       </script>
     </section>
@@ -477,12 +483,12 @@
         <h3 class="text-lg font-bold mb-3 text-darkviolet">
           Cómo citar esta revista
         </h3>
-        <p id="textoCita" class="text-sm text-gray-700 mb-4">
+        <p class="text-sm text-gray-700 mb-4">
           Autor del artículo, Título del artículo, Numero (1). Revista DSB LAD
           (2025). <em>Diseño sin barreras</em>. Universidad Nacional de Lanús.
           Recuperado de http://dsblad.unla.edu.ar/. Editorial LAD UNLa.
         </p>
-        <p class="text-xs text-gray-500 mb-4">Formato APA 7ª edición</p>
+        <p class="text-xs text-gray-500">Formato APA 7ª edición</p>
         <div class="text-right">
           <button
             id="copiarCita"
@@ -573,7 +579,7 @@
 
     <!-- Scripts -->
 
-    <!-- JS para mostrar/ocultar cita -->
+    <!-- JS para mostrar/ocultar -->
     <script>
       document.getElementById("abrirCita").addEventListener("click", () => {
         document.getElementById("modalCita").classList.remove("hidden");
@@ -591,19 +597,28 @@
       });
     </script>
 
+    <!-- JS para mostrar/ocultar cita-->
     <script>
-      document.getElementById("copiarCita").addEventListener("click", () => {
-        const texto = document.getElementById("textoCita").innerText;
-        navigator.clipboard.writeText(texto).then(() => {
-          alert("Cita copiada al portapapeles");
-        });
+      document.getElementById("abrirCita").addEventListener("click", () => {
+        document.getElementById("modalCita").classList.remove("hidden");
+      });
+
+      document.getElementById("cerrarCita").addEventListener("click", () => {
+        document.getElementById("modalCita").classList.add("hidden");
+      });
+
+      // También cerrar si se hace clic fuera del modal
+      document.getElementById("modalCita").addEventListener("click", (e) => {
+        if (e.target.id === "modalCita") {
+          e.target.classList.add("hidden");
+        }
       });
     </script>
 
-    <!-- Scripts generales -->
+    <!-- JS para mostrar mail -->
+
     <script>
-      // Menú hamburguesa
-      document.getElementById("menu-toggle")?.addEventListener("click", () => {
+      document.getElementById("menu-toggle").addEventListener("click", () => {
         const menu = document.getElementById("menu");
         const icon = document.getElementById("menu-icon");
         menu.classList.toggle("hidden");
@@ -612,10 +627,9 @@
           : "&#10005;";
       });
 
-      // Enlace de contacto
       document
         .getElementById("contactoMail")
-        ?.addEventListener("click", function (e) {
+        .addEventListener("click", function (e) {
           e.preventDefault();
           const nombre =
             document.getElementById("nombreUsuario")?.value || "[Nombre]";
@@ -629,7 +643,42 @@
         });
     </script>
 
-    <!-- Firebase + contador de descargas -->
+    <!-- Firebase -->
+    <!-- Enlace invisible para forzar apertura en nueva pestaña -->
+    <a
+      id="enlaceDescarga-1"
+      href="https://dsblad.github.io/REVISTADSBLADUNLA/documents/dhya2021.pdf"
+      target="_blank"
+      style="display: none"
+    ></a>
+
+    <!-- Scripts -->
+    <script>
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const menu = document.getElementById("menu");
+        const icon = document.getElementById("menu-icon");
+        menu.classList.toggle("hidden");
+        icon.innerHTML = menu.classList.contains("hidden")
+          ? "&#9776;"
+          : "&#10005;";
+      });
+
+      document
+        .getElementById("contactoMail")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const nombre =
+            document.getElementById("nombreUsuario")?.value || "[Nombre]";
+          const asunto = "Consulta sobre la revista DSB";
+          const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB.%0A%0AMi pregunta es:%0A%0AQuedo atento/a.%0A%0ASaludos,%0A${encodeURIComponent(
+            nombre
+          )}`;
+          window.location.href = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
+            asunto
+          )}&body=${cuerpo}`;
+        });
+    </script>
+
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
@@ -640,7 +689,6 @@
         runTransaction,
       } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
 
-      // Configuración de Firebase
       const firebaseConfig = {
         apiKey: "AIzaSyDX3ncTu_leIjd-4gOsq1ynY4-nZrrZQxk",
         authDomain: "descargaspdfdsb.firebaseapp.com",
@@ -652,53 +700,31 @@
         databaseURL: "https://descargaspdfdsb.firebaseio.com",
       };
 
-      // Inicializar Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
       const db = getDatabase(app);
+      const contadorRef = ref(db, "descargas/numero1");
 
-      // Inicializar contador individual
-      function inicializarContador(nombre) {
-        const boton = document.getElementById(`btn-${nombre}`);
-        const contador = document.getElementById(`contador-${nombre}`);
-        const enlace = document.getElementById(`enlace-${nombre}`);
-        const refDescarga = ref(db, `descargas/${nombre}`);
+      const enlaceDescarga = document.getElementById("enlaceDescarga");
 
-        // Mostrar número de descargas actual
-        onValue(refDescarga, (snapshot) => {
-          const count = snapshot.val() || 0;
-          if (contador) contador.textContent = count;
+      // Mostrar contador
+      onValue(contadorRef, (snapshot) => {
+        const count = snapshot.val() || 0;
+        document.getElementById("contadorDescargas").textContent = count;
+      });
+
+      // Al hacer clic en el botón
+      document.getElementById("descargarPDF").addEventListener("click", () => {
+        // Abrimos el PDF primero para que no lo bloquee el navegador
+        enlaceDescarga.click();
+
+        // Registramos la descarga en Firebase
+        runTransaction(contadorRef, (current) => {
+          return (current || 0) + 1;
+        }).catch((error) => {
+          console.error("Error al actualizar el contador:", error);
         });
-
-        // Contar clic en botón
-        boton?.addEventListener("click", () => {
-          enlace?.click(); // Abrir PDF
-          runTransaction(refDescarga, (actual) => (actual || 0) + 1).catch(
-            (error) => console.error(`Error en contador ${nombre}:`, error)
-          );
-        });
-      }
-
-      // Lista de documentos (coincide con los IDs en el HTML)
-      const documentos = [
-        "Articulo1",
-        "Articulo2",
-        "Articulo3",
-        "Articulo4",
-        "Articulo5",
-        "Comunicacion1",
-        "Comunicacion2",
-        "Comunicacion3",
-        "Comunicacion4",
-        "Comunicacion5",
-        "Editorial",
-        "Entrevista",
-        "Tesis",
-        "Ensayos",
-        "Resenas",
-      ];
-
-      documentos.forEach(inicializarContador);
+      });
     </script>
 
     <!-- JS para mostrar barra fija -->
