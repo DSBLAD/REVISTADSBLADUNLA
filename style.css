@@ -364,6 +364,20 @@ h2 {
   margin-top: 10px;
 }
 
+.miembro-equipo {
+  width: 400px;
+}
+
+.miembro-equipo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+.miembro-equipo .flex-col {
+  max-width: 210px;
+}
+
 @media (max-width: 900px) {
   #numeros .img-container {
     display: none;
