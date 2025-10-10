@@ -175,7 +175,9 @@ const contenedor = document.getElementById("equipo-dsblad");
 miembros.forEach((m) => {
   contenedor.innerHTML += `
     <div class="miembro-equipo flex items-start p-4 gap-2 bg-bg">
+    <div class="img-container">
       <img src="images/equipo/${m.foto || "placeholder.png"}" alt="" />
+      </div>
       <div class="flex flex-col justify-center">
         <h3 class="font-bold">${m.nombre || ""}</h3>
         <h4 class="text-sm font-semibold">${

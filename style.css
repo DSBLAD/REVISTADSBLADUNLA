@@ -368,9 +368,13 @@ h2 {
   width: 400px;
 }
 
+.miembro-equipo .img-container {
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+}
+
 .miembro-equipo img {
-  width: 150px;
-  height: 150px;
   object-fit: cover;
   filter: grayscale(100%);
 }
