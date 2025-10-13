@@ -152,6 +152,7 @@ const miembros = [
     contacto: "dsblad.diseno@gmail.com",
     institucion: "UNLa, Argentina",
     bio: "Estudiante avanzada DyCV",
+    foto: "AgustinaAylenQuiroga",
   },
   {
     nombre: "Sol Martinez",
@@ -161,11 +162,12 @@ const miembros = [
     bio: "Estudiante avanzada DyCV",
   },
   {
-    nombre: "Camila Costilla",
+    nombre: "Camila Belén Costilla",
     cargo: "Maquetación editorial",
     contacto: "dsblad.diseno@gmail.com",
     institucion: "UNLa, Argentina",
-    bio: "Estudiante avanzada DyCV",
+    bio: "Camila Costilla es estudiante avanzada de la Licenciatura en Diseño y Comunicación Visual en la Universidad Nacional de Lanús. Desde 2023 se desempeña como auxiliar docente ad-honorem, habiendo formado parte del taller de fanzines del Módulo de Cooperación, de Taller de Diseño 3 y, actualmente, de Taller de Diseño 4. Su interés se orienta hacia el diseño editorial y las múltiples posibilidades expresivas del formato impreso. Paralelamente desarrolla proyectos de diseño gráfico de forma freelance, explorando enfoques que combinan la comunicación visual con la investigación y la cultura. Le interesa especialmente el cruce entre la práctica editorial, la docencia y la experimentación gráfica.",
+    foto: "CamilaCostilla",
   },
 ];
 
@@ -173,26 +175,28 @@ const contenedor = document.getElementById("equipo-dsblad");
 
 miembros.forEach((m) => {
   contenedor.innerHTML += `
-    <div class="miembro-equipo flex items-start p-4 gap-2 bg-bg">
+  <div class="miembro-equipo flex items-start p-4 gap-2 bg-bg">
     <div class="img-container">
       <img src="images/equipo/${m.foto || "placeholder"}.png" alt="" />
-      </div>
-      <div class="flex flex-col justify-center">
-        <h3 class="font-bold">${m.nombre || ""}</h3>
-        <h4 class="text-sm font-semibold">${
-          m.cargo || "Cargo no disponible"
-        }</h4>
-        <p class="text-sm font-extralight">${m.institucion || ""}</p>
-        <details>
-          <summary class="text-sm">Ver bio</summary>
-          <div>
-          <p class="text-sm font-light">${m.bio || "Bio no disponible."}</p>
-          <a class="text-xs" href="mailto:${
-            m.contacto || "dsbladunla@gmail.com"
-          }" >Contacto</a>
-          </div>
-        </details>
-      </div>
     </div>
-  `;
+    <div class="flex flex-col justify-center">
+      <h3 class="font-bold">${m.nombre || ""}</h3>
+      <h4 class="text-sm font-semibold">${m.cargo || ""}</h4>
+      <p class="text-sm font-extralight">${m.institucion || ""}</p>
+      ${
+        m.bio
+          ? `<details>
+              <summary class="text-sm">Ver bio</summary>
+              <div>
+                <p class="text-sm font-light">${m.bio}</p>
+                <a class="text-xs" href="mailto:${
+                  m.contacto || "dsbladunla@gmail.com"
+                }">Contacto</a>
+              </div>
+            </details>`
+          : ""
+      }
+    </div>
+  </div>
+`;
 });
