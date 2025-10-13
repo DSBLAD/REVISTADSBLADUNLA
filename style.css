@@ -3,10 +3,11 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --bg-color: #167676;
+  /* --bg-color: #167676; */
+  --bg-color: #ee701e;
   --front-color: white;
   --button-bg: #537fd0;
-  --secondbg-color: #b29dca;
+  --secondbg-color: #f3bd9a;
 }
 
 @keyframes fadeIn {
@@ -103,7 +104,7 @@
 
 .home-header-text-container {
   padding: 0 0 0 70px;
-  color: var(--front-color);
+  color: #000;
 }
 
 .home-header h1,
@@ -127,20 +128,22 @@ h2 {
   margin-bottom: 15px;
 }
 
-#numeros {
+.numeros {
   display: flex;
   justify-content: space-between;
   padding-bottom: 150px;
   height: 100vh;
 }
 
-#numeros .img-container {
+.numeros .img-container {
   width: 50%;
   height: 100vh;
   overflow: hidden;
 }
 
 #dossiers {
+  background-image: url("./images/mockups/mockup-dossier.png");
+  background-size: cover;
   min-height: 100vh;
   position: relative;
   justify-content: center;
@@ -171,13 +174,28 @@ h2 {
   width: 500px;
   height: 500px;
 }
-
 #numeros h2,
+.numeros h2,
 #dossiers h2,
 #primer-numero h2,
 #primer-numero-dossier h2 {
   font-size: xx-large;
   font-weight: 700;
+}
+
+.numero-1 {
+  background-image: url("./images/mockups/mockup-tapa.png");
+  background-position: 40%;
+  width: 100vw;
+  height: 120vh;
+  position: relative;
+}
+
+.numero-1 div {
+  width: 300px;
+  position: absolute;
+  left: 15%;
+  top: 100px;
 }
 
 .dsb-edition-card {
@@ -190,13 +208,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.dsb-edition-card .text-container a {
-  background-color: var(--button-bg);
-  width: 150px;
-  display: flex;
-  justify-content: center;
 }
 
 .dsb-edition-card img {
@@ -271,10 +282,11 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: var(--front-color);
+  color: #000;
 }
 
 #guias h2 {
+  color: #000;
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 3px solid var(--front-color);
@@ -398,7 +410,7 @@ h2 {
 }
 
 @media (max-width: 900px) {
-  #numeros .img-container {
+  .numeros .img-container {
     display: none;
   }
 }
@@ -417,9 +429,11 @@ h2 {
   .dsb-edition-card {
     width: 100%;
   }
-  #numeros,
-  #dossiers {
+  .numeros {
     height: fit-content;
+  }
+  #dossiers {
+    height: 100vh;
   }
   .lines {
     display: none;
