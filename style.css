@@ -239,28 +239,28 @@ h2 {
 }
 
 .square-1 {
-  border-left: 30px solid var(--front-color);
-  border-right: 20px solid var(--front-color);
+  border-left: 30px solid var(--bg-color);
+  border-right: 20px solid var(--bg-color);
 }
 
 .square-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-top: 20px solid var(--front-color);
-  border-bottom: 10px solid var(--front-color);
+  border-top: 20px solid var(--bg-color);
+  border-bottom: 10px solid var(--bg-color);
 }
 
 .square-2 span {
   display: block;
   width: 100%;
   height: 30px;
-  background-color: var(--front-color);
+  background-color: var(--bg-color);
 }
 
 .square-3 {
-  border-left: 10px solid var(--front-color);
-  border-right: 30px solid var(--front-color);
+  border-left: 10px solid var(--bg-color);
+  border-right: 30px solid var(--bg-color);
   display: flex;
   justify-content: center;
 }
@@ -269,16 +269,16 @@ h2 {
   display: block;
   height: 100%;
   width: 10px;
-  background-color: var(--front-color);
+  background-color: var(--bg-color);
 }
 
 .square-4 {
-  border-top: 40px solid var(--front-color);
-  border-bottom: 10px solid var(--front-color);
+  border-top: 40px solid var(--bg-color);
+  border-bottom: 10px solid var(--bg-color);
 }
 
 #guias {
-  min-height: 60vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -341,11 +341,11 @@ h2 {
 }
 
 .article-card {
-  background-color: var(--bg-color);
+  background-color: var(--secondbg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--front-color);
+  color: black;
   width: 250px;
   padding-bottom: 30px;
 }
@@ -364,7 +364,7 @@ h2 {
 }
 
 .article-card-description a {
-  background-color: var(--button-bg);
+  background-color: var(--bg-color);
   padding: 5px;
   margin-top: 10px;
 }

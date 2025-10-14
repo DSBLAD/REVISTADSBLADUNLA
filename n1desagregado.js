@@ -214,7 +214,7 @@ function renderPublicaciones({
         <p>${autor}</p>
         <p class="font-bold tracking-wide">${titulo}</p>
         <span class="font-light text-sm">${subtitulo}</span>
-        <a href="${enlaceDescarga}" target="_blank">Descargar PDF</a>
+        <a href="${enlaceDescarga}" class="hover:text-white hover:bg-black transition" target="_blank">Descargar PDF</a>
         <p class="text-xs mt-2">${numeroEdicion}</p>
       </div>
     `;
