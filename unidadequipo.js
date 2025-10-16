@@ -130,6 +130,7 @@ const miembrosComiteCientifico = [
     nombre: "Mg. DI Alejandra Sivila Soza",
     institucion: "CONICET, UNLP, UNAJ, UNLa",
     contacto: "dsbladunla@gmail.com",
+    foto: "alejandra",
   },
 ];
 
