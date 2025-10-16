@@ -9,6 +9,8 @@
   --button-bg: #537fd0;
   --secondbg-color: #f3bd9a;
   --darkviolet: #3d2c54;
+  --pastelviolet: #cbb7e2;
+  --violet: #630f82;
   --bg-gradient: radial-gradient(
     at top left,
     #fce3b0 0%,
@@ -54,6 +56,19 @@
   justify-content: center;
   padding-top: 200px;
   background: var(--bg-gradient);
+}
+
+.gradient-background {
+  background: var(--bg-gradient);
+}
+
+#equipo {
+  background: radial-gradient(
+    at bottom right,
+    #fce3b0 0%,
+    #f3bd9a 20%,
+    #ed6d20 90%
+  );
 }
 
 .home-header-cover-img .marco {
@@ -328,11 +343,11 @@ h2 {
 }
 
 .infocard h2 {
-  color: var(--bg-color);
+  color: var(--violet);
 }
 
 .infocard-titulo {
-  border-bottom: 3px solid var(--bg-color);
+  border-bottom: 3px solid var(--violet);
   padding-bottom: 20px;
   width: 100%;
   font-weight: 900;
@@ -349,6 +364,12 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+  background: radial-gradient(
+    at top left,
+    #6b625a 0%,
+    #3f3933 50%,
+    #1e1b18 100%
+  );
 }
 #primer-numero-desagregado .flex-wrap {
   width: 80%;
@@ -394,7 +415,9 @@ h2 {
 }
 
 .miembro-equipo {
+  box-shadow: 1px 1px 89px 0px rgba(90, 82, 82, 0.2);
   width: 400px;
+  background-color: #dedede;
 }
 
 .miembro-equipo .img-container {
