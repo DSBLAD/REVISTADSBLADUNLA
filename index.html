@@ -341,24 +341,19 @@
 
     <!-- HERO principal con texto y logo al costado -->
 
-    <section class="home-header bg-bg">
+    <section class="home-header">
       <!-- Imagen -->
       <div class="home-header-cover-img">
-        <div class="home-header-title">
-          <h1>DSB LAD</h1>
-          <h2>revista de diseño</h2>
-        </div>
-        <div class="home-header-subtitle">
-          <div>
-            <h2>#1</h2>
-            <span>lanzamiento</span>
+        <div class="marco">
+          <div class="numero">#1 <span>lanzamiento</span></div>
+          <div class="texto">
+            <img src="images/dsblad-logo.png" alt="DSB lad" />
           </div>
         </div>
-        <div class="home-header-cover-img-inner"></div>
       </div>
       <!-- Texto -->
       <div class="home-header-text-container">
-        <div class="home-header-description">
+        <div class="home-header-description text-white">
           <p>
             La revista <strong class="fira-sans-bold">DSB-LAD</strong> es una
             publicación del Laboratorio de Diseño del Departamento de
@@ -385,19 +380,19 @@
         <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
           <a
             href="#numeros"
-            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg transition text-center"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg hover:text-darkviolet transition text-center"
           >
             NÚMEROS
           </a>
           <a
             href="#dossiers"
-            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg transition text-center"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg hover:text-darkviolet transition text-center"
           >
             DOSSIERS
           </a>
           <a
             href="#guias"
-            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg transition text-center"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg hover:text-darkviolet transition text-center"
           >
             GUÍAS
           </a>
@@ -406,59 +401,38 @@
     </section>
 
     <!-- Sección de números -->
-    <div id="numeros" class="numero-1">
-      <!-- <img src="./images/mockups/mockup-tapa.png" alt="" /> -->
-      <div class="flex flex-col gap-6 mt-6">
-        <h2>NÚMEROS</h2>
-        <p class="mt-3 text-white">
-          Descargá el primer número de la revista
-          <strong class="fira-sans-bold">DSB-LAD</strong>
-        </p>
-        <button
-          id="descargarPDF"
-          class="inline-flex items-center gap-2 bg-secondbg hover:bg-bg text-black text-base py-2 px-4 transition font-bold"
-        >
-          <i class="fas fa-download"></i> Descargar revista (PDF)
-        </button>
-        <a
-          id="enlaceDescarga"
-          href="./documents/n01/dsblad-n1-2025-BETA.pdf"
-          target="_blank"
-          style="display: none"
-        ></a>
-        <a
-          href="n1desagregado.html"
-          class="inline-flex items-center gap-2 bg-secondbg hover:bg-bg text-black text-base py-2 px-4 transition font-bold"
-        >
-          <i class="fas fa-book-open"></i> Ir al número desagregado
-        </a>
-      </div>
-    </div>
-    <!-- <section id="numeros" class="numeros">
-      <div class="img-container">
-        <img class="w-full" src="images/mockup-revista.jpg" alt="" />
-      </div>
-      <div class="flex flex-col ml-20 w-1/2">
-        <h2>NÚMEROS DSB LAD</h2>
-        <div class="dsb-edition-card mt-10 mb-10">
-          <a href="index.html#numeros" target="_blank">
-            <img
-              class="mb-10 hover: transition-all duration-300 transform hover:scale-105"
-              src="./images/tapa-nro-1.png"
-              alt="Tapa revista DSB número 1"
-            />
-          </a>
-          <div class="text-container">
-            <div>
-              <h3>DISEÑO SIN BARRERAS</h3>
-              <p>#1</p>
-              <p>Número especial de Lanzamiento</p>
-            </div>
-            <a href="index.html#numeros" class="mt-10 font-bold px-4 py-2"> Ver número </a>
+    <section
+      id="numeros"
+      class="flex flex-col items-center py-10 px-6 bg-black"
+    >
+      <div class="dsb-edition-card mt-10 mb-10">
+        <div class="text-black bg-bg p-8">
+          <div>
+            <!-- <h2 class="text-black">NÚMERO #1</h2> -->
+            <p class="font-extrabold tracking-wide">DISEÑO SIN BARRERAS</p>
+            <p>Descargá el primer número de la revista</p>
           </div>
+          <button
+            id="descargarPDF"
+            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-gray-200 hover:bg-gray-400 text-black"
+          >
+            <i class="fas fa-download"></i> Descargar revista (PDF)
+          </button>
+          <a
+            id="enlaceDescarga"
+            href="./documents/n01/dsblad-n1-2025-BETA.pdf"
+            target="_blank"
+            style="display: none"
+          ></a>
+          <a
+            href="n1desagregado.html"
+            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-gray-200 hover:bg-gray-400 text-black"
+          >
+            <i class="fas fa-book-open"></i> Ir al número desagregado
+          </a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- Sección de dossiers -->
     <section
@@ -470,13 +444,6 @@
       </div>
 
       <div class="dsb-edition-card mt-10 mb-10">
-        <!-- <a href="#" target="_blank">
-          <img
-            class="mb-10 hover: transition-all duration-300 transform hover:scale-105"
-            src="./images/tapa-nro-1.png"
-            alt="Tapa dossier DSB número 1"
-          />
-        </a> -->
         <div class="text-black bg-gray-200 p-8">
           <div>
             <h3>DOSSIER #1</h3>
@@ -502,12 +469,14 @@
     </section>
 
     <!-- Sección de estudios -->
-    <section id="guias" class="py-10 px-6 bg-secondbg">
-      <h2 class="text-3xl font-semibold text-center">
+    <section id="guias" class="py-10 px-6">
+      <h2 class="text-3xl font-semibold text-white text-center">
         GUíA PARA AUTORES Y LECTORES DSB LAD
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto mt-10"
+      >
         <!-- Tarjeta 1 -->
         <div class="item-guia flex flex-col items-center">
           <div class="square square-1"></div>
