@@ -4,4 +4,4 @@ Departamento de Humanidades y Artes <br/>
 Universidad Nacional de Lanús <br/>
 Argentina<br/>
 
-Sitio desarrollado por Estefanía Fondevilla Sancet & Melisa Beatriz Cerda
+Sitio desarrollado por Estefanía Fondevila Sancet & Melisa Beatriz Cerda

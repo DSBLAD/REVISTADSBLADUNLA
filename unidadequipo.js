@@ -213,7 +213,7 @@ const renderMiembros = (contenedorId, array) => {
   contenedor.innerHTML = "";
   array.forEach((m) => {
     contenedor.innerHTML += `
-      <div class="miembro-equipo flex items-start p-4 gap-2 bg-secondbg">
+      <div class="miembro-equipo flex items-start p-4 gap-4 bg-secondbg">
         <div class="img-container">
           <img src="images/equipo/${m.foto || "placeholder"}.png" alt="" />
         </div>
