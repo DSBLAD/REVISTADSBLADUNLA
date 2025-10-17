@@ -467,6 +467,9 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  .miembro-equipo {
+    width: 100%;
+  }
   .home-header-cover-img {
     width: 80%;
   }
