@@ -189,7 +189,8 @@ const miembrosDiseno = [
     cargo: "Maquetación editorial",
     contacto: "dsblad.diseno@gmail.com",
     institucion: "UNLa, Argentina",
-    bio: "Estudiante avanzada DyCV",
+    foto: "GiampietroCamila",
+    bio: "Camila Wendy Giampietro es estudiante avanzada de la Licenciatura en Diseño y Comunicación Visual en la Universidad Nacional de Lanús, y cursa paralelamente una especialidad en Diseño UX/UI en la Universidad Tecnológica Nacional (UTN). Desarrolla su actividad profesional como diseñadora freelance, participando activamente en proyectos de diversas áreas del diseño visual y digital. Su trabajo se distingue por una búsqueda experimental que fusiona lo manual con lo tecnológico, explorando nuevas formas de expresión gráfica. Actualmente se desempeña como parte del equipo de maquetación editorial en la primera edición de la revista DSB LAD.",
   },
   {
     nombre: "Sol Camila Martinez",
