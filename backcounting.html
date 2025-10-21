@@ -1,139 +1,238 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lanzamiento DSB LAD</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      position: relative;
-      background: url('images/n1.png') no-repeat center center/cover;
-      color: #fff;
-      text-align: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(241, 201, 247, 0.4); /* sombra ligera sobre el fondo */
-      z-index: 0;
-    }
-
-    h1, #countdown, #btn-final {
-      position: relative;
-      z-index: 1;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-
-    #countdown {
-      display: flex;
-      gap: 1rem;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .time-box {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem;
-      border-radius: 10px;
-      min-width: 80px;
-    }
-
-    .label {
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      display: block;
-    }
-
-    #btn-final {
-      display: none;
-      background-color: #5b3f92; /* violeta institucional */
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    #btn-final:hover {
-      background-color: #7a5eb2;
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 1.8rem; }
-      #countdown { font-size: 1.2rem; flex-wrap: wrap; }
-    }
-  </style>
-</head>
-<body>
-  <h1>Lanzamiento Revista DSB LAD</h1>
-  <div id="countdown">
-    <div class="time-box">
-      <span id="days">00</span>
-      <span class="label">días</span>
-    </div>
-    <div class="time-box">
-      <span id="hours">00</span>
-      <span class="label">horas</span>
-    </div>
-    <div class="time-box">
-      <span id="minutes">00</span>
-      <span class="label">min</span>
-    </div>
-    <div class="time-box">
-      <span id="seconds">00</span>
-      <span class="label">seg</span>
-    </div>
-  </div>
-  <button id="btn-final" onclick="window.location.href='https://dsblad.github.io/REVISTADSBLADUNLA/index.html'">
-    Ir al sitio
-  </button>
-
-  <script>
-    const endDate = new Date('2025-10-21T15:00:00-03:00').getTime();
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById('days').textContent = String(days).padStart(2, '0');
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-      if (distance <= 0) {
-        clearInterval(countdown);
-        document.getElementById('countdown').style.display = 'none';
-        document.getElementById('btn-final').style.display = 'inline-block';
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanzamiento DSB LAD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    }, 1000);
-  </script>
-</body>
+
+      body {
+        position: relative;
+        background: radial-gradient(
+          at top left,
+          #fce3b0 0%,
+          #ed6d20 35%,
+          #7c139e 80%,
+          #541863 96%
+        );
+        color: #fff;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 0;
+      }
+      .container {
+        border: 3px solid white;
+        height: 600px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1,
+      #countdown,
+      #btn-final {
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      #countdown {
+        font-family: "Fira Sans", sans-serif;
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .time-box {
+        min-width: 100px;
+        min-height: 100px;
+        background: black;
+        padding: 1rem;
+      }
+
+      .label {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        display: block;
+      }
+
+      #btn-final {
+        display: none;
+        background-color: #5b3f92; /* violeta institucional */
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      #btn-final:hover {
+        background-color: #7a5eb2;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        #countdown {
+          font-size: 1.2rem;
+          flex-wrap: wrap;
+        }
+        .time-box {
+          min-width: 70px;
+          min-height: 70px;
+        }
+        .container {
+          border: none;
+          height: unset;
+          width: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Lanzamiento Revista<br />
+        DSB LAD
+      </h1>
+      <div id="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <span class="label">días</span>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <span class="label">horas</span>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <span class="label">min</span>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <span class="label">seg</span>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
+      >
+        <!-- Logo UNLa -->
+        <a
+          href="https://www.unla.edu.ar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./images/logo-unla.png"
+            alt="logo unla"
+            class="h-10 w-auto object-contain"
+          />
+        </a>
+        <!-- Logo depto -->
+        <a
+          href="https://www.unla.edu.ar/departamentos/humanidades-y-artes"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ml-3"
+        >
+          <img
+            src="./images/logo-depto.png"
+            alt="logo unla"
+            class="h-10 w-auto object-contain"
+          />
+        </a>
+        <!-- Logo LAD -->
+        <a
+          href="https://lad.unla.edu.ar/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ml-3"
+        >
+          <img
+            src="./images/logo-lad.png"
+            alt="logo lad"
+            class="h-10 w-auto object-contain"
+          />
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const endDate = new Date("2025-10-23T15:00:00-03:00").getTime();
+      const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = String(days).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("minutes").textContent = String(
+          minutes
+        ).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(
+          seconds
+        ).padStart(2, "0");
+
+        if (distance <= 0) {
+          clearInterval(countdown);
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("btn-final").style.display = "inline-block";
+        }
+      }, 1000);
+    </script>
+  </body>
 </html>
