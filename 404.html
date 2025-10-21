@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Error 404</title>
-    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="https://dsblad.github.io/REVISTADSBLADUNLA/images/favicon.png"
+      type="image/x-icon"
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap"
@@ -23,14 +27,22 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://dsblad.github.io/REVISTADSBLADUNLA/style.css"
+    />
   </head>
   <body class="error">
     <div>
       <h3>404</h3>
       <h2>Página no encontrada</h2>
       <p>Puede que el enlace esté roto o la página haya sido movida.</p>
-      <a href="index.html">Volver al inicio</a>
+      <a href="#" id="home-link">Volver al inicio</a>
+      <script>
+        const url = new URL(window.location.href);
+        const rootUrl = `${url.origin}/`;
+        document.getElementById("home-link").href = rootUrl;
+      </script>
     </div>
   </body>
 </html>
