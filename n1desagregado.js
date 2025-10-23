@@ -182,7 +182,7 @@ const tipoC = [
   },
   {
     autor: "thomas & junco",
-    titulo: "Experiencias estudiantes UNLa",
+    titulo: "Relatos en primera persona del paso por Diseño Industrial UNLa",
     subtitulo: "",
     tipo: "C",
     rutaImg: "23_junco-thomas-experiencias",
@@ -302,6 +302,6 @@ renderPublicaciones({
 });
 
 renderPublicaciones({
-  data: [...tipoB, ...tipoD],
+  data: [...tipoD, ...tipoB],
   contenedorId: "contenedor-otros",
 });

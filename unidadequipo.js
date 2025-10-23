@@ -44,13 +44,6 @@ const miembrosConsejoRedaccion = [
     foto: "melisa",
   },
   {
-    nombre: "Mg. DI Edgardo Chanquia",
-    bio: "Edgardo Rafael Chanquia, es Magister en Metodología de la Investigación Científica UNLa. Posee los títulos de Diseñador Industrial UNLP, Prof. en Diseño Industrial UNLP y Diseñador Gráfico ESAV. Cuenta con amplia experiencia previa en investigación académica. Actualmente en la UNLa se desempeña como profesor adjunto concursado en las asignaturas: Dibujo Técnico; Morfología; Desarrollos Visuales; Taller de Diseño Industrial 1 y 3. Además, es docente del Seminario en Diseño de Paneles de Presentación de Productos y está a cargo de la organización, montaje y publicación de muestras y productos de los estudiantes de la Licenciatura en Diseño Industrial. Es Miembro del Consejo Departamental del Departamento de Humanidades y Artes de la UNLa.",
-    institucion: "UNLa, Argentina",
-    contacto: "dsbladunla@gmail.com",
-    foto: "chanqui",
-  },
-  {
     nombre: "Lic. en DI Emilia Di Nuzzo",
     bio: "María Emilia Di Nuzzo es Diseñadora Industrial UNLa y maestranda en Metodologías de la Investigación Científica en la misma institución. Posee un posgrado en Diseño de Juegos, Juguetes e Interfaces Lúdicas FADU-UBA. Su perfil académico se ha centrado en el diseño inclusivo y en el estudio y aplicación de metodologías de diseño. Desde 2021 se desempeña como docente en las materias Métodos de Diseño, Semiótica Aplicada al Diseño e Historia Social del Diseño I y II. Actualmente, su campo de trabajo se orienta al desarrollo de soluciones proyectuales basadas en metodologías de diseño, dentro de una red de Talleres Protegidos del Área Metropolitana de Buenos Aires (AMBA), con foco en la mejora de procesos y entornos inclusivos.",
     institucion: "UNLa, Argentina",
@@ -66,7 +59,7 @@ const miembrosConsejoRedaccion = [
   },
   {
     nombre: "Mg. DG Andrea Gergich",
-    bio: "Andrea Gergich es Diseñadora Gráfica, Magister en Diseño Comunicacional (FADU, UBA) y doctoranda en Historia del Arte (EIDAES-UNSAM). Docente universitaria e investigadora especializada en historia del diseño gráfico en Argentina y cultura gráfica local. Coordinadora Académica de la Licenciatura en Diseño y Comunicación Visual (UNLa) y Coordinadora técnica DyCV en el LaD-Laboratorio de Diseño (UNLa). Titular de Historia Social del Diseño y Coordinadora del Taller de Trabajo Final Integrador. Co-titular del Seminario de grado Historia del diseño en Argentina, y docente concursada en Historia de la Comunicación Visual en la FADU-UBA. Investigadora y directora de proyectos Amílcar Herrera (UNLa), UBACyT y PIA (FADU, UBA), Mecenazgo (CABA), e investigadora externa (CIAP-UNSAM-CONICET). Autora de artículos y capítulos de libros, disertante en congresos nacionales e internacionales. Fue Coordinadora del equipo de Diseño del Campus Virtual UNLa (2008-2020) y Directora de Estudios en Fundación Gutenberg (2001-2018).",
+    bio: "Andrea Gergich es Diseñadora Gráfica y Magister en Diseño Comunicacional por la FADU-UBA, y doctoranda en Historia del Arte (EIDAES-UNSAM). Directora de la Licenciatura en Diseño y Comunicación Visual de la Universidad Nacional de Lanús (DyCV-UNLa). Profesora Regular de Historia Social del Diseño, Práctica Pre Profesional y Taller de Trabajo Final Integrador (DyCV-UNLa). Co-titular del Seminario Historia del Diseño en Argentina, y Profesora Adjunta de Historia del Diseño en la Carrera de Diseño Gráfico (FADU-UBA). Titular del Seminario de posgrado Imagen y diseño. La construcción de las visualidades modernas, en la Maestría en Diseño Comunicacional (FADU-UBA). Investigadora y directora de proyectos Amilcar Herrera (UNLa), UBACyT y PIA (FADU-UBA), Mecenazgo (CABA), e investigadora externa (CIAP-UNSAM-CONICET). Su área de especialización docente e investigación se vincula con las construcciones teóricas del campo del diseño, con especial foco en la historia del diseño gráfico y la cultura gráfica en Argentina. Organiza diversas actividades de extensión académica, como ciclos de charlas, conferencias, y realiza la curaduría de muestras de diseño. Coordina actualmente la Comisión Académica de la Red Latinoamericana de Cultura Gráfica (Red-CG). Es autora de artículos en revistas especializadas y capítulos de libros; y diserta regularmente en jornadas y congresos nacionales e internacionales.",
     institucion: "UNLa, UBA, Argentina",
     contacto: "dsbladunla@gmail.com",
     foto: "andrea-gergich",
@@ -84,6 +77,13 @@ const miembrosConsejoRedaccion = [
     institucion: "UNLa, UBA, Argentina",
     contacto: "dsbladunla@gmail.com",
     foto: "angelina",
+  },
+  {
+    nombre: "Mg. DI Edgardo Chanquia",
+    bio: "Edgardo Rafael Chanquia, es Magister en Metodología de la Investigación Científica UNLa. Posee los títulos de Diseñador Industrial UNLP, Prof. en Diseño Industrial UNLP y Diseñador Gráfico ESAV. Cuenta con amplia experiencia previa en investigación académica. Actualmente en la UNLa se desempeña como profesor adjunto concursado en las asignaturas: Dibujo Técnico; Morfología; Desarrollos Visuales; Taller de Diseño Industrial 1 y 3. Además, es docente del Seminario en Diseño de Paneles de Presentación de Productos y está a cargo de la organización, montaje y publicación de muestras y productos de los estudiantes de la Licenciatura en Diseño Industrial. Es Miembro del Consejo Departamental del Departamento de Humanidades y Artes de la UNLa.",
+    institucion: "UNLa, Argentina",
+    contacto: "dsbladunla@gmail.com",
+    foto: "chanqui",
   },
 ];
 
