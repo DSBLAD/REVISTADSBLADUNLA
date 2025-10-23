@@ -190,12 +190,12 @@ const tipoC = [
   },
   {
     autor: "estudiantes dycv",
-    titulo: "Diseño en Red",
+    titulo: "Diseño en clave latinoamericana",
     subtitulo:
       "Identidad visual del II Encuentro de la Red Latinoamericana de Cultura Gráfica 2025",
     tipo: "C",
     rutaImg: "25_estudiantes-cultura",
-    rutaPdf: "estudiantes-red_cultura",
+    rutaPdf: "estudiantes-clave_latinoamericana",
   },
   {
     autor: "tapia, clara",
