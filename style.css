@@ -13,9 +13,9 @@
   --violet: #630f82;
   --bg-gradient: radial-gradient(
     at top left,
-    #fce3b0 0%,
-    #ed6d20 35%,
-    #7c139e 80%,
+    #d0fff6 0%,
+    #9cffec 35%,
+    #613ab6 90%,
     #541863 96%
   );
 }
@@ -44,6 +44,12 @@
   /* background-color: var(--bg-color); */
 }
 
+.home section a,
+.home section button {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+}
+
 .fira-sans-bold {
   font-family: "Fira Sans", sans-serif;
   font-weight: 700;
@@ -63,28 +69,14 @@
 }
 
 #equipo {
-  background: radial-gradient(
-    at bottom right,
-    #fce3b0 0%,
-    #f3bd9a 20%,
-    #ed6d20 90%
-  );
+  background: black;
 }
 
 .home-header-cover-img .marco {
   width: 550px;
   height: 550px;
   position: relative;
-  border: 4px solid white;
-  border-top: none;
-  border-right: none;
-}
-
-.home-header-cover-img .marco::before,
-.home-header-cover-img .marco::after {
-  content: "";
-  position: absolute;
-  background: white;
+  border: 4px solid black;
 }
 
 .home-header-cover-img .marco::before {
@@ -243,6 +235,9 @@ h2 {
   color: var(--front-color);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  height: 360px;
 }
 
 .dsb-edition-card .text-container {
@@ -340,6 +335,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   width: 60%;
+  margin-top: 100px;
 }
 
 .infocard h2 {
@@ -532,4 +528,10 @@ h2 {
   .infocard {
     width: 100%;
   }
+}
+
+nav {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-weight: 500;
 }

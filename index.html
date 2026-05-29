@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -82,6 +82,7 @@
               pastelviolet: "#CBB7E2",
               darkviolet: "#3D2C54",
               bordoviolet: "#A45C84",
+              celestelad: "#9cffec",
             },
             fontSize: {
               "2xl": "1.5rem",
@@ -112,77 +113,66 @@
     <!-- Compensa altura del menú fijo -->
     <!-- NAV RESPONSIVE CON MENÚ DESPLEGABLE -->
 
-    <nav
-      class="fixed top-0 left-0 right-0 bg-black text-white shadow-md z-50 p-6 flex items-center justify-between"
-    >
-      <div
-        class="flex items-center gap-2 text-lg sm:text-xl font text-pastelviolet"
-      >
-        <!-- Logo UNLa -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black flex flex-col">
+      <div class="text-white pl-8 py-2 text-sm font-bold flex">
         <a
           href="https://www.unla.edu.ar/"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <img
-            src="./images/logo-unla.png"
-            alt="logo unla"
-            class="h-10 w-auto object-contain"
-          />
+          >UNLa
         </a>
-        <!-- Logo depto -->
+        <p class="ml-3 text-gray-400 text-xs">&gt;</p>
         <a
           href="https://www.unla.edu.ar/departamentos/humanidades-y-artes"
           target="_blank"
           rel="noopener noreferrer"
           class="ml-3"
+          >Humanidades y artes</a
         >
-          <img
-            src="./images/logo-depto.png"
-            alt="logo unla"
-            class="h-10 w-auto object-contain"
-          />
-        </a>
-        <!-- Logo LAD -->
-        <a
-          href="https://lad.unla.edu.ar/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="ml-3"
-        >
-          <img
-            src="./images/logo-lad.png"
-            alt="logo lad"
-            class="h-10 w-auto object-contain"
-          />
-        </a>
       </div>
-
-      <!-- Botón hamburguesa visible solo en sm y md -->
-      <div class="lg:hidden">
-        <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
-          <span id="menu-icon">&#9776;</span>
-        </button>
-      </div>
-
-      <!-- Menú visible en LG y desplegable en SM/MD -->
-
-      <ul
-        id="menu"
-        class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font text-white"
-      >
-        <li>
+      <div class="bg-white text-black shadow-md p-6 flex justify-between">
+        <div class="flex items-center gap-2 text-lg sm:text-xl font">
+          <!-- Logo LAD -->
           <a
-            href="unidadequipo.html"
-            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+            href="https://lad.unla.edu.ar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ml-3"
           >
-            Equipo editorial
+            <img
+              src="./images/logo-lad-wide.png"
+              alt="logo lad"
+              class="h-10 w-auto object-contain"
+            />
           </a>
-        </li>
-        <!-- Comento esta sección por ahora no vamos a mostrar estos items. En el resto de los nav los elimino. Si hay que recuperarlos podemos hacerlo desde acá. <li>
+        </div>
+
+        <!-- Botón hamburguesa visible solo en sm y md -->
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="text-3xl focus:outline-none">
+            <span id="menu-icon">&#9776;</span>
+          </button>
+        </div>
+
+        <!-- Menú visible en LG y desplegable en SM/MD -->
+
+        <ul
+          id="menu"
+          class="hidden lg:flex lg:flex-row items-start lg:items-center gap-4 text-base font"
+        >
+          <li>
+            <a
+              href="unidadequipo.html"
+              class="w-full sm:w-auto text-center hover:border-b-[2px] m-3 border-black hover:text-black transition duration-200"
+            >
+              Equipo editorial
+            </a>
+          </li>
+          <!-- Comento esta sección por ahora no vamos a mostrar estos items. En el resto de los nav los elimino. Si hay que recuperarlos podemos hacerlo desde acá. <li>
           <a
             href="infolectores.html"
-            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+                          class="w-full sm:w-auto text-center hover:border-b-[2px] my-6 border-black hover:text-black transition duration-200"
+
           >
             Lectores
           </a>
@@ -190,7 +180,8 @@
         <li>
           <a
             href="infoautores.html"
-            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
+                          class="w-full sm:w-auto text-center hover:border-b-[2px] my-6 border-black hover:text-black transition duration-200"
+
           >
             Autores
           </a>
@@ -203,42 +194,42 @@
             Bibliotecarios
           </a>
         </li> -->
-        <li>
-          <a
-            href="etica.html"
-            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-          >
-            Buenas prácticas
-          </a>
-        </li>
-        <li>
-          <a
-            href="politicas.html"
-            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-          >
-            Políticas
-          </a>
-        </li>
-        <li>
-          <a
-            href="sobredsb.html"
-            class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-          >
-            Sobre DSB LAD
-          </a>
-        </li>
+          <li>
+            <a
+              href="etica.html"
+              class="w-full sm:w-auto text-center hover:border-b-[2px] m-3 border-black hover:text-black transition duration-200"
+            >
+              Buenas prácticas
+            </a>
+          </li>
+          <li>
+            <a
+              href="politicas.html"
+              class="w-full sm:w-auto text-center hover:border-b-[2px] m-3 border-black hover:text-black transition duration-200"
+            >
+              Políticas
+            </a>
+          </li>
+          <li>
+            <a
+              href="sobredsb.html"
+              class="w-full sm:w-auto text-center m-3 hover:border-b-[2px] border-black hover:text-black transition duration-200"
+            >
+              Sobre DSB LAD
+            </a>
+          </li>
 
-        <li>
-          <a
-            id="contactoMail"
-            href="mailto:dsbladunla@gmail.com"
-            class="block w-full py-1 text-white hover:text-pastelviolet flex items-center space-x-2"
-          >
-            <i class="fas fa-envelope"></i>
-            <span>Contacto</span>
-          </a>
-        </li>
-        <!-- íconos para traducción oultos hasta que tengamos traducciones
+          <li>
+            <a
+              id="contactoMail"
+              href="mailto:dsbladunla@gmail.com"
+              class="w-full sm:w-auto text-center m-3 hover:border-b-[2px] border-black hover:text-black transition duration-200"
+            >
+              <i class="fas fa-envelope"></i>
+              <span>Contacto</span>
+            </a>
+          </li>
+          <!-- íconos para traducción oultos hasta que tengamos traducciones
         <li class="flex flex-row gap-2 mt-2 lg:mt-0">
           <a
             href="index.html"
@@ -261,98 +252,9 @@
             />
           </a>
         </li> -->
-      </ul>
-    </nav>
-
-    <!-- AMBAS BARRAS DE PESTAÑAS DESKTOP Y MOBILE OCULTAS PORQUE UNIFIQUÉ LAS BARRAS EN UNA -->
-    <!-- Botón para mostrar barra de pestañas en mobile -->
-    <!-- <div class="sm:hidden flex justify-end px-6 py-2 text-white">
-      <button id="toggle-tabs" class="text-2xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div> -->
-    <!-- BARRA DE PESTAÑAS FIJA DEBAJO DEL NAV -->
-    <!-- 
-    <div
-      id="tab-bar"
-      class="hidden sm:flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base text-white w-full shadow-inner"
-    >
-      <div
-        class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 py-2 px-4 text-sm sm:text-base"
-      >
-        <a
-          href="convocatoria.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Convocatorias
-        </a>
-
-        <a
-          href="unidadequipo.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Equipo editorial
-        </a>
-
-        <a
-          href="infolectores.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Lectores
-        </a>
-
-        <a
-          href="infoautores.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Autores
-        </a>
-
-        <a
-          href="infobibliotecarios.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-msm transition duration-200"
-        >
-          Bibliotecarios
-        </a>
-
-        <a
-          href="etica.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Buenas prácticas
-        </a>
-
-        <a
-          href="politicas.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Políticas
-        </a>
-
-         <a
-          href="#envios"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Envios
-        </a> 
-
-        <a
-          href="estadistica.html"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 hover:text-black px-4 py-2 rounded-sm transition duration-200"
-        >
-          Estadísticas
-        </a> 
-
-        <a
-          href="buscador.html"
-          target="_blank"
-          class="w-full sm:w-auto text-center hover:bg-gray-100 transition hover:text-black px-4 py-2 rounded-sm transition duration-200 flex items-center justify-center gap-2"
-        >
-          <i class="fas fa-search"></i>
-          <span>Buscador</span>
-        </a> 
+        </ul>
       </div>
-    </div> -->
+    </nav>
 
     <!-- HERO principal con texto y logo al costado -->
 
@@ -360,7 +262,7 @@
       <!-- Imagen -->
       <div class="home-header-cover-img">
         <div class="marco">
-          <div class="numero">#1 <span>lanzamiento</span></div>
+          <!-- <div class="numero">#1 <span>lanzamiento</span></div> -->
           <div class="texto">
             <img src="images/dsblad-logo.png" alt="DSB lad" />
           </div>
@@ -368,13 +270,13 @@
       </div>
       <!-- Texto -->
       <div class="home-header-text-container">
-        <div class="home-header-description text-white">
+        <div class="home-header-description">
           <p>
-            La revista <strong class="fira-sans-bold">DSB-LAD</strong> es una
-            publicación anual del Laboratorio de Diseño del Departamento de
-            Humanidades y Artes de la Universidad Nacional de Lanús. Está
-            orientada a las áreas del Diseño Industrial y del Diseño en
-            Comunicación Visual, con apertura hacia otras disciplinas del
+            La revista <strong class="fira-sans-bold">DSB-LAD</strong> (ISSN
+            3125-2613) es una publicación anual del Laboratorio de Diseño del
+            Departamento de Humanidades y Artes de la Universidad Nacional de
+            Lanús. Está orientada a las áreas del Diseño Industrial y del Diseño
+            en Comunicación Visual, con apertura hacia otras disciplinas del
             diseño. Su objetivo es constituirse como un espacio plural para la
             reflexión y la difusión de conocimientos en los ámbitos académico y
             profesional, con el fin de promover el diálogo entre la comunidad,
@@ -402,19 +304,19 @@
         <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto md:mx-0 mt-6">
           <a
             href="#numeros"
-            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg hover:text-darkviolet transition text-center"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-celestelad hover:text-black transition text-center"
           >
             NÚMEROS
           </a>
           <a
             href="#dossiers"
-            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg hover:text-darkviolet transition text-center"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-celestelad hover:text-black transition text-center"
           >
             DOSSIERS
           </a>
           <a
             href="#guias"
-            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-secondbg hover:text-darkviolet transition text-center"
+            class="h-12 flex items-center justify-center bg-black text-white px-2 text-sm font-bold shadow hover:bg-celestelad hover:text-black transition text-center"
           >
             GUÍAS
           </a>
@@ -427,8 +329,8 @@
       id="numeros"
       class="flex flex-col items-center py-10 px-6 bg-black"
     >
-      <div class="dsb-edition-card mt-10 mb-10">
-        <div class="text-black bg-bg p-8">
+      <div class="dsb-edition-card bg-white mt-10 mb-10">
+        <div class="text-black p-8">
           <div>
             <!-- <h2 class="text-black">NÚMERO #1</h2> -->
             <p class="font-extrabold tracking-wide">DISEÑO SIN BARRERAS</p>
@@ -436,7 +338,7 @@
           </div>
           <button
             id="descargarPDF"
-            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-gray-200 hover:bg-gray-400 text-black"
+            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-celestelad hover:bg-black text-black hover:text-white"
           >
             <i class="fas fa-download"></i> Descargar revista (PDF)
           </button>
@@ -448,7 +350,7 @@
           ></a>
           <a
             href="n1desagregado.html"
-            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-gray-200 hover:bg-gray-400 text-black"
+            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-celestelad hover:bg-black text-black hover:text-white"
           >
             <i class="fas fa-book-open"></i> Ir al número desagregado
           </a>
@@ -465,8 +367,8 @@
         <div></div>
       </div>
 
-      <div class="dsb-edition-card mt-10 mb-10">
-        <div class="text-black bg-gray-200 p-8">
+      <div class="dsb-edition-card bg-black text-white mt-10 mb-10">
+        <div class="p-8">
           <div>
             <h3>DOSSIER #1</h3>
             <p>DISEÑO SIN BARRERAS</p>
@@ -474,14 +376,14 @@
           </div>
           <a
             href="./documents/n01/dossier/DOSSIER-DSB-LAD-oct2025-nro01.pdf"
-            class="flex items-center gap-2 mt-5 font-bold p-4 bg-secondbg hover:bg-bg text-black"
+            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-celestelad text-black hover:bg-white"
             target="_blank"
           >
             <i class="fas fa-download"></i> Descargar dossier (PDF)
           </a>
           <a
             href="./documents/n01/dossier/LAD_5aniversario.pdf"
-            class="flex items-center mt-5 font-bold p-4 bg-secondbg hover:bg-bg text-black"
+            class="w-full flex items-center gap-2 mt-5 font-bold p-4 bg-celestelad text-black hover:bg-white"
             target="_blank"
           >
             Infografía - 5 años del LAD (PDF)
@@ -615,7 +517,7 @@
           href="https://forms.gle/ooY7STk95Atw5QrW6"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block bg-black text-white text-m font-semibold px-4 py-3 shadow-md hover:bg-bg hover:text-black transition"
+          class="inline-block bg-black text-white text-m font-semibold px-4 py-3 shadow-md hover:bg-celestelad hover:text-black transition"
         >
           Quiero formar parte y te acerco mi propuesta
         </a>
@@ -780,7 +682,11 @@
 
           <!-- Botón de cierre -->
           <button
-            onclick="document.getElementById('popupConvocatoria').classList.add('hidden')"
+            onclick="
+              document
+                .getElementById('popupConvocatoria')
+                .classList.add('hidden')
+            "
             class="absolute top-2 right-2 bg-darkviolet text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-pastelviolet transition text-lg font-bold z-50"
           >
             &times;
@@ -806,6 +712,7 @@
         <div>
           <h2 class="text-lg font-bold mb-3">DISEÑO SIN BARRERAS</h2>
           <ul class="space-y-1">
+            <li>ISSN 3125-2613</li>
             <li>
               <a
                 href="https://lad.unla.edu.ar/"
@@ -1087,11 +994,11 @@
 
           const asunto = "Consulta sobre la revista DSB LAD";
           const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(
-            nombre
+            nombre,
           )}`;
 
           const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
-            asunto
+            asunto,
           )}&body=${cuerpo}`;
 
           window.location.href = mailtoLink;
@@ -1206,9 +1113,9 @@
             (error) => {
               console.error(
                 "Error al actualizar contador de descargas:",
-                error
+                error,
               );
-            }
+            },
           );
         });
       }
@@ -1229,7 +1136,7 @@
       runTransaction(visitasRef, (current) => (current || 0) + 1).catch(
         (error) => {
           console.error("Error al actualizar contador de visitas:", error);
-        }
+        },
       );
     </script>
 
@@ -1248,7 +1155,7 @@
             menu.classList.toggle("absolute");
             menu.classList.toggle("top-full");
             menu.classList.toggle("left-0");
-            menu.classList.toggle("bg-[#4c5155]");
+            menu.classList.toggle("bg-[#c9c9c9]");
             menu.classList.toggle("w-full");
             menu.classList.toggle("p-4");
             menu.classList.toggle("shadow-md");
