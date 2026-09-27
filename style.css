@@ -306,12 +306,24 @@ h2 {
   margin: 0 20px 80px 20px;
 }
 
-#primer-numero-desagregado {
+.numero-desagregado {
   max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+}
+.numero-desagregado .flex-wrap {
+  width: 80%;
+}
+
+.numero-desagregado h2 {
+  font-size: xx-large;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+#primer-numero-desagregado {
   background: radial-gradient(
     at top left,
     #6b625a 0%,
@@ -319,22 +331,42 @@ h2 {
     #1e1b18 100%
   );
 }
-#primer-numero-desagregado .flex-wrap {
-  width: 80%;
-}
 
-#primer-numero-desagregado h2 {
-  font-size: xx-large;
-  margin-top: 80px;
-  margin-bottom: 20px;
+#segundo-numero-desagregado {
+  background: radial-gradient(
+    at top left,
+    #5a616b 0%,
+    #33373f 50%,
+    #18191e 100%
+  );
 }
 
 .prueba {
   max-width: 100vw;
 }
 
-.article-card {
+.article-card-n01 {
   background-color: var(--secondbg-color);
+}
+
+.article-card-n01 .article-card-description a {
+  background-color: var(--bg-color);
+}
+
+.article-card-n02 {
+  background-color: #77f1fe;
+}
+
+.article-card-n02 .article-card-description a {
+  background-color: #0a95d4;
+  color: #77f1fe;
+}
+
+.article-card-n02 .article-card-description a:hover {
+  background-color: #0b6f9d;
+}
+
+.article-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,7 +389,6 @@ h2 {
 }
 
 .article-card-description a {
-  background-color: var(--bg-color);
   padding: 5px;
   margin-top: 10px;
 }

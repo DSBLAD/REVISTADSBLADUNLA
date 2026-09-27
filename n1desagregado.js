@@ -258,7 +258,7 @@ function renderPublicaciones({
 
   data.forEach((item) => {
     const card = document.createElement("div");
-    card.className = "article-card";
+    card.className = "article-card article-card-n01";
 
     const autor = item?.autor || "";
     const titulo = item?.titulo || "";
