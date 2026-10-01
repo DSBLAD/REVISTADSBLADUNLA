@@ -12,10 +12,11 @@
   --violet: #630f82;
   --bg-gradient: radial-gradient(
     at top left,
-    #d0fff6 0%,
-    #9cffec 35%,
-    #613ab6 90%,
-    #541863 96%
+    #e4e9ea 0%,
+    #b1e0e8 35%,
+    #41a7d5 60%,
+    #5f3ab6 90%,
+    #401863 96%
   );
 }
 
@@ -54,15 +55,6 @@
   font-style: normal;
 }
 
-.home-header {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 150px 0;
-  background: var(--bg-gradient);
-}
-
 .gradient-background {
   background: var(--bg-gradient);
 }
@@ -79,37 +71,31 @@
   min-height: 450px;
 }
 
-.home-header-cover-img {
-  width: 450px;
-  height: 450px;
-  position: relative;
+.home-header {
+  min-height: 100vh;
+  display: flex;
 }
 
 .home-header-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 50%;
+  background: var(--bg-gradient);
+  padding: 150px 0 0 60px;
+  color: var(--color-light);
+  font-size: medium;
 }
 
-.home-header h1,
-h2 {
-  font-family: "IBM Plex Mono", monospace;
-  color: var(--front-color);
+.home-header-text-container p {
+  max-width: 70ch;
 }
 
-.home-header h1 {
-  font-size: 90px;
-  line-height: 90px;
-  font-weight: 900;
-  margin-bottom: 15px;
-}
-
-.home-header-description {
-  max-width: 550px;
-}
-
-.home-header-description p {
-  margin-bottom: 15px;
+.home-header .title {
+  width: 50%;
+  padding: 350px 100px;
+  color: var(--color-light);
+  background: url(./images/nro02-mockup01.png);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .numeros {
@@ -123,6 +109,22 @@ h2 {
   width: 50%;
   height: 100vh;
   overflow: hidden;
+}
+
+#numero2 {
+  background-image: url("./images/nro02-mockup02.png");
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+}
+
+#numero1 {
+  background-image: url("./images/mockups/revista_def_mockup.png");
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
 }
 
 #dossiers {
@@ -321,6 +323,8 @@ h2 {
   font-size: xx-large;
   margin-top: 80px;
   margin-bottom: 20px;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 #primer-numero-desagregado {
@@ -462,12 +466,19 @@ nav {
 }
 
 @media (max-width: 970px) {
+  .home-header .title {
+    display: none;
+  }
   .home-header-text-container {
     width: 100%;
-    padding: 1em;
+    padding: 200px 1em;
   }
   .numeros .img-container {
     display: none;
+  }
+  #numero1,
+  #numero2 {
+    flex-direction: column;
   }
 }
 
@@ -488,12 +499,16 @@ nav {
     display: none;
   }
   #primer-numero-dossier .primer-numero-descripcion,
-  #primer-numero .primer-numero-descripcion {
+  #primer-numero .primer-numero-descripcion,
+  #numero1 .primer-numero-descripcion,
+  #numero2 .primer-numero-descripcion {
     position: initial;
     width: 100%;
   }
   #primer-numero,
-  #primer-numero-dossier {
+  #primer-numero-dossier,
+  #numero1,
+  #numero2 {
     position: unset;
   }
   .infocard {

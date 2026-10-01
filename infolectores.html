@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -422,16 +422,16 @@
           <ul class="space-y-1">
             <li>
               <a
-                href="#numeros"
+                href="index.html#numero1"
                 class="hover:text-pastelviolet transition-colors"
-                >Números</a
+                >Número 1</a
               >
             </li>
             <li>
               <a
-                href="#dossiers"
+                href="index.html#numero2"
                 class="hover:text-pastelviolet transition-colors"
-                >Dossiers</a
+                >Número 2</a
               >
             </li>
             <li>
@@ -502,11 +502,11 @@
 
           const asunto = "Consulta sobre la revista DSB LAD";
           const cuerpo = `Hola, me comunico para realizar una consulta sobre la revista DSB LAD.%0A%0AMi pregunta es:%0A%0AQuedo atento/a a su respuesta.%0A%0AMuchas gracias.%0A%0ASaludos,%0A${encodeURIComponent(
-            nombre
+            nombre,
           )}`;
 
           const mailtoLink = `mailto:dsbladunla@gmail.com?subject=${encodeURIComponent(
-            asunto
+            asunto,
           )}&body=${cuerpo}`;
 
           window.location.href = mailtoLink;
